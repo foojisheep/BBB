@@ -1,0 +1,138 @@
+.defaultPage-full{
+  display: flex;
+  overflow: hidden;
+}
+
+.header-full {
+  background-color: white;
+}
+
+.loadingPage-full{
+    /* display: flex; */
+    overflow: hidden;
+  }
+  
+  .loadingPage-image{
+    align-items: center;
+    justify-content: center;
+    /* width: 300px; */
+    float: right;
+    /* max-width: 100%; */
+    position: relative;
+    /* animation-timing-function: ease; */
+    /* animation: blender 5s; */
+    animation-fill-mode: forwards;
+  }
+
+  @keyframes blender {
+    from {right: 0px;}
+    to {right: 965px;}
+  }
+
+  @keyframes blender-tablet {
+    from {right: 0px;}
+    to {right: 520px;}
+  }
+
+  @keyframes blender-mobile {
+    from {right: -10px;}
+    to {right: 250px;}
+  }
+
+/* Extra small devices (phones, 600px and down) */
+/* @media only screen and (max-width: 600px) {
+  .loadingPage-full img{ 
+    background: red;
+    max-width: 70%;
+  }
+} */
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (max-width: 768px) {
+  .loadingPage-full { 
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    max-width: fit-content;
+  }
+
+  .loadingPage-image { 
+    /* background-color: chartreuse; */
+    flex-direction: row;
+    justify-content: center;
+    max-height: 17%;
+    animation: blender-mobile 3s;
+    animation-fill-mode: forwards;
+  }
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+  .loadingPage-full { 
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    max-height: fit-content;
+  }
+
+  .loadingPage-image { 
+    /* background: blue; */
+    flex-direction: row;
+    justify-content: center;
+    max-height: 28%;
+    animation: blender-tablet 3s;
+    animation-fill-mode: forwards;
+  }
+} 
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+  .loadingPage-full { 
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    max-height: fit-content;
+  }
+
+  .loadingPage-image { 
+    /* background-color:darkgreen;  */
+    flex-direction: row;
+    justify-content: center;
+    animation: blender 3s;
+    max-height: 68%;
+    /* max-height: 100%; */
+    animation-fill-mode: forwards;
+  }
+} 
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+/* @media only screen and (min-width: 1200px) {
+  .loadingPage-full{ 
+    background: pink;}
+
+} */
+
+@font-face {
+  font-family: "FoundersGroteskText";
+  src: local("Founders Grotesk Text"),
+    url("./resource/font/Test\ Founders\ Grotesk\ 400.otf") format("truetype");
+}
+
+.header-full h1 {
+  font-family: FoundersGroteskText;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 30px;
+  display: flex;
+  align-items: center;
+  letter-spacing: -0.02em;
+}
+
+.logo-style {
+  /* float: left; */
+  width: 25%;
+}

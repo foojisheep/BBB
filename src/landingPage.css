@@ -1,0 +1,87 @@
+@import "rsuite/dist/rsuite.css";
+
+#root{ padding: 10px; }
+
+.defaultLandingPage-full{
+    /* display: flex; */
+    overflow: hidden;
+
+  }
+
+  .topnav{
+    overflow: hidden;
+  }
+
+  .topnav a {
+    font-family: FoundersGroteskText;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 30px;
+    display: block;
+    align-items: center;
+    letter-spacing: -0.02em;
+  }
+  
+  .descrip {
+    width: 302px;
+    height: 32px;
+
+    /* Desktop/Body/B1 */
+
+    font-family: 'Founders Grotesk Text Test';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 15px;
+    letter-spacing: 0.01em;
+
+    color: #000000;
+
+    flex: none;
+    order: 1;
+    flex-grow: 0;
+  }
+
+  .row-rev {
+    flex-direction: row-reverse;
+  }
+
+  .header-right{
+    columns: 6rem auto;
+  }
+
+  [class*="col-"] {
+    float: left;
+    padding:15px;
+    border: 1px solid red;
+  }
+
+  .topnav-right {
+    float: right;
+  }
+
+  .nav {
+    width: 121px;
+    height: 30px;
+
+    /* Desktop/Heading/H1 */
+
+    font-family: 'Founders Grotesk Text Test';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 30px;
+    display: flex;
+    align-items: center;
+    letter-spacing: -0.02em;
+
+    /* Black */
+    color: #000000;
+
+    /* Inside auto layout */
+
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+  }

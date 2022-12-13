@@ -1,0 +1,25 @@
+.font{
+width: 94px;
+height: 30px;
+
+/* Desktop/Heading/H1 */
+font-family: 'Founders Grotesk Text Test';
+font-style: normal;
+font-weight: 400;
+font-size: 24px;
+line-height: 30px;
+letter-spacing: -0.02em;
+
+/* Black */
+
+color: #000000;
+
+border: 1px solid #000000;
+text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+
+/* Inside auto layout */
+
+flex: none;
+order: 0;
+flex-grow: 0;
+}
