@@ -1,6 +1,6 @@
-@import "rsuite/dist/rsuite.css";
+/* @import "rsuite/dist/rsuite.css"; */
 
-#root{ padding: 10px; }
+/* #root{ padding: 10px; } */
 
 .defaultLandingPage-full{
     /* display: flex; */
@@ -9,39 +9,57 @@
   }
 
   .topnav{
-    overflow: hidden;
+    /* overflow: hidden;s */
+    display: flex;
+    flex-direction: row;
   }
 
-  .topnav a {
+  .nav h1 {
     font-family: FoundersGroteskText;
     font-style: normal;
     font-weight: 400;
     font-size: 24px;
     line-height: 30px;
-    display: block;
+    display: flex;
     align-items: center;
     letter-spacing: -0.02em;
+    /* margin-left: 10%; */
+    /* margin-right: 1%; */
   }
   
-  .descrip {
-    width: 302px;
-    height: 32px;
+  .descp {
+    display: flex;
+    flex-direction: column;    
+    /* align-content:space-between; */
+  }
 
-    /* Desktop/Body/B1 */
+  ul {
+    list-style-type: none;
+    padding-left:0;
+  }
 
+  .descrip p{
+    /* width: 302px;
+    height: 32px; */
     font-family: 'Founders Grotesk Text Test';
     font-style: normal;
     font-weight: 400;
     font-size: 12px;
     line-height: 15px;
     letter-spacing: 0.01em;
-
     color: #000000;
-
-    flex: none;
-    order: 1;
-    flex-grow: 0;
+    display: flex;
   }
+
+  /* .top-desc{
+    margin-top: 0px;
+    margin-bottom: 0px;
+  }
+
+  .bottom-desc{
+    margin-top: 0px;
+    margin-bottom: 0px;
+  } */
 
   .row-rev {
     flex-direction: row-reverse;
@@ -53,35 +71,185 @@
 
   [class*="col-"] {
     float: left;
-    padding:15px;
+    /* padding-top:15px; */
     border: 1px solid red;
   }
 
-  .topnav-right {
+  .topnav-right{
     float: right;
-  }
-
-  .nav {
-    width: 121px;
-    height: 30px;
-
-    /* Desktop/Heading/H1 */
-
-    font-family: 'Founders Grotesk Text Test';
-    font-style: normal;
-    font-weight: 400;
-    font-size: 24px;
-    line-height: 30px;
+    list-style: none;
+    /* width: 100%; */
+    /* height:fit-content; */
     display: flex;
     align-items: center;
-    letter-spacing: -0.02em;
-
-    /* Black */
-    color: #000000;
-
-    /* Inside auto layout */
-
-    flex: none;
-    order: 0;
-    flex-grow: 0;
+    text-align: right;
+    margin-right: 0;
+    /* text-decoration: none; */
+    /* position:absolute; */
+    /* top:0; */
+    /* right:0; */
   }
+
+  .topcorner{
+    position:absolute;
+    top:0;
+    right:0;
+   }
+  /* .topnav-right ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333333;
+  }
+  
+  .topnav-right li {
+    float: left;
+  }
+
+  .topnav-right li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 16px;
+    text-decoration: none;
+  } */
+  
+  .nav{
+    padding-left: 2%;
+    padding-right: 1%;
+  }
+  
+  .landingPage-full{
+      /* display: flex; */
+      /* overflow: hidden; */
+      background-color: #FFB8F2;
+    }
+
+  .landingPage-image{
+    /* align-items: left; */
+    justify-content: center;
+    float: right;
+    position: relative;
+    /* max-height: 50%; */
+  }
+
+  /* Extra small devices (phones, 600px and down) */
+/* @media only screen and (max-width: 600px) {
+  .loadingPage-full img{ 
+    background: red;
+    max-width: 70%;
+  }
+} */
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (max-width: 768px) {
+  .landingPage-full { 
+    display: flex;
+    /* overflow: hidden; */
+    background-color: #FFB8F2;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    max-width: fit-content;
+  }
+
+  .landingPage-image { 
+    /* background-color: chartreuse; */
+    align-items: centers;
+    justify-content: center;
+    float: right;
+    max-width: 17%;
+  }
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+  .landingPage-full { 
+    display: flex;
+    /* overflow: hidden; */
+    background-color: #FFB8F2;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    max-width: fit-content;
+  }
+
+  .landingPage-image { 
+    /* background: blue; */
+    flex-direction: row;
+     align-items: left;
+    justify-content: center;
+    float: right;
+    max-height: 28%;
+  }
+} 
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+  .landingPage-full { 
+    display: flex;
+    /* overflow: hidden; */
+    background-color: #FFB8F2;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    max-height: fit-content;
+  }
+
+  .landingPage-image { 
+    /* background-color:darkgreen;  */
+    flex-direction: row;
+    align-items: left;
+    justify-content: center;
+    float: right;
+    max-height: 88%;
+  }
+} 
+
+#nav h1{
+  font-family: FoundersGroteskText;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 30px;
+  display: flex;
+  align-items: center;
+  letter-spacing: -0.02em;
+}
+
+#customers {
+  font-family: Arial, Helvetica, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+/* #customers tr {
+  border: 1px solid #ddd;
+  padding: 8px;
+} */
+
+@font-face {
+  font-family: "FoundersGroteskText";
+  src: local("Founders Grotesk Text"),
+    url("./resource/font/Test\ Founders\ Grotesk\ 400.otf") format("truetype");
+}
+
+/* #customers tr:nth-child(even){background-color: #f2f2f2;} */
+
+#customers tr:hover {background-color: #FFC572}
+
+#customers td{
+  font-family: 'FoundersGroteskText';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 30px;
+  letter-spacing: -0.02em;
+  color: #000000;
+  text-align: left;
+}
+
+.projectDisplay {
+  overflow-x: auto;
+}
