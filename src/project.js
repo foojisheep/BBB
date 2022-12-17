@@ -1,13 +1,11 @@
-import logoStart from './resource/logo-start.svg';
-import logoMiddle from './resource/logo-middle.svg';
-import logoEnd from './resource/logo-end.svg';
 import './landingPage.css';
 import './loadingPage.css';
 import './workPage.css';
+import { useState } from 'react';
 
 export default function LandingPage() {
     const content = projects.map((projects) =>
-    <tr key={projects.id}>
+      <tr key={projects.id} onMouseEnter={() => hoverImage(projects.link, true)} onMouseLeave={() => hoverImage(projects.link, false)}>
         <td>  </td>
         <td>{projects.year}</td>
         <td>{projects.name}</td>
@@ -64,9 +62,15 @@ export default function LandingPage() {
   }
 
   const projects = [
-    {id: 1, year: '  2022', name: 'Bolt & Witchwood', details: 'Not your average neighourhood cafe.', category: 'Hospo'},
-    {id: 2, year: '      ', name: 'Poppykat', details: 'Recalled a certain aesthetic from Wes Anderson\'s Movie.', category: 'Hospo'},
-    {id: 3, year: '      ', name: 'Kedai Coklat', details: 'Invokes a precious memory of broken chocholate bars.', category: 'Hospo'},
-    {id: 4, year: '  2021', name: 'Hejau MK', details: 'Ecovative of sunny Palm Springs and Arizon Cliffs combines.', category: 'Resi'},
-    {id: 5, year: '  2020', name: 'Hejau PJ', details: 'Reminiscent of a small oasis.', category: 'Hospo'}
+    {id: 1, year: '  2022', name: 'Bolt & Witchwood', details: 'Not your average neighourhood cafe.', category: 'Hospo', link: ''},
+    {id: 2, year: '      ', name: 'Poppykat', details: 'Recalled a certain aesthetic from Wes Anderson\'s Movie.', category: 'Hospo', link: ''},
+    {id: 3, year: '      ', name: 'Kedai Coklat', details: 'Invokes a precious memory of broken chocholate bars.', category: 'Hospo', link: ''},
+    {id: 4, year: '  2021', name: 'Hejau MK', details: 'Ecovative of sunny Palm Springs and Arizon Cliffs combines.', category: 'Resi', link: './resource/Hejau MK/IMG_1.JPG'},
+    {id: 5, year: '  2020', name: 'Hejau PJ', details: 'Reminiscent of a small oasis.', category: 'Hospo', link: ''}
   ];
+
+  function hoverImage(link, hover) {
+    if(hover){
+      document.getElementById("myImg").src = {link};
+    }
+  }

@@ -1,5 +1,5 @@
 .defaultPage-full{
-  display: flex;
+  /* display: flex; */
   overflow: hidden;
 }
 
@@ -9,7 +9,8 @@
 
 .loadingPage-full{
     /* display: flex; */
-    overflow: hidden;
+    /* overflow: hidden; */
+    width: 100%;
   }
   
   .loadingPage-image{
