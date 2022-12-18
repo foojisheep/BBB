@@ -134,6 +134,7 @@
     justify-content: center;
     float: right;
     position: relative;
+    width: 33.3vw;
     /* max-height: 50%; */
   }
 
@@ -197,7 +198,7 @@
     flex-direction: row;
     align-items: center;
     justify-content: center;
-    max-height: fit-content;
+    max-height: 60%;
   }
 
   .landingPage-image { 
@@ -251,10 +252,11 @@
   letter-spacing: -0.02em;
   color: #000000;
   text-align: left;
+  padding-left: 1%;
 }
 
 .projectDisplay {
-  overflow-x: auto;
+  overflow-x: hidden;
 }
 
 
@@ -333,4 +335,5 @@
 .navDisplay {
   overflow-x: auto;
   padding-left: 1%;
+  margin: 0.5%;
 }

@@ -9,15 +9,22 @@
 
 .loadingPage-full{
     /* display: flex; */
-    /* overflow: hidden; */
+    overflow: hidden;
     width: 100%;
+  }
+  .defaultLandingPage-full{
+     /* display: flex; */
+    overflow: hidden;
+    max-width: max-content;
+      /* overflow: hidden; */
+      background-color: #FFB8F2;
   }
   
   .loadingPage-image{
     align-items: center;
     justify-content: center;
     /* width: 300px; */
-    float: right;
+    float: center;
     /* max-width: 100%; */
     position: relative;
     /* animation-timing-function: ease; */

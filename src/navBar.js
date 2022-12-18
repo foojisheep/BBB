@@ -1,6 +1,4 @@
-import logoStart from './resource/logo-start.svg';
-import logoMiddle from './resource/logo-middle.svg';
-import logoEnd from './resource/logo-end.svg';
+import { Link } from 'react-router-dom';
 import './landingPage.css';
 import './loadingPage.css';
 import './workPage.css';
@@ -23,7 +21,7 @@ export default function NavBar() {
                 <td>   </td>
                 <td>
                   <ul class="list-group list-group-horizontal" style={{textAlign: 'right', marginTop: 0, marginBottom: 0 }}>
-                    <li class="list-group-item" style={{textAlign: 'center', display: 'inline', marginRight: '3%'}}> Works </li>
+                    <li class="list-group-item" style={{textAlign: 'center', display: 'inline', marginRight: '1%'}}><a href="./works"> Works</a></li>
                     <li class="list-group-item" style={{textAlign: 'right', display: 'inline', marginRight:'2%'}}>  Information</li>
                   </ul>
                 </td>

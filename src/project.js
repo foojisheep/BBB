@@ -1,7 +1,6 @@
 import './landingPage.css';
 import './loadingPage.css';
 import './workPage.css';
-import { useState } from 'react';
 
 export default function LandingPage() {
     const content = projects.map((projects) =>

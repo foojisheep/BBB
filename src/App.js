@@ -3,6 +3,10 @@ import landing from './resource/homepage.jpg';
 import LoadingPage from './loadingPage';
 import './App.css';
 import LandingPage from "./landingPage";
+import ProjectDetailPage from "./projectDetails";
+
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+
 
 function App() {
   const [width, setWindowWidth] = useState(0);
@@ -25,6 +29,19 @@ function App() {
 
   console.log('width is ', width);
   return (
+    // <BrowserRouter>
+    //   <Routes>
+    //     <Route path="/" element={<LandingPage />}>
+    //       <Route index element={<LandingPage />} />
+    //       <Route path="/works" element={<LandingPage />} />
+    //       {/* <Route path="information" element={<Contact />} /> */}
+    //       {/* <Route path="*" element={<NoPage />} /> */}
+    //     </Route>
+    //   </Routes>
+    // </BrowserRouter>
+
+
+
     <div>
       {/* <header className="App-header">
         <img src={landing} className="App-logo" alt="logo" />
@@ -32,6 +49,7 @@ function App() {
       <div className="App-full">
         {/* <LoadingPage /> */}
         <LandingPage />
+        {/* <ProjectDetailPage /> */}
       </div>
       {/* <img src={logoStart} alt="loading-page" /> */}
     </div>
