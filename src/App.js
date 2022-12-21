@@ -4,6 +4,7 @@ import LoadingPage from './loadingPage';
 import './App.css';
 import LandingPage from "./landingPage";
 import ProjectDetailPage from "./projectDetails";
+import InfoPage from './infoPage'
 
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 
@@ -47,8 +48,8 @@ function App() {
         <img src={landing} className="App-logo" alt="logo" />
       </header> */}
       <div className="App-full">
-        {/* <LoadingPage /> */}
         <LandingPage />
+        {/* <InfoPage /> */}
         {/* <ProjectDetailPage /> */}
       </div>
       {/* <img src={logoStart} alt="loading-page" /> */}

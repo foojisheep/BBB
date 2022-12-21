@@ -1,0 +1,63 @@
+#infoDisplay {
+    background: #661F08;
+    width: auto;
+}
+
+font{
+color: #FFC572;
+}
+
+.descriptionNavHeader{
+/* width: 302px;
+height: 32px; */
+font-family: 'FoundersGroteskText';
+font-style: normal;
+font-weight: 400;
+font-size: 12px;
+line-height: 15px;
+letter-spacing: 0.01em;
+color: #FFC572;
+display: flex;
+}
+
+#topInfoNav td {
+font-family: 'FoundersGroteskText';
+font-style: normal;
+font-weight: 400;
+font-size: 24px;
+line-height: 30px;
+letter-spacing: -0.02em;
+color: #FFC572;
+text-align: left;
+/* border: 1px solid #ddd; */
+/* padding: auto;
+padding-left: 2%;
+font-family: 'FoundersGroteskText';
+font-style: normal;
+font-weight: 400;
+font-size: 24px;
+line-height: 30px;
+letter-spacing: -0.02em;
+color: #000000;
+text-align: left; */
+}
+
+#topInfoNav {
+    font-family: 'FoundersGroteskText';
+    border-collapse: collapse;
+    width: 100%;
+  }
+  
+  #topInfoNav h1{
+    font-family: FoundersGroteskText;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 30px;
+    display: flex;
+    align-items: right;
+    letter-spacing: -0.02em;
+    align-content: right;
+    text-align: right;
+    margin: 0;
+  }

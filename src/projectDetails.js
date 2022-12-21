@@ -1,6 +1,6 @@
 import './landingPage.css';
 import './loadingPage.css';
-import './workPage.css';
+import './project.css';
 import './projectDetails.css';
 import Projects from "./project";
 import Navbar from "./navBar";

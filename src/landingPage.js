@@ -1,9 +1,9 @@
-import logoStart from './resource/logo-start.svg';
-import logoMiddle from './resource/logo-middle.svg';
-import logoEnd from './resource/logo-end.svg';
+import logoStart from './resource/logo-start-new.svg';
+import logoMiddle from './resource/logo-middle-new.svg';
+import logoEnd from './resource/logo-end-new.svg';
 import './landingPage.css';
 import './loadingPage.css';
-import './workPage.css';
+import './project.css';
 import Projects from "./project";
 import Navbar from "./navBar";
 // import { Navbar, Nav } from 'rsuite';
@@ -57,7 +57,7 @@ export default function LandingPage() {
             </tr>
           </table>
         </div> */}
-        <div key="landing" className="landingPage-full">
+        <div id='landingPage-image' key="landing" className="landingPage-full">
           {logo}
         </div>
         <Projects />/

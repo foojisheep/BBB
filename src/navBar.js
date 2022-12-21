@@ -1,7 +1,7 @@
 import { Link } from 'react-router-dom';
 import './landingPage.css';
 import './loadingPage.css';
-import './workPage.css';
+import './project.css';
 
 export default function NavBar() {    
     return(
