@@ -1,0 +1,40 @@
+#infoDisplay {
+    white-space:pre;
+    padding-left: 1%;
+    padding-right: 1%;
+}
+
+.infoFooterDisplay {
+    /* overflow-x: hidden; */
+    display: block;
+    /* padding-left: 1%; */
+    /* margin: 0.5%; */
+  }
+
+@font-face {
+    font-family: "FoundersGroteskText";
+    src: local("Founders Grotesk Text"),
+      url("./resource/font/founders-grotesk-regular.woff2") format("truetype");
+}
+
+.descriptionInfo{
+    white-space:pre;
+    /* width: 302px;
+    height: 32px; */
+    font-family: 'FoundersGroteskText';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 15px;
+    letter-spacing: 0.01em;
+    color: #FFC572;
+    /* display: flex; */
+}
+
+.textAlignCenter {
+    text-align: center;
+}
+
+.textAlignRight {
+    text-align: right;
+}

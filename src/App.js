@@ -48,8 +48,8 @@ function App() {
         <img src={landing} className="App-logo" alt="logo" />
       </header> */}
       <div className="App-full">
-        <LandingPage />
-        {/* <InfoPage /> */}
+        {/* <LandingPage /> */}
+        <InfoPage />
         {/* <ProjectDetailPage /> */}
       </div>
       {/* <img src={logoStart} alt="loading-page" /> */}

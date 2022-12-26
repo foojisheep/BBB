@@ -57,10 +57,10 @@ export default function LandingPage() {
             </tr>
           </table>
         </div> */}
-        <div id='landingPage-image' key="landing" className="landingPage-full">
+        {/* <div key="landing" className="landingPage-full">
           {logo}
-        </div>
-        <Projects />/
+        </div> */}
+        <Projects />
       </div>
       );
 }

@@ -65,7 +65,9 @@ export default function LandingPage() {
     {id: 2, year: '      ', name: 'Poppykat', details: 'Recalled a certain aesthetic from Wes Anderson\'s Movie.', category: 'Hospo', link: ''},
     {id: 3, year: '      ', name: 'Kedai Coklat', details: 'Invokes a precious memory of broken chocholate bars.', category: 'Hospo', link: ''},
     {id: 4, year: '  2021', name: 'Hejau MK', details: 'Ecovative of sunny Palm Springs and Arizon Cliffs combines.', category: 'Resi', link: './resource/Hejau MK/IMG_1.JPG'},
-    {id: 5, year: '  2020', name: 'Hejau PJ', details: 'Reminiscent of a small oasis.', category: 'Hospo', link: ''}
+    {id: 5, year: '  2020', name: 'Hejau PJ', details: 'Reminiscent of a small oasis.', category: 'Hospo', link: ''},
+    {id: 6, year: '      ', name: 'Hejau PJ', details: 'Reminiscent of a small oasis.', category: 'Hospo', link: ''},
+    {id: 7, year: '      ', name: 'Hejau PJ', details: 'Reminiscent of a small oasis.', category: 'Hospo', link: ''}
   ];
 
   function hoverImage(link, hover) {

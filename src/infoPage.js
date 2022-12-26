@@ -3,7 +3,7 @@ import logoMiddle from './resource/logo-middle.svg';
 import logoEnd from './resource/logo-end.svg';
 import './landingPage.css';
 import './loadingPage.css';
-import './project.css';
+import './infoPage.css';
 import Projects from "./project";
 import InfoNavBar from "./infoNavBar";
 // import { Navbar, Nav } from 'rsuite';
@@ -18,17 +18,19 @@ export default function InfoPage() {
     return(
       <div id="infoDisplay">
         <InfoNavBar />
-        
-        <div className="projectDisplay">
+        <div>
+            
+        </div>
+        <div className="infoFooterDisplay">
             <table id="topInfoNav">
-            <tr >
-        <td>Studio BBB @ 2022</td>
-        <td>For all project enquires, </td>
-        <td><a>email hi@studiobbb.co </a></td>
-        <td><a>whatsapp hi@studiobbb.co</a></td>
-    </tr>
-                </table>
-                </div>
+                <tr >
+                    <td>Studio BBB &copy; 2022</td>
+                    <td className='textAlignCenter'>For all project enquires, <span className='descriptionInfo'>   email</span> hi@studiobbb.co  
+                    <span className="descriptionInfo">    whatsapp</span> +60  12  360  1160</td>
+                    <td className='textAlignRight'>IG @studiobbb</td>
+                </tr>
+            </table>
+        </div>
       </div>
       );
 }

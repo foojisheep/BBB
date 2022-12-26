@@ -2,6 +2,7 @@ import { Link } from 'react-router-dom';
 import './landingPage.css';
 import './loadingPage.css';
 import './project.css';
+import './navBar.css';
 
 export default function NavBar() {    
     return(
