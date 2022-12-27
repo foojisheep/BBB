@@ -9,7 +9,7 @@ import InfoNavBar from "./infoNavBar";
 // import { Navbar, Nav } from 'rsuite';
 // import { Link, useMatch, useResolvedPath } from "react-router-dom"
 
-export default function InfoPage() {    
+ const InfoPage = () => {    
   // const logos = [logoMiddle,logoEnd,logoStart,logoMiddle,logoEnd,logoStart,logoMiddle,logoEnd,logoStart];
   const logos = [logoStart,logoMiddle,logoEnd];
     const logo = logos.map((logo,index) => (
@@ -34,3 +34,5 @@ export default function InfoPage() {
       </div>
       );
 }
+
+export default InfoPage;

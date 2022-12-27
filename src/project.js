@@ -71,7 +71,7 @@ export default function LandingPage() {
   ];
 
   function hoverImage(link, hover) {
-    if(hover){
-      document.getElementById("myImg").src = {link};
-    }
+    // if(hover){
+    //   document.getElementById("myImg").src = {link};
+    // }
   }

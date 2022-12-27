@@ -22,8 +22,8 @@ export default function NavBar() {
                 <td>   </td>
                 <td>
                   <ul class="list-group list-group-horizontal" style={{textAlign: 'right', marginTop: 0, marginBottom: 0 }}>
-                    <li class="list-group-item" style={{textAlign: 'center', display: 'inline', marginRight: '1%'}}><a href="./works"> Works</a></li>
-                    <li class="list-group-item" style={{textAlign: 'right', display: 'inline', marginRight:'2%'}}>  Information</li>
+                    <li class="list-group-item" style={{textAlign: 'center', display: 'inline', marginRight: '1%'}}><Link to="/works"> Works</Link></li>
+                    <li class="list-group-item" style={{textAlign: 'right', display: 'inline', marginRight:'2%'}}>  <Link to="/information">Information</Link></li>
                   </ul>
                 </td>
                 
