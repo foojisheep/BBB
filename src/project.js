@@ -20,41 +20,6 @@ export default function LandingPage() {
           <div className="projectDisplay">
             <table id="customers">
                 {content}
-              {/* <tr key='0'>
-                <td>  </td>
-                <td>2022</td>
-                <td>Bolt & Witchwood</td>
-                <td>Not your average neighourhood cafe.</td>
-                <td>Hospo</td>
-              </tr>
-              <tr key='1'>
-                <td>  </td>
-                <td>    </td>
-                <td>Poppykat</td>
-                <td>Recalled a certain aesthetic from Wes Anderson's Movie.</td>
-                <td>Hospo</td>
-              </tr>
-              <tr key='2'>
-                <td>  </td>
-                <td>    </td>
-                <td>Kedai Coklat</td>
-                <td>Invokes a precious memory of broken chocholate bars.</td>
-                <td>Hospo</td>
-              </tr>
-              <tr key='3'>
-                <td>  </td>
-                <td>2021</td>
-                <td>Hejau MK</td>
-                <td>Ecovative of sunny Palm Springs and Arizon Cliffs combines.</td>
-                <td>Resi</td>
-              </tr>
-              <tr key='4'>
-                <td>  </td>
-                <td>2020</td>
-                <td>Hejau PJ</td>
-                <td>Reminiscent of a small oasis.</td>
-                <td>Hospo</td>
-              </tr> */}
             </table>
           </div>
         );

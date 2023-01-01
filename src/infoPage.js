@@ -21,13 +21,13 @@ const InfoPage = () => {
         <div>
             
         </div>
-        <div className="infoFooterDisplay">ß
+        <div className="infoFooterDisplay">
             <table id="topInfoNav">
                 <tr >
                     <td>Studio BBB &copy; 2022</td>
-                    <td className='textAlignCenter'>For all project enquires, <span className='descriptionInfo'>   email</span> hi@studiobbb.co  
-                    <span className="descriptionInfo">    whatsapp</span> +60  12  360  1160</td>
-                    <td className='textAlignRight'>IG @studiobbb</td>
+                    <td className='textAlignCenter'>For all project enquires, <span className='descriptionInfo'>   email</span> <a href="mailto:hi@studiobbb.co">hi@studiobbb.co</a>  
+                    <span className="descriptionInfo">    whatsapp</span> <a href="https://wa.me/+60123601160">+60  12  360  1160</a></td>
+                    <td className='textAlignRight'><a href="https://www.instagram.com/studiobbb">IG @studiobbb</a></td>
                 </tr>
             </table>
         </div>

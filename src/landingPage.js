@@ -16,7 +16,7 @@ export default function LandingPage() {
       <img key={index} className="landingPage-image" src={logo} alt={logo.toString()} />
     ));
     return(
-      <div>
+      <>
         <Navbar />
         {/* <div className='topnav row'>
           <div className='nav col-2'> 
@@ -57,10 +57,10 @@ export default function LandingPage() {
             </tr>
           </table>
         </div> */}
-        {/* <div key="landing" className="landingPage-full">
+        <div key="landing" className="landingPage-full">
           {logo}
-        </div> */}
+        </div>
         <Projects />
-      </div>
+      </>
       );
 }

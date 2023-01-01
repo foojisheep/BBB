@@ -11,7 +11,7 @@ export default function InfoNavBar() {
             <tr>
             {/* <td>  </td> */}
             <td className="logoHeader " style={{ textAlign: 'right'}}>
-                <h1 style={{ marginTop: 0, marginbottom: 0 }}>Studio BBB</h1>
+                <h1 style={{ marginTop: 0, marginbottom: 0 }}><Link to="/">Studio BBB</Link></h1>
             </td>
             <td style={{ padding: 0 }}>
                 <ul style={{ marginTop: 0, marginBottom: 0 }}>
@@ -22,8 +22,8 @@ export default function InfoNavBar() {
             <td>   </td>
             <td>
                 <ul class="list-group list-group-horizontal" style={{textAlign: 'right', marginTop: 0, marginBottom: 0 }}>
-                <li class="list-group-item" style={{textAlign: 'center', display: 'inline', marginRight: '1%'}}> Works</li>
-                <li class="list-group-item" style={{textAlign: 'right', display: 'inline'}}>  Information</li>
+                <li class="list-group-item" style={{textAlign: 'center', display: 'inline', marginRight: '2%'}}><Link to="/works"> Works</Link></li>
+                <li class="list-group-item" style={{textAlign: 'right', display: 'inline', marginLeft: '2%'}}><Link to="/information">Information</Link></li>
                 </ul>
             </td>
             </tr>
