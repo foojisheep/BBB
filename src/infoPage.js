@@ -9,7 +9,7 @@ import InfoNavBar from "./infoNavBar";
 // import { Navbar, Nav } from 'rsuite';
 // import { Link, useMatch, useResolvedPath } from "react-router-dom"
 
- const InfoPage = () => {    
+const InfoPage = () => {    
   // const logos = [logoMiddle,logoEnd,logoStart,logoMiddle,logoEnd,logoStart,logoMiddle,logoEnd,logoStart];
   const logos = [logoStart,logoMiddle,logoEnd];
     const logo = logos.map((logo,index) => (
@@ -21,7 +21,7 @@ import InfoNavBar from "./infoNavBar";
         <div>
             
         </div>
-        <div className="infoFooterDisplay">
+        <div className="infoFooterDisplay">ß
             <table id="topInfoNav">
                 <tr >
                     <td>Studio BBB &copy; 2022</td>

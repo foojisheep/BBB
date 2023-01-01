@@ -14,7 +14,7 @@ export default function LoadingPage() {
       <img key={index} className="loadingPage-image" src={logo} alt={logo.toString()} />
     ));
     return(
-      <div className='defaultLandingPage-full'>
+      <div className='defaultLandingPagese-full'>
         {/* <div className='header-full'>
           <div className='col-2 logo-style'>
             <h1>Studio BBB</h1>

@@ -5,10 +5,9 @@ import LoadingPage from './loadingPage';
 import './App.css';
 import LandingPage from "./landingPage";
 import ProjectDetailPage from "./projectDetails";
-import InfoPage from './infoPage'
-
+import InfoPage from "./infoPage";
 import { BrowserRouter, Routes, Route, withRouter } from "react-router-dom";
-
+import NavBar from "./navBar";
 
 export default function App() {
   const [width, setWindowWidth] = useState(0);
@@ -33,28 +32,11 @@ export default function App() {
   return (
     <BrowserRouter>
       <Routes>
-         <Route path="/" element={<LandingPage />}>
-          {/* <Route index element={<LandingPage />} /> */}
-           <Route path="/works" exact element={<LandingPage />} />
-           {/* <Route path="information" element={<Contact />} /> */}
-           <Route path="/information" element={<InfoPage />} />
-         </Route>
+         <Route path="/" element={<LoadingPage/>}/>
+        <Route path="works" element={<LandingPage/>} />
+        <Route path="information" element={<InfoPage/>} />
       </Routes>
     </BrowserRouter>
-
-
-
-    // <div>
-      //  <header className="App-header">
-      //   <img src={landing} className="App-logo" alt="logo" />
-      // </header> 
-    //   {/* <div className="App-full"> */}
-    //     {/* <LandingPage /> */}
-    //     {/* <InfoPage /> */}
-    //     {/* <ProjectDetailPage /> */}
-    //   {/* </div> */}
-    //   {/* <img src={logoStart} alt="loading-page" /> */}
-    // {/* </div> */}
   );
 }
 
