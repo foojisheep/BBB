@@ -136,7 +136,7 @@
       max-width: max-content;
       /* overflow: hidden; */
       background-color: #FFB8F2;
-      position: fixed;
+      /* position: fixed; */
     }
 
   .landingPage-image{
@@ -166,7 +166,7 @@
     align-items: center;
     justify-content: center;
     max-width: fit-content;
-    position: fixed;
+    /* position: fixed; */
   }
 
   .landingPage-image { 
@@ -188,7 +188,7 @@
     align-items: center;
     justify-content: center;
     max-width: fit-content; 
-    position: fixed;
+    /* position: fixed; */
   }
 
   .landingPage-image { 
@@ -212,7 +212,7 @@
     align-items: center;
     justify-content: center;
     max-height: 70%;
-    position: fixed;
+    /* position: fixed; */
   }
 
   .landingPage-image {

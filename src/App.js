@@ -34,6 +34,7 @@ export default function App() {
       <Routes>
          <Route path="/" element={<LoadingPage/>}/>
         <Route path="works" element={<LandingPage/>} />
+        <Route path="project" element={<ProjectDetailPage/>} />
         <Route path="information" element={<InfoPage/>} />
       </Routes>
     </BrowserRouter>
