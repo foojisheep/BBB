@@ -17,7 +17,7 @@ export default function ProjectDetailPage(object) {
       <img key={index} className="project-image" src={image} alt={index.toString()}/>
     ));
   return(
-    <div>
+    <>
       <Navbar />
       <div key='details' className="projectContent-full">
         {image}
@@ -58,6 +58,6 @@ export default function ProjectDetailPage(object) {
             </tr>
           </table>
       </div>
-    </div>
+    </>
   );
 }
