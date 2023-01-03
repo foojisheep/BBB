@@ -1,7 +1,5 @@
 #infoDisplay {
-  /* background-color: #661F08; */
     background: #661F08;
-    /* white-space:pre; */
     padding-left: 1%;
     padding-right: 1%;
     overflow-x: hidden;
@@ -10,14 +8,14 @@
 
 .infoFooterDisplay {
   white-space:pre;
-    background: #661F08;
-    position: fixed;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    padding-left: 1%;
-    padding-right: 1%;
-  }
+  background: #661F08;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding-left: 1%;
+  padding-right: 1%;
+}
 
 @font-face {
     font-family: "FoundersGroteskText";
@@ -27,8 +25,6 @@
 
 .descriptionInfo{
     white-space: none;
-    /* width: 302px;
-    height: 32px; */
     font-family: 'FoundersGroteskText';
     font-style: normal;
     font-weight: 400;
@@ -36,7 +32,6 @@
     line-height: 15px;
     letter-spacing: 0.01em;
     color: #FFC572;
-    /* display: flex; */
 }
 
 .textAlignCenter {
@@ -69,8 +64,6 @@ a:link {
 
   #infoContent {
     white-space:pre-wrap;
-    /* width: 302px;
-    height: 32px; */
     font-family: 'FoundersGroteskText';
     font-style: normal;
     font-weight: 400;
@@ -78,8 +71,6 @@ a:link {
     line-height: 30px;
     letter-spacing: -0.02em;
     color: #FFC572;
-    /* white-space: none; */
-    /* display: flex; */
     text-align: left;
     padding-right: 62%;
   }

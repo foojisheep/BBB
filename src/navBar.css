@@ -59,9 +59,10 @@
   }
   
   .navDisplay {
-    overflow-x: auto;
+    overflow-x: hidden;
     padding-left: 1%;
     margin: 0.5%;
+    overflow-y: hidden;
     /* position: fixed; */
   }
   

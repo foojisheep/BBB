@@ -12,9 +12,13 @@ export default function InfoNavBar() {
             {/* <td>  </td> */}
             <td className="logoHeader " style={{ textAlign: 'right'}}>
                 <h1 style={{ marginTop: 0, marginbottom: 0 }}><Link to="/">Studio BBB</Link></h1>
+                {/* <ul style={{ marginTop: 0, marginBottom: 0 , padding: 0}}>
+                <li className='descriptionNavHeader'>is an interior design studio believes every space</li>
+                <li className='descriptionNavHeader'>created is an expression of oneself.</li>
+                </ul> */}
             </td>
             <td style={{ padding: 0 }}>
-                <ul style={{ marginTop: 0, marginBottom: 0 }}>
+                <ul style={{ marginTop: 0, marginBottom: 0 , padding: 0}}>
                 <li className='descriptionNavHeader'>is an interior design studio believes every space</li>
                 <li className='descriptionNavHeader'>created is an expression of oneself.</li>
                 </ul>

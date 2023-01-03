@@ -17,7 +17,7 @@
   }
 
   .nav h1 {
-    font-family: FoundersGroteskText;
+    font-family: 'FoundersGroteskText';
     font-style: normal;
     font-weight: 400;
     font-size: 24px;
@@ -62,16 +62,6 @@
     display: flex;
   }
 
-  /* .top-desc{
-    margin-top: 0px;
-    margin-bottom: 0px;
-  }
-
-  .bottom-desc{
-    margin-top: 0px;
-    margin-bottom: 0px;
-  } */
-
   .row-rev {
     flex-direction: row-reverse;
   }
@@ -106,25 +96,6 @@
     top:0;
     right:0;
    }
-  /* .topnav-right ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    overflow: hidden;
-    background-color: #333333;
-  }
-  
-  .topnav-right li {
-    float: left;
-  }
-
-  .topnav-right li a {
-    display: block;
-    color: white;
-    text-align: center;
-    padding: 16px;
-    text-decoration: none;
-  } */
   
   .nav{
     padding-left: 2%;
@@ -132,6 +103,8 @@
   }
   
   .landingPage-full{
+    overflow-x: hidden;
+    overflow-y: hidden;
       /* display: flex; */
       max-width: max-content;
       /* overflow: hidden; */
@@ -160,6 +133,8 @@
 @media only screen and (max-width: 768px) {
   .landingPage-full { 
     display: flex;
+    overflow-x: hidden;
+    overflow-y: hidden;
     /* overflow: hidden; */
     background-color: #FFB8F2;
     flex-direction: row;
@@ -182,6 +157,8 @@
 @media only screen and (min-width: 768px) {
   .landingPage-full { 
     display: flex;
+    overflow-x: hidden;
+    overflow-y: hidden;
     /* overflow: hidden; */
     background-color: #FFB8F2;
     flex-direction: row;
