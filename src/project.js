@@ -34,13 +34,7 @@ export default function LandingPage() {
     {id: 6, year: '      ', name: 'Hejau PJ', details: 'Reminiscent of a small oasis.', category: 'Hospo', link: ''},
     {id: 7, year: '      ', name: 'Hejau PJ', details: 'Reminiscent of a small oasis.', category: 'Hospo', link: ''},
     {id: 8, year: '      ', name: 'Hejau PJ', details: 'Reminiscent of a small oasis.', category: 'Hospo', link: ''},
-    {id: 9, year: '      ', name: 'Hejau PJ', details: 'Reminiscent of a small oasis.', category: 'Hospo', link: ''},
-    {id: 10, year: '      ', name: 'Hejau PJ', details: 'Reminiscent of a small oasis.', category: 'Hospo', link: ''},
-    {id: 11, year: '      ', name: 'Hejau PJ', details: 'Reminiscent of a small oasis.', category: 'Hospo', link: ''},
-    {id: 12, year: '      ', name: 'Hejau PJ', details: 'Reminiscent of a small oasis.', category: 'Hospo', link: ''},
-    {id: 13, year: '      ', name: 'Hejau PJ', details: 'Reminiscent of a small oasis.', category: 'Hospo', link: ''},
-    {id: 14, year: '      ', name: 'Hejau PJ', details: 'Reminiscent of a small oasis.', category: 'Hospo', link: ''},
-    {id: 15, year: '      ', name: 'Hejau PJ', details: 'Reminiscent of a small oasis.', category: 'Hospo', link: ''}
+    {id: 9, year: '      ', name: 'Hejau PJ', details: 'Reminiscent of a small oasis.', category: 'Hospo', link: ''}
   ];
 
   function hoverImage(link, hover) {

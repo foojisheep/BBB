@@ -1,6 +1,7 @@
 import logoStart from './resource/logo-start-new.svg';
 import logoMiddle from './resource/logo-middle-new.svg';
 import logoEnd from './resource/logo-end-new.svg';
+import logoBig from  './resource/logo.svg';
 import './landingPage.css';
 import './loadingPage.css';
 import './project.css';
@@ -58,7 +59,8 @@ export default function LandingPage() {
           </table>
         </div> */}
         <div key="landing" className="landingPage-full">
-          {logo}
+        <img key='logo' className="landingPage-image" src={logoBig} alt={logoBig.toString()} />
+          {/* {logo} */}
         </div>
         <Projects />
       </>
