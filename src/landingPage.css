@@ -132,7 +132,7 @@
 /* Small devices (portrait tablets and large phones, 600px and up) */
 @media only screen and (max-width: 768px) {
   .landingPage-full { 
-    display: flex;
+    /* display: flex; */
     overflow-x: hidden;
     overflow-y: hidden;
     /* overflow: hidden; */
@@ -149,14 +149,14 @@
     align-items: centers;
     justify-content: center;
     /* float: right; */
-    max-width: 17%;
+    width: inherit;
   }
 }
 
 /* Medium devices (landscape tablets, 768px and up) */
 @media only screen and (min-width: 768px) {
   .landingPage-full { 
-    display: flex;
+    /* display: flex; */
     overflow-x: hidden;
     overflow-y: hidden;
     /* overflow: hidden; */
@@ -176,6 +176,7 @@
     justify-content: center;
     float: right;
     height: 100%;
+    width: inherit;
     /* position: fixed; */
   }
 } 
@@ -183,7 +184,7 @@
 /* Large devices (laptops/desktops, 992px and up) */
 @media only screen and (min-width: 992px) {
   .landingPage-full { 
-    display: flex;
+    /* display: flex; */
     /* overflow: hidden; */
     background-color: #FFB8F2;
     /* flex-direction: row; */
@@ -200,6 +201,7 @@
     justify-content: center;
     /* float: right; */
     height: 100%;
+    width: inherit;
     /* width: 1000px; */
     /* position: fixed; */
   }
