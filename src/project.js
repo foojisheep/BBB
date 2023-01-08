@@ -14,7 +14,7 @@ export default function LandingPage() {
         <td>{projects.year}</td>
         <td>{projects.name}</td>
         <td>{projects.details}</td>
-        <td>{projects.category}</td>
+        <td style={{ textAlign:'right'}}>{projects.category}</td>
     </tr>
     );
       return(
@@ -27,13 +27,12 @@ export default function LandingPage() {
   }
 
   const projects = [
-    {id: 1, year: '  2022', name: 'Bolt & Witchwood', details: 'Not your average neighourhood cafe.', category: 'Hospo', link: HejauMK2},
-    {id: 2, year: '      ', name: 'Poppykat', details: 'Recalled a certain aesthetic from Wes Anderson\'s Movie.', category: 'Hospo', link: ''},
-    {id: 3, year: '      ', name: 'Kedai Coklat', details: 'Invokes a precious memory of broken chocholate bars.', category: 'Hospo', link: HejauMK4},
-    {id: 4, year: '  2021', name: 'Hejau MK', details: 'Ecovative of sunny Palm Springs and Arizon Cliffs combines.', category: 'Resi', link: HejauMK},
-    {id: 5, year: '  2020', name: 'Hejau PJ', details: 'Reminiscent of a small oasis.', category: 'Hospo', link: ''}
+    {id: 1, year: '  2023', name: 'Wangsa9 Penthouse', details: 'Emotional connection across 5,313km.', category: 'Residential', link: ''},
+    {id: 2, year: '      ', name: 'KLC', details: 'Lunar Eclipse.', category: 'Commercial', link: ''},
+    {id: 3, year: '  2022', name: 'Hejau', details: 'A foundation of environmental psychology.', category: 'Commercial', link: ''},
+    {id: 4, year: '      ', name: 'Melody Kindyland', details: 'A place just like a home and a communal place for children.', category: 'Commercial', link: ''},
+    {id: 5, year: '  2021', name: 'Poppykat', details: 'Recalled a certain aesthetic from Wes Anderson\'s Movie.', category: 'Commercial', link: ''},
   ];
-
 
   function changeURL(projects, hover) {
     if(!hover){
