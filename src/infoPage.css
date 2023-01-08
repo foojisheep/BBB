@@ -15,6 +15,7 @@
   right: 0;
   padding-left: 1%;
   padding-right: 1%;
+  margin-bottom: 0.2%;
 }
 
 @font-face {
@@ -32,6 +33,10 @@
     line-height: 15px;
     letter-spacing: 0.01em;
     color: #FFC572;
+}
+
+.textAlignLeft {
+  text-align: left;
 }
 
 .textAlignCenter {
@@ -63,14 +68,54 @@ a:link {
   }
 
   #infoContent {
-    white-space:pre-wrap;
-    font-family: 'FoundersGroteskText';
-    font-style: normal;
-    font-weight: 400;
-    font-size: 24px;
-    line-height: 30px;
-    letter-spacing: -0.02em;
-    color: #FFC572;
-    text-align: left;
-    padding-right: 62%;
-  }
+  white-space:pre-wrap;
+  font-family: 'FoundersGroteskText';
+  font-style: normal; 
+  font-weight: 400;
+  font-size: 40px;
+  line-height: 106%;
+  letter-spacing: -0.02em;
+  color: #FFC572;
+  text-align: left;
+  padding-right: 62%;
+}
+
+#contextAlign li {
+  font-family: 'FoundersGroteskText';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 21px;
+  letter-spacing: -0.02em;
+  color: #FFC067;
+}
+
+#contextAlign ul {
+  font-family: 'FoundersGroteskText';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 21px;
+  letter-spacing: -0.01em;
+  color: #FFC572;
+}
+
+#contextAlign {
+  font-family: 'FoundersGroteskText';
+  border-collapse: collapse;
+  width: 100%;
+}
+
+#contextAlign h1{
+  font-family: FoundersGroteskText;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 21px;
+  display: flex;
+  align-items: right;
+  letter-spacing: -0.02em;
+  align-content: right;
+  text-align: right;
+  margin: 0;
+}

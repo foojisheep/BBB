@@ -20,27 +20,43 @@ const InfoPage = () => {
         <InfoNavBar />
         <div>
           <ul style={{ textAlign: 'left',paddingTop:'3%', width: '100%', whiteSpace: 'none'}}>
-              <li id="infoContent">The studio’s vision is informed by staging and 
-                  storytelling. In addition to our interior design services,
-                  together with our in-house registered architect, we 
-                  also offer new builds and architectural renovations.</li>
-              <li id="infoContent">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Our immersive approach to sculpting spaces for 
-                  private residences plus the hospitality and commercial 
-                  sectors is realised through the creation of abundant 
-                  elements - from joinery to individual furnishing pieces -
-                  to craft truly inimitable solutions that cohesively
-                  connect all interior aspects. Daring palettes, organic
-                  shapes and unexpected textural pairings elicit 
-                  experiential outcomes with lasting impact.</li>
+              <li id="infoContent">BBB is an interior design studio based in Kuala Lumpur. 
+              We create non-linear narratives associated with a sense of place - 
+              echoing emotions formed through a connection with the craft of building.</li>
           </ul>
+        </div>
+        <div className='context'>
+          <table id="contextAlign">
+            <tr>
+            <td style={{width: '20%', verticalAlign:'top'}}>
+              <ul className='textAlignLeft'>CONTACT
+                <li id="context">For all project enquires,</li>
+                <li id="context"><a href="mailto:hi@studiobbb.co">hi@studiobbb.co</a></li>
+              </ul>
+              {/* <td className='textAlignLeft'>For all project enquires, </td>
+              <td><span className='descriptionInfo'>   email</span> <a href="mailto:hi@studiobbb.co">hi@studiobbb.co</a></td>
+              <td className='textAlignRight'><a href="https://www.instagram.com/studiobbb">IG @studiobbb</a></td> */}
+              </td>
+              <td>
+                <ul className='textAlignLeft'>OFFICE HOURS
+                  <li id="context">Monday to Friday</li>
+                  <li id="context">10:00 - 18:00</li>
+                </ul>
+                <ul></ul>
+              </td>
+            </tr>
+            <ul className='textAlignLeft'>Instagram
+                <li id="context"><a href="https://www.instagram.com/studiobbb">@studiobbb</a></li>
+              </ul>
+          </table>
         </div>
         <div className="infoFooterDisplay">
             <table id="topInfoNav">
                 <tr >
                     <td>Studio BBB &copy; 2022</td>
-                    <td className='textAlignCenter'>For all project enquires, <span className='descriptionInfo'>   email</span> <a href="mailto:hi@studiobbb.co">hi@studiobbb.co</a>  
+                    {/* <td className='textAlignCenter'>For all project enquires, <span className='descriptionInfo'>   email</span> <a href="mailto:hi@studiobbb.co">hi@studiobbb.co</a>  
                     <span className="descriptionInfo">    whatsapp</span> <a href="https://wa.me/+60123601160">+60  12  360  1160</a></td>
-                    <td className='textAlignRight'><a href="https://www.instagram.com/studiobbb">IG @studiobbb</a></td>
+                    <td className='textAlignRight'><a href="https://www.instagram.com/studiobbb">IG @studiobbb</a></td> */}
                 </tr>
             </table>
         </div>

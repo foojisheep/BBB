@@ -130,7 +130,7 @@
   /* max-height: 50%; */
   /* width:33.33%; */
   width: inherit;
-  height: 10%;
+  height: 30vh;
 }
 
   /* Extra small devices (phones, 600px and down) */
@@ -169,7 +169,7 @@
     align-items: centers;
     justify-content: center;
     /* float: right; */
-    height: 10%;
+    width: inherit;
   }
 }
 
@@ -206,7 +206,7 @@
      align-items: left;
     justify-content: center;
     float: right;
-    height: 10%;
+    height: 100%;
     width: inherit;
     /* position: fixed; */
   }
@@ -242,7 +242,7 @@
     align-items: left;
     justify-content: center;
     /* float: right; */
-    height: 10%;
+    height: 100%;
     width: inherit;
     /* width: 1000px; */
     /* position: fixed; */
