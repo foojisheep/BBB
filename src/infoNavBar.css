@@ -34,7 +34,7 @@ font-style: normal;
 font-weight: 400;
 font-size: 24px;
 line-height: 30px;
-letter-spacing: -0.02em;
+letter-spacing: 0.02em;
 color: #FFC572;
 /* text-align: left; */
 /* border: 1px solid #ddd; */
@@ -64,7 +64,7 @@ text-align: left; */
     line-height: 30px;
     display: flex;
     align-items: right;
-    letter-spacing: -0.02em;
+    letter-spacing: 0.02em;
     align-content: right;
     text-align: right;
     margin: 0;

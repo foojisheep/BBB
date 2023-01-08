@@ -25,7 +25,7 @@ const InfoPage = () => {
               echoing emotions formed through a connection with the craft of building.</li>
           </ul>
         </div>
-        <div className='context'>
+        <div className='context' style={{ marginTop: '3%' }}>
           <table id="contextAlign">
             <tr>
             <td style={{width: '20%', verticalAlign:'top'}}>
@@ -33,19 +33,16 @@ const InfoPage = () => {
                 <li id="context">For all project enquires,</li>
                 <li id="context"><a href="mailto:hi@studiobbb.co">hi@studiobbb.co</a></li>
               </ul>
-              {/* <td className='textAlignLeft'>For all project enquires, </td>
-              <td><span className='descriptionInfo'>   email</span> <a href="mailto:hi@studiobbb.co">hi@studiobbb.co</a></td>
-              <td className='textAlignRight'><a href="https://www.instagram.com/studiobbb">IG @studiobbb</a></td> */}
-              </td>
-              <td>
-                <ul className='textAlignLeft'>OFFICE HOURS
-                  <li id="context">Monday to Friday</li>
-                  <li id="context">10:00 - 18:00</li>
-                </ul>
-                <ul></ul>
-              </td>
+            </td>
+            <td>
+              <ul className='textAlignLeft'>OFFICE HOURS
+                <li id="context">Monday to Friday</li>
+                <li id="context">10:00 - 18:00</li>
+              </ul>
+              <ul></ul>
+            </td>
             </tr>
-            <ul className='textAlignLeft'>Instagram
+            <ul className='textAlignLeft' style={{ fontSize: '18px' }}>INSTAGRAM
                 <li id="context"><a href="https://www.instagram.com/studiobbb">@studiobbb</a></li>
               </ul>
           </table>
