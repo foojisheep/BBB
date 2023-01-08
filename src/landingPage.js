@@ -19,47 +19,8 @@ export default function LandingPage() {
     return(
       <>
         <Navbar />
-        {/* <div className='topnav row'>
-          <div className='nav col-2'> 
-            <h1>Studio BBB</h1>
-           </div>
-           <div className='descp col-8'> 
-           <ul>
-            <li className='row descrip'>is an interior design studio believes every space</li>
-            <li className='row descrip'>created is an expression of oneself.</li>
-          </ul> */}
-
-          {/* Previous way of displaying desciption - but have issue with putting center for entire description }
-              {/* <p className='row descrip top-desc'>is an interior design studio believes every space</p>
-              <p className='row descrip bottom-desc'>created is an expression of oneself.</p> */}
-
-          {/* </div>
-          <div className='topnav-right col-1'> */}
-            {/* <ul>
-              <li><a href="#">Work</a></li>
-              <li><a href="#">Information</a></li>
-            </ul> */}
-              {/* <a>Work</a>
-            </div>
-            <div className='topnav-right col-1'>
-              <a>Information</a>
-            </div>
-        </div> */}
-        {/* <div className="projectDisplay">
-          <table id="nav">
-            <tr>
-              <td><h1>Studio BBB</h1></td>
-              <td><ul>
-            <li className='row descrip'>is an interior design studio believes every space</li>
-            <li className='row descrip'>created is an expression of oneself.</li>
-          </ul></td>
-              <td>Not your average neighourhood cafe.</td>
-              <td>Hospo</td>
-            </tr>
-          </table>
-        </div> */}
         <div key="landing" className="landingPage-full">
-        <img key='logo' className="landingPage-image" src={logoBig} alt={logoBig.toString()} />
+        <img id="hoverImage" key='logo' className="landingPage-image" src={logoBig} alt={logoBig.toString()} />
           {/* {logo} */}
         </div>
         <Projects />
