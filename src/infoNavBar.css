@@ -4,10 +4,12 @@
 }
 
 .infoNavDisplay {
+  background: #661F08;
     overflow-x: auto;
-    /* background: #661F08; */
-    /* margin: 0.5%; */
-    /* position: fixed; */
+    padding-left: 1%;
+    /* padding-right: 1%; */
+    margin: 0.5%;
+    overflow-y: hidden;
   }
   
 

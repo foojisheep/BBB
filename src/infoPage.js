@@ -19,13 +19,13 @@ const InfoPage = () => {
       <div id="infoDisplay">
         <InfoNavBar />
         <div>
-          <ul style={{ textAlign: 'left',paddingTop:'3%', width: '100%', whiteSpace: 'none'}}>
+          <ul style={{ textAlign: 'left',paddingTop:'3%', width: '100%', whiteSpace: 'none', paddingLeft: '1%'}}>
               <li id="infoContent">BBB is an interior design studio based in Kuala Lumpur. 
               We create non-linear narratives associated with a sense of place - 
               echoing emotions formed through a connection with the craft of building.</li>
           </ul>
         </div>
-        <div className='context' style={{ marginTop: '3%' }}>
+        <div className='context' style={{ marginTop: '3%', paddingLeft: '1%' }}>
           <table id="contextAlign">
             <tr>
             <td style={{width: '20%', verticalAlign:'top'}}>
@@ -43,7 +43,7 @@ const InfoPage = () => {
             </td>
             </tr>
             <ul className='textAlignLeft' style={{ fontSize: '18px' }}>INSTAGRAM
-                <li id="context"><a href="https://www.instagram.com/studiobbb">@studiobbb</a></li>
+                <li id="context"><a href="https://www.instagram.com/studiobbb.co">@studiobbb</a></li>
               </ul>
           </table>
         </div>

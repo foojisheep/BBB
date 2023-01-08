@@ -1,7 +1,7 @@
 #infoDisplay {
     background: #661F08;
-    padding-left: 1%;
-    padding-right: 1%;
+    /* padding-left: 1%;
+    padding-right: 1%; */
     overflow-x: hidden;
     height: 100vh;
 }
