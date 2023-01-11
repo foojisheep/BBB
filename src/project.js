@@ -6,25 +6,31 @@ import HejauMK2 from './resource/Hejau MK/IMG_2.JPG';
 import HejauMK3 from './resource/Hejau MK/IMG_3.JPG';
 import HejauMK4 from './resource/Hejau MK/IMG_4.JPG';
 import logoBig from  './resource/logo.svg';
+import { useNavigate } from 'react-router-dom';
 
 export default function LandingPage() {
+  let navigate = useNavigate(); 
+  const routeChange = (projectId) =>{ 
+    let path = `/project/${projectId}`; 
+    navigate(path);
+  }
   console.log(projects[1].category);
     const content = projects.map((projects) =>
-      <tr key={projects.id} onMouseEnter={() => changeURL(projects, true)} onMouseLeave={() => changeURL(projects, false)} onClick={()=> changePage(projects.id)}>
+      <tr key={projects.id} onMouseEnter={() => changeURL(projects, true)} onMouseLeave={() => changeURL(projects, false)} onClick={()=> routeChange(projects.id)}>
         <td>  </td>
         <td>{projects.year}</td>
         <td>{projects.name}</td>
         <td>{projects.details}</td>
         <td style={{ textAlign:'right'}}>{projects.category}</td>
-    </tr>
+      </tr>
     );
-      return(
-          <div className="projectDisplay">
-            <table id="customers">
-                {content}
-            </table>
-          </div>
-        );
+    return(
+      <div className="projectDisplay">
+        <table id="customers">
+            {content}
+        </table>
+      </div>
+    );
   }
 
   const projects = [
@@ -36,19 +42,12 @@ export default function LandingPage() {
   ];
 
   function changeURL(projects, hover) {
-    if(!hover){
-      console.log('hover out');
-      document.getElementById('hoverImage').src = logoBig;
-    }
-    if(hover && projects.link.length !== 0){
-      console.log(projects.link);
-      document.getElementById('hoverImage').src = projects.link;
-    }
-  }
-
-  function changePage(projectsId) {
-    if(true){
-      console.log('hover out');
-      document.getElementById('hoverImage').src = logoBig;
-    }
+    // if(!hover){
+    //   console.log('hover out');
+    //   document.getElementById('hoverImage').src = logoBig;
+    // }
+    // if(hover && projects.link.length !== 0){
+    //   console.log(projects.link);
+    //   document.getElementById('hoverImage').src = projects.link;
+    // }
   }

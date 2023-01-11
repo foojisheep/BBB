@@ -8,7 +8,7 @@ function Header(){
 }
 
 export default function LoadingPage() {    
-  const logos = [logoMiddle,logoEnd,logoStart,logoMiddle,logoEnd,logoStart,logoMiddle,logoEnd,logoStart];
+  const logos = [logoMiddle,logoEnd,logoStart,logoMiddle,logoEnd,logoStart,logoMiddle,logoEnd];
   // const logos = [logoStart,logoStart,logoStart];
     const logo = logos.map((logo,index) => (
       <img key={index} className="loadingPage-image" src={logo} alt={logo.toString()} />
@@ -20,7 +20,7 @@ export default function LoadingPage() {
             <h1>Studio BBB</h1>
           </div>
         </div> */}
-        <div className="loadingPage-full">
+        <div className="loadingPage-full vertical-center">
           {logo}
         </div>
       </div>

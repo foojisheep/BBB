@@ -8,9 +8,6 @@ import './project.css';
 import Projects from "./project";
 import Navbar from "./navBar";
 import React, { useState } from "react";
-// import { Link, useMatch, useResolvedPath } from "react-router-dom"
-
-// const [project, setProject] = useState([]);
 
 export default function LandingPage() {  
   // const logos = [logoMiddle,logoEnd,logoStart,logoMiddle,logoEnd,logoStart,logoMiddle,logoEnd,logoStart];
