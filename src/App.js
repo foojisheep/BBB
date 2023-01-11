@@ -1,6 +1,5 @@
 import ReactDOM from "react-dom/client";
 import React, { useState, useEffect } from "react";
-import landing from './resource/homepage.jpg';
 import LoadingPage from './loadingPage';
 import './App.css';
 import LandingPage from "./landingPage";
@@ -34,7 +33,7 @@ export default function App() {
       <Routes>
          <Route path="/" element={<LoadingPage/>}/>
         <Route path="works" element={<LandingPage/>} />
-        <Route path="project" element={<ProjectDetailPage/>} />
+        <Route path="project/:id" element={<ProjectDetailPage/>} />
         <Route path="information" element={<InfoPage/>} />
       </Routes>
     </BrowserRouter>

@@ -8,8 +8,9 @@ import HejauMK4 from './resource/Hejau MK/IMG_4.JPG';
 import logoBig from  './resource/logo.svg';
 
 export default function LandingPage() {
+  console.log(projects[1].category);
     const content = projects.map((projects) =>
-      <tr key={projects.id} onMouseEnter={() => changeURL(projects, true)} onMouseLeave={() => changeURL(projects, false)}>
+      <tr key={projects.id} onMouseEnter={() => changeURL(projects, true)} onMouseLeave={() => changeURL(projects, false)} onClick={()=> changePage(projects.id)}>
         <td>  </td>
         <td>{projects.year}</td>
         <td>{projects.name}</td>
@@ -45,8 +46,9 @@ export default function LandingPage() {
     }
   }
 
-  //function hoverImage(link, hover) {
-    // if(hover){  hover && ! empty(projects.link)
-    //   document.getElementById("myImg").src = {link};
-    // }
-  //}
+  function changePage(projectsId) {
+    if(true){
+      console.log('hover out');
+      document.getElementById('hoverImage').src = logoBig;
+    }
+  }

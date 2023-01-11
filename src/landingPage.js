@@ -7,10 +7,12 @@ import './loadingPage.css';
 import './project.css';
 import Projects from "./project";
 import Navbar from "./navBar";
-// import { Navbar, Nav } from 'rsuite';
+import React, { useState } from "react";
 // import { Link, useMatch, useResolvedPath } from "react-router-dom"
 
-export default function LandingPage() {    
+// const [project, setProject] = useState([]);
+
+export default function LandingPage() {  
   // const logos = [logoMiddle,logoEnd,logoStart,logoMiddle,logoEnd,logoStart,logoMiddle,logoEnd,logoStart];
   const logos = [logoStart,logoMiddle,logoEnd];
     const logo = logos.map((logo,index) => (
