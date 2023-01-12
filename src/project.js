@@ -1,11 +1,6 @@
 import './landingPage.css';
 import './loadingPage.css';
 import './project.css';
-import HejauMK from './resource/Hejau MK/IMG_1.JPG';
-import HejauMK2 from './resource/Hejau MK/IMG_2.JPG';
-import HejauMK3 from './resource/Hejau MK/IMG_3.JPG';
-import HejauMK4 from './resource/Hejau MK/IMG_4.JPG';
-import logoBig from  './resource/logo.svg';
 import { useNavigate } from 'react-router-dom';
 
 export default function LandingPage() {

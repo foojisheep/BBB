@@ -11,10 +11,14 @@ import MK_4 from './resource/ProjectDetails/HejauMK/4.jpg';
 import MK_5 from './resource/ProjectDetails/HejauMK/5.jpg';
 import { useParams } from 'react-router-dom';
 
-const image = [
-  {id: 0,}
+// const images = [
+//   {id: 1, file:'Wangsa', name:['01','02','03','04','05','06','07','08','09','10','11','12','13']},
+//   {id: 2, file:'KLC', name:['01','02','03','04','05','06','07','08','09','10']},
+//   {id: 3, file:'Hejau', name:['01','02','03','04','05','06','07']},
+//   {id: 4, file:'Melody', name:['01','02','03','04','05','06','07','08']},
+//   {id: 5, file:'Poppy', name:['01','02','03','04','05','06','07']},
+// ];
 
-];
 const projectsDetails = [
   {id: 1, title:'Wangsa9 Penthouse', location: 'Wangsa Maju', category: 'Residential', years: 'On-going', surface: '7,700sqft', collab: '',  desc1:'The overall design direction is informed by the idea of injecting a sense of individuality and character to a contemporary holiday home. The vision was to create an experience that is inspired by interpretations of the landscape in the client’s home country.', desc2:'Mountain striations, sensual desert curves and the rugged wadis are all strategically translated and expressed in architectural forms, materiality and color scheme as a celebration of the rich and diverse landscape Oman has to offer. The project is a commitment to craft a series of spaces that are personal, exciting and beautifully balanced.' },
   {id: 2, title:'KLC Confinement Center', location: 'Dataran Prima', category: 'Commercial, Care Center', years: 'On-going', surface: '16,480 sqft', collab: '',  desc1:'The concept of lunar eclipse represents a balance, with the alignment of sun, moon and earth. A ray of light breaking from the shadow signifies the vibrancy of a new journey, similar to the vigour of a new birth.', desc2:'The spatial concept is inspired by this natural sense of delicateness where the gesture of contact and peeling combine to mask the rigidity of the current office typology, all in the spirit of presenting a sensual, emotive and highly balanced environment for new mothers and their family'},
@@ -36,20 +40,20 @@ function ShowProject(props) {
                   <th></th>
                 </tr>
                 <tr>
-                    <td> Location</td>
-                    <td>{projectsDetails[id].location}</td>
+                  <td> Location</td>
+                  <td>{projectsDetails[id].location}</td>
                 </tr>
                 <tr>
-                    <td> Category</td>
-                    <td>{projectsDetails[id].category}</td>
+                  <td> Category</td>
+                  <td>{projectsDetails[id].category}</td>
                 </tr>
                 <tr>
-                    <td>Years</td>
-                    <td>{projectsDetails[id].years}</td>
+                  <td>Years</td>
+                  <td>{projectsDetails[id].years}</td>
                 </tr>
                 <tr>
-                    <td>Surface</td>
-                    <td>{projectsDetails[id].surface}</td>
+                  <td>Surface</td>
+                  <td>{projectsDetails[id].surface}</td>
                 </tr>
                 {projectsDetails[id].collab != '' &&
                   <tr>
@@ -74,8 +78,14 @@ function Desc(object) {
       <td className='projectDescription' style={{ textAlign: 'left', display: 'table-cell'}}>{object.value.desc2}</td>
     </>
   );
-  }
-  else {
+  } else if(object.value.id == 2 || object.value.id == 4 ) {
+    return(
+      <>
+        <td className='projectDescription' style={{ textAlign: 'left' ,paddingRight: '15%'}}>{object.value.desc1}</td>
+        <td className='projectDescription' style={{ textAlign: 'left' ,paddingRight: '15%', paddingTop: '1%'}}>&emsp;{object.value.desc2}</td>
+      </>
+    );
+  } else {
     return(
       <>
         <td className='projectDescription' style={{ textAlign: 'left' ,paddingRight: '15%'}}>{object.value.desc1}</td>
@@ -85,18 +95,40 @@ function Desc(object) {
   }
 }
 
+// function ShowImage(props) {
+//   const id = parseInt(props.value) ;
+//   const photos = images[id].name;
+//   const file = images[id].file;
+//   const image = photos.map((photo) => {
+//     const img = require(`./resource/Images/${file}/${photo}.png`).default;
+//     return(
+//     <img key={`${file}-${photo}`} className="project-image" src={`img`} alt={`${file}-${photo}`}/>
+//     )
+//   });
+// }
+
 export default function ProjectDetailPage(object) {
   const { id } = useParams();
-  const file = object.file;
+
+  // const photos = images[id].name;
+  // const file = images[id].file;
+  // // const image = photos.map((photo) => {
+  //   const img = require(`./resource/Images/${file}/${photo}.png`).default;
+  //   console.log(img);
+  //   return(
+  //   <img key={`${file}-${photo}`} className="project-image" src={`img`} alt={`${file}-${photo}`}/>
+  //   )
+  // });
   const images = [MK_1, MK_2, MK_3, MK_5];
-  const image = images.map((image,index) => (
-      <img key={index} className="project-image" src={image} alt={index.toString()}/>
+  const image = images.map((images,index) => (
+      <img key={index} className="project-image" src={images} alt={index.toString()}/>
     ));
   return(
     <>
       <Navbar />
       <div key='details' className="projectContent-full">
         {image}
+      {/* <ShowImage key={id.toString()} value={id}/> */}
       </div>
       <ShowProject key={id.toString()} value={id}/>
     </>
