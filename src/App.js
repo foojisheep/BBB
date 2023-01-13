@@ -7,6 +7,7 @@ import ProjectDetailPage from "./projectDetails";
 import InfoPage from "./infoPage";
 import { BrowserRouter, Routes, Route, withRouter } from "react-router-dom";
 import NavBar from "./navBar";
+import { AnimatePresence } from 'framer-motion';
 
 export default function App() {
   const [width, setWindowWidth] = useState(0);
@@ -27,12 +28,15 @@ export default function App() {
     showTopNavMenu: width > 1023
   }
 
+  // const height = width > 992 ?? 100%: 70%;
   console.log('width is ', width);
   return (
     <BrowserRouter>
       <Routes>
+        {/* <AnimatePresence exitBeforeEnter> */}
          <Route path="/" element={<LoadingPage/>}/>
-        <Route path="works" element={<LandingPage/>} />
+         <Route path="works" element={<LandingPage/>} />
+        {/* </AnimatePresence> */}
         <Route path="project/:id" element={<ProjectDetailPage/>} />
         <Route path="information" element={<InfoPage/>} />
       </Routes>

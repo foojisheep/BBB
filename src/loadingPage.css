@@ -17,6 +17,7 @@
     overflow: hidden;
     max-width: max-content;
       /* overflow: hidden; */
+      height: 100vh;
       background-color: #FFB8F2;
   }
   
@@ -28,23 +29,29 @@
     /* max-width: 100%; */
     position: relative;
     /* animation-timing-function: ease; */
-    /* animation: blender 5s; */
+    animation: blender 3s linear infinite;
     animation-fill-mode: forwards;
   }
 
   @keyframes blender {
-    from {right: 0px;}
-    to {right: 965px;}
+    from {right: 0%;}
+    to {right: 60%;}
+    /* from {right: 0px;}
+    to {right: 965px;} */
   }
 
   @keyframes blender-tablet {
-    from {right: 0px;}
-    to {right: 520px;}
+    from {right: 0%;}
+    to {right: 105%;}
+    /* from {right: 0px;}
+    to {right: 520px;} */
   }
 
   @keyframes blender-mobile {
-    from {right: -10px;}
-    to {right: 250px;}
+    from {right: 0%;}
+    to {right: 67%;}
+    /* from {right: -10px;}
+    to {right: 250px;} */
   }
 
 /* Extra small devices (phones, 600px and down) */
@@ -89,7 +96,7 @@
     /* background: blue; */
     flex-direction: row;
     justify-content: center;
-    max-height: 28%;
+    max-height: 27%;
     animation: blender-tablet 3s;
     animation-fill-mode: forwards;
   }
@@ -110,7 +117,7 @@
     flex-direction: row;
     justify-content: center;
     animation: blender 3s;
-    max-height: 68%;
+    max-height: fit-content;
     /* max-height: 100%; */
     animation-fill-mode: forwards;
   }
@@ -151,4 +158,12 @@
   top: 50%;
   -ms-transform: translateY(-50%);
   transform: translateY(-50%);
+}
+
+.vertical-container {
+  display: flex;
+  align-items: center;
+  height: inherit;
+  /* height: 600px; */
+  /* border: 2px solid #006100;  */
 }
