@@ -1,75 +1,71 @@
 #infoDisplay {
-    background: #661F08;
-    width: auto;
+  background: #661F08;
+  width: auto;
 }
 
 .infoNavDisplay {
   background: #661F08;
-    overflow-x: auto;
-    padding-left: 1%;
-    /* padding-right: 1%; */
-    margin: 0.5%;
-    margin-top: 0%;
-    margin-bottom: 0.2%;
-    overflow-y: hidden;
-  }
-  
+  overflow-x: auto;
+  margin-left: 1%;
+  margin-right: 1%;
+  margin-top: 0%;
+  margin-bottom: 0.2%;
+  overflow-y: hidden;
+}
 
 font{
-color: #FFC572;
+  color: #FFC572;
 }
 
 .descriptionNavHeader{
-/* width: 302px;
-height: 32px; */
-font-family: 'FoundersGroteskText';
-font-style: normal;
-font-weight: 400;
-font-size: 12px;
-line-height: 15px;
-letter-spacing: 0.01em;
-color: #FFC572;
-display: flex;
+  font-family: 'FoundersGroteskText';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 15px;
+  letter-spacing: 0.01em;
+  color: #FFC572;
+  display: flex;
 }
 
 #topInfoNav td {
-font-family: 'FoundersGroteskText';
-font-style: normal;
-font-weight: 400;
-font-size: 24px;
-line-height: 30px;
-letter-spacing: 0.02em;
-color: #FFC572;
-/* text-align: left; */
-/* border: 1px solid #ddd; */
-/* padding: auto;
-padding-left: 2%;
-font-family: 'FoundersGroteskText';
-font-style: normal;
-font-weight: 400;
-font-size: 24px;
-line-height: 30px;
-letter-spacing: -0.02em;
-color: #000000;
-text-align: left; */
+  font-family: 'FoundersGroteskText';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 30px;
+  letter-spacing: 0.02em;
+  color: #FFC572;
+  /* text-align: left; */
+  /* border: 1px solid #ddd; */
+  /* padding: auto;
+  padding-left: 2%;
+  font-family: 'FoundersGroteskText';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 30px;
+  letter-spacing: -0.02em;
+  color: #000000;
+  text-align: left; */
 }
 
 #topInfoNav {
-    font-family: 'FoundersGroteskText';
-    border-collapse: collapse;
-    width: 100%;
-  }
+  font-family: 'FoundersGroteskText';
+  border-collapse: collapse;
+  width: 100%;
+}
   
-  #topInfoNav h1{
-    font-family: FoundersGroteskText;
-    font-style: normal;
-    font-weight: 400;
-    font-size: 24px;
-    line-height: 30px;
-    display: flex;
-    align-items: right;
-    letter-spacing: 0.02em;
-    align-content: right;
-    text-align: right;
-    margin: 0;
-  }
+#topInfoNav h1{
+  font-family: FoundersGroteskText;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 30px;
+  display: flex;
+  align-items: right;
+  letter-spacing: 0.02em;
+  align-content: right;
+  text-align: right;
+  margin: 0;
+}
