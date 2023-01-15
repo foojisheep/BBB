@@ -9,29 +9,29 @@
 
 .loadingPage-full{
     /* display: flex; */
+    height: 100%;
+    align-items: 'center';
+    justify-content: center;
     overflow: hidden;
-    width: 100%;
   }
   
   .defaultLandingPage-full{
      /* display: flex; */
-    overflow: hidden;
-    max-width: max-content;
+      overflow: hidden;
+      /* max-width: max-content; */
       /* overflow: hidden; */
       height: 100vh;
       background-color: #FFB8F2;
   }
   
   .loadingPage-image{
+    display: flex;
+    height: 100%;
+    width: 200%;
+    flex-direction: row;
     align-items: center;
-    justify-content: center;
-    /* width: 300px; */
-    float: center;
-    /* max-width: 100%; */
-    position: relative;
-    /* animation-timing-function: ease; */
-    animation: blender 3s;
-    animation-fill-mode: forwards;
+    animation: blender-laptop 3s;
+    animation-fill-mode: linear forwards;
   }
 
   /* Large devices (laptops/desktops, 1920px and up) */
@@ -47,7 +47,7 @@
   /* Large devices (laptops/desktops, 1440px and up) */
   @keyframes blender-laptop {
     from {
-      transform: translateX(100%);
+      transform: translateX(0%);
     }
     to {
       transform: translateX(-50%);
@@ -84,113 +84,117 @@
     to {right: 52%;}
   }
 
-/* Extra small devices (phones, 600px and down) */
+/* Extra small devices (phones, 600px and down)
 @media only screen and (max-width: 600px) {
-  .loadingPage-full { 
+  /* .loadingPage-full { 
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: center;
     max-width: fit-content;
-  }
+  } */
 
-  .loadingPage-image { 
-    /* background-color: chartreuse; */
+  /* .loadingPage-image {  */
+    /* background-color: chartreuse;
     flex-direction: row;
     justify-content: center;
     max-height: 17%;
     animation: blender-mobile-small 3s;
-    animation-fill-mode: forwards;
-  }
-}
+    animation-fill-mode: forwards; */
+  /* } */
+/* } */
 
 /* Small devices (small phones, 600px and down) */
-@media only screen and (min-width: 600px) {
-  .loadingPage-full { 
+/* @media only screen and (min-width: 600px) { */
+  /* .loadingPage-full { 
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: center;
     max-width: fit-content;
-  }
+  } */
 
   .loadingPage-image { 
-    /* background-color: chartreuse; */
+    /* background-color: chartreuse;
     flex-direction: row;
     justify-content: center;
     max-height: 26%;
     animation: blender-mobile-large 3s;
-    animation-fill-mode: forwards;
+    animation-fill-mode: forwards; */
   }
-}
+/* } */
 
 /* Medium devices (landscape tablets, 768px and up) */
-@media only screen and (min-width: 768px) {
-  .loadingPage-full { 
+/* @media only screen and (max-width:992px) { */
+  /* .loadingPage-full { 
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: center;
     max-height: fit-content;
-  }
+  } */
 
-  .loadingPage-image { 
-    /* background: blue; */
+  /* .loadingPage-image {  */
+    /* background: blue;
     flex-direction: row;
     justify-content: center;
     max-height: 26%;
     animation: blender-tablet 3s;
-    animation-fill-mode: forwards;
-  }
-} 
+    animation-fill-mode: forwards; */
+  /* }
+}  */
 
 /* Large devices (laptops/desktops, 992px and up) */
-@media only screen and (min-width: 992px) {
-  .loadingPage-full { 
-    display: flex;
+/* @media only screen and (min-width: 992px) {
+  .loadingPage-full {  */
+    /* display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: center;
     max-height: fit-content;
-    /* scale: 0.8; */
-  }
+    scale: 0.8; */
+  /* } */
 
-  .loadingPage-image { 
-    /* background-color:darkgreen;  */
+  /* .loadingPage-image {  */
+    /* background-color:darkgreen;  
     flex-direction: row;
     justify-content: center;
-    animation: blender 3s;
+   animation: blender 3s; 
     max-height: 50%;
-    /* max-height: 100%; */
-    animation-fill-mode: forwards;
-    /* scale:0.6 */
-  }
-} 
+     max-height: 100%; 
+    animation-fill-mode: forwards; 
+    scale:0.6 */
+  /* }
+}  */
 
 /* Large devices (laptops/desktops, 1440px and up) */
-@media only screen and (min-width: 1440px) {
-  .loadingPage-full { 
-    display: flex;
+/* @media only screen and (min-width: 1440px) {
+  .loadingPage-full {  */
+    /* display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: center;
-    max-height: fit-content;
+    max-height: fit-content; */
     /* scale: 0.9; */
-  }
+  /* } */
 
-  .loadingPage-image { 
+  /* .loadingPage-image { */
     /* background-color:darkgreen;  */
-    flex-direction: row;
-    justify-content: center;
-    animation: blender-laptop 3s;
-    max-height: fit-content;
+    /* display: flex;
+    height: 100%;
+    width: 200%; */
+    /* flex-direction: row;
+    align-items: center; */
+    /* vertical-align: middle; */
+    /* animation: blender-laptop 3s; */
+    /* max-height: fit-content; */
     /* max-height: 100%; */
-    animation-fill-mode: forwards;
-  }
-} 
+    /* animation-fill-mode: linear forwards; */
+  /* }
+}  */
 
 /* Large devices (laptops/desktops, 1920px and up) */
-@media only screen and (min-width: 1920px) {
+/* @media only screen and (min-width: 1920px) {
   .loadingPage-full { 
     display: flex;
     flex-direction: row;
@@ -201,15 +205,13 @@
   }
 
   .loadingPage-image { 
-    /* background-color:darkgreen;  */
     flex-direction: row;
     justify-content: center;
     animation: blender-large-desktop 3s;
     max-height: fit-content;
-    /* max-height: 100%; */
-    animation-fill-mode: forwards;
+    
   }
-} 
+}   */
 
 /* Extra large devices (large laptops and desktops, 1200px and up) */
 /* @media only screen and (min-width: 1200px) {
@@ -249,9 +251,9 @@
 }
 
 .vertical-container {
-  display: flex;
+  /* display: flex;
   align-items: center;
-  height: inherit;
+  height: inherit; */
   /* height: 600px; */
   /* border: 2px solid #006100;  */
 }
