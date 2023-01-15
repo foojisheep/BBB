@@ -29,15 +29,19 @@ div.projectDisplay {
   /* display: block; */
   overflow: auto;
   width: inherit;
-  height: 30vh;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: white;
 }
 
 /* Large devices (laptops/desktops, 992px and up) */
 @media only screen and (min-width: 1200px) {
   div.projectDisplay { 
     overflow: auto;
-    width: inherit;
-    height: 10vh;
+    /* width: inherit;
+    height: 10vh; */
   }
 }
 
@@ -45,8 +49,8 @@ div.projectDisplay {
 @media only screen and (min-width: 992px) {
   div.projectDisplay { 
     overflow: auto;
-    width: inherit;
-    height: 30vh;
+    /* width: inherit;
+    height: 30vh; */
   }
 }
 
@@ -54,8 +58,8 @@ div.projectDisplay {
 @media only screen and (min-width: 768px) {
   div.projectDisplay { 
     overflow: auto;
-    width: inherit;
-    height: 30vh;
+    /* width: inherit;
+    height: 30vh; */
   }
 }
 
@@ -63,8 +67,8 @@ div.projectDisplay {
 @media only screen and (max-width: 768px) {
   div.projectDisplay { 
     overflow: auto;
-    width: inherit;
-    height: 70vh;
+    /* width: inherit;
+    height: 70vh; */
   }
 }
 
