@@ -53,13 +53,13 @@ export default function LoadingPage() {
     </AnimatePresence>
       <AnimatePresence>
       {showLanding && ( 
-        <> 
-        <Navbar />
-        <motion.div initial={initial} animate={{ y:0, width: "100%", transition: {delay:0.2, ...transition} }} key="landing" className="landingPage-full">
-          <motion.img iinitial={initial} animate={{ y:0, width: "100%", transition: {delay:0.2, ...transition} }} id="hoverImage" key='logo' className="landingPage-image" src={logoBig} alt={logoBig.toString()} />
-        </motion.div>
-        <Projects />
-          </>
+        <div style={{display: 'flex', flexDirection: 'column', height: '100vh'}}> 
+        <Navbar style={{ display: 'flex', height: '5%'}}/>
+        <div key="landing" className="landingPage-full" style={{ height: '80%'}}>
+          <img id="hoverImage" key='logo' className="landingPage-image" src={logoBig} alt={logoBig.toString()} />
+        </div>
+        <Projects style={{ display: 'flex', height: '20%'}}/>
+          </div>
         )}
         </AnimatePresence>
     </>
