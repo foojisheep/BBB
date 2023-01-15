@@ -19,7 +19,7 @@ export default function InfoNavBar() {
             </td> */}
             <td>
                 <ul class="list-group list-group-horizontal" style={{textAlign: 'left', marginTop: 0, marginBottom: 0 }}>
-                    <li class="list-group-item" style={{textAlign: 'center', display: 'inline', marginRight: '2%'}}><Link to="/">Studio BBB</Link></li>
+                    <li class="list-group-item" style={{textAlign: 'center', display: 'inline', marginRight: '1%'}}><Link to="/">Studio BBB</Link></li>
                     <li class="list-group-item" style={{textAlign: 'center', display: 'inline-flex', verticalAlign:'super', alignContent:'center'}}>
                         <ul class="" style={{textAlign: 'center', display: 'inline-grid', marginTop: 0}}>
                             <li className=' descriptionNavHeader' style={{textAlign: 'left', display: 'inline'}}>is an interior design studio believes every space</li>
