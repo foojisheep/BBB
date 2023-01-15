@@ -74,8 +74,8 @@ function Desc(object) {
   if(object.value.id == 1 || object.value.id == 5 ){
   return(
     <>
-      <td className='projectDescription' style={{ textAlign: 'left', display: 'table-cell'}}>{object.value.desc1}</td>
-      <td className='projectDescription' style={{ textAlign: 'left', display: 'table-cell'}}>{object.value.desc2}</td>
+      <td className='projectDescription' style={{ textAlign: 'left', display: 'table-cell', paddingLeft: '1%'}}>{object.value.desc1}</td>
+      <td className='projectDescription' style={{ textAlign: 'left', display: 'table-cell', paddingLeft: '1%'}}>{object.value.desc2}</td>
     </>
   );
   } else if(object.value.id == 2 || object.value.id == 4 ) {

@@ -12,6 +12,7 @@
     overflow: hidden;
     width: 100%;
   }
+  
   .defaultLandingPage-full{
      /* display: flex; */
     overflow: hidden;
@@ -29,41 +30,62 @@
     /* max-width: 100%; */
     position: relative;
     /* animation-timing-function: ease; */
-    animation: blender 3s linear infinite;
+    animation: blender 3s;
     animation-fill-mode: forwards;
   }
 
+  /* Large devices (laptops/desktops, 1920px and up) */
+  @keyframes blender-large-desktop {
+    from {
+      transform: translateX(100%);
+    }
+    to {
+      transform: translateX(17%);
+    }
+  }
+  
+  /* Large devices (laptops/desktops, 1440px and up) */
+  @keyframes blender-laptop {
+    from {
+      transform: translateX(100%);
+    }
+    to {
+      transform: translateX(-50%);
+    }
+  }
+
   @keyframes blender {
-    from {right: 0%;}
-    to {right: 60%;}
-    /* from {right: 0px;}
-    to {right: 965px;} */
+    from {
+      transform: translateX(100%);
+    }
+    to {
+      transform: translateX(-50%);
+    }
   }
 
   @keyframes blender-tablet {
-    from {right: 0%;}
-    to {right: 105%;}
-    /* from {right: 0px;}
-    to {right: 520px;} */
+    from {
+      transform: translateX(50%);
+    }
+    to {
+      transform: translateX(-51%);
+    }
+    /* from {right: -50%;}
+    to {right: 51%;} */
   }
 
-  @keyframes blender-mobile {
+  @keyframes blender-mobile-small {
     from {right: 0%;}
-    to {right: 67%;}
-    /* from {right: -10px;}
-    to {right: 250px;} */
+    to {right: 50%;}
+  }
+
+  @keyframes blender-mobile-large {
+    from {right: 0%;}
+    to {right: 52%;}
   }
 
 /* Extra small devices (phones, 600px and down) */
-/* @media only screen and (max-width: 600px) {
-  .loadingPage-full img{ 
-    background: red;
-    max-width: 70%;
-  }
-} */
-
-/* Small devices (portrait tablets and large phones, 600px and up) */
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 600px) {
   .loadingPage-full { 
     display: flex;
     flex-direction: row;
@@ -77,7 +99,27 @@
     flex-direction: row;
     justify-content: center;
     max-height: 17%;
-    animation: blender-mobile 3s;
+    animation: blender-mobile-small 3s;
+    animation-fill-mode: forwards;
+  }
+}
+
+/* Small devices (small phones, 600px and down) */
+@media only screen and (min-width: 600px) {
+  .loadingPage-full { 
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    max-width: fit-content;
+  }
+
+  .loadingPage-image { 
+    /* background-color: chartreuse; */
+    flex-direction: row;
+    justify-content: center;
+    max-height: 26%;
+    animation: blender-mobile-large 3s;
     animation-fill-mode: forwards;
   }
 }
@@ -96,7 +138,7 @@
     /* background: blue; */
     flex-direction: row;
     justify-content: center;
-    max-height: 27%;
+    max-height: 26%;
     animation: blender-tablet 3s;
     animation-fill-mode: forwards;
   }
@@ -110,6 +152,7 @@
     align-items: center;
     justify-content: center;
     max-height: fit-content;
+    /* scale: 0.8; */
   }
 
   .loadingPage-image { 
@@ -117,6 +160,51 @@
     flex-direction: row;
     justify-content: center;
     animation: blender 3s;
+    max-height: 50%;
+    /* max-height: 100%; */
+    animation-fill-mode: forwards;
+    /* scale:0.6 */
+  }
+} 
+
+/* Large devices (laptops/desktops, 1440px and up) */
+@media only screen and (min-width: 1440px) {
+  .loadingPage-full { 
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    max-height: fit-content;
+    /* scale: 0.9; */
+  }
+
+  .loadingPage-image { 
+    /* background-color:darkgreen;  */
+    flex-direction: row;
+    justify-content: center;
+    animation: blender-laptop 3s;
+    max-height: fit-content;
+    /* max-height: 100%; */
+    animation-fill-mode: forwards;
+  }
+} 
+
+/* Large devices (laptops/desktops, 1920px and up) */
+@media only screen and (min-width: 1920px) {
+  .loadingPage-full { 
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    max-height: fit-content;
+    scale: 1.3;
+  }
+
+  .loadingPage-image { 
+    /* background-color:darkgreen;  */
+    flex-direction: row;
+    justify-content: center;
+    animation: blender-large-desktop 3s;
     max-height: fit-content;
     /* max-height: 100%; */
     animation-fill-mode: forwards;

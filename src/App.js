@@ -33,10 +33,8 @@ export default function App() {
   return (
     <BrowserRouter>
       <Routes>
-        {/* <AnimatePresence exitBeforeEnter> */}
-         <Route path="/" element={<LoadingPage/>}/>
+         <Route path="/" element={<LoadingPage/>} />
          <Route path="works" element={<LandingPage/>} />
-        {/* </AnimatePresence> */}
         <Route path="project/:id" element={<ProjectDetailPage/>} />
         <Route path="information" element={<InfoPage/>} />
       </Routes>
