@@ -21,7 +21,7 @@
 @font-face {
     font-family: "FoundersGroteskText";
     src: local("Founders Grotesk Text"),
-      url("./resource/font/founders-grotesk-regular.woff2") format("truetype");
+    url("./resource/font/founders-grotesk-regular.woff2") format("truetype");
 }
 
 .descriptionInfo{

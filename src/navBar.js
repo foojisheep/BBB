@@ -10,7 +10,7 @@ export default function NavBar() {
             <table id="topnav">
               <tr>
                 {/* <td>  </td> */}
-                <td className="logoHeader" style={{ textAlign: 'right'}}>
+                {/* <td className="logoHeader" style={{ textAlign: 'right'}}>
                   <h1 style={{ marginTop: 0, marginbottom: 0 }}><Link to="/">Studio BBB</Link></h1>
                 </td>
                 <td style={{ padding: 0 }}>
@@ -18,8 +18,18 @@ export default function NavBar() {
                     <li className='descriptionHeader'>is an interior design studio believes every space</li>
                     <li className='descriptionHeader'>created is an expression of oneself.</li>
                   </ul>
+                </td> */}
+                <td>
+                <ul class="list-group list-group-horizontal" style={{textAlign: 'left', marginTop: 0, marginBottom: 0 }}>
+                    <li class="list-group-item" style={{textAlign: 'center', display: 'inline', marginRight: '1%'}}><Link to="/">Studio BBB</Link></li>
+                    <li class="list-group-item" style={{textAlign: 'center', display: 'inline-flex', verticalAlign:'super',  alignContent:'center'}}>
+                        <ul class="" style={{textAlign: 'center', display: 'inline-grid', marginTop: 0}}>
+                            <li className=' descriptionHeader' style={{textAlign: 'left', display: 'inline'}}>is an interior design studio believes every space</li>
+                            <li className=' descriptionHeader' style={{textAlign: 'left', display: 'inline'}}>created is an expression of oneself.</li>
+                        </ul>
+                    </li>
+                    </ul>
                 </td>
-                <td>   </td>
                 <td>
                   <ul class="list-group list-group-horizontal" style={{textAlign: 'right', marginTop: 0, marginBottom: 0 }}>
                     <li class="list-group-item" style={{textAlign: 'center', display: 'inline', marginRight: '2%'}}><Link to="/works"> Works</Link></li>
@@ -30,31 +40,5 @@ export default function NavBar() {
               </tr>
               </table>
               </div>
-        // <div className='topnav row'>
-        //   <div className='nav col-2'> 
-        //     <h1>Studio BBB</h1>
-        //    </div>
-        //    <div className='descp col-8'> 
-        //    <ul>
-        //     <li className='row descrip'>is an interior design studio believes every space</li>
-        //     <li className='row descrip'>created is an expression of oneself.</li>
-        //   </ul>
-
-        //   {/* Previous way of displaying desciption - but have issue with putting center for entire description }
-        //       {/* <p className='row descrip top-desc'>is an interior design studio believes every space</p>
-        //       <p className='row descrip bottom-desc'>created is an expression of oneself.</p> */}
-
-        //   </div>
-        //   <div className='topnav-right col-1'>
-        //     {/* <ul>
-        //       <li><a href="#">Work</a></li>
-        //       <li><a href="#">Information</a></li>
-        //     </ul> */}
-        //       <a>Work</a>
-        //     </div>
-        //     <div className='topnav-right col-1'>
-        //       <a>Information</a>
-        //     </div>
-        // </div>
       );
 }
