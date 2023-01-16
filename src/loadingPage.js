@@ -33,25 +33,43 @@ export default function LoadingPage() {
       setShowLanding(!showLanding);
     }, 3000)  }, []);
 
-  const logos = [logoBig,logoBig,logoBig, logoBig];
+  const logos = [logoBig];
   const logo = logos.map((logo,index) => (
-    <img key={index} className="loadingPage-image" src={logo} alt={logo.toString()} />
+    <img key={index} style={{width:"50%"}}src={logo} alt={logo.toString()} />
   ));
-  console.log('hello');
+
   return(
     <>
-    <AnimatePresence>
-      {showLoading && (
-        <motion.div>
-          <div className='defaultLandingPage-full'>
-          <motion.div initial={{ height:'100%'}} transition={{ transition }} className="loadingPage-full vertical-container">
-            {logo}
-          </motion.div>
+    {/* <div className='defaultLandingPage-full'>
+          <div className="loadingPage-full">
+            <div className='loadingPage-image'>
+              {logo}
+              {logo}
+            </div>
           </div>
-        </motion.div>
+          </div> */}
+     <AnimatePresence>
+      {showLoading && (
+        <div className='defaultLandingPage-full'>
+        <div className="loadingPage-full">
+          <div className='loadingPage-image'>
+            {logo}
+            {logo}
+          </div>
+        </div>
+        </div>
+        // <motion.div>
+        //   <div className='defaultLandingPage-full'>
+        //   <motion.div initial={{ height:'100%'}} transition={{ transition }} className="loadingPage-full vertical-container">
+            
+        //     {logo}
+            
+        //   </motion.div>
+        //   </div>
+        // </motion.div>
       )}
-    </AnimatePresence>
-      <AnimatePresence>
+    </AnimatePresence> 
+    <AnimatePresence>
       {showLanding && ( 
         <div style={{display: 'flex', flexDirection: 'column', height: '100vh'}}> 
         <Navbar style={{ display: 'flex', height: '5%'}}/>
