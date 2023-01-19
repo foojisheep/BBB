@@ -1,78 +1,78 @@
-.defaultLandingPage-full{
-    /* display: flex; */
-    overflow: hidden;
+.defaultLandingPage-full {
+  /* display: flex; */
+  overflow: hidden;
 
-  }
+}
 
-  .topnav{
-    /* overflow: hidden;s */
-    border-collapse: collapse;
-    width: 100%;
-    display: fixed;
-    flex-direction: row;
-  }
+.topnav {
+  /* overflow: hidden;s */
+  border-collapse: collapse;
+  width: 100%;
+  display: fixed;
+  flex-direction: row;
+}
 
-  .nav h1 {
-    font-family: 'FoundersGroteskText';
-    font-style: normal;
-    font-weight: 400;
-    font-size: 24px;
-    line-height: 30px;
-    display: flex;
-    align-items: center;
-    letter-spacing: -0.02em;
-    /* margin-left: 10%; */
-    /* margin-right: 1%; */
-  }
+.nav h1 {
+  font-family: 'FoundersGroteskText';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 30px;
+  display: flex;
+  align-items: center;
+  letter-spacing: -0.02em;
+  /* margin-left: 10%; */
+  /* margin-right: 1%; */
+}
 
-  #fixed-div {
-    position: fixed;
-    /* top: 0;
+#fixed-div {
+  position: fixed;
+  /* top: 0;
     left: 0;
     right: 0;
     height: 100px;
     background-color: #000; */
-  }
-  
-  .descp {
-    display: flex;
-    flex-direction: column;    
-    /* align-content:space-between; */
-  }
+}
 
-  ul {
-    list-style-type: none;
-    padding-left:0;
-  }
+.descp {
+  display: flex;
+  flex-direction: column;
+  /* align-content:space-between; */
+}
 
-  .descrip p{
-    /* width: 302px;
+ul {
+  list-style-type: none;
+  padding-left: 0;
+}
+
+.descrip p {
+  /* width: 302px;
     height: 32px; */
-    font-family: 'Founders Grotesk Text Test';
-    font-style: normal;
-    font-weight: 400;
-    font-size: 12px;
-    line-height: 15px;
-    letter-spacing: 0.01em;
-    color: #000000;
-    display: flex;
-  }
+  font-family: 'Founders Grotesk Text Test';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 15px;
+  letter-spacing: 0.01em;
+  color: #000000;
+  display: flex;
+}
 
-  .row-rev {
-    flex-direction: row-reverse;
-  }
+.row-rev {
+  flex-direction: row-reverse;
+}
 
-  .header-right{
-    columns: 6rem auto;
-  }
+.header-right {
+  columns: 6rem auto;
+}
 
-  [class*="col-"] {
-    float: left;
-    /* padding-top:15px; */
-    border: 1px solid red;
-  }
+[class*="col-"] {
+  float: left;
+  /* padding-top:15px; */
+  border: 1px solid red;
+}
 
-.topnav-right{
+.topnav-right {
   float: right;
   list-style: none;
   /* width: 100%; */
@@ -87,41 +87,60 @@
   /* right:0; */
 }
 
-.topcorner{
-  position:absolute;
-  top:0;
-  right:0;
-  }
+.topcorner {
+  position: absolute;
+  top: 0;
+  right: 0;
+}
 
-.nav{
+.nav {
   padding-left: 2%;
   padding-right: 1%;
 }
-  
-.landingPage-full{
-  overflow-x: hidden;
-  overflow-y: hidden;
-  /* display: flex; */
-  max-width: max-content;
-  /* overflow: hidden; */
+
+.landingPage-full0 {
   background-color: #FFB8F2;
-  /* position: fixed; */
+  height: 67.5%;
   width: 100%;
-  height: 80%;
+  display: flex;
+  animation: navigationTop 3s;
+  animation-fill-mode: linear forwards;
 }
 
-.landingPage-image{
+@keyframes navigationTop {
+  from {
+    transform: translateY(20%);
+  }
+
+  to {
+    transform: translateY(0%);
+  }
+}
+
+.landingPage-full1 {
+  display: flex;
+  align-items: center;
+  overflow-x: hidden;
+  overflow-y: hidden;
+  height: 100%;
+  width: 100%;
+  align-items: center;
+}
+
+.landingPage-image1 {
   /* align-items: left; */
-  justify-content: center;
+  /* justify-content: center; */
   /* float: right; */
   /* position: fixed; */
   /* width: 33.3vw; */
   /* max-height: 50%; */
   /* width:33.33%; */
-  height: 80%;
+  object-fit: cover;
+  width: 100%;
+  max-height: 100%;
 }
 
-.landingPage-image img:hover{
+.landingPage-image img:hover {
   /* align-items: left; */
   justify-content: center;
   /* float: right; */
@@ -133,7 +152,7 @@
   height: 30vh;
 }
 
-  /* Extra small devices (phones, 600px and down) */
+/* Extra small devices (phones, 600px and down) */
 /* @media only screen and (max-width: 600px) {
   .loadingPage-full img{ 
     background: red;
@@ -143,7 +162,7 @@
 
 /* Small devices (portrait tablets and large phones, 600px and up) */
 @media only screen and (max-width: 768px) {
-  .landingPage-full { 
+  .landingPage-full {
     /* display: flex; */
     overflow-x: hidden;
     overflow-y: hidden;
@@ -156,7 +175,7 @@
     /* position: fixed; */
   }
 
-  .landingPage-image { 
+  .landingPage-image {
     /* background-color: chartreuse; */
     align-items: centers;
     justify-content: center;
@@ -164,7 +183,7 @@
     width: inherit;
   }
 
-  .landingPage-image img:hover{ 
+  .landingPage-image img:hover {
     /* background-color: chartreuse; */
     align-items: centers;
     justify-content: center;
@@ -175,7 +194,7 @@
 
 /* Medium devices (landscape tablets, 768px and up) */
 @media only screen and (min-width: 768px) {
-  .landingPage-full { 
+  .landingPage-full {
     /* display: flex; */
     overflow-x: hidden;
     overflow-y: hidden;
@@ -184,15 +203,15 @@
     flex-direction: row;
     align-items: center;
     justify-content: center;
-    max-width: fit-content; 
+    max-width: fit-content;
     /* position: fixed; */
     height: 70%;
   }
 
-  .landingPage-image { 
+  .landingPage-image {
     /* background: blue; */
     flex-direction: row;
-     align-items: left;
+    align-items: left;
     justify-content: center;
     float: right;
     height: 100%;
@@ -200,21 +219,21 @@
     /* position: fixed; */
   }
 
-  .landingPage-image img:hover{ 
+  .landingPage-image img:hover {
     /* background: blue; */
     flex-direction: row;
-     align-items: left;
+    align-items: left;
     justify-content: center;
     float: right;
     height: 100%;
     width: inherit;
     /* position: fixed; */
   }
-} 
+}
 
 /* Large devices (laptops/desktops, 992px and up) */
 @media only screen and (min-width: 992px) {
-  .landingPage-full { 
+  .landingPage-full {
     /* display: flex; */
     /* overflow: hidden; */
     background-color: #FFB8F2;
@@ -237,7 +256,7 @@
     /* position: fixed; */
   }
 
-  .landingPage-image img:hover{
+  .landingPage-image img:hover {
     flex-direction: row;
     align-items: left;
     justify-content: center;
@@ -247,9 +266,9 @@
     /* width: 1000px; */
     /* position: fixed; */
   }
-} 
+}
 
-#nav h1{
+#nav h1 {
   font-family: FoundersGroteskText;
   font-style: normal;
   font-weight: 400;
@@ -265,11 +284,6 @@
   border-collapse: collapse;
   width: 100%;
 }
-
-/* #customers tr {
-  border: 1px solid #ddd;
-  padding: 8px;
-} */
 
 @font-face {
   font-family: "FoundersGroteskText";
