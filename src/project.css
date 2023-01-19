@@ -24,15 +24,11 @@ order: 0;
 flex-grow: 0;
 }
 
-div.projectDisplay {
+div.projectDisplay1 {
   /* overflow-x: hidden; */
   /* display: block; */
-  overflow: auto;
-  width: inherit;
-  position: fixed;
-  bottom: 0;
-  left: 0;
-  right: 0;
+  display: flex;
+  height:27.5%;
   background: white;
 }
 

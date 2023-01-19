@@ -20,7 +20,7 @@ export default function LandingPage() {
       </tr>
     );
     return(
-      <div className="projectDisplay">
+      <div className="projectDisplay1">
         <table id="customers">
             {content}
         </table>
