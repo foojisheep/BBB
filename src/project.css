@@ -71,7 +71,7 @@ div.projectDisplay1 {
 #customers tr:hover {background-color: #FFC572}
 
 #customers tr{
-  border-bottom: 1px solid black;
+  border-bottom: 1.6px solid black;
   border-collapse: collapse;
 }
 
@@ -81,7 +81,7 @@ div.projectDisplay1 {
   font-weight: 100;
   font-size: 24px;
   line-height: 30px;
-  letter-spacing: -0.02em;
+  /* letter-spacing: -0.02em; */
   color: #000000;
   text-align: left;
   padding-left: 1%;

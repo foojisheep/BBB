@@ -103,7 +103,7 @@ ul {
   height: 67.5%;
   width: 100%;
   display: flex;
-  animation: navigationTop 3s;
+  animation: navigationTop 2s;
   animation-fill-mode: linear forwards;
 }
 

@@ -234,7 +234,7 @@
   line-height: 30px;
   display: flex;
   align-items: center;
-  letter-spacing: -0.02em;
+  /* letter-spacing: -0.02em; */
 }
 
 .logo-style {
