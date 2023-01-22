@@ -70,12 +70,14 @@ export default function LandingPage() {
          </AnimatePresence> */}
          {/* {!firstVisit && showLanding && ( 
           <> */}
-          <div style={{display: 'flex', flexDirection: 'column', height: '100vh'}}> 
-            <Navbar style={{ display: 'flex', height: '5%'}}/>
-            <div key="landing" className="landingPage-full" style={{ height: '80%'}}>
-              <img id="hoverImage" key='logo' className="landingPage-image" src={logoBig} alt={logoBig.toString()} />
+          <div style={{display: 'flex', flexDirection: 'column', height: '100vh', width: "100vw"}}> 
+            <Navbar/>
+            <div style={{ display: 'flex', width:'100%', backgroundColor:'#FFB8F2', height:'80%', alignSelf:'stretch'}}>
+            <div key="landing" className="landingPage-full1">
+              <img id="hoverImage" key='logo' className="landingPage-image1" src={logoBig} alt={logoBig.toString()} />
             </div>
-            <Projects style={{ display: 'flex', height: '20%'}}/>
+            </div>
+            <Projects />
           </div>
           {/* <Navbar />
           <div key="landing" className="landingPage-full">

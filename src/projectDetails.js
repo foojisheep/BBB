@@ -32,13 +32,13 @@ function ShowProject(props) {
   return(
     <div className="projectDetailDisplay">
         <table id="projectDetails">
+        <tr>
+            <th style={{ textAlign: 'left'}}>{projectsDetails[id].title}</th>
+            <th></th>
+          </tr>
           <tr>
             <td style={{width: '20%', verticalAlign:'top'}}>
               <table>
-                <tr>
-                  <th style={{ textAlign: 'left' ,paddingBottom: '5%', paddingTop: '5%'}}>{projectsDetails[id].title}</th>
-                  <th></th>
-                </tr>
                 <tr>
                   <td> Location</td>
                   <td>{projectsDetails[id].location}</td>
@@ -74,8 +74,18 @@ function Desc(object) {
   if(object.value.id == 1 || object.value.id == 5 ){
   return(
     <>
-      <td className='projectDescription' style={{ textAlign: 'left', display: 'table-cell', paddingLeft: '1%'}}>{object.value.desc1}</td>
-      <td className='projectDescription' style={{ textAlign: 'left', display: 'table-cell', paddingLeft: '1%'}}>{object.value.desc2}</td>
+    <td>
+      <table>
+        {/* <tr>
+          <th style={{ textAlign: 'left' ,paddingBottom: '5%', paddingTop: '5%'}}>{}</th>
+          <th></th>
+          </tr> */}
+          <tr>
+          <th className='projectDescription' style={{ textAlign: 'left', display: 'table-cell', paddingLeft: '1%'}}>{object.value.desc1}</th>
+          <th className='projectDescription' style={{ textAlign: 'left', display: 'table-cell', paddingLeft: '1%'}}>{object.value.desc2}</th>
+        </tr>
+      </table>
+      </td> 
     </>
   );
   } else if(object.value.id == 2 || object.value.id == 4 ) {
@@ -126,11 +136,36 @@ export default function ProjectDetailPage(object) {
   return(
     <>
       <Navbar />
+      {/* {id == 1 || id == 3 &&
+       <div key='details' className="projectContent-full" style="maxHeight: '65%'">
+        {image}
+        </div>
+      }
+      {id == 2 || id == 4 || id == 5 &&
       <div key='details' className="projectContent-full">
         {image}
+        </div>
+} */}
       {/* <ShowImage key={id.toString()} value={id}/> */}
-      </div>
+      {/* </div> */}
+      <ImageSize  key={id.toString()} value={id} image={image}/>
       <ShowProject key={id.toString()} value={id}/>
     </>
   );
 }
+
+function ImageSize(object) {
+  if(object.value.id == 1 || object.value.id == 3 ){
+  return(
+    <div key='details' className="projectContent-full" style="maxHeight: '65%'">
+     {object.image}
+     </div>
+    );
+  } else {
+    return(
+      <div key='details' className="projectContent-full">
+        {object.image}
+      </div>
+    );
+   }
+  }

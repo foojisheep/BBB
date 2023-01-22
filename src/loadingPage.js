@@ -73,13 +73,13 @@ export default function LoadingPage() {
       {/* <AnimatePresence> */}
       {showLanding && (
         <div style={{ display: 'flex', flexDirection: 'column', height: "100vh", width: "100vw" }}>
-          <Navbar />
+          <Navbar style={{ display: 'flex', height: '5%'}}/>
           <div className='landingPage-full0'>
             <div key="landing" className="landingPage-full1">
               <img id="hoverImage" key='logo' className="landingPage-image1" src={logoBig} alt={logoBig.toString()} />
             </div>
           </div>
-          <Projects />
+          <Projects style={{ display: 'flex', height: '20%'}}/>
         </div>
       )}
       {/* </AnimatePresence> */}
