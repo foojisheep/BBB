@@ -5,6 +5,40 @@ import './project.css';
 import './infoNavBar.css';
 
 export default function InfoNavBar() {    
+    return (
+        <div className="infoNavDisplay">
+          <div className="leftInfoNavBar">
+            <div className='studioBBBInfoDiv'>
+              <h1 className="studioInfoBBB">
+                <Link to="/">Studio BBB</Link>
+              </h1>
+            </div>
+            <div className='descriptionInfoDiv'>
+              <h1 className='descriptionInfoHeader'>
+                is an interior design studio believes every space
+              </h1>
+              <h1 className='descriptionInfoHeader'>
+                created is an expression of oneself
+              </h1>
+            </div>
+          </div>
+          <div className='rightInfoNavBar'>
+            <div className='linkStyleInfoDiv'>
+              <h1 className='linkStyleInfo'>
+                <Link to="/works"> Works</Link>
+              </h1>
+            </div>
+            <div className='linkStyleInfoDiv'>
+              <h1 className='linkStyleInfo'>
+                <Link to="/information">Information</Link>
+              </h1>
+            </div>
+          </div>
+        </div>
+    );
+}
+
+function InfoNavBar1() { 
     return(
       <div className='infoNavDisplay'>
         <table id="topInfoNav">
