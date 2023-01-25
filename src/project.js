@@ -12,7 +12,7 @@ export default function ImageAndProjects() {
   }
   console.log(projects[1].category);
     const content = projects.map((projects) =>
-      <tr key={projects.id} onMouseEnter={() => changeURL(projects, true)} onMouseLeave={() => changeURL(projects, false)} onClick={()=> routeChange(projects.id)}>
+      <tr key={projects.id} onMouseEnter={() => changeURL(projects, true)} onClick={()=> routeChange(projects.id)}>
         <td>  </td>
         <td>{projects.year}</td>
         <td>{projects.name}</td>
@@ -24,7 +24,7 @@ export default function ImageAndProjects() {
       <>
        <div style={{ display: 'flex', width:'100%', backgroundColor:'#FFB8F2', height:'80%', alignSelf:'stretch'}}>
         <div key="landing" className="landingPage-full1">
-          <img id="hoverImage" key='logo' className="landingPage-image1" src={logoBig} alt={logoBig.toString()} />
+          <img id="hoverImage" key='logo' className="landingPage-image1" src={logoBig} alt={logoBig.toString()} onMouseEnter={() => changeURL(logoBig, false)}/>
         </div>
         </div>
         <div className="projectDisplay1">
@@ -49,6 +49,7 @@ export default function ImageAndProjects() {
       console.log('hover out');
       document.getElementById('hoverImage').src = logoBig;
     }
+
     if(hover && projects.link.length !== 0){
       console.log(projects.link);
       document.getElementById('hoverImage').src = projects.link;

@@ -27,7 +27,7 @@ function Projects() {
   }
   console.log(projects[1].category);
   const content = projects.map((projects) =>
-    <tr key={projects.id} onMouseEnter={() => changeURL(projects, true)} onMouseLeave={() => changeURL(projects, false)} onClick={()=> routeChange(projects.id)}>
+    <tr key={projects.id} onMouseEnter={() => changeURL(projects, true)} onClick={()=> routeChange(projects.id)}>
       <td>  </td>
       <td>{projects.year}</td>
       <td>{projects.name}</td>
@@ -59,7 +59,7 @@ export default function LoadingPage() {
 
   const logos = [logoBig];
   const logo = logos.map((logo, index) => (
-    <img key={index} style={{ width: "50%" }} src={logo} alt={logo.toString()} />
+    <img key={index} style={{ width: "50%" }} src={logo} alt={logo.toString()}/>
   ));
 
   return (
@@ -79,7 +79,7 @@ export default function LoadingPage() {
           <Navbar style={{ display: 'flex', height: '5%'}}/>
           <div className='landingPage-full0'>
             <div key="landing" className="landingPage-full1">
-              <img id="hoverImage" key='logo' className="landingPage-image1" src={logoBig} alt={logoBig.toString()} />
+              <img id="hoverImage" key='logo' className="landingPage-image1" src={logoBig} alt={logoBig.toString()} onMouseEnter={() => changeURL(logoBig, false)}/>
             </div>
           </div>
           <Projects style={{ display: 'flex', height: '20%'}}/>
@@ -102,8 +102,9 @@ function changeURL(projects, hover) {
     console.log('hover out');
     document.getElementById('hoverImage').src = logoBig;
   }
+
   if(hover && projects.link.length !== 0){
     console.log(projects.link);
     document.getElementById('hoverImage').src = projects.link;
-  }
+  } 
 }
