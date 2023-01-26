@@ -64,7 +64,6 @@ export default function NavBar() {
               <li class="list-group-item" style={{ textAlign: 'right', display: 'inline', marginLeft: '2%' }}><Link to="/information">Information</Link></li>
             </ul>
           </td>
-
         </tr>
       </table> */}
     </div>

@@ -4,20 +4,15 @@ import './project.css';
 import './projectDetails.css';
 import Projects from "./project";
 import Navbar from "./navBar";
-import MK_1 from './resource/ProjectDetails/HejauMK/1.jpg';
-import MK_2 from './resource/ProjectDetails/HejauMK/2.jpg';
-import MK_3 from './resource/ProjectDetails/HejauMK/3.jpg';
-import MK_4 from './resource/ProjectDetails/HejauMK/4.jpg';
-import MK_5 from './resource/ProjectDetails/HejauMK/5.jpg';
 import { useParams } from 'react-router-dom';
 
-// const images = [
-//   {id: 1, file:'Wangsa', name:['01','02','03','04','05','06','07','08','09','10','11','12','13']},
-//   {id: 2, file:'KLC', name:['01','02','03','04','05','06','07','08','09','10']},
-//   {id: 3, file:'Hejau', name:['01','02','03','04','05','06','07']},
-//   {id: 4, file:'Melody', name:['01','02','03','04','05','06','07','08']},
-//   {id: 5, file:'Poppy', name:['01','02','03','04','05','06','07']},
-// ];
+const images = [
+  {id: 1, file:'Wangsa', name:['01','02','03','04','05','06','07','08','09','10','11','12','13']},
+  {id: 2, file:'KLC', name:['01','02','03','04','05','06','07','08','09','10']},
+  {id: 3, file:'Hejau', name:['01','02','03','04','05','06','07']},
+  {id: 4, file:'Melody', name:['01','02','03','04','05','06','07','08']},
+  {id: 5, file:'Poppy', name:['01','02','03','04','05','06','07']},
+];
 
 const projectsDetails = [
   {id: 1, title:'Wangsa9 Penthouse', location: 'Wangsa Maju', category: 'Residential', years: 'On-going', surface: '7,700sqft', collab: '',  desc1:'The overall design direction is informed by the idea of injecting a sense of individuality and character to a contemporary holiday home. The vision was to create an experience that is inspired by interpretations of the landscape in the client’s home country.', desc2:'Mountain striations, sensual desert curves and the rugged wadis are all strategically translated and expressed in architectural forms, materiality and color scheme as a celebration of the rich and diverse landscape Oman has to offer. The project is a commitment to craft a series of spaces that are personal, exciting and beautifully balanced.' },
@@ -105,50 +100,38 @@ function Desc(object) {
   }
 }
 
-// function ShowImage(props) {
-//   const id = parseInt(props.value) ;
-//   const photos = images[id].name;
-//   const file = images[id].file;
-//   const image = photos.map((photo) => {
-//     const img = require(`./resource/Images/${file}/${photo}.png`).default;
-//     return(
-//     <img key={`${file}-${photo}`} className="project-image" src={`img`} alt={`${file}-${photo}`}/>
-//     )
-//   });
-// }
+function ShowImage(props) {
+  const id = parseInt(props.value) -1;
+  const photos = images[id].name;
+  const file = images[id].file;
+  const showImage = photos.map((index) => {
+  //   const img = require(`./resource/Images/${file}/${photo}.png`);
+  //   console.log(`./Images/${file}/${photo}.png`);
+  return(
+      <li className='list-group-item' style={{display: 'inline'}}>
+        <img key={`${file}-${index}`} className="project-image" src={require(`./resource/Images/${file}/${index}.png`)} alt={`${file}-${index}`}/>
+      </li>
+      // <img key={`${file}-${index}`} className="project-image" src={require(`./resource/Images/${file}/Hover.png`)} alt={`${file}-${index}`}/>
+    );
+  });
+  // console.log('stop');
+  return (
+    <>
+      <div className="project-Image-Div">
+        <ul className='list-group list-group-horizontal'>
+        {showImage}
+        </ul>
+      </div>
+    </>
+  );
+}
 
 export default function ProjectDetailPage(object) {
   const { id } = useParams();
-
-  // const photos = images[id].name;
-  // const file = images[id].file;
-  // // const image = photos.map((photo) => {
-  //   const img = require(`./resource/Images/${file}/${photo}.png`).default;
-  //   console.log(img);
-  //   return(
-  //   <img key={`${file}-${photo}`} className="project-image" src={`img`} alt={`${file}-${photo}`}/>
-  //   )
-  // });
-  const images = [MK_1, MK_2, MK_3, MK_5];
-  const image = images.map((images,index) => (
-      <img key={index} className="project-image" src={images} alt={index.toString()}/>
-    ));
   return(
     <>
       <Navbar />
-      {/* {id == 1 || id == 3 &&
-       <div key='details' className="projectContent-full" style="maxHeight: '65%'">
-        {image}
-        </div>
-      }
-      {id == 2 || id == 4 || id == 5 &&
-      <div key='details' className="projectContent-full">
-        {image}
-        </div>
-} */}
-      {/* <ShowImage key={id.toString()} value={id}/> */}
-      {/* </div> */}
-      <ImageSize  key={id.toString()} value={id} image={image}/>
+      <ShowImage key={id.toString()} value={id}/>
       <ShowProject key={id.toString()} value={id}/>
     </>
   );

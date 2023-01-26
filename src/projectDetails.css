@@ -10,6 +10,10 @@
       url("./resource/font/Test\ Founders\ Grotesk\ 400.otf") format("truetype");
   } */
 
+  .project-Image-Div {
+    display: column;
+  }
+
   /* Small devices (portrait tablets and large phones, 600px and up) */
   @media only screen and (max-width: 768px) {
     .projectContent-full { 
@@ -20,7 +24,6 @@
       align-items: center;
       justify-content: center;
       max-height: fit-content;
-      display: inline-block;
       display: inline-block;
     /* width: 50%; */
     white-space: nowrap;
