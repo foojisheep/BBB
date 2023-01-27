@@ -5,6 +5,7 @@ import './projectDetails.css';
 import Projects from "./project";
 import Navbar from "./navBar";
 import { useParams } from 'react-router-dom';
+import { useRef, useEffect } from "react";
 
 const images = [
   { id: 1, file: 'Wangsa', name: ['01', '02', '03', '04', '05', '06', '07', '08', '09', '10', '11', '12', '13'] },
@@ -28,7 +29,7 @@ function ShowProject(props) {
     <div className="projectDetailDisplay">
       <table id="projectDetails">
         <tr>
-          <th style={{ textAlign: 'left' }}>{projectsDetails[id].title}</th>
+          <th style={{ textAlign: 'left', paddingTop: '1%'}}>{projectsDetails[id].title}</th>
           <th></th>
         </tr>
         <tr>
@@ -76,8 +77,8 @@ function Desc(object) {
           <th></th>
           </tr> */}
             <tr>
-              <th className='projectDescription' style={{ textAlign: 'left', display: 'table-cell', paddingLeft: '1%' }}>{object.value.desc1}</th>
-              <th className='projectDescription' style={{ textAlign: 'left', display: 'table-cell', paddingLeft: '1%' }}>{object.value.desc2}</th>
+              <th className='projectDescription' style={{ textAlign: 'left', display: 'table-cell', paddingLeft: '1%', verticalAlign: 'top', width: '50%'}}>{object.value.desc1}</th>
+              <th className='projectDescription' style={{ textAlign: 'left', display: 'table-cell', paddingLeft: '1%', verticalAlign: 'top', width: '50%'}}>{object.value.desc2}</th>
             </tr>
           </table>
         </td>
@@ -86,21 +87,22 @@ function Desc(object) {
   } else if (object.value.id == 2 || object.value.id == 4) {
     return (
       <>
-        <td className='projectDescription' style={{ textAlign: 'left', paddingRight: '15%' }}>{object.value.desc1}</td>
-        <td className='projectDescription' style={{ textAlign: 'left', paddingRight: '15%', paddingTop: '1%' }}>&emsp;{object.value.desc2}</td>
+        <td className='projectDescription' style={{ textAlign: 'left', paddingRight: '10%' }}>{object.value.desc1}</td>
+        <td className='projectDescription' style={{ textAlign: 'left', paddingRight: '10%', paddingTop: '1%' }}>&emsp;{object.value.desc2}</td>
       </>
     );
   } else {
     return (
       <>
-        <td className='projectDescription' style={{ textAlign: 'left', paddingRight: '15%' }}>{object.value.desc1}</td>
-        <td className='projectDescription' style={{ textAlign: 'left', paddingRight: '15%', paddingTop: '1%' }}>{object.value.desc2}</td>
+        <td className='projectDescription' style={{ textAlign: 'left', paddingRight: '10%' }}>{object.value.desc1}</td>
+        <td className='projectDescription' style={{ textAlign: 'left', paddingRight: '10%', paddingTop: '1%' }}>{object.value.desc2}</td>
       </>
     );
   }
 }
 
 function ShowImage(props) {
+  const scrollRef = useHorizontalScroll();
   const id = parseInt(props.value) - 1;
   const photos = images[id].name;
   const file = images[id].file;
@@ -117,7 +119,7 @@ function ShowImage(props) {
 
   return (
     <>
-      <div className="project-Image-Div">
+      <div className="project-Image-Div" ref={scrollRef}>
         {/* <div className='list-group list-group-horizontal' style={{ display: 'flex', overflow: 'hidden', height: '80%' }}> */}
         {showImage}
         {/* </div> */}
@@ -137,18 +139,22 @@ export default function ProjectDetailPage(object) {
   );
 }
 
-function ImageSize(object) {
-  if (object.value.id == 1 || object.value.id == 3) {
-    return (
-      <div key='details' className="projectContent-full" style="maxHeight: '65%'">
-        {object.image}
-      </div>
-    );
-  } else {
-    return (
-      <div key='details' className="projectContent-full">
-        {object.image}
-      </div>
-    );
-  }
+function useHorizontalScroll() {
+  const elRef = useRef();
+  useEffect(() => {
+    const el = elRef.current;
+    if (el) {
+      const onWheel = e => {
+        if (e.deltaY == 0) return;
+        e.preventDefault();
+        el.scrollTo({
+          left: el.scrollLeft + e.deltaY,
+          behavior: "smooth"
+        });
+      };
+      el.addEventListener("wheel", onWheel);
+      return () => el.removeEventListener("wheel", onWheel);
+    }
+  }, []);
+  return elRef;
 }
