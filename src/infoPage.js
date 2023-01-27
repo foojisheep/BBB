@@ -45,7 +45,7 @@ const InfoPage = () => {
         </table>
       </div>
       <div className="infoFooterDisplay">
-          <table id="topInfoNav">
+          <table id="bottomInfoNav">
               <tr >
                   <td>Studio BBB &copy; 2022</td>
               </tr>

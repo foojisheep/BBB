@@ -33,7 +33,7 @@ function ShowProject(props) {
           <th></th>
         </tr>
         <tr>
-          <td style={{ width: '20%', verticalAlign: 'top' }}>
+          <td style={{ width: '18%', verticalAlign: 'top' }}>
             <table>
               <tr>
                 <td> Location</td>

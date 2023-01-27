@@ -8,6 +8,7 @@
 
 .infoFooterDisplay {
   white-space:pre;
+  font-family: 'FoundersGroteskText';
   background: #661F08;
   position: fixed;
   bottom: 0;
@@ -15,6 +16,7 @@
   right: 0;
   padding-left: 1%;
   padding-right: 1%;
+  color: #FFC572;
   /* margin-bottom: 0.2%; */
 }
 
@@ -22,6 +24,17 @@
     font-family: "FoundersGroteskText";
     src: local("Founders Grotesk Text"),
     url("./resource/font/founders-grotesk-regular.woff2") format("truetype");
+}
+
+.bottomInfoNav {
+  white-space: none;
+  font-family: 'FoundersGroteskText';
+  font-style: normal;
+  font-weight: 200;
+  font-size: 12px;
+  line-height: 15px;
+  letter-spacing: 0.01em;
+  color: #FFC572;
 }
 
 .descriptionInfo{
@@ -74,7 +87,7 @@ a:link {
   font-weight: 400;
   font-size: 54px;
   line-height: 100%;
-  /* letter-spacing: -0.02em; */
+  letter-spacing: 0.02em;
   color: #FFC572;
   text-align: left;
   padding-right: 45%;
@@ -86,7 +99,7 @@ a:link {
   font-weight: 400;
   font-size: 24px;
   line-height: 110%;
-  /* letter-spacing: 0em; */
+  letter-spacing: 0.02em;
   color: #FFC067;
 }
 
@@ -96,7 +109,7 @@ a:link {
   font-weight: 400;
   font-size: 18px;
   line-height: 110%;
-  /* letter-spacing: 0em; */
+  /* letter-spacing: 0.02em; */
   color: #FFC572;
 }
 
@@ -114,7 +127,7 @@ a:link {
   line-height: 21px;
   display: flex;
   align-items: right;
-  /* letter-spacing: -0.02em; */
+  /* letter-spacing: 0.02em; */
   align-content: right;
   text-align: right;
   margin: 0;
