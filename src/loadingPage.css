@@ -26,6 +26,7 @@
   100% {
     background-color: #FFFFFF;
   }
+}
 
 @-webkit-keyframes navBarSlide {
   0% {transform: translateY(-30%);}
