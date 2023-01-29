@@ -132,7 +132,9 @@ export default function ProjectDetailPage(object) {
   const { id } = useParams();
   return (
     <div style={{ display: 'flex', flexDirection: 'column', height: '100vh' }}>
-      <Navbar />
+      <div className="navDisplay">
+        <Navbar />
+      </div>
       <ShowImage key={id.toString()} value={id} />
       <ShowProject key={id.toString()} value={id} />
     </div>
