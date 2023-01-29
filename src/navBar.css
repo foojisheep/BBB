@@ -1,0 +1,162 @@
+#topnav {
+  font-family: 'FoundersGroteskText';
+  border-collapse: collapse;
+  width: 100%;
+}
+
+#topnav h1 {
+  font-family: FoundersGroteskText;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 30px;
+  display: flex;
+  align-items: right;
+  /* letter-spacing: 0.02em; */
+  align-content: right;
+  text-align: right;
+  margin: 0;
+}
+
+.logoheader {
+  text-align: right;
+  align-items: right;
+  align-self: right;
+}
+
+#topnav td {
+  font-family: 'FoundersGroteskText';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 30px;
+  /* letter-spacing: 0.02em; */
+  color: #000000;
+  text-align: left;
+  /* border: 1px solid #ddd; */
+  /* padding: auto;
+  padding-left: 2%;
+  font-family: 'FoundersGroteskText';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 30px;
+  letter-spacing: -0.02em;
+  color: #000000;
+  text-align: left; */
+}
+
+.descriptionHeader {
+  font-family: 'FoundersGroteskText';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 15px;
+  letter-spacing: 0.01em;
+  color: #000000;
+  display: flex;
+  margin: 0
+}
+
+.navDisplay {
+  overflow-x: hidden;
+  overflow-y: hidden;
+  margin-top: 0%;
+  margin-bottom: 0.0%;
+  height: 5%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  background-color: #FFFFFF;
+}
+
+a:link {
+  text-decoration: none;
+  color: inherit;
+  display: inline-block;
+}
+
+a:visited {
+  text-decoration: none;
+  color: inherit;
+}
+
+a:hover {
+  text-decoration: none;
+  color: inherit;
+}
+
+a:active {
+  text-decoration: none;
+  color: inherit;
+}
+
+.studioBBBDiv {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 100%;
+  margin-left: 1%;
+  margin-right: 1%;
+}
+
+.studioBBB {
+  margin: 0;
+  font-family: 'FoundersGroteskText';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 30px;
+  /* letter-spacing: 0.02em; */
+  color: #000000;
+  justify-content: center;
+  display: inline;
+}
+
+.leftNavBar {
+  display: flex;
+  flex-direction: row;
+  height: 100%;
+  flex-grow: 1;
+  justify-content: flex-start;
+}
+
+.descriptionDiv {
+  display: inline-flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-left: 1%;
+  margin-right: 1%;
+}
+
+.rightNavBar {
+  display: flex;
+  flex-direction: row;
+  height: 100%;
+  flex-grow: 1;
+  justify-content: flex-end;
+}
+
+.linkStyleDiv {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  justify-content: center;
+  margin-left: 1%;
+  margin-right: 1%;
+  width: fit-content;
+}
+
+.linkStyle {
+  margin: 0;
+  font-family: 'FoundersGroteskText';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 30px;
+  /* letter-spacing: 0.02em; */
+  color: #000000;
+  text-align: center;
+  justify-content: center;
+  display: flex;
+}
