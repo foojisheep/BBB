@@ -1,7 +1,10 @@
 .defaultLandingPage-full {
   /* display: flex; */
   overflow: hidden;
-
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  width: 100vw;
 }
 
 .topnav {
@@ -100,12 +103,11 @@ ul {
 
 .landingPage-full0 {
   background-color: #FFB8F2;
-  /* height: 65.7%; */
-  height: 80%;
+  height: 70%;
   width: 100%;
   display: flex;
-  animation: navigationTop 2s;
-  animation-fill-mode: linear forwards;
+  /* animation: navigationTop 2s; */
+  /* animation-fill-mode: linear forwards; */
 }
 
 @keyframes navigationTop {

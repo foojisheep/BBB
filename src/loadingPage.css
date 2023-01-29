@@ -1,4 +1,4 @@
-.defaultPage-full{
+.defaultPage-full {
   /* display: flex; */
   overflow: hidden;
 }
@@ -8,13 +8,23 @@
 }
 
 @-webkit-keyframes fadeOut {
-  0% {background-color: #FFB8F2;}
-  100% {background-color: #FFFFFF;}
+  0% {
+    background-color: #FFB8F2;
+  }
+
+  100% {
+    background-color: #FFFFFF;
+  }
 }
 
 @keyframes fadeOut {
-  0% {background-color: #FFB8F2;}
-  100% {background-color: #FFFFFF;}
+  0% {
+    background-color: #FFB8F2;
+  }
+
+  100% {
+    background-color: #FFFFFF;
+  }
 }
 
 .fadeOut {
@@ -22,84 +32,107 @@
   animation-name: fadeOut;
 }
 
-.loadingPage-full{
-    /* display: flex; */
-    height: 100%;
-    align-items: 'center';
-    justify-content: center;
-    overflow: hidden;
-  }
-  
-  .defaultLandingPage-full{
-     /* display: flex; */
-      overflow: hidden;
-      /* max-width: max-content; */
-      /* overflow: hidden; */
-      height: 100vh;
-      background-color: #FFB8F2;
-      /* transition: background 0.2s linear; */
-      /* animation: fadeOut 3s; */
-  }
-  
-  .loadingPage-image{
-    display: flex;
-    height: 100%;
-    width: 200%;
-    flex-direction: row;
-    align-items: center;
-    animation: blender-laptop 3s;
-    animation-fill-mode: linear forwards;
+.loadingPage-full {
+  display: flex;
+  height: 70%;
+  align-items: 'center';
+  justify-content: center;
+  overflow: hidden;
+  width: 200%;
+}
+
+.defaultLandingPage-full {
+  /* display: flex; */
+  overflow: hidden;
+  /* max-width: max-content; */
+  /* overflow: hidden; */
+  height: 100vh;
+  background-color: #FFB8F2;
+  /* transition: background 0.2s linear; */
+  /* animation: fadeOut 3s; */
+}
+
+.loadingPage-image {
+  display: flex;
+  height: 100%;
+  width: 100%;
+  flex-direction: row;
+  align-items: center;
+  animation: blender-laptop 3s;
+  animation-fill-mode: linear forwards;
+}
+
+.loadingImage {
+  object-fit: cover;
+  width: 100%;
+  max-height: 100%;
+  align-self: stretch;
+}
+
+/* Large devices (laptops/desktops, 1920px and up) */
+@keyframes blender-large-desktop {
+  from {
+    transform: translateX(100%);
   }
 
-  /* Large devices (laptops/desktops, 1920px and up) */
-  @keyframes blender-large-desktop {
-    from {
-      transform: translateX(100%);
-    }
-    to {
-      transform: translateX(17%);
-    }
+  to {
+    transform: translateX(17%);
   }
-  
-  /* Large devices (laptops/desktops, 1440px and up) */
-  @keyframes blender-laptop {
-    from {
-      transform: translateX(0%);
-    }
-    to {
-      transform: translateX(-50%);
-    }
+}
+
+/* Large devices (laptops/desktops, 1440px and up) */
+@keyframes blender-laptop {
+  from {
+    transform: translateX(0%);
   }
 
-  @keyframes blender {
-    from {
-      transform: translateX(100%);
-    }
-    to {
-      transform: translateX(-50%);
-    }
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+@keyframes blender {
+  from {
+    transform: translateX(100%);
   }
 
-  @keyframes blender-tablet {
-    from {
-      transform: translateX(50%);
-    }
-    to {
-      transform: translateX(-51%);
-    }
-    /* from {right: -50%;}
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+@keyframes blender-tablet {
+  from {
+    transform: translateX(50%);
+  }
+
+  to {
+    transform: translateX(-51%);
+  }
+
+  /* from {right: -50%;}
     to {right: 51%;} */
+}
+
+@keyframes blender-mobile-small {
+  from {
+    right: 0%;
   }
 
-  @keyframes blender-mobile-small {
-    from {right: 0%;}
-    to {right: 50%;}
+  to {
+    right: 50%;
+  }
+}
+
+@keyframes blender-mobile-large {
+  from {
+    right: 0%;
   }
 
-  @keyframes blender-mobile-large {
-    from {right: 0%;}
-    to {right: 52%;}
+  to {
+    right: 52%;
   }
+}
 
 /* Extra small devices (phones, 600px and down)
 @media only screen and (max-width: 600px) {
@@ -111,19 +144,19 @@
     max-width: fit-content;
   } */
 
-  /* .loadingPage-image {  */
-    /* background-color: chartreuse;
+/* .loadingPage-image {  */
+/* background-color: chartreuse;
     flex-direction: row;
     justify-content: center;
     max-height: 17%;
     animation: blender-mobile-small 3s;
     animation-fill-mode: forwards; */
-  /* } */
+/* } */
 /* } */
 
 /* Small devices (small phones, 600px and down) */
 /* @media only screen and (min-width: 600px) { */
-  /* .loadingPage-full { 
+/* .loadingPage-full { 
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -131,19 +164,20 @@
     max-width: fit-content;
   } */
 
-  .loadingPage-image { 
-    /* background-color: chartreuse;
+.loadingPage-image {
+  /* background-color: chartreuse;
     flex-direction: row;
     justify-content: center;
     max-height: 26%;
     animation: blender-mobile-large 3s;
     animation-fill-mode: forwards; */
-  }
+}
+
 /* } */
 
 /* Medium devices (landscape tablets, 768px and up) */
 /* @media only screen and (max-width:992px) { */
-  /* .loadingPage-full { 
+/* .loadingPage-full { 
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -151,29 +185,29 @@
     max-height: fit-content;
   } */
 
-  /* .loadingPage-image {  */
-    /* background: blue;
+/* .loadingPage-image {  */
+/* background: blue;
     flex-direction: row;
     justify-content: center;
     max-height: 26%;
     animation: blender-tablet 3s;
     animation-fill-mode: forwards; */
-  /* }
+/* }
 }  */
 
 /* Large devices (laptops/desktops, 992px and up) */
 /* @media only screen and (min-width: 992px) {
   .loadingPage-full {  */
-    /* display: flex;
+/* display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: center;
     max-height: fit-content;
     scale: 0.8; */
-  /* } */
+/* } */
 
-  /* .loadingPage-image {  */
-    /* background-color:darkgreen;  
+/* .loadingPage-image {  */
+/* background-color:darkgreen;  
     flex-direction: row;
     justify-content: center;
    animation: blender 3s; 
@@ -181,33 +215,33 @@
      max-height: 100%; 
     animation-fill-mode: forwards; 
     scale:0.6 */
-  /* }
+/* }
 }  */
 
 /* Large devices (laptops/desktops, 1440px and up) */
 /* @media only screen and (min-width: 1440px) {
   .loadingPage-full {  */
-    /* display: flex;
+/* display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: center;
     max-height: fit-content; */
-    /* scale: 0.9; */
-  /* } */
+/* scale: 0.9; */
+/* } */
 
-  /* .loadingPage-image { */
-    /* background-color:darkgreen;  */
-    /* display: flex;
+/* .loadingPage-image { */
+/* background-color:darkgreen;  */
+/* display: flex;
     height: 100%;
     width: 200%; */
-    /* flex-direction: row;
+/* flex-direction: row;
     align-items: center; */
-    /* vertical-align: middle; */
-    /* animation: blender-laptop 3s; */
-    /* max-height: fit-content; */
-    /* max-height: 100%; */
-    /* animation-fill-mode: linear forwards; */
-  /* }
+/* vertical-align: middle; */
+/* animation: blender-laptop 3s; */
+/* max-height: fit-content; */
+/* max-height: 100%; */
+/* animation-fill-mode: linear forwards; */
+/* }
 }  */
 
 /* Large devices (laptops/desktops, 1920px and up) */

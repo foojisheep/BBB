@@ -28,7 +28,7 @@ div.projectDisplay1 {
   /* overflow-x: hidden; */
   /* display: block; */
   display: flex;
-  /* height:27.5%; */
+  height: 25%;
   flex-direction: row;
   /* background: white; */
 }
