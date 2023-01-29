@@ -18,7 +18,9 @@ export default function LandingPage() {
   return(
     <>
       <div style={{display: 'flex', flexDirection: 'column', height: '100vh', width: "100vw"}}> 
+      <div className="navDisplay">
         <Navbar/>
+        </div>
         <ImageAndProjects />
       </div>
     </>

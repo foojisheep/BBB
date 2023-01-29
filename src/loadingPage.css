@@ -7,6 +7,7 @@
   background-color: white;
 }
 
+
 @-webkit-keyframes fadeOut {
   0% {
     background-color: #FFB8F2;
@@ -25,11 +26,39 @@
   100% {
     background-color: #FFFFFF;
   }
+
+@-webkit-keyframes navBarSlide {
+  0% {transform: translateY(-30%);}
+  100% {transform: translateY(0%);}
 }
 
-.fadeOut {
-  -webkit-animation-name: fadeOut;
-  animation-name: fadeOut;
+@keyframes navBarSlide {
+  0% {transform: translateY(-30%);}
+  100% {transform: translateY(0%);}
+}
+
+.slideDown {
+  animation: navBarSlide 1s ;
+  /* position: absolute; */
+  /* left: 0; */
+  /* top: 0; */
+}
+
+@-webkit-keyframes projectSlide {
+  0% {transform: translateY(30%);}
+  100% {transform: translateY(0%);}
+}
+
+@keyframes projectSlide {
+  0% {transform: translateY(30%);}
+  100% {transform: translateY(0%);}
+}
+
+.slideUp{
+  animation: projectSlide 1s ;
+  /* position: absolute; */
+  /* left: 0; */
+  /* top: 0; */
 }
 
 .loadingPage-full {
@@ -311,5 +340,5 @@
 
 
 .landingPage-transition {
-  animation: fadeOut 2s;
+  animation: slideDown 5s;
 }

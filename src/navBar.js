@@ -6,7 +6,7 @@ import './navBar.css';
 
 export default function NavBar() {
   return (
-    <div className="navDisplay">
+    <>
       <div className="leftNavBar">
         <div className='studioBBBDiv'>
           <h1 className="studioBBB">
@@ -66,6 +66,6 @@ export default function NavBar() {
           </td>
         </tr>
       </table> */}
-    </div>
+    </>
   );
 }
