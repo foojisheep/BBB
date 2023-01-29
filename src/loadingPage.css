@@ -7,6 +7,21 @@
   background-color: white;
 }
 
+@-webkit-keyframes fadeOut {
+  0% {background-color: #FFB8F2;}
+  100% {background-color: #FFFFFF;}
+}
+
+@keyframes fadeOut {
+  0% {background-color: #FFB8F2;}
+  100% {background-color: #FFFFFF;}
+}
+
+.fadeOut {
+  -webkit-animation-name: fadeOut;
+  animation-name: fadeOut;
+}
+
 .loadingPage-full{
     /* display: flex; */
     height: 100%;
@@ -22,6 +37,8 @@
       /* overflow: hidden; */
       height: 100vh;
       background-color: #FFB8F2;
+      /* transition: background 0.2s linear; */
+      /* animation: fadeOut 3s; */
   }
   
   .loadingPage-image{
@@ -256,4 +273,9 @@
   height: inherit; */
   /* height: 600px; */
   /* border: 2px solid #006100;  */
+}
+
+
+.landingPage-transition {
+  animation: fadeOut 2s;
 }

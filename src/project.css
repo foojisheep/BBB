@@ -30,7 +30,7 @@ div.projectDisplay1 {
   display: flex;
   /* height:27.5%; */
   flex-direction: row;
-  background: white;
+  /* background: white; */
 }
 
 /* Large devices (laptops/desktops, 992px and up) */

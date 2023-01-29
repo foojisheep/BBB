@@ -73,9 +73,9 @@ export default function LoadingPage() {
             </div>
           </div>
         </div>
-      )}
-      {showLanding && (
-        <div style={{ display: 'flex', flexDirection: 'column', height: "100vh", width: "100vw" }}>
+       )} 
+       {showLanding && ( 
+        <div className='landingPage-transition' style={{ display: 'flex', flexDirection: 'column', height: "100vh", width: "100vw" }}>
           <Navbar style={{ display: 'flex', height: '5%'}}/>
           <div className='landingPage-full0'>
             <div key="landing" className="landingPage-full1">
