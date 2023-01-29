@@ -75,14 +75,18 @@ export default function LoadingPage() {
         </div>
        )} 
        {showLanding && ( 
-        <div className='landingPage-transition' style={{ display: 'flex', flexDirection: 'column', height: "100vh", width: "100vw" }}>
-          <Navbar style={{ display: 'flex', height: '5%'}}/>
+        <div style={{ display: 'flex', flexDirection: 'column', height: "100vh", width: "100vw", backgroundColor: '#FFB8F2'}}>
+          <div className="navDisplay slideDown">
+            <Navbar style={{ display: 'flex', height: '5%'}}/>
+            </div>
           <div className='landingPage-full0'>
             <div key="landing" className="landingPage-full1">
               <img id="hoverImage" key='logo' className="landingPage-image1" src={logoBig} alt={logoBig.toString()} onMouseEnter={() => changeURL(logoBig, false)}/>
             </div>
           </div>
+          <div className='slideUp' style={{backgroundColor: '#FFFFFF'}}>
           <Projects style={{ display: 'flex', height: '20%'}}/>
+          </div>
         </div>
       )}
     </>

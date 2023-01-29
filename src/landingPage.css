@@ -104,8 +104,8 @@ ul {
   height: 80%;
   width: 100%;
   display: flex;
-  animation: navigationTop 2s;
-  animation-fill-mode: linear forwards;
+  /* animation: navigationTop 2s;
+  animation-fill-mode: linear forwards; */
 }
 
 @keyframes navigationTop {
