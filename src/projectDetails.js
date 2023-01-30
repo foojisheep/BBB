@@ -37,24 +37,24 @@ function ShowProject(props) {
             <table style={{ display: 'table-row-group'}}>
               <tr>
                 <td style={{ verticalAlign:'top'}}>Location</td>
-                <td style={{ paddingLeft:'5%'}}>{projectsDetails[id].location}</td>
+                <td style={{ paddingLeft:'5%', whiteSpace:'nowrap'}}>{projectsDetails[id].location}</td>
               </tr>
               <tr>
                 <td style={{ verticalAlign:'top'}}>Category</td>
-                <td style={{ paddingLeft:'5%'}}>{projectsDetails[id].category}</td>
+                <td style={{ paddingLeft:'5%', whiteSpace:'nowrap'}}>{projectsDetails[id].category}</td>
               </tr>
               <tr>
                 <td style={{ verticalAlign:'top'}}>Years</td>
-                <td style={{ paddingLeft:'5%'}}>{projectsDetails[id].years}</td>
+                <td style={{ paddingLeft:'5%', whiteSpace:'nowrap'}}>{projectsDetails[id].years}</td>
               </tr>
               <tr>
                 <td style={{ verticalAlign:'top'}}>Surface</td>
-                <td style={{ paddingLeft:'5%'}}>{projectsDetails[id].surface}</td>
+                <td style={{ paddingLeft:'5%', whiteSpace:'nowrap'}}>{projectsDetails[id].surface}</td>
               </tr>
               {projectsDetails[id].collab != '' &&
                 <tr>
                   <td style={{ verticalAlign:'top'}}>Collab</td>
-                  <td style={{ paddingLeft:'5%'}}>{projectsDetails[id].collab}</td>
+                  <td style={{ paddingLeft:'5%', whiteSpace:'nowrap'}}>{projectsDetails[id].collab}</td>
                 </tr>
               }
             </table>
@@ -87,15 +87,15 @@ function Desc(object) {
   } else if (object.value.id == 2 || object.value.id == 4) {
     return (
       <>
-        <td className='projectDescription' style={{ textAlign: 'left', paddingLeft:'5%', paddingRight: '5%' }}>{object.value.desc1}</td>
-        <td className='projectDescription' style={{ textAlign: 'left', paddingLeft:'5%', paddingRight: '5%', paddingTop: '1%' }}>&emsp;{object.value.desc2}</td>
+        <td className='projectDescription' style={{ textAlign: 'left', paddingLeft:'5%' }}>{object.value.desc1}</td>
+        <td className='projectDescription' style={{ textAlign: 'left', paddingLeft:'5%', paddingTop: '1%' }}>&emsp;{object.value.desc2}</td>
       </>
     );
   } else {
     return (
       <>
-        <td className='projectDescription' style={{ textAlign: 'left', paddingLeft:'5%', paddingRight: '10%' }}>{object.value.desc1}</td>
-        <td className='projectDescription' style={{ textAlign: 'left', paddingLeft:'5%',paddingRight: '10%', paddingTop: '1%' }}>{object.value.desc2}</td>
+        <td className='projectDescription' style={{ textAlign: 'left', paddingLeft:'5%'}}>{object.value.desc1}</td>
+        <td className='projectDescription' style={{ textAlign: 'left', paddingLeft:'5%', paddingTop: '1%' }}>{object.value.desc2}</td>
       </>
     );
   }
