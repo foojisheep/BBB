@@ -68,8 +68,8 @@
   align-items: 'center';
   justify-content: center;
   /* overflow: hidden; */
-  width: 220%;
-  align-self: stretch;
+  width: 200%;
+  /* align-self: stretch; */
 }
 
 .defaultLandingPage-full {
@@ -86,7 +86,7 @@
 .loadingPage-image {
   display: flex;
   height: 100%;
-  width: 110%;
+  width: 100%;
   flex-direction: row;
   align-items: center;
   animation: blender-laptop 3s;
@@ -119,7 +119,7 @@
   }
 
   to {
-    transform: translateX(-52%);
+    transform: translateX(-50%);
   }
 }
 
