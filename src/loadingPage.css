@@ -68,7 +68,7 @@
   align-items: 'center';
   justify-content: center;
   /* overflow: hidden; */
-  width: 200%;
+  width: 220%;
   /* align-self: stretch; */
 }
 
@@ -119,7 +119,7 @@
   }
 
   to {
-    transform: translateX(-50%);
+    transform: translateX(-53%);
   }
 }
 
