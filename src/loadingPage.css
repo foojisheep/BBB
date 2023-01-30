@@ -90,6 +90,7 @@
   flex-direction: row;
   align-items: center;
   animation: blender-laptop 3s;
+  animation-iteration-count: 1;
   animation-fill-mode: linear forwards;
 }
 

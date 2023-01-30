@@ -66,7 +66,7 @@ export default function LoadingPage() {
     <>
       {showLoading && (
         <div className='defaultLandingPage-full'>
-          <div className='navDisplay' />
+          <div className='navDisplay' style={{backgroundColor: '#FFB8F2' }}/>
           <div className="loadingPage-full">
             <div className='loadingPage-image'>
               {logo}
