@@ -78,7 +78,7 @@ div.projectDisplay1 {
   border-collapse: collapse;
 }
 
-#customers tr.last
+#customers tr:last-child
 {
   border-bottom: none;
 }
