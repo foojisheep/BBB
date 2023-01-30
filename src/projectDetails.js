@@ -119,7 +119,7 @@ function ShowImage(props) {
   const div = 'image';
   return (
     <>
-      <div id='projectImageDiv' className="project-Image-Div" ref={scrollRef} onMouseEnter={() => scrollable(div, true)}>
+      <div ref={scrollRef} id='projectImageDiv' className="project-Image-Div" onMouseEnter={() => scrollable(div, true)} style={{ overflow: "auto" }}>
         {/* <div className='list-group list-group-horizontal' style={{ display: 'flex', overflow: 'hidden', height: '80%' }}> */}
         {showImage}
         {/* </div> */}

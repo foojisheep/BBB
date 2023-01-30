@@ -78,6 +78,11 @@ div.projectDisplay1 {
   border-collapse: collapse;
 }
 
+#customers tr.last
+{
+  border-bottom: none;
+}
+
 #customers td {
   font-family: 'FoundersGroteskText';
   font-style: normal;
