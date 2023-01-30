@@ -2,7 +2,6 @@ import './landingPage.css';
 import './loadingPage.css';
 import './project.css';
 import './projectDetails.css';
-import Projects from "./project";
 import Navbar from "./navBar";
 import { useParams } from 'react-router-dom';
 import { useRef, useEffect } from "react";
@@ -25,36 +24,37 @@ const projectsDetails = [
 
 function ShowProject(props) {
   const id = parseInt(props.value) - 1;
+  const div = 'project';
   return (
-    <div className="projectDetailDisplay">
+    <div id='projectDetailDisplay' className="projectDetailDisplay" onMouseEnter={() => scrollable(div, true)}>
       <table id="projectDetails">
         <tr>
-          <th style={{ textAlign: 'left', paddingTop: '1%'}}>{projectsDetails[id].title}</th>
+          <th style={{ textAlign: 'left', paddingTop: '1%', paddingBottom:'1%'}}>{projectsDetails[id].title}</th>
           <th></th>
         </tr>
         <tr>
           <td style={{ width: '18%', verticalAlign: 'top' }}>
-            <table>
+            <table style={{ display: 'table-row-group'}}>
               <tr>
-                <td> Location</td>
-                <td>{projectsDetails[id].location}</td>
+                <td style={{ verticalAlign:'top'}}>Location</td>
+                <td style={{ paddingLeft:'5%'}}>{projectsDetails[id].location}</td>
               </tr>
               <tr>
-                <td> Category</td>
-                <td>{projectsDetails[id].category}</td>
+                <td style={{ verticalAlign:'top'}}>Category</td>
+                <td style={{ paddingLeft:'5%'}}>{projectsDetails[id].category}</td>
               </tr>
               <tr>
-                <td>Years</td>
-                <td>{projectsDetails[id].years}</td>
+                <td style={{ verticalAlign:'top'}}>Years</td>
+                <td style={{ paddingLeft:'5%'}}>{projectsDetails[id].years}</td>
               </tr>
               <tr>
-                <td>Surface</td>
-                <td>{projectsDetails[id].surface}</td>
+                <td style={{ verticalAlign:'top'}}>Surface</td>
+                <td style={{ paddingLeft:'5%'}}>{projectsDetails[id].surface}</td>
               </tr>
               {projectsDetails[id].collab != '' &&
                 <tr>
-                  <td>Collab</td>
-                  <td>{projectsDetails[id].collab}</td>
+                  <td style={{ verticalAlign:'top'}}>Collab</td>
+                  <td style={{ paddingLeft:'5%'}}>{projectsDetails[id].collab}</td>
                 </tr>
               }
             </table>
@@ -87,15 +87,15 @@ function Desc(object) {
   } else if (object.value.id == 2 || object.value.id == 4) {
     return (
       <>
-        <td className='projectDescription' style={{ textAlign: 'left', paddingRight: '10%' }}>{object.value.desc1}</td>
-        <td className='projectDescription' style={{ textAlign: 'left', paddingRight: '10%', paddingTop: '1%' }}>&emsp;{object.value.desc2}</td>
+        <td className='projectDescription' style={{ textAlign: 'left', paddingLeft:'5%', paddingRight: '5%' }}>{object.value.desc1}</td>
+        <td className='projectDescription' style={{ textAlign: 'left', paddingLeft:'5%', paddingRight: '5%', paddingTop: '1%' }}>&emsp;{object.value.desc2}</td>
       </>
     );
   } else {
     return (
       <>
-        <td className='projectDescription' style={{ textAlign: 'left', paddingRight: '10%' }}>{object.value.desc1}</td>
-        <td className='projectDescription' style={{ textAlign: 'left', paddingRight: '10%', paddingTop: '1%' }}>{object.value.desc2}</td>
+        <td className='projectDescription' style={{ textAlign: 'left', paddingLeft:'5%', paddingRight: '10%' }}>{object.value.desc1}</td>
+        <td className='projectDescription' style={{ textAlign: 'left', paddingLeft:'5%',paddingRight: '10%', paddingTop: '1%' }}>{object.value.desc2}</td>
       </>
     );
   }
@@ -116,10 +116,10 @@ function ShowImage(props) {
       // <img key={`${file}-${index}`} className="project-image" src={require(`./resource/Images/${file}/Hover.png`)} alt={`${file}-${index}`}/>
     );
   });
-
+  const div = 'image';
   return (
     <>
-      <div className="project-Image-Div" ref={scrollRef}>
+      <div id='projectImageDiv' className="project-Image-Div" ref={scrollRef} onMouseEnter={() => scrollable(div, true)}>
         {/* <div className='list-group list-group-horizontal' style={{ display: 'flex', overflow: 'hidden', height: '80%' }}> */}
         {showImage}
         {/* </div> */}
@@ -159,4 +159,16 @@ function useHorizontalScroll() {
     }
   }, []);
   return elRef;
+}
+
+function scrollable(div, scroll) {
+  if (scroll) {
+    if(div == 'image') {
+      document.getElementsByClassName('projectDetailDisplay')[0].style.overflow = 'hidden';
+      document.getElementsById('project-Image-Div')[0].style.overflow = 'scroll';
+    } else{
+      document.getElementsByClassName('projectDetailDisplay')[0].style.overflow = 'scroll';
+      document.getElementsById('project-Image-Div')[0].style.overflow = 'hidden';
+    }
+  }
 }
