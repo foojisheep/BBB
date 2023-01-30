@@ -9,7 +9,7 @@ export default function NavBar() {
     <>
       <div className="leftNavBar">
         <div className='studioBBBDiv'>
-          <h1 className="studioBBB">
+          <h1 className="studioBBB" style={{display:'table-row-group'}}>
             <Link to="/">Studio BBB</Link>
           </h1>
         </div>

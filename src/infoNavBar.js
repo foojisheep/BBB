@@ -9,7 +9,7 @@ export default function InfoNavBar() {
         <div className="infoNavDisplay">
           <div className="leftInfoNavBar">
             <div className='studioBBBInfoDiv'>
-              <h1 className="studioInfoBBB">
+              <h1 className="studioInfoBBB" style={{display:'table-row-group'}}>
                 <Link to="/">Studio BBB</Link>
               </h1>
             </div>
