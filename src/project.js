@@ -27,7 +27,7 @@ export default function ImageAndProjects() {
           <img id="hoverImage" key='logo' className="landingPage-image1" src={logoBig} alt={logoBig.toString()} onMouseEnter={() => changeURL(logoBig, false)} />
         </div>
       </div>
-      <div className="projectDisplay1">
+      <div className="projectDisplay1" style={{ height: '26%'}}>
         <table id="customers">
           {content}
         </table>

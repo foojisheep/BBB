@@ -37,7 +37,7 @@ function Projects() {
   );
   return (
     <>
-      <div className="projectDisplay1">
+      <div className="projectDisplay1" style={{ height: '100%'}}>
         <table id="customers">
           {content}
         </table>
@@ -86,8 +86,8 @@ export default function LoadingPage() {
               <img id="hoverImage" key='logo' className="landingPage-image1" src={logoBig} alt={logoBig.toString()} onMouseEnter={() => changeURL(logoBig, false)} />
             </div>
           </div>
-          <div className='slideUp' style={{backgroundColor: '#FFFFFF'}}>
-          <Projects style={{ display: 'flex', height: '20%'}}/>
+          <div className='slideUp' style={{backgroundColor: '#FFFFFF', height:'26%'}}>
+            <Projects />
           </div>
         </div>
       )}
