@@ -119,7 +119,7 @@ function ShowImage(props) {
   const div = 'image';
   return (
     <>
-      <div id='projectImageDiv' className="project-Image-Div" onMouseEnter={() => scrollable(div, true)} style={{ overflow: "auto" }}>
+      <div ref={scrollRef} id='projectImageDiv' className="project-Image-Div" onMouseEnter={() => scrollable(div, true)} style={{ overflow: "auto" }}>
         {/* <div className='list-group list-group-horizontal' style={{ display: 'flex', overflow: 'hidden', height: '80%' }}> */}
         {showImage}
         {/* </div> */}
@@ -149,10 +149,18 @@ function useHorizontalScroll() {
       const onWheel = e => {
         if (e.deltaY == 0) return;
         e.preventDefault();
-        el.scrollTo({
+        // if(e.deltaY > 0){
+        el.scrollBy({
           left: el.scrollLeft + e.deltaY,
           behavior: "smooth"
         });
+      // } else {
+      //   el.scrollBy({
+      //     left: el.scrollLeft - e.deltaY,
+      //     behavior: "smooth"
+      //   });
+      //   e.preventDefault();
+      // }
       };
       el.addEventListener("wheel", onWheel);
       return () => el.removeEventListener("wheel", onWheel);
@@ -165,10 +173,10 @@ function scrollable(div, scroll) {
   if (scroll) {
     if(div == 'image') {
       document.getElementsByClassName('projectDetailDisplay')[0].style.overflow = 'hidden';
-      document.getElementsById('project-Image-Div')[0].style.overflow = 'scroll';
+      document.getElementsByClassName('project-Image-Div')[0].style.overflow = 'scroll';
     } else{
       document.getElementsByClassName('projectDetailDisplay')[0].style.overflow = 'scroll';
-      document.getElementsById('project-Image-Div')[0].style.overflow = 'hidden';
+      document.getElementsByClassName('project-Image-Div')[0].style.overflow = 'hidden';
     }
   }
 }
