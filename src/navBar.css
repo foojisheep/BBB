@@ -59,8 +59,8 @@
 }
 
 .navDisplay {
-  overflow-x: hidden;
-  overflow-y: hidden;
+  /* overflow-x: hidden;
+  overflow-y: hidden; */
   margin-top: 0%;
   margin-bottom: 0.0%;
   height: 5%;
