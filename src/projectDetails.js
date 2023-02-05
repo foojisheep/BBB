@@ -5,6 +5,7 @@ import './projectDetails.css';
 import Navbar from "./navBar";
 import { useParams } from 'react-router-dom';
 import { useRef, useEffect } from "react";
+import HorizontalScroll from 'react-scroll-horizontal'
 
 const images = [
   { id: 1, file: 'Wangsa', name: ['01', '02', '03', '04', '05', '06', '07', '08', '09', '10', '11', '12', '13'] },
@@ -102,7 +103,6 @@ function Desc(object) {
 }
 
 function ShowImage(props) {
-  const scrollRef = useHorizontalScroll();
   const id = parseInt(props.value) - 1;
   const photos = images[id].name;
   const file = images[id].file;
@@ -111,19 +111,24 @@ function ShowImage(props) {
     //   console.log(`./Images/${file}/${photo}.png`);
     return (
       // <div className='list-group-item' style={{}}>
-      <img style={{ height: '100%' }} key={`${file}-${index}`} className="project-image" src={require(`./resource/Images/${file}/${index}.png`)} alt={`${file}-${index}`} />
+      <img style={{ height: '100%'}} key={`${file}-${index}`} className="project-image" src={require(`./resource/Images/${file}/${index}.png`)} alt={`${file}-${index}`} />
       // </div>
       // <img key={`${file}-${index}`} className="project-image" src={require(`./resource/Images/${file}/Hover.png`)} alt={`${file}-${index}`}/>
     );
   });
   const div = 'image';
   return (
-    <>
-      <div ref={scrollRef} id='projectImageDiv' className="project-Image-Div" onMouseEnter={() => scrollable(div, true)} style={{ overflow: "auto" }}>
+    <>    
+      {/* <HorizontalScroll>   */}
+      <div id='projectImageDiv' className="project-Image-Div" onMouseEnter={() => scrollable(div, true)} style={{ overflow: "auto" }}>
+        <HorizontalScroll className='scroll' reverseScroll={true}>
+          {/* <div style={{width: '110vw'}}> */}
         {/* <div className='list-group list-group-horizontal' style={{ display: 'flex', overflow: 'hidden', height: '80%' }}> */}
         {showImage}
         {/* </div> */}
+        </HorizontalScroll>
       </div>
+      {/* </HorizontalScroll> */}
     </>
   );
 }
@@ -139,34 +144,6 @@ export default function ProjectDetailPage(object) {
       <ShowProject key={id.toString()} value={id} />
     </div>
   );
-}
-
-function useHorizontalScroll() {
-  const elRef = useRef();
-  useEffect(() => {
-    const el = elRef.current;
-    if (el) {
-      const onWheel = e => {
-        if (e.deltaY == 0) return;
-        e.preventDefault();
-        // if(e.deltaY > 0){
-        el.scrollBy({
-          left: el.scrollLeft + e.deltaY,
-          behavior: "smooth"
-        });
-      // } else {
-      //   el.scrollBy({
-      //     left: el.scrollLeft - e.deltaY,
-      //     behavior: "smooth"
-      //   });
-      //   e.preventDefault();
-      // }
-      };
-      el.addEventListener("wheel", onWheel);
-      return () => el.removeEventListener("wheel", onWheel);
-    }
-  }, []);
-  return elRef;
 }
 
 function scrollable(div, scroll) {
