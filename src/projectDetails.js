@@ -120,6 +120,8 @@ function ShowImage(props) {
   return (
     <>    
       {/* <HorizontalScroll>   */}
+      <div style ={{display:'flex', height:'66.5%', flexDirection:'column', overflow:'hidden'}}>
+
       <div id='projectImageDiv' className="project-Image-Div" onMouseEnter={() => scrollable(div, true)} style={{ overflow: "auto" }}>
         <HorizontalScroll className='scroll' reverseScroll={true}>
           {/* <div style={{width: '110vw'}}> */}
@@ -127,6 +129,7 @@ function ShowImage(props) {
         {showImage}
         {/* </div> */}
         </HorizontalScroll>
+      </div>
       </div>
       {/* </HorizontalScroll> */}
     </>
@@ -136,12 +139,14 @@ function ShowImage(props) {
 export default function ProjectDetailPage(object) {
   const { id } = useParams();
   return (
-    <div style={{ display: 'flex', flexDirection: 'column', height: '100vh' }}>
+    <div style={{ flexDirection: 'column', height: '100vh', width:"100vw" }}>        
       <div className="navDisplay">
         <Navbar />
       </div>
-      <ShowImage key={id.toString()} value={id} />
-      <ShowProject key={id.toString()} value={id} />
+      <div className='projectDetailsTransition' style={{ flexDirection: 'column', height: '95%'}}>
+        <ShowImage key={id.toString()} value={id} />
+        <ShowProject key={id.toString()} value={id} />
+    </div>
     </div>
   );
 }

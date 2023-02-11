@@ -13,16 +13,16 @@ const InfoPage = () => {
     <img key={index} className="landingPage-image" src={logo} alt={logo.toString()} />
   ));
   return(
-    <div id="infoDisplay">
+    <div id="infoDisplay" className="infoPageTransition">
       <InfoNavBar />
-      <div>
+      <div style={{ height: '40%'}}>
         <ul style={{ textAlign: 'left',paddingTop:'3%', width: '100%', whiteSpace: 'none', paddingLeft: '2%'}}>
             <li id="infoContent">BBB is an interior design studio based in Kuala Lumpur. 
             We create non-linear narratives associated with a sense of place - 
             echoing emotions formed through a connection with the craft of building.</li>
         </ul>
       </div>
-      <div className='context' style={{ marginTop: '3%', paddingLeft: '2%' }}>
+      <div className='context' style={{ marginTop: '3%', paddingLeft: '2%', height: '40%'}}>
         <table id="contextAlign">
           <tr>
           <td style={{width: '20%', verticalAlign:'top'}}>

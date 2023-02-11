@@ -13,7 +13,7 @@
 .project-Image-Div {
   display: flex;
   flex-direction: row;
-  height: 70%;
+  height: 100%;
   overflow-x: scroll;
   /* Hide scrollbar for IE, Edge and Firefox */
   -ms-overflow-style: none;  /* IE and Edge */
@@ -177,4 +177,25 @@
   font-size: 18px;
   line-height: 21px;
   letter-spacing: -0.02em;
+}
+
+.projectDetailsTransition {
+  display: flex;
+  /* height: 100%; */
+  /* width: 100%; */
+  /* flex-direction: row; */
+  /* align-items: center; */
+  animation: projectDetailsTransition 500ms;
+  animation-iteration-count: 1;
+  animation-fill-mode: linear;
+}
+
+@keyframes projectDetailsTransition {
+  from {
+    transform: translateX(100%);
+  }
+
+  to {
+    transform: translateX(0%);
+  }
 }

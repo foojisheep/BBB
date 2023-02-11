@@ -10,10 +10,11 @@
   white-space:pre;
   font-family: 'FoundersGroteskText';
   background: #661F08;
-  position: fixed;
+  /* position: absolute; */
   bottom: 0;
   left: 0;
   right: 0;
+  height: 2%;
   padding-left: 2%;
   padding-right: 1%;
   margin-bottom: 2%;
@@ -132,4 +133,25 @@ a:link {
   align-content: right;
   text-align: right;
   margin: 0;
+}
+
+.infoPageTransition {
+  /* display: flex; */
+  /* height: 100%; */
+  /* width: 100%; */
+  /* flex-direction: row; */
+  /* align-items: center; */
+  animation: infoPageTransition 300ms;
+  animation-iteration-count: 1;
+  animation-fill-mode: linear;
+}
+
+@keyframes infoPageTransition {
+  from {
+    transform: translateY(100%);
+  }
+
+  to {
+    transform: translateY(0%);
+  }
 }

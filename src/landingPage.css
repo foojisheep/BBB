@@ -294,3 +294,24 @@ ul {
   src: local("Founders Grotesk Text"),
     url("./resource/font/founders-grotesk-regular.woff2") format("truetype");
 }
+
+.landingPageTransition {
+  /* display: flex; */
+  /* height: 100%; */
+  /* width: 100%; */
+  /* flex-direction: row; */
+  /* align-items: center; */
+  animation: landingPageTransition 300ms;
+  animation-iteration-count: 1;
+  animation-fill-mode: linear;
+}
+
+@keyframes landingPageTransition {
+  from {
+    transform: translateY(-500%);
+  }
+
+  to {
+    transform: translateY(0%);
+  }
+}
