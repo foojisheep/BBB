@@ -72,6 +72,14 @@
   margin-right: 2%;
 }
 
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (max-width: 430px) {
+  .infoNavDisplay {
+    margin-left: 4%;
+    margin-right: 4%;
+  }
+}
+
 a:link {
   text-decoration: none;
   color: inherit;
