@@ -3,6 +3,7 @@ import './landingPage.css';
 import './loadingPage.css';
 import './project.css';
 import './infoNavBar.css';
+import { isMobile } from "react-device-detect";
 
 export default function InfoNavBar() {    
     return (
@@ -13,6 +14,7 @@ export default function InfoNavBar() {
                 <Link to="/">Studio BBB</Link>
               </h1>
             </div>
+            { isMobile ?  (<></>) : (
             <div className='descriptionInfoDiv'>
               <h1 className='descriptionInfoHeader'>
                 is an interior design studio believes every space
@@ -20,7 +22,7 @@ export default function InfoNavBar() {
               <h1 className='descriptionInfoHeader'>
                 created is an expression of oneself
               </h1>
-            </div>
+            </div> )}
           </div>
           <div className='rightInfoNavBar'>
             <div className='linkStyleInfoDiv'>

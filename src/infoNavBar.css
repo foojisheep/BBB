@@ -115,6 +115,27 @@ a:active {
   display: inline;
 }
 
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (max-width: 430px) {
+  .studioInfoBBB {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 20px;
+    display: flex;
+    align-items: center;
+    letter-spacing: -0.02em;
+    color: #FFC572;
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+    margin: 0;
+    font-family: 'FoundersGroteskText';
+    justify-content: center;
+    display: inline;
+  }
+}
+
 .leftInfoNavBar {
   display: flex;
   flex-direction: row;
@@ -163,3 +184,19 @@ a:active {
   display: flex;
 }
 
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (max-width: 430px) {
+  .linkStyleInfo {
+    margin: 0;
+    font-family: 'FoundersGroteskText';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 30px;
+    /* letter-spacing: 0.02em; */
+    color: #FFC572;
+    text-align: center;
+    justify-content: center;
+    display: flex;
+  }
+}

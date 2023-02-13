@@ -3,6 +3,7 @@ import './landingPage.css';
 import './loadingPage.css';
 import './project.css';
 import './navBar.css';
+import { isMobile } from "react-device-detect";
 
 export default function NavBar() {
   return (
@@ -13,6 +14,7 @@ export default function NavBar() {
             <Link to="/">Studio BBB</Link>
           </h1>
         </div>
+        { isMobile ?  (<></>) : (
         <div className='descriptionDiv'>
           <h1 className='descriptionHeader'>
             is an interior design studio believes every space
@@ -20,7 +22,7 @@ export default function NavBar() {
           <h1 className='descriptionHeader'>
             created is an expression of oneself
           </h1>
-        </div>
+        </div> )}
       </div>
       <div className='rightNavBar'>
         <div className='linkStyleDiv'>
@@ -33,7 +35,6 @@ export default function NavBar() {
             <Link to="/information">Information</Link>
           </h1>
         </div>
-
       </div>
     </>
   );

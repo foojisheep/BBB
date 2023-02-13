@@ -103,7 +103,7 @@ ul {
 
 .landingPage-full0 {
   background-color: #FFB8F2;
-  max-height: 69%;
+  min-height: 69%;
   width: 100%;
   display: flex;
   /* animation: navigationTop 2s; */

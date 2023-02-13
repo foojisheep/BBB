@@ -4,7 +4,7 @@ import logoEnd from './resource/logo-end.svg';
 import './landingPage.css';
 import './loadingPage.css';
 import './infoPage.css';
-import Projects from "./project";
+import { isMobile } from "react-device-detect";
 import InfoNavBar from "./infoNavBar";
 
 const InfoPage = () => {    
