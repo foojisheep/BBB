@@ -7,7 +7,8 @@ import './infoPage.css';
 import { isMobile } from "react-device-detect";
 import InfoNavBar from "./infoNavBar";
 
-const InfoPage = () => {    
+const InfoPage = () => {
+  const screenWidth = window.innerWidth;
   const logos = [logoStart,logoMiddle,logoEnd];
   const logo = logos.map((logo,index) => (
     <img key={index} className="landingPage-image" src={logo} alt={logo.toString()} />
@@ -24,37 +25,37 @@ const InfoPage = () => {
       </div>
       <div className='context contentHeight'>
         <table id="contextAlign">
-        { isMobile ? 
+        { screenWidth <500 ||  isMobile ? 
           <>
-           <ul className='textAlignLeft' style={{ fontSize: '20px'}}>{ isMobile ?  <><h1 style={{ fontSize: '20px', paddingBottom: '5%'}}>Contact</h1></> : <>CONTACT</> }
+           <ul className='textAlignLeft' style={{ fontSize: '20px'}}>{ screenWidth <500 ||  isMobile ?   <><h1 style={{ fontSize: '20px', paddingBottom: '5%'}}>Contact</h1></> : <>CONTACT</> }
               <li id="context" style={{ fontSize: '20px'}}>For all project enquires,</li>
               <li id="context" style={{ fontSize: '20px'}}><a href="mailto:hi@studiobbb.co">hi@studiobbb.co</a></li>
             </ul>
-            <ul className='textAlignLeft' style={{ fontSize: '20px' }}>{ isMobile ?  <>Office Hours</> : <>OFFICE HOURS</> }
+            <ul className='textAlignLeft' style={{ fontSize: '20px' }}>{ screenWidth <500 ||  isMobile ?  <>Office Hours</> : <>OFFICE HOURS</> }
               <li id="context" style={{ fontSize: '20px'}}>Monday to Friday</li>
               <li id="context" style={{ fontSize: '20px'}}>10:00 - 18:00</li>
             </ul>
-            <ul className='textAlignLeft' style={{ fontSize: '20px' }}>{ isMobile ?  <>Instagram</> : <>INSTAGRAM</> }
+            <ul className='textAlignLeft' style={{ fontSize: '20px' }}>{ screenWidth <500 ||  isMobile ?   <>Instagram</> : <>INSTAGRAM</> }
               <li id="context" style={{ fontSize: '20px'}}><a href="https://www.instagram.com/studiobbb.co">@studiobbb</a></li>
             </ul>
           </> :
           <>
           <tr>
           <td style={{width: '20%', verticalAlign:'top'}}>
-            <ul className='textAlignLeft'>{ isMobile ?  <>Contact</> : <>CONTACT</> }
+            <ul className='textAlignLeft'>{ screenWidth <500 ||  isMobile ?   <>Contact</> : <>CONTACT</> }
               <li id="context">For all project enquires,</li>
               <li id="context"><a href="mailto:hi@studiobbb.co">hi@studiobbb.co</a></li>
             </ul>
           </td>
           <td>
-            <ul className='textAlignLeft'>{ isMobile ?  <>Office Hours</> : <>OFFICE HOURS</> }
+            <ul className='textAlignLeft'>{ screenWidth <500 ||  isMobile ?  <>Office Hours</> : <>OFFICE HOURS</> }
               <li id="context">Monday to Friday</li>
               <li id="context">10:00 - 18:00</li>
             </ul>
             <ul></ul>
           </td>
           </tr>
-          <ul className='textAlignLeft' style={{ fontSize: '18px' }}>{ isMobile ?  <>Instagram</> : <>INSTAGRAM</> }
+          <ul className='textAlignLeft' style={{ fontSize: '18px' }}>{ screenWidth <500 ||  isMobile ?   <>Instagram</> : <>INSTAGRAM</> }
               <li id="context"><a href="https://www.instagram.com/studiobbb.co">@studiobbb</a></li>
             </ul>
             </>
