@@ -98,7 +98,7 @@ a:link {
   /* Small devices (portrait tablets and large phones, 600px and up) */
 @media only screen and (max-width: 500px) {
   .contentDescriptionHeight {
-    height: 60%;
+    /* height: 60%; */
   }
 }
 
@@ -146,13 +146,13 @@ a:link {
 }
 
 /* Small devices (portrait tablets and large phones, 600px and up) */
-@media only screen and (max-width: 430px) {
+@media only screen and (max-width: 500px) {
   #infoContent {
     white-space:pre-wrap;
     font-family: 'FoundersGroteskText';
     font-style: normal;
     font-weight: 400;
-    font-size: 20px;
+    font-size: 16px;
     line-height: 20px;
     letter-spacing: 0.02em;
     color: #FFC572;
@@ -165,7 +165,7 @@ a:link {
     font-family: 'FoundersGroteskText';
     font-style: normal;
     font-weight: 400;
-    font-size: 20px;
+    font-size: 16px;
     line-height: 110%;
     letter-spacing: 0.02em;
     color: #FFC067;
@@ -175,7 +175,7 @@ a:link {
     font-family: 'FoundersGroteskText';
     font-style: normal;
     font-weight: 400;
-    font-size: 20px;
+    font-size: 16px;
     line-height: 110%;
     margin-top: 0%;
     margin-bottom: 5%;
@@ -190,8 +190,18 @@ a:link {
     margin-left: 2%;
   }
 
+  #contextAlign li {
+    font-family: 'FoundersGroteskText';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 20px;
+    letter-spacing: -0.02em;
+    color: #FFC067;
+  }
+
   #context li{
-    font-size: 20px;
+    font-size: 16px;
   }
 }
 

@@ -6,6 +6,7 @@ import './navBar.css';
 import { isMobile } from "react-device-detect";
 
 export default function NavBar() {
+  const screenWidth = window.innerWidth;
   return (
     <>
       <div className="leftNavBar">
@@ -14,7 +15,7 @@ export default function NavBar() {
             <Link to="/">Studio BBB</Link>
           </h1>
         </div>
-        { isMobile ?  (<></>) : (
+        { screenWidth <500 || isMobile ?  (<></>) : (
         <div className='descriptionDiv'>
           <h1 className='descriptionHeader'>
             is an interior design studio believes every space

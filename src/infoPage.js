@@ -27,16 +27,16 @@ const InfoPage = () => {
         <table id="contextAlign">
         { screenWidth <500 ||  isMobile ? 
           <>
-           <ul className='textAlignLeft' style={{ fontSize: '20px'}}>{ screenWidth <500 ||  isMobile ?   <><h1 style={{ fontSize: '20px', paddingBottom: '5%'}}>Contact</h1></> : <>CONTACT</> }
-              <li id="context" style={{ fontSize: '20px'}}>For all project enquires,</li>
-              <li id="context" style={{ fontSize: '20px'}}><a href="mailto:hi@studiobbb.co">hi@studiobbb.co</a></li>
+           <ul className='textAlignLeft' style={{ fontSize: '16px'}}>{ screenWidth <500 ||  isMobile ?   <><h1 style={{ fontSize: '16px', paddingBottom: '5%'}}>Contact</h1></> : <>CONTACT</> }
+              <li id="context" style={{ fontSize: '16px'}}>For all project enquires,</li>
+              <li id="context" style={{ fontSize: '16px'}}><a href="mailto:hi@studiobbb.co">hi@studiobbb.co</a></li>
             </ul>
-            <ul className='textAlignLeft' style={{ fontSize: '20px' }}>{ screenWidth <500 ||  isMobile ?  <>Office Hours</> : <>OFFICE HOURS</> }
-              <li id="context" style={{ fontSize: '20px'}}>Monday to Friday</li>
-              <li id="context" style={{ fontSize: '20px'}}>10:00 - 18:00</li>
+            <ul className='textAlignLeft' style={{ fontSize: '16px' }}>{ screenWidth <500 ||  isMobile ?  <>Office Hours</> : <>OFFICE HOURS</> }
+              <li id="context" style={{ fontSize: '16px'}}>Monday to Friday</li>
+              <li id="context" style={{ fontSize: '16px'}}>10:00 - 18:00</li>
             </ul>
-            <ul className='textAlignLeft' style={{ fontSize: '20px' }}>{ screenWidth <500 ||  isMobile ?   <>Instagram</> : <>INSTAGRAM</> }
-              <li id="context" style={{ fontSize: '20px'}}><a href="https://www.instagram.com/studiobbb.co">@studiobbb</a></li>
+            <ul className='textAlignLeft' style={{ fontSize: '16px' }}>{ screenWidth <500 ||  isMobile ?   <>Instagram</> : <>INSTAGRAM</> }
+              <li id="context" style={{ fontSize: '16px'}}><a href="https://www.instagram.com/studiobbb.co">@studiobbb</a></li>
             </ul>
           </> :
           <>

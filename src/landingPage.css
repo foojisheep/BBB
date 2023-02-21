@@ -110,6 +110,16 @@ ul {
   /* animation-fill-mode: linear forwards; */
 }
 
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (max-width: 500px) {
+  .landingPage-full0 {
+    background-color: #FFB8F2;
+    min-height: auto;
+    width: 100%;
+    display: flex;
+  }
+}
+
 @keyframes navigationTop {
   from {
     transform: translateY(20%);
@@ -128,6 +138,16 @@ ul {
   height: 100%;
   width: 100%;
   align-items: center;
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (max-width: 500px) {
+  .landingPage-image1 {
+    object-fit: cover;
+    width: 100%;
+    max-height: 100%;
+    align-self: center;
+  }
 }
 
 .landingPage-image1 {
