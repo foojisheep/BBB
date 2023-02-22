@@ -4,12 +4,6 @@
     url("./resource/font/FoundersGrotesk-Regular.otf") format("truetype");
 }
 
-/* @font-face {
-    font-family: "FoundersGroteskText";
-    src: local("Founders Grotesk Text"),
-      url("./resource/font/Test\ Founders\ Grotesk\ 400.otf") format("truetype");
-  } */
-
 .project-Image-Div {
   display: flex;
   flex-direction: row;
@@ -17,6 +11,7 @@
   overflow-x: scroll;
   /* Hide scrollbar for IE, Edge and Firefox */
   -ms-overflow-style: none;  /* IE and Edge */
+  -webkit-overflow-scrolling: touch;
   scrollbar-width: none;  /* Firefox */
   scroll-behavior: smooth;
 }
