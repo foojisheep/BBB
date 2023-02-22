@@ -35,7 +35,7 @@ function ShowProject(props) {
       <table id="projectDetails">
         <tr>
           <th className='projectDetailsTableTitle'>{projectsDetails[id].title}</th>
-          <th></th>
+          { screenWidth <500 ||  isMobile ? <></> : <th></th>}
         </tr>
         <tr>
           <td style={{ width: '18%', verticalAlign: 'top' }}>
