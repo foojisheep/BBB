@@ -186,8 +186,8 @@ function ShowImage(props) {
       {/* <HorizontalScroll>   */} 
       {/* <div style ={{display:'flex', height:'66.5%', flexDirection:'column', overflow:'hidden'}}> */}
     <div className='projectDetailsImageDiv'>
-      <div id='projectImageDiv' className="project-Image-Div" onMouseEnter={() => scrollable(div, true)} style={{ overflow: "auto" }}>
-        <HorizontalScroll className='scroll' reverseScroll={true}>
+      <div id='projectImageDiv' className="project-Image-Div" onMouseEnter={() => scrollable(div, true)} style={{ overflow: "scroll" }}>
+        <HorizontalScroll className='scroll' reverseScroll={true} style={{ overflow: 'auto' }}>
           {/* <div style={{width: '110vw'}}> */}
         {/* <div className='list-group list-group-horizontal' style={{ display: 'flex', overflow: 'hidden', height: '80%' }}> */}
         {showImage}
