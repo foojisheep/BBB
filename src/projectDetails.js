@@ -4,8 +4,10 @@ import './project.css';
 import './projectDetails.css';
 import Navbar from "./navBar";
 import { useParams } from 'react-router-dom';
-import { useRef, useEffect } from "react";
+import { isMobile } from "react-device-detect";
 import HorizontalScroll from 'react-scroll-horizontal'
+
+const screenWidth = window.innerWidth;
 
 const images = [
   { id: 1, file: 'Wangsa', name: ['01', '02', '03', '04', '05', '06', '07', '08', '09', '10', '11', '12', '13'] },
@@ -26,11 +28,55 @@ const projectsDetails = [
 function ShowProject(props) {
   const id = parseInt(props.value) - 1;
   const div = 'project';
-  return (
+
+  const isMobileContent = (
+    <>
     <div id='projectDetailDisplay' className="projectDetailDisplay" onMouseEnter={() => scrollable(div, true)}>
       <table id="projectDetails">
         <tr>
-          <th style={{ textAlign: 'left', paddingTop: '1%', paddingBottom:'1%'}}>{projectsDetails[id].title}</th>
+          <th className='projectDetailsTableTitle'>{projectsDetails[id].title}</th>
+          <th></th>
+        </tr>
+        <tr>
+          <td style={{ width: '18%', verticalAlign: 'top' }}>
+            <table style={{ display: 'table-row-group'}}>
+              <tr>
+                <td style={{ verticalAlign:'top'}}>Location</td>
+                <td style={{ paddingLeft:'5%', whiteSpace:'nowrap'}}>{projectsDetails[id].location}</td>
+              </tr>
+              <tr>
+                <td style={{ verticalAlign:'top'}}>Category</td>
+                <td style={{ paddingLeft:'5%', whiteSpace:'nowrap'}}>{projectsDetails[id].category}</td>
+              </tr>
+              <tr>
+                <td style={{ verticalAlign:'top'}}>Years</td>
+                <td style={{ paddingLeft:'5%', whiteSpace:'nowrap'}}>{projectsDetails[id].years}</td>
+              </tr>
+              <tr>
+                <td style={{ verticalAlign:'top'}}>Surface</td>
+                <td style={{ paddingLeft:'5%', whiteSpace:'nowrap'}}>{projectsDetails[id].surface}</td>
+              </tr>
+              {projectsDetails[id].collab != '' &&
+                <tr>
+                  <td style={{ verticalAlign:'top'}}>Collab</td>
+                  <td style={{ paddingLeft:'5%', whiteSpace:'nowrap'}}>{projectsDetails[id].collab}</td>
+                </tr>
+              }
+            </table>
+          </td>
+        </tr>
+      </table>
+      <MobileDesc value={projectsDetails[id]} />
+    </div>
+    </>
+  );
+  
+  const isLaptopContent = (
+    <>
+    <div id='projectDetailDisplay' className="projectDetailDisplay" onMouseEnter={() => scrollable(div, true)}>
+      <table id="projectDetails">
+        <tr>
+          <th className='projectDetailsTableTitle'>{projectsDetails[id].title}</th>
           <th></th>
         </tr>
         <tr>
@@ -64,7 +110,25 @@ function ShowProject(props) {
         </tr>
       </table>
     </div>
+    </>
   );
+
+  if(screenWidth <500 ||  isMobile ){
+    return(isMobileContent);
+  } else {
+    return (isLaptopContent)
+  }
+}
+
+function MobileDesc(object) {
+    return (
+      <>
+        <div style={{ textAlign: 'left', paddingLeft:'2%', paddingRight: '2%'}}>
+          <p className='mobileProjectDescription' style={{ textAlign: 'left'}}>{object.value.desc1}</p>
+          <p className='mobileProjectDescription' style={{ textAlign: 'left', paddingTop: '1%' }}>&emsp;{object.value.desc2}</p>
+        </div>
+      </>
+    );
 }
 
 function Desc(object) {
@@ -119,9 +183,9 @@ function ShowImage(props) {
   const div = 'image';
   return (
     <>    
-      {/* <HorizontalScroll>   */}
-      <div style ={{display:'flex', height:'66.5%', flexDirection:'column', overflow:'hidden'}}>
-
+      {/* <HorizontalScroll>   */} 
+      {/* <div style ={{display:'flex', height:'66.5%', flexDirection:'column', overflow:'hidden'}}> */}
+    <div className='projectDetailsImageDiv'>
       <div id='projectImageDiv' className="project-Image-Div" onMouseEnter={() => scrollable(div, true)} style={{ overflow: "auto" }}>
         <HorizontalScroll className='scroll' reverseScroll={true}>
           {/* <div style={{width: '110vw'}}> */}

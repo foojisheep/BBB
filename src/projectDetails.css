@@ -199,3 +199,53 @@
     transform: translateX(0%);
   }
 }
+
+.projectDetailsImageDiv {
+  display: flex;
+  height: 66.5%;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.projectDetailsTableTitle {
+  padding-top: 1%;
+  text-align: left;
+  padding-bottom: 1%;
+}
+
+@media only screen and (max-width: 500px) {
+  .projectDetailsImageDiv {
+    height: 50%;
+  }
+
+  .projectDetailsTableTitle {
+    padding-top: 5%;
+    padding-bottom: 5%;
+  }
+
+  #projectDetails .projectDescription {
+    font-family: 'FoundersGroteskText';
+    font-style: normal;
+    font-weight: 200;
+    font-size: 16px;
+    line-height: 20px;
+    letter-spacing: 0.0em;
+    color: #000000;
+    display: flex;
+  }
+  
+   #projectDetails td {
+    font-size: 12px;
+  }
+}
+
+.mobileProjectDescription {
+  font-family: 'FoundersGroteskText';
+  font-style: normal;
+  font-weight: 200;
+  font-size: 16px;
+  line-height: 20px;
+  letter-spacing: -0.02em;
+  color: #000000;
+  display: flex;
+}
