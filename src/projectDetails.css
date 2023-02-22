@@ -11,7 +11,6 @@
   overflow-x: scroll;
   /* Hide scrollbar for IE, Edge and Firefox */
   -ms-overflow-style: none;  /* IE and Edge */
-  -webkit-overflow-scrolling: touch;
   scrollbar-width: none;  /* Firefox */
   scroll-behavior: smooth;
 }
@@ -89,6 +88,21 @@
     /* max-width: 70%; */
     display: inline-block;
     /* line-height: 100px;  */
+  }
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (max-width: 500px) {
+  .projectDetailDisplay {
+    overflow: scroll;
+    /* Hide scrollbar for IE, Edge and Firefox */
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
+  }
+  
+  /* Hide scrollbar for Chrome, Safari and Opera */
+  .projectDetailDisplay::-webkit-scrollbar {
+    display: none;
   }
 }
 
