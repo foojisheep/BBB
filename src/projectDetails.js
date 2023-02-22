@@ -216,13 +216,18 @@ export default function ProjectDetailPage(object) {
 }
 
 function scrollable(div, scroll) {
-  if (scroll) {
-    if(div == 'image') {
-      document.getElementsByClassName('projectDetailDisplay')[0].style.overflow = 'hidden';
-      document.getElementsByClassName('project-Image-Div')[0].style.overflow = 'scroll';
-    } else{
-      document.getElementsByClassName('projectDetailDisplay')[0].style.overflow = 'scroll';
-      document.getElementsByClassName('project-Image-Div')[0].style.overflow = 'hidden';
+  if(screenWidth <500 ||  isMobile){
+    if (scroll) {
+      if(div == 'image') {
+        document.getElementsByClassName('projectDetailDisplay')[0].style.overflow = 'hidden';
+        document.getElementsByClassName('project-Image-Div')[0].style.overflow = 'scroll';
+      } else{
+        document.getElementsByClassName('projectDetailDisplay')[0].style.overflow = 'scroll';
+        document.getElementsByClassName('project-Image-Div')[0].style.overflow = 'hidden';
+      }
     }
+  } else {
+    document.getElementsByClassName('projectDetailDisplay')[0].style.overflow = 'scroll';
+    document.getElementsByClassName('project-Image-Div')[0].style.overflow = 'scroll';
   }
 }
