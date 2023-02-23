@@ -57,7 +57,7 @@ function Projects() {
       <div className='mobileExpandContent' {...getCollapseProps()}>
       <div className="projectColumn" style={{marginTop: 0, marginBottom: 0}}>
         <p style={{ float: 'left', width: '20%'}}></p>
-        <img className='mobileExpandContentDescription' src={projects.link} />
+        <img className='mobileExpandContentDescription' style={{ height: '20vh' }} src={projects.link} />
         </div>
         <div className="projectColumn" style={{marginTop: 0, marginBottom: 0}}>
         <p style={{ float: 'left', width: '20%'}}></p>
@@ -74,7 +74,7 @@ function Projects() {
   return (
     <>
     {screenWidth <500 ||  isMobile ? 
-      <div className="projectDisplay1" style={{ height: '26%'}}>
+      <div className="projectDisplay1" style={{ overflow: 'scroll'}}>
         <table id="customers">
           {isMobileContent}
         </table>

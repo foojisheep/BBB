@@ -46,7 +46,7 @@ export default function ImageAndProjects() {
         </div>
         <div className="projectColumn" style={{marginTop: 0, marginBottom: 0}}>
         <p style={{ float: 'left', width: '20%'}}></p>
-        <p className='mobileExpandContentDescription' style={{ textAlign: 'start'}}>{projects.details}</p>
+        <p className='mobileExpandContentDescription' style={{ textAlign: 'start', paddingTop: '2%'}}>{projects.details}</p>
         </div>
         <div className="projectColumn" style={{marginTop: 0, marginBottom: 0}}>
           <p className='mobileExpandContentDescription' style={{ textAlign: 'end'}} onClick={() => routeChange(projects.id)}>Read more</p>
