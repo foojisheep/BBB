@@ -31,7 +31,7 @@ function ShowProject(props) {
 
   const isMobileContent = (
     <>
-    <div id='projectDetailDisplay' className="projectDetailDisplay" onMouseEnter={() => scrollable(div, true)}>
+    <div id='projectDetailDisplay' className="projectDetailDisplay" onMouseEnter={() => scrollable(div, true)} style={{overflow: 'scroll'}}>
       <table id="projectDetails">
         <tr>
           <th className='projectDetailsTableTitle'>{projectsDetails[id].title}</th>

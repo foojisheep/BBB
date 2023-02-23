@@ -16,7 +16,7 @@ export default function ImageAndProjects() {
   }
   console.log(projects[1].category);
   const content = projects.map((projects) =>
-    <tr key={projects.id} onMouseEnter={() => changeURL(projects, true)} onClick={() => routeChange(projects.id)}>
+    <tr key={projects.id} onMouseEnter={() => changeURL(projects, true)} onClick={() => routeChange(projects, true)}>
       <td>  </td>
       <td>{projects.year}</td>
       <td>{projects.name}</td>
@@ -27,7 +27,7 @@ export default function ImageAndProjects() {
 
   const isMobileContent = projects.map((projects) =>
   <>
-    <div className="projectListDisplay" key={projects.id}>
+    <div className="projectListDisplay" key={projects.id} onClick={() => isMobileExpandDetails(projects.id)}>
       <div className="projectColumn" {...getToggleProps()}>
         <div className='mobileContentYear' style={{ width: '20%', textAlign: 'start'}}>
           {projects.mobileYear}
@@ -39,10 +39,10 @@ export default function ImageAndProjects() {
           {projects.category}
         </div>
       </div>
-      <div className='mobileExpandContent' {...getCollapseProps()}>
+        <div className='mobileExpandContent'  key={`expand-${projects.id}`} {...getCollapseProps()}>
       <div className="projectColumn" style={{marginTop: 0, marginBottom: 0}}>
         <p style={{ float: 'left', width: '20%'}}></p>
-        <img className='mobileExpandContentDescription' src={projects.link} />
+        <img className='mobileExpandContentDescription' style={{ height: '20vh' }} src={projects.link} />
         </div>
         <div className="projectColumn" style={{marginTop: 0, marginBottom: 0}}>
         <p style={{ float: 'left', width: '20%'}}></p>
@@ -65,7 +65,7 @@ export default function ImageAndProjects() {
       </div>
       { screenWidth <500 ||  isMobile ? 
       <>
-      <div className="projectDisplay1" style={{ height: '26%'}}>
+      <div className="projectDisplay1" style={{ overflow: 'scroll'}}>
         <table id="customers">
           {isMobileContent}
         </table>
@@ -102,6 +102,8 @@ function changeURL(projects, hover) {
   }
 }
 
-function isMobileExpandDetails () {
+function isMobileExpandDetails (projects, expand) {
+  if(expand) {
 
+  }
 }
