@@ -56,30 +56,30 @@ function Projects() {
         </div>
       </div>
       { projects.id == 1 ? 
-      <div id={`expanded-${projects.id}`} className='mobileExpandContent'  key={`expand-${projects.id}`} {...getCollapseProps()} style={{ display: 'inline-table'}}>
-        <div className="projectColumn" style={{marginTop: 0, marginBottom: 0}}>
+      <div id={`expanded-${projects.id}`} className='mobileExpandContent'  key={`expand-${projects.id}`} {...getCollapseProps()} style={{ display: 'inline-table', width: '100%'}}>
+        <div className="projectColumn" style={{marginTop: '5%', marginBottom: 0}}>
           <p style={{ float: 'left', width: '20%'}}></p>
-          <img className='mobileExpandContentDescription' style={{ height: '20vh' }} src={projects.link} />
+          <img className='mobileExpandContentDescription' style={{ height: '25vh' }} src={projects.link} />
         </div>
-        <div className="projectColumn" style={{marginTop: 0, marginBottom: 0}}>
+        <div className="projectColumn" style={{marginTop: '3%', marginBottom: '2%'}}>
           <p style={{ float: 'left', width: '20%'}}></p>
-          <p className='mobileExpandContentDescription' style={{ textAlign: 'start', paddingTop: '2%'}}>{projects.details}</p>
+          <p className='mobileExpandContentDescription' style={{ textAlign: 'start', paddingTop: '2%', minHeight: '4vh'}}>{projects.details}</p>
         </div>
-        <div className="projectColumn" style={{marginTop: 0, marginBottom: 0, justifyContent: 'end'}}>
+        <div className="projectColumn" style={{marginTop: '5%', marginBottom: 0, justifyContent: 'end'}}>
           <p className='mobileExpandContentDescription' style={{ textAlign: 'end'}} onClick={() => routeChange(projects.id)}>Read more</p>
         </div>
       </div>
       :
       <div id={`expanded-${projects.id}`} className='mobileExpandContent'  key={`expand-${projects.id}`} {...getCollapseProps()}>
-        <div className="projectColumn" style={{marginTop: 0, marginBottom: 0}}>
+        <div className="projectColumn" style={{marginTop: '5%', marginBottom: 0}}>
           <p style={{ float: 'left', width: '20%'}}></p>
-          <img className='mobileExpandContentDescription' style={{ height: '20vh' }} src={projects.link} />
+          <img className='mobileExpandContentDescription' style={{ height: '25vh' }} src={projects.link} />
         </div>
-        <div className="projectColumn" style={{marginTop: 0, marginBottom: 0}}>
+        <div className="projectColumn" style={{marginTop: '3%', marginBottom: '2%'}}>
           <p style={{ float: 'left', width: '20%'}}></p>
-          <p className='mobileExpandContentDescription' style={{ textAlign: 'start', paddingTop: '2%'}}>{projects.details}</p>
+          <p className='mobileExpandContentDescription' style={{ textAlign: 'start', paddingTop: '2%', minHeight: '4vh'}}>{projects.details}</p>
         </div>
-        <div className="projectColumn" style={{marginTop: 0, marginBottom: 0, justifyContent: 'end'}}>
+        <div className="projectColumn" style={{marginTop: '5%', marginBottom: 0, justifyContent: 'end'}}>
           <p className='mobileExpandContentDescription' style={{ textAlign: 'end'}} onClick={() => routeChange(projects.id)}>Read more</p>
         </div>
       </div>

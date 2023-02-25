@@ -40,30 +40,30 @@ export default function ImageAndProjects() {
         </div>
       </div>
       { projects.id == 1 ? 
-      <div id={`expanded-${projects.id}`} className='mobileExpandContent'  key={`expand-${projects.id}`} {...getCollapseProps()} style={{ display: 'inline-table'}}>
-        <div className="projectColumn" style={{marginTop: 0, marginBottom: 0}}>
+      <div id={`expanded-${projects.id}`} className='mobileExpandContent'  key={`expand-${projects.id}`} {...getCollapseProps()} style={{ display: 'inline-table', width: '100%'}}>
+        <div className="projectColumn" style={{marginTop: '5%', marginBottom: 0}}>
           <p style={{ float: 'left', width: '20%'}}></p>
-          <img className='mobileExpandContentDescription' style={{ height: '20vh' }} src={projects.link} />
+          <img className='mobileExpandContentDescription' style={{ height: '25vh' }} src={projects.link} />
         </div>
-        <div className="projectColumn" style={{marginTop: 0, marginBottom: 0}}>
+        <div className="projectColumn" style={{marginTop: '3%', marginBottom: '2%'}}>
           <p style={{ float: 'left', width: '20%'}}></p>
-          <p className='mobileExpandContentDescription' style={{ textAlign: 'start', paddingTop: '2%'}}>{projects.details}</p>
+          <p className='mobileExpandContentDescription' style={{ textAlign: 'start', paddingTop: '2%', minHeight: '4vh'}}>{projects.details}</p>
         </div>
-        <div className="projectColumn" style={{marginTop: 0, marginBottom: 0, justifyContent: 'end'}}>
+        <div className="projectColumn" style={{marginTop: '5%', marginBottom: 0, justifyContent: 'end'}}>
           <p className='mobileExpandContentDescription' style={{ textAlign: 'end'}} onClick={() => routeChange(projects.id)}>Read more</p>
         </div>
       </div>
       :
       <div id={`expanded-${projects.id}`} className='mobileExpandContent'  key={`expand-${projects.id}`} {...getCollapseProps()}>
-        <div className="projectColumn" style={{marginTop: 0, marginBottom: 0}}>
+        <div className="projectColumn" style={{marginTop: '5%', marginBottom: 0}}>
           <p style={{ float: 'left', width: '20%'}}></p>
-          <img className='mobileExpandContentDescription' style={{ height: '20vh' }} src={projects.link} />
+          <img className='mobileExpandContentDescription' style={{ height: '25vh' }} src={projects.link} />
         </div>
-        <div className="projectColumn" style={{marginTop: 0, marginBottom: 0}}>
+        <div className="projectColumn" style={{marginTop: '3%', marginBottom: '2%'}}>
           <p style={{ float: 'left', width: '20%'}}></p>
-          <p className='mobileExpandContentDescription' style={{ textAlign: 'start', paddingTop: '2%'}}>{projects.details}</p>
+          <p className='mobileExpandContentDescription' style={{ textAlign: 'start', paddingTop: '2%', minHeight: '4vh'}}>{projects.details}</p>
         </div>
-        <div className="projectColumn" style={{marginTop: 0, marginBottom: 0, justifyContent: 'end'}}>
+        <div className="projectColumn" style={{marginTop: '5%', marginBottom: 0, justifyContent: 'end'}}>
           <p className='mobileExpandContentDescription' style={{ textAlign: 'end'}} onClick={() => routeChange(projects.id)}>Read more</p>
         </div>
       </div>
@@ -74,25 +74,32 @@ export default function ImageAndProjects() {
   
   return (
     <>
-      <div className='landingPage-full0'>
+      { screenWidth <500 ||  isMobile ? 
+      <>
+      <div className='landingPage-full0' style={{ height: '31%'}}>
         <div key="landing" className="landingPage-full1">
           <img id="hoverImage" key='logo' className="landingPage-image1" src={logoBig} alt={logoBig.toString()} onMouseEnter={() => changeURL(logoBig, false)} />
         </div>
       </div>
-      { screenWidth <500 ||  isMobile ? 
-      <>
-      <div className="projectDisplay1" style={{ overflow: 'scroll',backgroundColor: '#FFFFFF'}}>
+      <div className="projectDisplay1" style={{ overflow: 'scroll',backgroundColor: '#FFFFFF', height: '66%'}}>
         <table id="customers">
           {isMobileContent}
         </table>
       </div>
       </>
        :
+       <>
+       <div className='landingPage-full0' >
+        <div key="landing" className="landingPage-full1">
+          <img id="hoverImage" key='logo' className="landingPage-image1" src={logoBig} alt={logoBig.toString()} onMouseEnter={() => changeURL(logoBig, false)} />
+        </div>
+      </div>
        <div className="projectDisplay1 collapsible" style={{ height: '26%',backgroundColor: '#FFFFFF'}}>
         <table id="customers">
           {content}
         </table>
       </div>
+      </>
       }
     </>
   );
@@ -127,6 +134,7 @@ function isMobileExpandDetails (projects, expand) {
   for(let i = 0; i < projectCount; i++){
     if(number == i && expand) {
       document.getElementsByClassName('mobileExpandContent')[number].style.display = 'inline-table';
+      document.getElementsByClassName('mobileExpandContent')[number].style.width = '100%';
       console.log('isMobileExpandDetails');
     } else {
       document.getElementsByClassName('mobileExpandContent')[i].style.display = 'none';
