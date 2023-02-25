@@ -39,7 +39,7 @@ export default function ImageAndProjects() {
           {projects.category}
         </div>
       </div>
-      { projects.id == 0 ? 
+      { projects.id == 1 ? 
       <div id={`expanded-${projects.id}`} className='mobileExpandContent'  key={`expand-${projects.id}`} {...getCollapseProps()} style={{ display: 'inline-table'}}>
         <div className="projectColumn" style={{marginTop: 0, marginBottom: 0}}>
           <p style={{ float: 'left', width: '20%'}}></p>
@@ -81,14 +81,14 @@ export default function ImageAndProjects() {
       </div>
       { screenWidth <500 ||  isMobile ? 
       <>
-      <div className="projectDisplay1" style={{ overflow: 'scroll'}}>
+      <div className="projectDisplay1" style={{ overflow: 'scroll',backgroundColor: '#FFFFFF'}}>
         <table id="customers">
           {isMobileContent}
         </table>
       </div>
       </>
        :
-       <div className="projectDisplay1 collapsible" style={{ height: '26%'}}>
+       <div className="projectDisplay1 collapsible" style={{ height: '26%',backgroundColor: '#FFFFFF'}}>
         <table id="customers">
           {content}
         </table>
@@ -121,8 +121,15 @@ function changeURL(projects, hover) {
 function isMobileExpandDetails (projects, expand) {
   console.log('isMobileExpandDetails');
   console.log(projects);
-  if(expand) {
-    const number = projects.id -1;
-    document.getElementsByClassName('mobileExpandContent')[number].style.display = 'inline-table';
+  const projectCount = 5;
+  const number = projects.id -1;
+  console.log(number);
+  for(let i = 0; i < projectCount; i++){
+    if(number == i && expand) {
+      document.getElementsByClassName('mobileExpandContent')[number].style.display = 'inline-table';
+      console.log('isMobileExpandDetails');
+    } else {
+      document.getElementsByClassName('mobileExpandContent')[i].style.display = 'none';
+    }
   }
 }

@@ -68,16 +68,16 @@
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  margin-left: 2%;
-  margin-right: 2%;
+  padding-left: 2%;
+  padding-right: 2%;
 }
 
 /* Small devices (portrait tablets and large phones, 600px and up) */
 @media only screen and (max-width: 500px) {
   .infoNavDisplay {
     border-bottom: 1.8px solid #FFC572;
-    margin-left: 4%;
-    margin-right: 4%;
+    padding-left: 3%;
+    padding-right: 2%;
   }
 }
 

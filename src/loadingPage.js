@@ -55,6 +55,21 @@ function Projects() {
           {projects.category}
         </div>
       </div>
+      { projects.id == 1 ? 
+      <div id={`expanded-${projects.id}`} className='mobileExpandContent'  key={`expand-${projects.id}`} {...getCollapseProps()} style={{ display: 'inline-table'}}>
+        <div className="projectColumn" style={{marginTop: 0, marginBottom: 0}}>
+          <p style={{ float: 'left', width: '20%'}}></p>
+          <img className='mobileExpandContentDescription' style={{ height: '20vh' }} src={projects.link} />
+        </div>
+        <div className="projectColumn" style={{marginTop: 0, marginBottom: 0}}>
+          <p style={{ float: 'left', width: '20%'}}></p>
+          <p className='mobileExpandContentDescription' style={{ textAlign: 'start', paddingTop: '2%'}}>{projects.details}</p>
+        </div>
+        <div className="projectColumn" style={{marginTop: 0, marginBottom: 0, justifyContent: 'end'}}>
+          <p className='mobileExpandContentDescription' style={{ textAlign: 'end'}} onClick={() => routeChange(projects.id)}>Read more</p>
+        </div>
+      </div>
+      :
       <div id={`expanded-${projects.id}`} className='mobileExpandContent'  key={`expand-${projects.id}`} {...getCollapseProps()}>
         <div className="projectColumn" style={{marginTop: 0, marginBottom: 0}}>
           <p style={{ float: 'left', width: '20%'}}></p>
@@ -68,6 +83,7 @@ function Projects() {
           <p className='mobileExpandContentDescription' style={{ textAlign: 'end'}} onClick={() => routeChange(projects.id)}>Read more</p>
         </div>
       </div>
+      }
     </div>
   </>
   );
@@ -126,7 +142,7 @@ export default function LoadingPage() {
         </div>
       )}
       {showLanding && (
-        <div className='landingPage-transition' style={{ display: 'flex', flexDirection: 'column', height: "100vh", width: "100vw" }}>
+        <div className='landingPage-transition' style={{ display: 'flex', flexDirection: 'column', height: "100vh", width: "100vw" , backgroundColor: '#FFB8F2'}}>
           <div className="navDisplay slideDown">
             <Navbar style={{ display: 'flex', height: '5%'}}/>
            </div>
@@ -165,8 +181,15 @@ function changeURL(projects, hover) {
 function isMobileExpandDetails (projects, expand) {
   console.log('isMobileExpandDetails');
   console.log(projects);
-  if(expand) {
-    const number = projects.id -1;
-    document.getElementsByClassName('mobileExpandContent')[number].style.display = 'inline-table';
+  const projectCount = 5;
+  const number = projects.id -1;
+  console.log(number);
+  for(let i = 0; i < projectCount; i++){
+    if(number == i && expand) {
+      document.getElementsByClassName('mobileExpandContent')[number].style.display = 'inline-table';
+      console.log('isMobileExpandDetails');
+    } else {
+      document.getElementsByClassName('mobileExpandContent')[i].style.display = 'none';
+    }
   }
 }

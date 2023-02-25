@@ -68,15 +68,15 @@
   flex-direction: row;
   justify-content: space-between;
   background-color: #FFFFFF;
-  margin-left: 2%;
-  margin-right: 2%;
+  padding-left: 2%;
+  padding-right: 2%;
 }
 
 /* Small devices (portrait tablets and large phones, 600px and up) */
 @media only screen and (max-width: 430px) {
   .infoNavDisplay {
-    margin-left: 4%;
-    margin-right: 4%;
+    padding-left: 4%;
+    padding-right: 4%;
   }
 }
 
@@ -124,7 +124,7 @@ a:active {
 }
 
 /* Small devices (portrait tablets and large phones, 600px and up) */
-@media only screen and (max-width: 430px) {
+@media only screen and (max-width: 500px) {
   .studioBBB {
     font-style: normal;
     font-weight: 400;
@@ -193,7 +193,7 @@ a:active {
 }
 
 /* Small devices (portrait tablets and large phones, 600px and up) */
-@media only screen and (max-width: 430px) {
+@media only screen and (max-width: 500px) {
   .linkStyle {
     margin: 0;
     font-family: 'FoundersGroteskText';
