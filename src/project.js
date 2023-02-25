@@ -76,7 +76,7 @@ export default function ImageAndProjects() {
     <>
       { screenWidth <500 ||  isMobile ? 
       <>
-      <div className='landingPage-full0' style={{ height: '31%'}}>
+      <div className='landingPage-full0' style={{ height: '29%'}}>
         <div key="landing" className="landingPage-full1">
           <img id="hoverImage" key='logo' className="landingPage-image1" src={logoBig} alt={logoBig.toString()} onMouseEnter={() => changeURL(logoBig, false)} />
         </div>

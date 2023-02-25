@@ -20,11 +20,10 @@ import useCollapse from 'react-collapsed';
 //   initial = { y: "20%", width: "100%" }; // large device
 //   transition = { duration: 3, ease: [0.6, 0.01, -0.05, 0.9] };
 // }
-
+const screenWidth = window.innerWidth;
 
 function Projects() {
   const { getCollapseProps, getToggleProps, isExpanded } = useCollapse();
-  const screenWidth = window.innerWidth;
   let navigate = useNavigate();
   const routeChange = (projectId) => {
     let path = `/project/${projectId}`;
@@ -91,7 +90,7 @@ function Projects() {
   return (
     <>
     {screenWidth <500 ||  isMobile ? 
-      <div className='slideUp' style={{backgroundColor: '#FFFFFF', overflow: 'scroll'}}>
+      <div className='slideUp' style={{backgroundColor: '#FFFFFF', overflow: 'scroll', height: '66%'}}>
         <div className="projectDisplay1" style={{ overflow: 'scroll'}}>
           <table id="customers">
             {isMobileContent}
@@ -146,11 +145,19 @@ export default function LoadingPage() {
           <div className="navDisplay slideDown">
             <Navbar style={{ display: 'flex', height: '5%'}}/>
            </div>
-          <div className='landingPage-full0'>
+           {screenWidth <500 ||  isMobile ?
+           <div className='landingPage-full0' style={{ minHeight: '29%'}}>
             <div key="landing" className="landingPage-full1">
               <img id="hoverImage" key='logo' className="landingPage-image1" src={logoBig} alt={logoBig.toString()} onMouseEnter={() => changeURL(logoBig, false)} />
             </div>
-          </div>
+           </div>
+           :
+           <div className='landingPage-full0'>
+             <div key="landing" className="landingPage-full1">
+               <img id="hoverImage" key='logo' className="landingPage-image1" src={logoBig} alt={logoBig.toString()} onMouseEnter={() => changeURL(logoBig, false)} />
+             </div>
+           </div>
+           }
           <Projects />
         </div>
       )}
