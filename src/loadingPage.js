@@ -2,6 +2,7 @@ import './loadingPage.css';
 import logoBig from './resource/logo.svg';
 import React, { useState, useEffect } from "react";
 import Navbar from "./navBar";
+import './project.css';
 import { useNavigate } from 'react-router-dom';
 import { isMobile } from "react-device-detect";
 import useCollapse from 'react-collapsed';
@@ -43,7 +44,7 @@ function Projects() {
   const isMobileContent = projects.map((projects) =>
   <>
     <div className="projectListDisplay" key={projects.id}>
-      <div className="projectColumn" {...getToggleProps()}>
+      <div id={`expand-${projects.id}`} className="projectColumn" {...getToggleProps()} onClick={()=> isMobileExpandDetails(projects, true)}>
         <div className='mobileContentYear' style={{ width: '20%', textAlign: 'start'}}>
           {projects.mobileYear}
         </div>
@@ -54,16 +55,16 @@ function Projects() {
           {projects.category}
         </div>
       </div>
-      <div className='mobileExpandContent' {...getCollapseProps()}>
-      <div className="projectColumn" style={{marginTop: 0, marginBottom: 0}}>
-        <p style={{ float: 'left', width: '20%'}}></p>
-        <img className='mobileExpandContentDescription' style={{ height: '20vh' }} src={projects.link} />
+      <div id={`expanded-${projects.id}`} className='mobileExpandContent'  key={`expand-${projects.id}`} {...getCollapseProps()}>
+        <div className="projectColumn" style={{marginTop: 0, marginBottom: 0}}>
+          <p style={{ float: 'left', width: '20%'}}></p>
+          <img className='mobileExpandContentDescription' style={{ height: '20vh' }} src={projects.link} />
         </div>
         <div className="projectColumn" style={{marginTop: 0, marginBottom: 0}}>
-        <p style={{ float: 'left', width: '20%'}}></p>
-        <p className='mobileExpandContentDescription' style={{ textAlign: 'start'}}>{projects.details}</p>
+          <p style={{ float: 'left', width: '20%'}}></p>
+          <p className='mobileExpandContentDescription' style={{ textAlign: 'start', paddingTop: '2%'}}>{projects.details}</p>
         </div>
-        <div className="projectColumn" style={{marginTop: 0, marginBottom: 0}}>
+        <div className="projectColumn" style={{marginTop: 0, marginBottom: 0, justifyContent: 'end'}}>
           <p className='mobileExpandContentDescription' style={{ textAlign: 'end'}} onClick={() => routeChange(projects.id)}>Read more</p>
         </div>
       </div>
@@ -74,16 +75,20 @@ function Projects() {
   return (
     <>
     {screenWidth <500 ||  isMobile ? 
-      <div className="projectDisplay1" style={{ overflow: 'scroll'}}>
-        <table id="customers">
-          {isMobileContent}
-        </table>
+      <div className='slideUp' style={{backgroundColor: '#FFFFFF', overflow: 'scroll'}}>
+        <div className="projectDisplay1" style={{ overflow: 'scroll'}}>
+          <table id="customers">
+            {isMobileContent}
+          </table>
+        </div>
       </div>
       :
-      <div className="projectDisplay1" style={{ height: '100%'}}>
-        <table id="customers">
-          {content}
-        </table>
+      <div className='slideUp' style={{backgroundColor: '#FFFFFF', height:'26%'}}>
+        <div className="projectDisplay1" style={{ height: '100%'}}>
+          <table id="customers">
+            {content}
+          </table>
+        </div>
       </div>
     }
     </>
@@ -130,9 +135,7 @@ export default function LoadingPage() {
               <img id="hoverImage" key='logo' className="landingPage-image1" src={logoBig} alt={logoBig.toString()} onMouseEnter={() => changeURL(logoBig, false)} />
             </div>
           </div>
-          <div className='slideUp' style={{backgroundColor: '#FFFFFF', height:'26%'}}>
-            <Projects />
-          </div>
+          <Projects />
         </div>
       )}
     </>
@@ -156,5 +159,14 @@ function changeURL(projects, hover) {
   if (hover && projects.link.length !== 0) {
     console.log(projects.link);
     document.getElementById('hoverImage').src = projects.link;
+  }
+}
+
+function isMobileExpandDetails (projects, expand) {
+  console.log('isMobileExpandDetails');
+  console.log(projects);
+  if(expand) {
+    const number = projects.id -1;
+    document.getElementsByClassName('mobileExpandContent')[number].style.display = 'inline-table';
   }
 }
