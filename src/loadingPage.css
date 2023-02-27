@@ -74,7 +74,7 @@
 @media only screen and (max-width: 500px) {
   .loadingPage-full {
     display: flex;
-    height: fit-content;
+    height: 75%;
     align-items: 'center';
     justify-content: center;
     /* overflow: hidden; */
