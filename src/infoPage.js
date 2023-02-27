@@ -14,7 +14,8 @@ const InfoPage = () => {
     <img key={index} className="landingPage-image" src={logo} alt={logo.toString()} />
   ));
   return(
-    <div id="infoDisplay" className="infoPageTransition">
+    // <div id="infoDisplay" className="infoPageTransition">
+    <div id="infoDisplay">
       <InfoNavBar />
       <div className='contentDescriptionHeight'>
         <ul style={{ textAlign: 'left',paddingTop:'3%', width: '100%', whiteSpace: 'none', paddingLeft: '2%'}}>

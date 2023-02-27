@@ -17,7 +17,8 @@ export default function LandingPage() {
 
   return(
     <>
-      <div className='landingPageTransition' style={{display: 'flex', flexDirection: 'column', height: '100vh', width: "100vw", backgroundColor: '#FFB8F2'}}> 
+      {/* <div className='landingPageTransition' style={{display: 'flex', flexDirection: 'column', height: '100vh', width: "100vw", backgroundColor: '#FFB8F2'}}> */}
+      <div style={{display: 'flex', flexDirection: 'column', height: '100vh', width: "100vw", backgroundColor: '#FFB8F2'}}> 
         <div className="navDisplay" style={{ height: '5%'}}>
           <Navbar/>
         </div>

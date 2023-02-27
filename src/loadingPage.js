@@ -71,7 +71,8 @@ function Projects() {
   return (
     <>
     {screenWidth <500 ||  isMobile ? 
-      <div className='slideUp' style={{backgroundColor: '#FFFFFF', overflow: 'hidden', height: '35%'}}>
+      // <div className='slideUp' style={{backgroundColor: '#FFFFFF', overflow: 'hidden', height: '35%'}}>
+      <div style={{backgroundColor: '#FFFFFF', overflow: 'hidden', height: '35%'}}>
         <div className="projectDisplay1" style={{ overflow: 'hidden'}}>
           <table id="customers">
             {isMobileContent}
@@ -79,7 +80,8 @@ function Projects() {
         </div>
       </div>
       :
-      <div className='slideUp' style={{backgroundColor: '#FFFFFF', height:'26%'}}>
+      // <div className='slideUp' style={{backgroundColor: '#FFFFFF', height:'26%'}}></div>
+      <div style={{backgroundColor: '#FFFFFF', height:'26%'}}>
         <div className="projectDisplay1" style={{ height: '100%'}}>
           <table id="customers">
             {content}
@@ -123,7 +125,8 @@ export default function LoadingPage() {
       )}
       {showLanding && (
         <div className='landingPage-transition' style={{ display: 'flex', flexDirection: 'column', height: "100vh", width: "100vw" , backgroundColor: '#FFB8F2'}}>
-          <div className="navDisplay slideDown">
+          {/* <div className="navDisplay slideDown"> */}
+          <div className="navDisplay">
             <Navbar style={{ display: 'flex', height: '5%'}}/>
            </div>
            {screenWidth <500 ||  isMobile ?
