@@ -70,12 +70,12 @@ export default function ImageAndProjects() {
     <>
       { screenWidth <500 ||  isMobile ? 
       <>
-      <div className='landingPage-full0' style={{ height: '60%'}}>
+      <div className='landingPage-full0' style={{ height: '70%'}}>
         <div key="landing" className="landingPage-full1">
           <img id="changeImage" key='logo' className="landingPage-image1" src={projects[0].link} onMouseEnter={() => changeURL(logoBig, false)} />
         </div>
       </div>
-      <div className="projectDisplay1" style={{ overflow: 'hidden',backgroundColor: '#FFFFFF', height: '35%'}}>
+      <div className="projectDisplay1" style={{ overflow: 'hidden',backgroundColor: '#FFFFFF', position: 'absolute', bottom: 0, width: '100%'}}>
         <table id="customers">
           {isMobileContent}
         </table>
