@@ -173,7 +173,7 @@ a:active {
   flex-direction: column;
   height: 100%;
   justify-content: center;
-  margin-left: 3%;
+  margin-left: 5%;
   /* margin-right: 2%; */
   width: fit-content;
 }

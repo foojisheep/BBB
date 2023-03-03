@@ -41,24 +41,24 @@ export default function ImageAndProjects() {
       </div>
       { projects.id == 1 ? 
       <div id={`expanded-${projects.id}`} className='mobileExpandContent'  key={`expand-${projects.id}`} {...getCollapseProps()} style={{ display: 'inline-table', width: '100%'}}>
-        <div className="projectColumn" style={{marginTop: '1%', marginBottom: '2%'}}>
+        <div className="projectColumn" style={{ marginBottom: '2%', alignItems:'center'}}>
           <p style={{ float: 'left', width: '20%'}}></p>
-          <p className='mobileExpandContentDescription' style={{ textAlign: 'start', paddingTop: '1%', minHeight: '2vh'}}>{projects.details}</p>
+          <p className='mobileExpandContentDescription' style={{ textAlign: 'start', paddingTop: '1%', }}>{projects.details}</p>
         </div>
-        <div className="projectColumn" style={{ marginBottom: 0}}>
+        <div className="projectColumn" style={{}}>
           <p style={{ float: 'left', width: '20%'}}></p>
-          <p className='mobileExpandContentDescription' style={{ textAlign: 'start'}} onClick={() => routeChange(projects.id)}>Read more</p>
+          <p className='mobileExpandContentDescription' style={{ textAlign: 'start', alignSelf: 'center'}} onClick={() => routeChange(projects.id)}>Read more</p>
         </div>
       </div>
       :
       <div id={`expanded-${projects.id}`} className='mobileExpandContent'  key={`expand-${projects.id}`} {...getCollapseProps()}>
-        <div className="projectColumn" style={{marginTop: '1%', marginBottom: '2%'}}>
+        <div className="projectColumn" style={{ marginBottom: '2%', alignItems:'center'}}>
           <p style={{ float: 'left', width: '20%'}}></p>
-          <p className='mobileExpandContentDescription' style={{ textAlign: 'start', paddingTop: '1%', minHeight: '2vh'}}>{projects.details}</p>
+          <p className='mobileExpandContentDescription' style={{ textAlign: 'start', paddingTop: '1%', }}>{projects.details}</p>
         </div>
-        <div className="projectColumn" style={{ marginBottom: 0}}>
+        <div className="projectColumn" style={{ }}>
           <p style={{ float: 'left', width: '20%'}}></p>
-          <p className='mobileExpandContentDescription' style={{ textAlign: 'start'}} onClick={() => routeChange(projects.id)}>Read more</p>
+          <p className='mobileExpandContentDescription' style={{ textAlign: 'start', alignSelf: 'center'}} onClick={() => routeChange(projects.id)}>Read more</p>
         </div>
       </div>
       }

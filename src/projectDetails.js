@@ -5,7 +5,8 @@ import './projectDetails.css';
 import Navbar from "./navBar";
 import { useParams } from 'react-router-dom';
 import { isMobile } from "react-device-detect";
-import HorizontalScroll from 'react-scroll-horizontal'
+import HorizontalScroll from 'react-scroll-horizontal';
+import React, { useState, useEffect } from "react";
 
 const screenWidth = window.innerWidth;
 
@@ -123,7 +124,7 @@ function ShowProject(props) {
 function MobileDesc(object) {
     return (
       <>
-        <div style={{ textAlign: 'left', paddingLeft:'2%', paddingRight: '2%'}}>
+        <div style={{ textAlign: 'left', paddingLeft:'2%', paddingRight: '2%', paddingBottom: '15%'}}>
           <p className='mobileProjectDescription' style={{ textAlign: 'left'}}>{object.value.desc1}</p>
           <p className='mobileProjectDescription' style={{ textAlign: 'left', paddingTop: '1%' }}>&emsp;{object.value.desc2}</p>
         </div>
@@ -201,6 +202,21 @@ function ShowImage(props) {
 }
 
 export default function ProjectDetailPage(object) {
+  const [size, initSize] = React.useState();
+  const onResize = () => {
+    const width = window.innerWidth;
+    const height = window.innerHeight;
+    initSize({
+      width: width,
+      height: height,
+    });
+  };
+  React.useEffect(() => {
+    window.addEventListener("resize", onResize);
+    return () => {
+      window.removeEventListener("resize", onResize);
+    };
+  }, []);
   const { id } = useParams();
   return (
     <div style={{ flexDirection: 'column', height: '100vh', width:"100vw" }}>        

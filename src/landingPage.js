@@ -10,6 +10,21 @@ import Navbar from "./navBar";
 import React, { useState, useEffect } from "react";
  
 export default function LandingPage() {
+  const [size, initSize] = React.useState();
+  const onResize = () => {
+    const width = window.innerWidth;
+    const height = window.innerHeight;
+    initSize({
+      width: width,
+      height: height,
+    });
+  };
+  React.useEffect(() => {
+    window.addEventListener("resize", onResize);
+    return () => {
+      window.removeEventListener("resize", onResize);
+    };
+  }, []);
   const logos = [logoBig,logoBig,logoBig];
   const logo = logos.map((logo,index) => (
     <img key={index} className="landingPage-image" src={logo} alt={logo.toString()} />

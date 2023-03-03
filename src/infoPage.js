@@ -6,8 +6,24 @@ import './loadingPage.css';
 import './infoPage.css';
 import { isMobile } from "react-device-detect";
 import InfoNavBar from "./infoNavBar";
+import React, { useState, useEffect } from "react";
 
-const InfoPage = () => {
+function InfoPage () {
+  const [size, initSize] = React.useState();
+  const onResize = () => {
+    const width = window.innerWidth;
+    const height = window.innerHeight;
+    initSize({
+      width: width,
+      height: height,
+    });
+  };
+  React.useEffect(() => {
+    window.addEventListener("resize", onResize);
+    return () => {
+      window.removeEventListener("resize", onResize);
+    };
+  }, []);
   const screenWidth = window.innerWidth;
   const logos = [logoStart,logoMiddle,logoEnd];
   const logo = logos.map((logo,index) => (
