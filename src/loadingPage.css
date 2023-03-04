@@ -78,8 +78,36 @@
     align-items: 'center';
     justify-content: center;
     /* overflow: hidden; */
-    width: 210%;
+    width: 102%;
     /* align-self: stretch; */
+  }
+
+  .loadingImage {
+    object-fit: cover;
+    width: 50%;
+    max-height: 100%;
+    /* align-self: stretch; */
+  }
+
+  .loadingPage-image {
+    display: flex;
+    height: 100%;
+    width: 100%;
+    flex-direction: row;
+    align-items: center;
+    animation: blender-mobile 3s !important;
+    animation-iteration-count: 1;
+    animation-fill-mode: linear forwards;
+  }
+}
+
+@keyframes blender-mobile {
+  from {
+    transform: translateX(0%);
+  }
+
+  to {
+    transform: translateX(-67%);
   }
 }
 
@@ -134,16 +162,6 @@
   }
 }
 
-@keyframes blender {
-  from {
-    transform: translateX(100%);
-  }
-
-  to {
-    transform: translateX(-50%);
-  }
-}
-
 @keyframes blender-tablet {
   from {
     transform: translateX(50%);
@@ -155,26 +173,6 @@
 
   /* from {right: -50%;}
     to {right: 51%;} */
-}
-
-@keyframes blender-mobile-small {
-  from {
-    right: 0%;
-  }
-
-  to {
-    right: 50%;
-  }
-}
-
-@keyframes blender-mobile-large {
-  from {
-    right: 0%;
-  }
-
-  to {
-    right: 52%;
-  }
 }
 
 /* Extra small devices (phones, 600px and down)
