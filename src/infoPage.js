@@ -7,6 +7,7 @@ import './infoPage.css';
 import { isMobile } from "react-device-detect";
 import InfoNavBar from "./infoNavBar";
 import React, { useState, useEffect } from "react";
+import { LazyLoadImage } from "react-lazy-load-image-component";
 
 function InfoPage () {
   const [size, initSize] = React.useState();
@@ -27,7 +28,7 @@ function InfoPage () {
   const screenWidth = window.innerWidth;
   const logos = [logoStart,logoMiddle,logoEnd];
   const logo = logos.map((logo,index) => (
-    <img key={index} className="landingPage-image" src={logo} alt={logo.toString()} />
+    <LazyLoadImage key={index} className="landingPage-image" src={logo} alt={logo.toString()} />
   ));
   return(
     // <div id="infoDisplay" className="infoPageTransition">

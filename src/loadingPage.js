@@ -6,6 +6,7 @@ import './project.css';
 import { useNavigate } from 'react-router-dom';
 import { isMobile } from "react-device-detect";
 import useCollapse from 'react-collapsed';
+import { LazyLoadImage } from "react-lazy-load-image-component";
 
 const screenWidth = window.innerWidth;
 
@@ -121,7 +122,7 @@ export default function LoadingPage() {
 
   const logos = [logoBig];
   const logo = logos.map((logo, index) => (
-    <img key={index} className='loadingImage' src={logo} alt={logo.toString()} />
+    <LazyLoadImage key={index} className='loadingImage' src={logo} alt={logo.toString()} />
   ));
 
   return (
@@ -147,13 +148,13 @@ export default function LoadingPage() {
            {screenWidth <500 ||  isMobile ?
            <div className='landingPage-full0' style={{ minHeight: '58%'}}>
             <div key="landing" className="landingPage-full1">
-              <img id="changeImage" key='logo' className="landingPage-image1" src={projects[0].link} alt={logoBig.toString()} onMouseEnter={() => changeURL(logoBig, false)} />
+              <LazyLoadImage id="changeImage" key='logo' className="landingPage-image1" src={projects[0].link} alt={logoBig.toString()} onMouseEnter={() => changeURL(logoBig, false)} />
             </div>
            </div>
            :
            <div className='landingPage-full0'>
              <div key="landing" className="landingPage-full1">
-               <img id="hoverImage" key='logo' className="landingPage-image1" src={logoBig} alt={logoBig.toString()} onMouseEnter={() => changeURL(logoBig, false)} />
+               <LazyLoadImage id="hoverImage" key='logo' className="landingPage-image1" src={logoBig} alt={logoBig.toString()} onMouseEnter={() => changeURL(logoBig, false)} />
              </div>
            </div>
            }

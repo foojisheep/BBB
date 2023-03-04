@@ -5,6 +5,7 @@ import logoBig from './resource/logo.svg';
 import { useNavigate } from 'react-router-dom';
 import { isMobile } from "react-device-detect";
 import useCollapse from 'react-collapsed';
+import { LazyLoadImage } from "react-lazy-load-image-component";
 
 export default function ImageAndProjects() {
   const { getCollapseProps, getToggleProps, isExpanded } = useCollapse();
@@ -72,7 +73,7 @@ export default function ImageAndProjects() {
       <>
       <div className='landingPage-full0' style={{ minHeight: ' 58%'}}>
         <div key="landing" className="landingPage-full1">
-          <img id="changeImage" key='logo' className="landingPage-image1" src={projects[0].link} onMouseEnter={() => changeURL(logoBig, false)} />
+          <LazyLoadImage id="changeImage" key='logo' className="landingPage-image1" src={projects[0].link} onMouseEnter={() => changeURL(logoBig, false)} />
         </div>
       </div>
       <div className="projectDisplay1" style={{ overflow: 'hidden',backgroundColor: '#FFFFFF', position: 'absolute', bottom: 0, width: '100%', minHeight: '37%', alignItems:'center'}}>
@@ -85,7 +86,7 @@ export default function ImageAndProjects() {
        <>
        <div className='landingPage-full0' >
         <div key="landing" className="landingPage-full1">
-          <img id="hoverImage" key='logo' className="landingPage-image1" src={logoBig} alt={logoBig.toString()} onMouseEnter={() => changeURL(logoBig, false)} />
+          <LazyLoadImage id="hoverImage" key='logo' className="landingPage-image1" src={logoBig} alt={logoBig.toString()} onMouseEnter={() => changeURL(logoBig, false)} />
         </div>
       </div>
        <div className="projectDisplay1 collapsible" style={{ height: '26%',backgroundColor: '#FFFFFF'}}>

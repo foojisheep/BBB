@@ -7,6 +7,7 @@ import { useParams } from 'react-router-dom';
 import { isMobile } from "react-device-detect";
 import HorizontalScroll from 'react-scroll-horizontal';
 import React, { useState, useEffect } from "react";
+import { LazyLoadImage } from "react-lazy-load-image-component";
 
 const screenWidth = window.innerWidth;
 
@@ -176,7 +177,7 @@ function ShowImage(props) {
     //   console.log(`./Images/${file}/${photo}.png`);
     return (
       // <div className='list-group-item' style={{}}>
-      <img style={{ height: '100%'}} key={`${file}-${index}`} className="project-image" src={require(`./resource/Images/${file}/${index}.png`)} alt={`${file}-${index}`} />
+      <LazyLoadImage style={{ height: '100%'}} key={`${file}-${index}`} className="project-image" src={require(`./resource/Images/${file}/${index}.png`)} alt={`${file}-${index}`} />
       // </div>
       // <img key={`${file}-${index}`} className="project-image" src={require(`./resource/Images/${file}/Hover.png`)} alt={`${file}-${index}`}/>
     );

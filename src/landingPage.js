@@ -8,6 +8,7 @@ import './project.css';
 import ImageAndProjects from "./project";
 import Navbar from "./navBar";
 import React, { useState, useEffect } from "react";
+import { LazyLoadImage } from "react-lazy-load-image-component";
  
 export default function LandingPage() {
   const [size, initSize] = React.useState();
@@ -27,7 +28,7 @@ export default function LandingPage() {
   }, []);
   const logos = [logoBig,logoBig,logoBig];
   const logo = logos.map((logo,index) => (
-    <img key={index} className="landingPage-image" src={logo} alt={logo.toString()} />
+    <LazyLoadImage key={index} className="landingPage-image" src={logo} alt={logo.toString()} />
   ));
 
   return(
