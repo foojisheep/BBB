@@ -72,7 +72,7 @@ function Projects() {
     <>
     {screenWidth <500 ||  isMobile ? 
       // <div className='slideUp' style={{backgroundColor: '#FFFFFF', overflow: 'hidden', height: '35%'}}>
-      <div style={{backgroundColor: '#FFFFFF', overflow: 'hidden', position: 'absolute', bottom: 0, width: '100%'}}>
+      <div style={{backgroundColor: '#FFFFFF', overflow: 'hidden', position: 'absolute', bottom: 0, width: '100%', minHeight: '35%'}}>
         <div className="projectDisplay1" style={{ overflow: 'hidden'}}>
           <table id="customers">
             {isMobileContent}
@@ -145,7 +145,7 @@ export default function LoadingPage() {
             <Navbar style={{ display: 'flex', height: '5%'}}/>
            </div>
            {screenWidth <500 ||  isMobile ?
-           <div className='landingPage-full0' style={{ height: '70%'}}>
+           <div className='landingPage-full0' style={{ minHeight: '60%'}}>
             <div key="landing" className="landingPage-full1">
               <img id="changeImage" key='logo' className="landingPage-image1" src={projects[0].link} alt={logoBig.toString()} onMouseEnter={() => changeURL(logoBig, false)} />
             </div>
