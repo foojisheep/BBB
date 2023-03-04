@@ -43,9 +43,9 @@ function Projects() {
       </div>
       { projects.id == 1 ? 
       <div id={`expanded-${projects.id}`} className='mobileExpandContent'  key={`expand-${projects.id}`} {...getCollapseProps()} style={{ display: 'inline-table', width: '100%'}}>
-        <div className="projectColumn" style={{ marginBottom: '2%', alignItems:'center'}}>
+        <div className="projectColumn" style={{ height: '6vh', alignItems:'center'}}>
           <p style={{ float: 'left', width: '20%'}}></p>
-          <p className='mobileExpandContentDescription' style={{ textAlign: 'start', paddingTop: '1%', }}>{projects.details}</p>
+          <p className='mobileExpandContentDescription' style={{ textAlign: 'start', paddingTop: '2%', paddingBottom: '2%'}}>{projects.details}</p>
         </div>
         <div className="projectColumn" style={{ }}>
           <p style={{ float: 'left', width: '20%'}}></p>
@@ -54,9 +54,9 @@ function Projects() {
       </div>
       :
       <div id={`expanded-${projects.id}`} className='mobileExpandContent' key={`expand-${projects.id}`} {...getCollapseProps()}>
-        <div className="projectColumn" style={{ marginBottom: '2%', alignItems:'center'}}>
+        <div className="projectColumn" style={{ height: '6vh', alignItems:'center'}}>
           <p style={{ float: 'left', width: '20%'}}></p>
-          <p className='mobileExpandContentDescription' style={{ textAlign: 'start', paddingTop: '1%',}}>{projects.details}</p>
+          <p className='mobileExpandContentDescription' style={{ textAlign: 'start', paddingTop: '2%', paddingBottom: '2%'}}>{projects.details}</p>
         </div>
         <div className="projectColumn" style={{ }}>
           <p style={{ float: 'left', width: '20%'}}></p>

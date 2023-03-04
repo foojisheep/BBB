@@ -124,7 +124,7 @@ function ShowProject(props) {
 function MobileDesc(object) {
     return (
       <>
-        <div style={{ textAlign: 'left', paddingLeft:'2%', paddingRight: '2%', paddingBottom: '15%'}}>
+        <div style={{ textAlign: 'left', paddingLeft:'2%', paddingRight: '2%', paddingBottom: '18%'}}>
           <p className='mobileProjectDescription' style={{ textAlign: 'left'}}>{object.value.desc1}</p>
           <p className='mobileProjectDescription' style={{ textAlign: 'left', paddingTop: '1%' }}>&emsp;{object.value.desc2}</p>
         </div>
