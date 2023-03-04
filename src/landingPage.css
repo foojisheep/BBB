@@ -114,9 +114,10 @@ ul {
 @media only screen and (max-width: 500px) {
   .landingPage-full0 {
     background-color: #FFB8F2;
-    /* min-height: auto; */
+    min-height: auto;
     width: auto;
     display: flex;
+    flex-grow: 1;
   }
 }
 
