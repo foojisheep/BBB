@@ -7,10 +7,12 @@ import { useNavigate } from 'react-router-dom';
 import { isMobile } from "react-device-detect";
 import useCollapse from 'react-collapsed';
 import { LazyLoadImage } from "react-lazy-load-image-component";
-
+import { useContext } from 'react';
+import { ViewContext } from './ViewContext';
 const screenWidth = window.innerWidth;
 
 function Projects() {
+  const {mobileView, laptopView} = useContext(ViewContext);
   const { getCollapseProps, getToggleProps, isExpanded } = useCollapse();
   let navigate = useNavigate();
   const routeChange = (projectId) => {
@@ -71,7 +73,7 @@ function Projects() {
 
   return (
     <>
-    {screenWidth <500 ||  isMobile ? 
+    {mobileView ? 
       // <div className='slideUp' style={{backgroundColor: '#FFFFFF', overflow: 'hidden', height: '35%'}}>
       <div style={{backgroundColor: '#FFFFFF', width: '100%'}}>
         <div className="projectDisplay1">
@@ -95,6 +97,7 @@ function Projects() {
 }
 
 export default function LoadingPage() {
+  const {mobileView, laptopView} = useContext(ViewContext);
   const [size, initSize] = React.useState();
   const onResize = () => {
     const width = window.innerWidth;
@@ -145,7 +148,7 @@ export default function LoadingPage() {
           <div className="navDisplay">
             <Navbar style={{ display: 'flex', height: '5%'}}/>
            </div>
-           {screenWidth <500 ||  isMobile ?
+           {mobileView ?
            <div className='landingPage-full0'>
             <div key="landing" className="landingPage-full1">
               <LazyLoadImage id="changeImage" key='logo' className="landingPage-image1" src={projects[0].link} alt={logoBig.toString()} onMouseEnter={() => changeURL(logoBig, false)} />

@@ -6,8 +6,11 @@ import { useNavigate } from 'react-router-dom';
 import { isMobile } from "react-device-detect";
 import useCollapse from 'react-collapsed';
 import { LazyLoadImage } from "react-lazy-load-image-component";
+import { ViewContext } from './ViewContext';
+import { useContext } from 'react';
 
 export default function ImageAndProjects() {
+  const {mobileView, laptopView} = useContext(ViewContext);
   const { getCollapseProps, getToggleProps, isExpanded } = useCollapse();
   const screenWidth = window.innerWidth;
   let navigate = useNavigate();
@@ -15,7 +18,7 @@ export default function ImageAndProjects() {
     let path = `/project/${projectId}`;
     navigate(path);
   }
-  console.log(projects[1].category);
+  // console.log(projects[1].category);
   const content = projects.map((projects) =>
     <tr key={projects.id} onMouseEnter={() => changeURL(projects, true)} onClick={() => routeChange(projects, true)}>
       <td>  </td>
@@ -69,7 +72,7 @@ export default function ImageAndProjects() {
   
   return (
     <>
-      { screenWidth <500 ||  isMobile ? 
+      { mobileView ? 
       <>
       <div className='landingPage-full0'>
         <div key="landing" className="landingPage-full1">

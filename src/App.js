@@ -8,8 +8,16 @@ import InfoPage from "./infoPage";
 import { BrowserRouter, Routes, Route, withRouter } from "react-router-dom";
 import NavBar from "./navBar";
 import { AnimatePresence } from 'framer-motion';
+import { ViewContext } from "./ViewContext";
+
 
 export default function App() {
+  const screenWidth = window.innerWidth;
+
+  const [mobileView, setMobileView] = useState(false);
+  const [laptopView, setLaptopView] = useState(false);
+  
+  
   const [width, setWindowWidth] = useState(0);
 
   const updateDimensions = () => {
@@ -24,13 +32,28 @@ export default function App() {
     return () => window.removeEventListener("resize", updateDimensions);
   }, [])
 
-  const responsive = {
-    showTopNavMenu: width > 1023
+  const onResize = () => { 
+    console.log('enter resize');
+    if(screenWidth < 500){
+      setMobileView(true);
+      setLaptopView(false);
+      console.log('mobile');
+    } else if(screenWidth > 500){
+      setLaptopView(true);
+      setMobileView(false);
+      console.log('test laptop');
+    }
   }
 
-  // const height = width > 992 ?? 100%: 70%;
-  console.log('width is ', width);
+  useEffect(() => {
+    console.log('resize')
+    onResize()
+  }, [width]);
+
+  
+
   return (
+    <ViewContext.Provider value = {{mobileView, setMobileView, laptopView,setLaptopView}}>
     <BrowserRouter>
       <Routes>
          <Route path="/" element={<LoadingPage/>} />
@@ -39,6 +62,7 @@ export default function App() {
         <Route path="information" element={<InfoPage/>} />
       </Routes>
     </BrowserRouter>
+    </ViewContext.Provider>
   );
 }
 

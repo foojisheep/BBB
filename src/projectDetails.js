@@ -8,6 +8,8 @@ import { isMobile } from "react-device-detect";
 import HorizontalScroll from 'react-scroll-horizontal';
 import React, { useState, useEffect } from "react";
 import { LazyLoadImage } from "react-lazy-load-image-component";
+import { ViewContext } from './ViewContext';
+import { useContext } from 'react';
 
 const screenWidth = window.innerWidth;
 
@@ -28,6 +30,7 @@ const projectsDetails = [
 ];
 
 function ShowProject(props) {
+  const {mobileView, laptopView} = useContext(ViewContext);
   const id = parseInt(props.value) - 1;
   const div = 'project';
 
@@ -37,7 +40,7 @@ function ShowProject(props) {
       <table id="projectDetails">
         <tr>
           <th className='projectDetailsTableTitle'>{projectsDetails[id].title}</th>
-          { screenWidth <500 ||  isMobile ? <></> : <th></th>}
+          { mobileView ? <></> : <th></th>}
         </tr>
         <tr>
           <td style={{ width: '18%', verticalAlign: 'top' }}>
@@ -115,7 +118,7 @@ function ShowProject(props) {
     </>
   );
 
-  if(screenWidth <500 ||  isMobile ){
+  if(mobileView ){
     return(isMobileContent);
   } else {
     return (isLaptopContent)
@@ -203,6 +206,7 @@ function ShowImage(props) {
 }
 
 export default function ProjectDetailPage(object) {
+  const {mobileView, laptopView} = useContext(ViewContext);
   const [size, initSize] = React.useState();
   const onResize = () => {
     const width = window.innerWidth;

@@ -6,10 +6,12 @@ import './loadingPage.css';
 import './infoPage.css';
 import { isMobile } from "react-device-detect";
 import InfoNavBar from "./infoNavBar";
-import React, { useState, useEffect } from "react";
+import React, { useState, useContext } from "react";
 import { LazyLoadImage } from "react-lazy-load-image-component";
+import { ViewContext } from './ViewContext';
 
 function InfoPage () {
+  const {mobileView, laptopView} = useContext(ViewContext)
   const [size, initSize] = React.useState();
   const onResize = () => {
     const width = window.innerWidth;
@@ -43,7 +45,7 @@ function InfoPage () {
       </div>
       <div className='context contentHeight'>
         <table id="contextAlign">
-        { screenWidth <500 ||  isMobile ? 
+        { mobileView ? 
           <>
            <ul className='textAlignLeft' style={{ fontSize: '16px'}}>{ screenWidth <500 ||  isMobile ?   <><h1 style={{ fontSize: '16px', paddingBottom: '5%'}}>Contact</h1></> : <>CONTACT</> }
               <li id="context" style={{ fontSize: '16px'}}>For all project enquires,</li>
