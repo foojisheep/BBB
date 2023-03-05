@@ -9,34 +9,7 @@ import { ViewContext } from './ViewContext';
 
 
 export default function NavBar() {
-  // const screenWidth = window.innerWidth;
-
   const {mobileView, laptopView} = useContext(ViewContext)
-
-  // const [mobileView, setMobileView] = useState(false);
-  // const [laptopView, setLaptopView] = useState(false);
-
-  
-  // useEffect(() => {
-  //   onResize()
-  // }, [screenWidth]);
-
-
-  // const onResize = () => { 
-  //   console.log('enter resize');
-  //   if(screenWidth < 500){
-  //     setMobileView(true);
-  //     setLaptopView(false);
-  //     console.log('mobile');
-  //   } else if(screenWidth > 500){
-  //     setLaptopView(true);
-  //     setMobileView(false);
-  //     console.log('test laptop');
-  //   }
-    
-  // }
-  // const laptop = useContext(laptopView);
-
   return (
     <>
       <div className="leftNavBar">
