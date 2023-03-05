@@ -124,7 +124,7 @@ a:active {
 }
 
 /* Small devices (portrait tablets and large phones, 600px and up) */
-@media only screen and (max-width: 500px) {
+@media only screen and (max-width: 733px) {
   .studioBBB {
     font-style: normal;
     font-weight: 400;
@@ -199,7 +199,7 @@ a:active {
 }
 
 /* Small devices (portrait tablets and large phones, 600px and up) */
-@media only screen and (max-width: 500px) {
+@media only screen and (max-width: 733px) {
   .linkStyle {
     margin: 0;
     font-family: 'FoundersGroteskText';

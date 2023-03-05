@@ -10,7 +10,7 @@ import { ViewContext } from './ViewContext';
 import { useContext } from 'react';
 
 export default function ImageAndProjects() {
-  const {mobileView, laptopView} = useContext(ViewContext);
+  const {mobileView, laptopView, navView} = useContext(ViewContext);
   const { getCollapseProps, getToggleProps, isExpanded } = useCollapse();
   const screenWidth = window.innerWidth;
   let navigate = useNavigate();
@@ -24,7 +24,9 @@ export default function ImageAndProjects() {
       <td>  </td>
       <td>{projects.year}</td>
       <td>{projects.name}</td>
-      <td>{projects.details}</td>
+      { navView ? null :
+        <td>{projects.details}</td>
+      }
       <td style={{ textAlign: 'right' }}>{projects.category}</td>
     </tr>
   );

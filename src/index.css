@@ -14,7 +14,6 @@ body {
   -ms-overflow-style: hidden;  /* for Internet Explorer, Edge */
   scrollbar-width: hidden;  /* for Firefox
   /* overflow-y: scroll;  */
-  padding-bottom: env(safe-area-inset-bottom);
 }
 
 body::-webkit-scrollbar {

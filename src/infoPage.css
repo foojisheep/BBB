@@ -23,7 +23,7 @@
 }
 
 /* Small devices (portrait tablets and large phones, 600px and up) */
-@media only screen and (max-width: 500px) {
+@media only screen and (max-width: 733) {
   .infoFooterDisplay {
     height: 5%;
     padding-top: 3%;
@@ -96,7 +96,7 @@ a:link {
 }
 
   /* Small devices (portrait tablets and large phones, 600px and up) */
-@media only screen and (max-width: 500px) {
+@media only screen and (max-width: 733px) {
   .contentDescriptionHeight {
     /* height: 60%; */
   }
@@ -146,7 +146,7 @@ a:link {
 }
 
 /* Small devices (portrait tablets and large phones, 600px and up) */
-@media only screen and (max-width: 500px) {
+@media only screen and (max-width: 733px) {
   #infoContent {
     white-space:pre-wrap;
     font-family: 'FoundersGroteskText';

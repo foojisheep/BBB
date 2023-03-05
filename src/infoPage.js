@@ -47,35 +47,35 @@ function InfoPage () {
         <table id="contextAlign">
         { mobileView ? 
           <>
-           <ul className='textAlignLeft' style={{ fontSize: '16px'}}>{ screenWidth <500 ||  isMobile ?   <><h1 style={{ fontSize: '16px', paddingBottom: '5%'}}>Contact</h1></> : <>CONTACT</> }
+           <ul className='textAlignLeft' style={{ fontSize: '16px'}}>{ mobileView ?   <><h1 style={{ fontSize: '16px', paddingBottom: '5%'}}>Contact</h1></> : <>CONTACT</> }
               <li id="context" style={{ fontSize: '16px'}}>For all project enquires,</li>
               <li id="context" style={{ fontSize: '16px'}}><a href="mailto:hi@studiobbb.co">hi@studiobbb.co</a></li>
             </ul>
-            <ul className='textAlignLeft' style={{ fontSize: '16px' }}>{ screenWidth <500 ||  isMobile ?  <>Office Hours</> : <>OFFICE HOURS</> }
+            <ul className='textAlignLeft' style={{ fontSize: '16px' }}>{ mobileView ?  <>Office Hours</> : <>OFFICE HOURS</> }
               <li id="context" style={{ fontSize: '16px'}}>Monday to Friday</li>
               <li id="context" style={{ fontSize: '16px'}}>10:00 - 18:00</li>
             </ul>
-            <ul className='textAlignLeft' style={{ fontSize: '16px' }}>{ screenWidth <500 ||  isMobile ?   <>Instagram</> : <>INSTAGRAM</> }
+            <ul className='textAlignLeft' style={{ fontSize: '16px' }}>{ mobileView ?   <>Instagram</> : <>INSTAGRAM</> }
               <li id="context" style={{ fontSize: '16px'}}><a href="https://www.instagram.com/studiobbb.co">@studiobbb</a></li>
             </ul>
           </> :
           <>
           <tr>
           <td style={{width: '20%', verticalAlign:'top'}}>
-            <ul className='textAlignLeft'>{ screenWidth <500 ||  isMobile ?   <>Contact</> : <>CONTACT</> }
+            <ul className='textAlignLeft'>{ mobileView ?   <>Contact</> : <>CONTACT</> }
               <li id="context">For all project enquires,</li>
               <li id="context"><a href="mailto:hi@studiobbb.co">hi@studiobbb.co</a></li>
             </ul>
           </td>
           <td>
-            <ul className='textAlignLeft'>{ screenWidth <500 ||  isMobile ?  <>Office Hours</> : <>OFFICE HOURS</> }
+            <ul className='textAlignLeft'>{ mobileView ?  <>Office Hours</> : <>OFFICE HOURS</> }
               <li id="context">Monday to Friday</li>
               <li id="context">10:00 - 18:00</li>
             </ul>
             <ul></ul>
           </td>
           </tr>
-          <ul className='textAlignLeft' style={{ fontSize: '18px' }}>{ screenWidth <500 ||  isMobile ?   <>Instagram</> : <>INSTAGRAM</> }
+          <ul className='textAlignLeft' style={{ fontSize: '18px' }}>{ mobileView ?   <>Instagram</> : <>INSTAGRAM</> }
               <li id="context"><a href="https://www.instagram.com/studiobbb.co">@studiobbb</a></li>
             </ul>
             </>

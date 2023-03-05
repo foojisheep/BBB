@@ -73,7 +73,7 @@
 }
 
 /* Small devices (portrait tablets and large phones, 600px and up) */
-@media only screen and (max-width: 500px) {
+@media only screen and (max-width: 733px) {
   .infoNavDisplay {
     border-bottom: 1.6px solid #FFC572;
     padding-left: 3%;
@@ -125,7 +125,7 @@ a:active {
 }
 
 /* Small devices (portrait tablets and large phones, 600px and up) */
-@media only screen and (max-width: 500px) {
+@media only screen and (max-width: 733px) {
   .studioInfoBBB {
     font-style: normal;
     font-weight: 400;
@@ -194,7 +194,7 @@ a:active {
 }
 
 /* Small devices (portrait tablets and large phones, 600px and up) */
-@media only screen and (max-width: 500px) {
+@media only screen and (max-width: 733px) {
   .linkStyleInfo {
     margin: 0;
     font-family: 'FoundersGroteskText';

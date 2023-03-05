@@ -237,7 +237,7 @@ export default function ProjectDetailPage(object) {
 }
 
 function scrollable(div, scroll) {
-  if(screenWidth <500 ||  isMobile){
+  if(screenWidth < 733 ||  isMobile){
     if (scroll) {
       if(div == 'image') {
         document.getElementsByClassName('projectDetailDisplay')[0].style.overflow = 'hidden';

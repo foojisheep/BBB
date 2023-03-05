@@ -16,6 +16,7 @@ export default function App() {
 
   const [mobileView, setMobileView] = useState(false);
   const [laptopView, setLaptopView] = useState(false);
+  const [navView, setNavView] = useState(false);
   
   
   const [width, setWindowWidth] = useState(0);
@@ -34,14 +35,22 @@ export default function App() {
 
   const onResize = () => { 
     console.log('enter resize');
-    if(screenWidth < 500){
+    if(screenWidth < 733){
       setMobileView(true);
       setLaptopView(false);
       console.log('mobile');
-    } else if(screenWidth > 500){
+    } else if(screenWidth > 733){
       setLaptopView(true);
       setMobileView(false);
       console.log('test laptop');
+    }
+
+    if(screenWidth < 1280){
+      setNavView(true);
+      console.log('nav');
+    } else {
+      setNavView(false);
+      console.log('nav - laptop');
     }
   }
 
@@ -53,7 +62,7 @@ export default function App() {
   
 
   return (
-    <ViewContext.Provider value = {{mobileView, setMobileView, laptopView,setLaptopView}}>
+    <ViewContext.Provider value = {{mobileView, setMobileView, laptopView,setLaptopView, navView, setNavView}}>
     <BrowserRouter>
       <Routes>
          <Route path="/" element={<LoadingPage/>} />
