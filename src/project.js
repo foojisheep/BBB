@@ -46,7 +46,7 @@ export default function ImageAndProjects() {
         </div>
       </div>
       { projects.id == 1 ? 
-      <div id={`expanded-${projects.id}`} className='mobileExpandContent'  key={`expand-${projects.id}`} {...getCollapseProps()} style={{ display: 'inline-table', width: '100%'}}>
+      <div id={`expanded-${projects.id}`} className='mobileExpandContent'  key={`expand-${projects.id}`} {...getCollapseProps()} style={{ display: 'inline-table', width: '100%'}} onClick={() => routeChange(projects.id)}>
         <div className="projectColumn" style={{ height: '6vh', alignItems:'center'}}>
           <p style={{ float: 'left', width: '20%'}}></p>
           <p className='mobileExpandContentDescription' style={{ textAlign: 'start', paddingTop: '2%', paddingBottom: '2%' }}>{projects.details}</p>
@@ -57,7 +57,7 @@ export default function ImageAndProjects() {
         </div>
       </div>
       :
-      <div id={`expanded-${projects.id}`} className='mobileExpandContent'  key={`expand-${projects.id}`} {...getCollapseProps()}>
+      <div id={`expanded-${projects.id}`} className='mobileExpandContent'  key={`expand-${projects.id}`} {...getCollapseProps()} onClick={() => routeChange(projects.id)}>
         <div className="projectColumn" style={{ height: '6vh', alignItems:'center'}}>
           <p style={{ float: 'left', width: '20%'}}></p>
           <p className='mobileExpandContentDescription' style={{ textAlign: 'start', paddingTop: '2%', paddingBottom: '2%'}}>{projects.details}</p>
@@ -136,6 +136,7 @@ function isMobileExpandDetails (projects, expand) {
       document.getElementById('changeImage').src = projects.link;
       document.getElementsByClassName('mobileExpandContent')[number].style.display = 'inline-table';
       document.getElementsByClassName('mobileExpandContent')[number].style.width = '100%';
+      document.getElementsByClassName('projectListDisplay')[number].onClick = function(){alert("Finaly!");};
       console.log('isMobileExpandDetails');
     } else {
       document.getElementsByClassName('mobileExpandContent')[i].style.display = 'none';
