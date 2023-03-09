@@ -111,7 +111,7 @@ ul {
 }
 
 /* Small devices (portrait tablets and large phones, 600px and up) */
-@media only screen and (max-width: 733px) {
+@media only screen and (max-width: 1024px) {
   .landingPage-full0 {
     background-color: #FFB8F2;
     min-height: auto;
@@ -142,7 +142,7 @@ ul {
 }
 
 /* Small devices (portrait tablets and large phones, 600px and up) */
-@media only screen and (max-width: 733px) {
+@media only screen and (max-width: 1024px) {
   .landingPage-image1 {
     /* object-fit: cover;
     width: 100%;

@@ -92,7 +92,7 @@
 }
 
 /* Large devices (laptops/desktops, 992px and up) */
-@media only screen and (max-width: 733px) {
+@media only screen and (max-width: 1024px) {
   .projectDetailDisplay {
     overflow: scroll;
     /* Hide scrollbar for IE, Edge and Firefox */
@@ -238,7 +238,7 @@
   padding-bottom: 1%;
 }
 
-@media only screen and (max-width: 733px) {
+@media only screen and (max-width: 1024px) {
   .projectDetailsImageDiv {
     height: 50%;
   }
@@ -275,7 +275,7 @@
   display: flex;
 }
 
-@media only screen and (max-width: 733px) {
+@media only screen and (max-width: 1024px) {
   .scroll {
     overflow: scroll;
   }
