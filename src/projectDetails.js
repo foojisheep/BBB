@@ -228,10 +228,11 @@ export default function ProjectDetailPage(object) {
       <div className="navDisplay">
         <Navbar />
       </div>
-      <div className='projectDetailsTransition' style={{ flexDirection: 'column', height: '95%'}}>
+      {/* <div className='projectDetailsTransition' style={{ flexDirection: 'column', height: '95%'}}> */}
+      <div style={{ flexDirection: 'column', height: '95%'}}>
         <ShowImage key={id.toString()} value={id} />
         <ShowProject key={id.toString()} value={id} />
-    </div>
+      </div>
     </div>
   );
 }
