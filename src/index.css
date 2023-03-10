@@ -10,7 +10,7 @@
 body {
   padding-top: env(safe-area-inset-top);
   margin: 0;
-  overflow: hidden;
+  overflow: scroll;
   /* position: fixed; */
   -ms-overflow-style: hidden;  /* for Internet Explorer, Edge */
   scrollbar-width: hidden;  /* for Firefox
