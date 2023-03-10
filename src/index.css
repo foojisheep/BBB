@@ -24,7 +24,7 @@ body {
 @media only screen and (max-width: 1024px) {
   .body {
     max-height: 100dvh;
-    /* overflow: scroll; */
+    overflow: scroll;
   }
 }
 
