@@ -20,7 +20,7 @@ export default function ImageAndProjects() {
   }
   // console.log(projects[1].category);
   const content = projects.map((projects) =>
-    <tr key={projects.id} onMouseEnter={() => changeURL(projects, true)} onClick={() => routeChange(projects, true)}>
+    <tr key={projects.id} onMouseEnter={() => changeURL(projects, true)} onClick={() => routeChange(projects.id)}>
       <td>  </td>
       <td>{projects.year}</td>
       <td>{projects.name}</td>
