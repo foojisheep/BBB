@@ -10,22 +10,14 @@
 body {
   padding-top: env(safe-area-inset-top);
   margin: 0;
-  overflow: scroll;
-  /* position: fixed; */
+  /* overflow: scroll; */
+  position: fixed;
   -ms-overflow-style: hidden;  /* for Internet Explorer, Edge */
   scrollbar-width: hidden;  /* for Firefox
   /* overflow-y: scroll;  */
   /* padding-bottom: env(safe-area-inset-bottom); */
   padding-bottom: calc(100dvh - var(--webkit-footer-gap) + 5%);
-  /* height: 100dvh; */
-}
-
-/* Small devices (portrait tablets and large phones, 600px and up) */
-@media only screen and (max-width: 1024px) {
-  .body {
-    /* max-height: 100dvh; */
-    overflow: scroll;
-  }
+  height: 100dvh;
 }
 
 body::-webkit-scrollbar {
