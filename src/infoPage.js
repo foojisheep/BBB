@@ -45,7 +45,7 @@ function InfoPage () {
     //     </ul>
     //   </div>
     <div style={{display: 'flex', flexDirection: 'column', height: '100vh', width: "100vw", background: '#661F08'}}> 
-        <div className="navDisplay" style={{ height: '6.99%', backgroundColor: '#661F08'}}>
+        <div className="navDisplay" style={{ height: '6.99%', backgroundColor: '#661F08', borderBottom: '1.6px solid #FFC572'}}>
           <InfoNavBar/>
         </div>
       <div className='context contentHeight' style={{height: '93.01%'}}>
