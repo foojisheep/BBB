@@ -7,7 +7,6 @@ import { isMobile } from "react-device-detect";
 import React, { useState, useEffect, useContext } from "react";
 import { ViewContext } from './ViewContext';
 
-
 export default function NavBar() {
   const {mobileView, laptopView} = useContext(ViewContext)
   return (

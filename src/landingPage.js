@@ -38,7 +38,7 @@ export default function LandingPage() {
         <div className="navDisplay" style={{ height: '6.75%'}}>
           <Navbar/>
         </div>
-        <ImageAndProjects style={{height: '95%'}}/>
+        <ImageAndProjects style={{height: '93.25%'}}/>
       </div>
     </>
   );

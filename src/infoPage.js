@@ -6,6 +6,7 @@ import './loadingPage.css';
 import './infoPage.css';
 import { isMobile } from "react-device-detect";
 import InfoNavBar from "./infoNavBar";
+import Navbar from "./navBar";
 import React, { useState, useContext } from "react";
 import { LazyLoadImage } from "react-lazy-load-image-component";
 import { ViewContext } from './ViewContext';
@@ -34,16 +35,27 @@ function InfoPage () {
   ));
   return(
     // <div id="infoDisplay" className="infoPageTransition">
-    <div id="infoDisplay">
-      <InfoNavBar />
+    // <div id="infoDisplay">
+    //   <InfoNavBar />
+    //   <div className='contentDescriptionHeight'>
+    //     <ul style={{ textAlign: 'left',paddingTop:'3%', width: '100%', whiteSpace: 'none', paddingLeft: '2%'}}>
+    //         <li id="infoContent">BBB is an interior design studio based in Kuala Lumpur. 
+    //         We create non-linear narratives associated with a sense of place - 
+    //         echoing emotions formed through a connection with the craft of building.</li>
+    //     </ul>
+    //   </div>
+    <div style={{display: 'flex', flexDirection: 'column', height: '100vh', width: "100vw", background: '#661F08'}}> 
+        <div className="navDisplay" style={{ height: '6.99%', backgroundColor: '#661F08'}}>
+          <InfoNavBar/>
+        </div>
+      <div className='context contentHeight' style={{height: '93.01%'}}>
       <div className='contentDescriptionHeight'>
-        <ul style={{ textAlign: 'left',paddingTop:'3%', width: '100%', whiteSpace: 'none', paddingLeft: '2%'}}>
-            <li id="infoContent">BBB is an interior design studio based in Kuala Lumpur. 
-            We create non-linear narratives associated with a sense of place - 
-            echoing emotions formed through a connection with the craft of building.</li>
-        </ul>
-      </div>
-      <div className='context contentHeight'>
+         <ul style={{ textAlign: 'left',paddingTop:'3%', width: '100%', whiteSpace: 'none'}}>
+             <li id="infoContent">BBB is an interior design studio based in Kuala Lumpur. 
+             We create non-linear narratives associated with a sense of place - 
+             echoing emotions formed through a connection with the craft of building.</li>
+         </ul>
+       </div>
         <table id="contextAlign">
         { mobileView ? 
           <>
