@@ -2,7 +2,7 @@
   font-family: 'FoundersGroteskText';
   border-collapse: collapse;
   width: 100%;
-  background: #661F08;
+  background: rgb(104,19,0);
 }
 
 #topnav h1 {
@@ -32,7 +32,7 @@
   font-size: 24px;
   line-height: 30px;
   /* letter-spacing: 0.02em; */
-  color: #FFC572;
+  color: rgb(255,192,103);
   text-align: left;
   /* border: 1px solid #ddd; */
   /* padding: auto;
@@ -54,7 +54,7 @@
   font-size: 12px;
   line-height: 15px;
   letter-spacing: 0.02em;
-  color: #FFC572;
+  color: rgb(255,192,103);
   display: flex;
   margin: 0
 }
@@ -75,7 +75,7 @@
 /* Small devices (portrait tablets and large phones, 600px and up) */
 @media only screen and (max-width: 1024px) {
   .infoNavDisplay {
-    border-bottom: 1.6px solid #FFC572;
+    border-bottom: 1.6px solid rgb(255,192,103);
     padding-left: 3%;
     padding-right: 2%;
   }
@@ -119,7 +119,7 @@ a:active {
   font-size: 24px;
   line-height: 30px;
   /* letter-spacing: 0.02em; */
-  color: #FFC572;
+  color: rgb(255,192,103);
   justify-content: center;
   display: inline;
 }
@@ -134,7 +134,7 @@ a:active {
     display: flex;
     align-items: center;
     letter-spacing: -0.02em;
-    color: #FFC572;
+    color: rgb(255,192,103);
     flex: none;
     order: 0;
     flex-grow: 0;
@@ -187,7 +187,7 @@ a:active {
   font-size: 24px;
   line-height: 30px;
   /* letter-spacing: 0.02em; */
-  color: #FFC572;
+  color: rgb(255,192,103);
   text-align: center;
   justify-content: center;
   display: flex;
@@ -203,7 +203,7 @@ a:active {
     font-size: 16px;
     line-height: 30px;
     /* letter-spacing: 0.02em; */
-    color: #FFC572;
+    color: rgb(255,192,103);
     text-align: center;
     justify-content: center;
     display: flex;

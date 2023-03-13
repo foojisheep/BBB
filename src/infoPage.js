@@ -44,10 +44,15 @@ function InfoPage () {
     //         echoing emotions formed through a connection with the craft of building.</li>
     //     </ul>
     //   </div>
-    <div style={{display: 'flex', flexDirection: 'column', height: '100vh', width: "100vw", background: '#661F08'}}> 
-        <div className="navDisplay" style={{ height: '6.99%', backgroundColor: '#661F08', borderBottom: '1.6px solid #FFC572'}}>
+    <div style={{display: 'flex', flexDirection: 'column', height: '100vh', width: "100vw", background: 'rgb(104,19,0)'}}> 
+      { mobileView ?
+      <div className="navDisplay" style={{ height: '6.99%', backgroundColor: 'rgb(104,19,0)', borderBottom: '1.6px solid rgb(255,192,103)'}}>
           <InfoNavBar/>
-        </div>
+      </div> :
+      <div className="navDisplay" style={{ height: '6.99%', backgroundColor: 'rgb(104,19,0)', borderBottom: 'none'}}>
+        <InfoNavBar/>
+      </div>
+      }
       <div className='context contentHeight' style={{height: '93.01%'}}>
       <div className='contentDescriptionHeight'>
          <ul style={{ textAlign: 'left',paddingTop:'3%', width: '100%', whiteSpace: 'none'}}>

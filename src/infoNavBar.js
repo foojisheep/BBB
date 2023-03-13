@@ -50,7 +50,7 @@ export default function InfoNavBar() {
     <>
       <div className="leftNavBar">
         <div className='studioBBBDiv'>
-          <h1 className="studioBBB" style={{display:'table-row-group', color: '#FFC572'}}>
+          <h1 className="studioBBB" style={{display:'table-row-group', color: 'rgb(255,192,103)'}}>
             <Link to="/">Studio BBB</Link>
           </h1>
         </div>
@@ -59,10 +59,10 @@ export default function InfoNavBar() {
             null
           :
           <div className='descriptionDiv'>
-            <h1 className='descriptionHeader' style={{ color: '#FFC572' }}>
+            <h1 className='descriptionHeader' style={{ color: 'rgb(255,192,103)' }}>
               is an interior design studio believes every space
             </h1>
-            <h1 className='descriptionHeader' style={{ color: '#FFC572' }}>
+            <h1 className='descriptionHeader' style={{ color: 'rgb(255,192,103)' }}>
               created is an expression of oneself
             </h1>
           </div> 
@@ -70,12 +70,12 @@ export default function InfoNavBar() {
       </div>
       <div className='rightNavBar'>
         <div className='linkStyleDiv'>
-          <h1 className='linkStyle' style={{ color: '#FFC572' }}>
+          <h1 className='linkStyle' style={{ color: 'rgb(255,192,103)' }}>
             <Link to="/works"> Works</Link>
           </h1>
         </div>
         <div className='linkStyleDiv'>
-          <h1 className='linkStyle' style={{ color: '#FFC572' }}>
+          <h1 className='linkStyle' style={{ color: 'rgb(255,192,103)' }}>
             <Link to="/information">Information</Link>
           </h1>
         </div>

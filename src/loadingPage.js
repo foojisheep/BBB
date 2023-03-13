@@ -35,7 +35,7 @@ function Projects() {
   const isMobileContent = projects.map((projects) =>
   <>
     { projects.id == 1 ? 
-      <div className="projectListDisplay projectBackgroundColour" key={projects.id} style={{ backgroundColor: '#FFC572'}}>
+      <div className="projectListDisplay projectBackgroundColour" key={projects.id} style={{ backgroundColor: 'rgb(255,192,103)'}}>
         <div id={`expand-${projects.id}`} className="projectColumn" {...getToggleProps()} onClick={()=> isMobileExpandDetails(projects, true)}>
           <div className='mobileContentYear' style={{ width: '20%', textAlign: 'start'}}>
             {projects.mobileYear}
@@ -147,7 +147,7 @@ export default function LoadingPage() {
     <>
       {showLoading && (
         <div className='defaultLandingPage-full'>
-          <div className='navDisplay' style={{ backgroundColor: '#FFB8F2', borderBottom: 'hidden'}}/>
+          <div className='navDisplay' style={{ backgroundColor: 'rgb(255, 184, 242)', borderBottom: 'hidden'}}/>
           <div className="loadingPage-full">
             <div className='loadingPage-image'>
               {logo}
@@ -158,7 +158,7 @@ export default function LoadingPage() {
         </div>
       )}
       {showLanding && (
-        <div className='landingPage-transition' style={{ display: 'flex', flexDirection: 'column', height: "100vh", width: "100vw" , backgroundColor: '#FFB8F2'}}>
+        <div className='landingPage-transition' style={{ display: 'flex', flexDirection: 'column', height: "100vh", width: "100vw" , backgroundColor: 'rgb(255, 184, 242)'}}>
           {/* <div className="navDisplay slideDown"> */}
           <div className="navDisplay">
             <Navbar style={{ display: 'flex', height: '5%'}}/>
@@ -213,7 +213,7 @@ function isMobileExpandDetails (projects, expand) {
     if(number == i && expand) {
       document.getElementById('changeImage').src = projects.link;
       document.getElementsByClassName('mobileExpandContent')[number].style.display = 'inline-table';
-      document.getElementsByClassName('projectBackgroundColour')[number].style.backgroundColor = '#FFC572';
+      document.getElementsByClassName('projectBackgroundColour')[number].style.backgroundColor = 'rgb(255,192,103)';
       document.getElementsByClassName('mobileExpandContent')[number].style.width = '96%';
       console.log('isMobileExpandDetails');
     } else {

@@ -102,7 +102,7 @@ ul {
 }
 
 .landingPage-full0 {
-  background-color: #FFB8F2;
+  background-color: rgb(255, 184, 242);
   min-height: 69%;
   width: 100%;
   display: flex;
@@ -113,7 +113,7 @@ ul {
 /* Small devices (portrait tablets and large phones, 600px and up) */
 @media only screen and (max-width: 1024px) {
   .landingPage-full0 {
-    background-color: #FFB8F2;
+    background-color: rgb(255, 184, 242);
     min-height: auto;
     width: auto;
     display: flex;
@@ -195,7 +195,7 @@ ul {
     overflow-x: hidden;
     overflow-y: hidden;
     /* overflow: hidden; */
-    background-color: #FFB8F2;
+    background-color: rgb(255, 184, 242);
     flex-direction: row;
     align-items: center;
     justify-content: center;
@@ -227,7 +227,7 @@ ul {
     overflow-x: hidden;
     overflow-y: hidden;
     /* overflow: hidden; */
-    background-color: #FFB8F2;
+    background-color: rgb(255, 184, 242);
     flex-direction: row;
     align-items: center;
     justify-content: center;
@@ -264,7 +264,7 @@ ul {
   .landingPage-full {
     /* display: flex; */
     /* overflow: hidden; */
-    background-color: #FFB8F2;
+    background-color: rgb(255, 184, 242);
     /* flex-direction: row; */
     align-items: center;
     justify-content: center;

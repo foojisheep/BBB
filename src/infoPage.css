@@ -1,5 +1,5 @@
 #infoDisplay {
-    background: #661F08;
+    background: rgb(104,19,0);
     /* padding-left: 1%;
     padding-right: 1%; */
     overflow-x: hidden;
@@ -9,7 +9,7 @@
 .infoFooterDisplay {
   white-space:pre;
   font-family: 'FoundersGroteskText';
-  background: #661F08;
+  background: rgb(104,19,0);
   /* position: absolute; */
   bottom: 0;
   left: 0;
@@ -18,7 +18,7 @@
   padding-left: 2%;
   padding-right: 1%;
   margin-bottom: 2%;
-  color: #FFC572;
+  color: rgb(255,192,103);
   /* margin-bottom: 0.2%; */
 }
 
@@ -45,7 +45,7 @@
   font-size: 12px;
   line-height: 15px;
   letter-spacing: 0.01em;
-  color: #FFC572;
+  color: rgb(255,192,103);
 }
 
 .descriptionInfo{
@@ -56,7 +56,7 @@
     font-size: 12px;
     line-height: 15px;
     /* letter-spacing: 0.01em; */
-    color: #FFC572;
+    color: rgb(255,192,103);
 }
 
 .textAlignLeft {
@@ -123,7 +123,7 @@ a:link {
   font-size: 54px;
   line-height: 100%;
   letter-spacing: 0.02em;
-  color: #FFC572;
+  color: rgb(255,192,103);
   text-align: left;
   padding-right: 45%;
 }
@@ -138,7 +138,7 @@ a:link {
     font-size: 40px;
     line-height: 100%;
     letter-spacing: 0.02em;
-    color: #FFC572;
+    color: rgb(255,192,103);
     text-align: left;
     /* padding-left: 2%; */
     padding-right: 32%;
@@ -155,7 +155,7 @@ a:link {
     font-size: 16px;
     line-height: 20px;
     letter-spacing: 0.02em;
-    color: #FFC572;
+    color: rgb(255,192,103);
     text-align: left;
     padding-left: 2%;
     padding-right: 9%;
@@ -168,7 +168,7 @@ a:link {
     font-size: 16px;
     line-height: 110%;
     letter-spacing: 0.02em;
-    color: #FFC067;
+    color: rgb(255,192,103);
   }
   
   #contextAlign ul {
@@ -180,7 +180,7 @@ a:link {
     margin-top: 0%;
     margin-bottom: 5%;
     /* letter-spacing: 0.02em; */
-    color: #FFC572;
+    color: rgb(255,192,103);
   }
   
   #contextAlign {
@@ -197,7 +197,7 @@ a:link {
     font-size: 16px;
     line-height: 20px;
     letter-spacing: -0.02em;
-    color: #FFC067;
+    color: rgb(255,192,103);
   }
 
   #context li{
@@ -212,7 +212,7 @@ a:link {
   font-size: 24px;
   line-height: 110%;
   letter-spacing: 0.02em;
-  color: #FFC067;
+  color: rgb(255,192,103);
 }
 
 #contextAlign ul {
@@ -222,7 +222,7 @@ a:link {
   font-size: 18px;
   line-height: 110%;
   /* letter-spacing: 0.02em; */
-  color: #FFC572;
+  color: rgb(255,192,103);
 }
 
 #contextAlign {

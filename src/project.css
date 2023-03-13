@@ -82,7 +82,7 @@ div.projectDisplay1 {
 }
 
 #customers tr:hover {
-  background-color: #FFC572
+  background-color: rgb(255,192,103);
 }
 
 #customers tr {
@@ -172,7 +172,7 @@ div.projectDisplay1 {
 .mobileExpandContentDescription {
   width: 80%;
   font-size: 16px;
-  margin-left: 0.5%;
+  /* margin-left: 0.5%; */
   margin-right: 2%;
   margin-top: 0;
   margin-bottom: 0;

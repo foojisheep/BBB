@@ -34,7 +34,7 @@ export default function ImageAndProjects() {
   const isMobileContent = projects.map((projects) =>
   <>
 { projects.id == 1 ? 
-      <div className="projectListDisplay projectBackgroundColour" key={projects.id} style={{ backgroundColor: '#FFC572'}}>
+      <div className="projectListDisplay projectBackgroundColour" key={projects.id} style={{ backgroundColor: 'rgb(255,192,103)'}}>
         <div id={`expand-${projects.id}`} className="projectColumn" {...getToggleProps()} onClick={()=> isMobileExpandDetails(projects, true)}>
           <div className='mobileContentYear' style={{ width: '20%', textAlign: 'start'}}>
             {projects.mobileYear}
@@ -46,7 +46,23 @@ export default function ImageAndProjects() {
             {projects.category}
           </div>
         </div>
-        <div id={`expanded-${projects.id}`} className='mobileExpandContent'  key={`expand-${projects.id}`} {...getCollapseProps()} style={{ display: 'inline-table', width: '100%'}} onClick={() => routeChange(projects.id)}>
+        <div id={`expanded-${projects.id}`} className="mobileExpandContent" key={`expand-${projects.id}`} {...getCollapseProps()} style={{ display: 'contents'}} onClick={()=> routeChange(projects.id)}>
+          <div className='projectColumn' style={{ width: '20%', textAlign: 'start'}}>
+          </div>
+          <div className='projectColumn' style={{ alignItems: 'flex-start', textAlign: 'start', paddingLeft: '20%', paddingRight: '20%'}}>
+            <p className='mobileExpandContentDescription' style={{ textAlign: 'start', paddingTop: '2%', paddingBottom: '2%' }}>{projects.details}</p>
+          </div>
+          <div className='projectColumn' style={{ textAlign: 'end'}}>
+          </div>
+          <div className='projectColumn' style={{ width: '20%', textAlign: 'start'}}>
+          </div>
+          <div className='projectColumn' style={{ alignItems: 'flex-start', textAlign: 'start', paddingLeft: '20%', paddingRight: '20%'}}>
+            <p className='mobileExpandContentDescription' style={{ textAlign: 'start', paddingTop: '1%', paddingBottom: '2%', alignSelf: 'center'}} onClick={() => routeChange(projects.id)}>Read more</p>
+          </div>
+          <div className='projectColumn' style={{ textAlign: 'end'}}>
+          </div>
+        </div>
+        {/* <div id={`expanded-${projects.id}`} className='mobileExpandContent'  key={`expand-${projects.id}`} {...getCollapseProps()} style={{ display: 'inline-table', width: '100%'}} onClick={() => routeChange(projects.id)}>
           <div className="projectColumn" style={{ height: '6vh', alignItems:'center'}}>
             <p style={{ float: 'left', width: '20%'}}></p>
             <p className='mobileExpandContentDescription' style={{ textAlign: 'start', paddingTop: '2%', paddingBottom: '2%' }}>{projects.details}</p>
@@ -55,7 +71,7 @@ export default function ImageAndProjects() {
             <p style={{ float: 'left', width: '20%'}}></p>
             <p className='mobileExpandContentDescription' style={{ textAlign: 'start', alignSelf: 'center'}} onClick={() => routeChange(projects.id)}>Read more</p>
           </div>
-        </div>
+        </div> */}
       </div>
     :
       <div className="projectListDisplay projectBackgroundColour" key={projects.id}>
@@ -70,16 +86,34 @@ export default function ImageAndProjects() {
             {projects.category}
           </div>
         </div>
-        <div id={`expanded-${projects.id}`} className='mobileExpandContent'  key={`expand-${projects.id}`} {...getCollapseProps()} onClick={() => routeChange(projects.id)}>
+        <div id={`expanded-${projects.id}`} className="mobileExpandContent" key={`expand-${projects.id}`} {...getCollapseProps()} onClick={()=> routeChange(projects.id)}>
+          <div className='projectColumn' style={{ width: '20%', textAlign: 'start'}}>
+          </div>
+          <div className='projectColumn' style={{ alignItems: 'flex-start', textAlign: 'start', paddingLeft: '20%', paddingRight: '20%'}}>
+            <p className='mobileExpandContentDescription' style={{ textAlign: 'start', paddingTop: '2%', paddingBottom: '2%' }}>{projects.details}</p>
+          </div>
+          <div className='projectColumn' style={{ textAlign: 'end'}}>
+          </div>
+          <div className='projectColumn' style={{ width: '20%', textAlign: 'start'}}>
+          </div>
+          <div className='projectColumn' style={{ alignItems: 'flex-start', textAlign: 'start', paddingLeft: '20%', paddingRight: '20%'}}>
+            <p className='mobileExpandContentDescription' style={{ textAlign: 'start', paddingTop: '1%', paddingBottom: '2%', alignSelf: 'center'}} onClick={() => routeChange(projects.id)}>Read more</p>
+          </div>
+          <div className='projectColumn' style={{ textAlign: 'end'}}>
+          </div>
+        </div>
+        {/* <div id={`expanded-${projects.id}`} className='mobileExpandContent'  key={`expand-${projects.id}`} {...getCollapseProps()} onClick={() => routeChange(projects.id)}>
           <div className="projectColumn" style={{ height: '6vh', alignItems:'center'}}>
             <p style={{ float: 'left', width: '20%'}}></p>
             <p className='mobileExpandContentDescription' style={{ textAlign: 'start', paddingTop: '2%', paddingBottom: '2%'}}>{projects.details}</p>
+            <p style={{ float: 'left', width: '20%'}}></p>
           </div>
           <div className="projectColumn" style={{ }}>
             <p style={{ float: 'left', width: '20%'}}></p>
             <p className='mobileExpandContentDescription' style={{ textAlign: 'start', alignSelf: 'center'}} onClick={() => routeChange(projects.id)}>Read more</p>
+            <p style={{ float: 'left', width: '20%'}}></p>
           </div>
-        </div>
+        </div> */}
       </div>
     }
   </>
@@ -147,8 +181,8 @@ function isMobileExpandDetails (projects, expand) {
   for(let i = 0; i < projectCount; i++){
     if(number == i && expand) {
       document.getElementById('changeImage').src = projects.link;
-      document.getElementsByClassName('mobileExpandContent')[number].style.display = 'inline-table';
-      document.getElementsByClassName('projectBackgroundColour')[number].style.backgroundColor = '#FFC572';
+      document.getElementsByClassName('mobileExpandContent')[number].style.display = 'contents';
+      document.getElementsByClassName('projectBackgroundColour')[number].style.backgroundColor = 'rgb(255,192,103)';
       document.getElementsByClassName('mobileExpandContent')[number].style.width = '100%';
     } else {
       document.getElementsByClassName('mobileExpandContent')[i].style.display = 'none';
