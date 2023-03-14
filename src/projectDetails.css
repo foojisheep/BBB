@@ -280,4 +280,7 @@
   .scroll {
     overflow: scroll;
   }
+  #projectDetails th {
+    font-size: 16px;
+  }
 }
