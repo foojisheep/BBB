@@ -6,7 +6,7 @@
   font-family: 'Founders Grotesk Text Test';
   font-style: normal;
   font-weight: 400;
-  font-size: 24px;
+  font-size: 28px;
   line-height: 30px;
   letter-spacing: -0.02em;
 
@@ -42,6 +42,14 @@ div.projectDisplay1 {
     /* height: 70%; */
     flex-direction: row;
     background: white;
+  }
+
+  .projectListDisplay{
+    border-top: 1.6px solid #000000;
+    padding-top: 2%;
+    padding-bottom: 2%;
+    padding-left: 4% !important;
+    padding-right: 4% !important;
   }
 }
 
@@ -99,7 +107,7 @@ div.projectDisplay1 {
   font-family: 'FoundersGroteskText';
   font-style: normal;
   font-weight: 100;
-  font-size: 24px;
+  font-size: 28px;
   line-height: 30px;
   /* letter-spacing: -0.02em; */
   color: #000000;
@@ -172,7 +180,7 @@ div.projectDisplay1 {
 .mobileExpandContentDescription {
   width: 80%;
   font-size: 16px;
-  /* margin-left: 0.5%; */
+  margin-left: 0.5%;
   margin-right: 2%;
   margin-top: 0;
   margin-bottom: 0;

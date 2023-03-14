@@ -46,14 +46,14 @@ function InfoPage () {
     //   </div>
     <div style={{display: 'flex', flexDirection: 'column', height: '100vh', width: "100vw", background: 'rgb(104,19,0)'}}> 
       { mobileView ?
-      <div className="navDisplay" style={{ height: '6.99%', backgroundColor: 'rgb(104,19,0)', borderBottom: '1.6px solid rgb(255,192,103)'}}>
+      <div className="navDisplay" style={{ height: '6.1%', backgroundColor: 'rgb(104,19,0)', borderBottom: '1.6px solid rgb(255,192,103)'}}>
           <InfoNavBar/>
       </div> :
-      <div className="navDisplay" style={{ height: '6.99%', backgroundColor: 'rgb(104,19,0)', borderBottom: 'none'}}>
+      <div className="navDisplay" style={{ height: '6.1%', backgroundColor: 'rgb(104,19,0)', borderBottom: 'none'}}>
         <InfoNavBar/>
       </div>
       }
-      <div className='context contentHeight' style={{height: '93.01%'}}>
+      <div className='context' style={{height: '80.01%'}}>
       <div className='contentDescriptionHeight'>
          <ul style={{ textAlign: 'left',paddingTop:'3%', width: '100%', whiteSpace: 'none'}}>
              <li id="infoContent">BBB is an interior design studio based in Kuala Lumpur. 
@@ -61,45 +61,51 @@ function InfoPage () {
              echoing emotions formed through a connection with the craft of building.</li>
          </ul>
        </div>
-        <table id="contextAlign">
-        { mobileView ? 
-          <>
-           <ul className='textAlignLeft' style={{ fontSize: '16px'}}>{ mobileView ?   <><h1 style={{ fontSize: '16px', paddingBottom: '5%'}}>Contact</h1></> : <>CONTACT</> }
-              <li id="context" style={{ fontSize: '16px'}}>For all project enquires,</li>
-              <li id="context" style={{ fontSize: '16px'}}><a href="mailto:hi@studiobbb.co">hi@studiobbb.co</a></li>
-            </ul>
-            <ul className='textAlignLeft' style={{ fontSize: '16px' }}>{ mobileView ?  <>Office Hours</> : <>OFFICE HOURS</> }
-              <li id="context" style={{ fontSize: '16px'}}>Monday to Friday</li>
-              <li id="context" style={{ fontSize: '16px'}}>10:00 - 18:00</li>
-            </ul>
-            <ul className='textAlignLeft' style={{ fontSize: '16px' }}>{ mobileView ?   <>Instagram</> : <>INSTAGRAM</> }
-              <li id="context" style={{ fontSize: '16px'}}><a href="https://www.instagram.com/studiobbb.co">@studiobbb</a></li>
-            </ul>
-          </> :
-          <>
-          <tr>
-          <td style={{width: '20%', verticalAlign:'top'}}>
-            <ul className='textAlignLeft'>{ mobileView ?   <>Contact</> : <>CONTACT</> }
-              <li id="context">For all project enquires,</li>
-              <li id="context"><a href="mailto:hi@studiobbb.co">hi@studiobbb.co</a></li>
-            </ul>
-          </td>
-          <td>
-            <ul className='textAlignLeft'>{ mobileView ?  <>Office Hours</> : <>OFFICE HOURS</> }
-              <li id="context">Monday to Friday</li>
-              <li id="context">10:00 - 18:00</li>
-            </ul>
-            <ul></ul>
-          </td>
-          </tr>
-          <ul className='textAlignLeft' style={{ fontSize: '18px' }}>{ mobileView ?   <>Instagram</> : <>INSTAGRAM</> }
-              <li id="context"><a href="https://www.instagram.com/studiobbb.co">@studiobbb</a></li>
-            </ul>
-            </>
-          }
-        </table>
+       <div className='infoContentDiv' >
+          <table id="contextAlign">
+          { mobileView ? 
+            <>
+            <ul className='textAlignLeft mobileFontSize'>{ mobileView ?   <><h1 classame='mobileFontSize' style={{ paddingTop: '3%', paddingBottom: '3%'}}>Contact</h1></> : <>CONTACT</> }
+                <li id="context mobileFontSize">For all project enquires,</li>
+                <li id="context mobileFontSize"><a href="mailto:hi@studiobbb.co">hi@studiobbb.co</a></li>
+              </ul>
+              <ul className='textAlignLeft mobileFontSize'>{ mobileView ?  <>Office Hours</> : <>OFFICE HOURS</> }
+                <li id="context mobileFontSize">Monday to Friday</li>
+                <li id="context mobileFontSize">10:00 - 18:00</li>
+              </ul>
+              <ul className='textAlignLeft mobileFontSize'>{ mobileView ?   <>Instagram</> : <>INSTAGRAM</> }
+                <li id="context mobileFontSize"><a href="https://www.instagram.com/studiobbb.co">@studiobbb</a></li>
+              </ul>
+            </> :
+            <>
+            <tr>
+            <td style={{width: '20%', verticalAlign:'top'}}>
+              <ul className='textAlignLeft '>{ mobileView ?   <>Contact</> : <>CONTACT</> }
+                <li id="context">For all project enquires,</li>
+                <li id="context"><a href="mailto:hi@studiobbb.co">hi@studiobbb.co</a></li>
+              </ul>
+            </td>
+            <td>
+              <ul className='textAlignLeft'>{ mobileView ?  <>Office Hours</> : <>OFFICE HOURS</> }
+                <li id="context">Monday to Friday</li>
+                <li id="context">10:00 - 18:00</li>
+              </ul>
+              <ul></ul>
+            </td>
+            </tr>
+            <ul className='textAlignLeft ' style={{ fontSize: '18px' }}>{ mobileView ?   <>Instagram</> : <>INSTAGRAM</> }
+                <li id="context"><a href="https://www.instagram.com/studiobbb.co">@studiobbb</a></li>
+              </ul>
+              </>
+            }
+          </table>
+        </div>
       </div>
-      <div id="bottomInfoNav"className="infoFooterDisplay">Studio BBB &copy; 2023</div>
+      { mobileView ?
+        <div id="bottomInfoNav"className="infoFooterDisplay mobileFontSize">Studio BBB &copy; 2023</div>
+        :
+        <div id="bottomInfoNav"className="infoFooterDisplay laptopFontSize">Studio BBB &copy; 2023</div>
+      }
     </div>
   );
 }

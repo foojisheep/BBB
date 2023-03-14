@@ -36,7 +36,7 @@ function ShowProject(props) {
 
   const isMobileContent = (
     <>
-    <div id='projectDetailDisplay' className="projectDetailDisplay" onMouseEnter={() => scrollable(div, true)} style={{overflow: 'scroll'}}>
+    <div id='projectDetailDisplay' className="projectDetailDisplay" onMouseEnter={() => scrollable(div, true)} style={{overflow: 'scroll', paddingLeft: '1%', paddingRight:'1%'}}>
       <table id="projectDetails">
         <tr>
           <th className='projectDetailsTableTitle'>{projectsDetails[id].title}</th>
@@ -85,7 +85,7 @@ function ShowProject(props) {
           <th></th>
         </tr>
         <tr>
-          <td style={{ width: '18%', verticalAlign: 'top' }}>
+          <td style={{ width: '20%', verticalAlign: 'top' }}>
             <table style={{ display: 'table-row-group'}}>
               <tr>
                 <td style={{ verticalAlign:'top'}}>Location</td>
@@ -128,7 +128,7 @@ function ShowProject(props) {
 function MobileDesc(object) {
     return (
       <>
-        <div style={{ textAlign: 'left', paddingLeft:'2%', paddingRight: '2%', paddingBottom: '18%'}}>
+        <div style={{ textAlign: 'left', paddingLeft:'3%', paddingRight: '3%', paddingBottom: '18%'}}>
           <p className='mobileProjectDescription' style={{ textAlign: 'left'}}>{object.value.desc1}</p>
           <p className='mobileProjectDescription' style={{ textAlign: 'left', paddingTop: '1%' }}>&emsp;{object.value.desc2}</p>
         </div>

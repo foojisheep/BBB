@@ -29,6 +29,11 @@
     padding-top: 3%;
     text-align: center;
   }
+
+  .infoContentDiv {
+    padding-left: 4% !important;
+    padding-top: 30%;
+  }
 }
 
 @font-face {
@@ -92,13 +97,13 @@ a:link {
   }
 
 .contentDescriptionHeight {
-  height: 40%;
+  /* height: 40%; */
 }
 
   /* Small devices (portrait tablets and large phones, 600px and up) */
 @media only screen and (max-width: 1024px) {
   .contentDescriptionHeight {
-    /* height: 60%; */
+    height: 20%;
   }
 }
 
@@ -125,7 +130,8 @@ a:link {
   letter-spacing: 0.02em;
   color: rgb(255,192,103);
   text-align: left;
-  padding-right: 45%;
+  padding-left: 2%;
+  padding-right: 35%;
 }
 
 /* Small devices (portrait tablets and large phones, 600px and up) */
@@ -152,12 +158,12 @@ a:link {
     font-family: 'FoundersGroteskText';
     font-style: normal;
     font-weight: 400;
-    font-size: 16px;
-    line-height: 20px;
+    font-size: 25px;
+    line-height: 25px;
     letter-spacing: 0.02em;
     color: rgb(255,192,103);
     text-align: left;
-    padding-left: 2%;
+    padding-left: 4%;
     padding-right: 9%;
   }
 
@@ -165,7 +171,7 @@ a:link {
     font-family: 'FoundersGroteskText';
     font-style: normal;
     font-weight: 400;
-    font-size: 16px;
+    font-size: 16px !important;
     line-height: 110%;
     letter-spacing: 0.02em;
     color: rgb(255,192,103);
@@ -175,7 +181,7 @@ a:link {
     font-family: 'FoundersGroteskText';
     font-style: normal;
     font-weight: 400;
-    font-size: 16px;
+    font-size: 20px;
     line-height: 110%;
     margin-top: 0%;
     margin-bottom: 5%;
@@ -187,21 +193,21 @@ a:link {
     font-family: 'FoundersGroteskText';
     border-collapse: collapse;
     width: 100%;
-    margin-left: 2%;
+    padding-left: 2%;
   }
 
   #contextAlign li {
     font-family: 'FoundersGroteskText';
     font-style: normal;
     font-weight: 400;
-    font-size: 16px;
+    font-size: 20px;
     line-height: 20px;
     letter-spacing: -0.02em;
     color: rgb(255,192,103);
   }
 
   #context li{
-    font-size: 16px;
+    font-size: 20px;
   }
 }
 
@@ -235,7 +241,7 @@ a:link {
   font-family: FoundersGroteskText;
   font-style: normal;
   font-weight: 400;
-  font-size: 12px;
+  font-size: 16px;
   line-height: 21px;
   display: flex;
   align-items: right;
@@ -264,4 +270,17 @@ a:link {
   to {
     transform: translateY(0%);
   }
+}
+
+.infoContentDiv {
+  padding-left: 2%; 
+  padding-top: 10%;
+}
+
+.mobileFontSize {
+  font-size: 16px !important;
+}
+
+.laptopFontSize {
+  font-size: 20px !important;
 }

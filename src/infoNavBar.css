@@ -76,8 +76,8 @@
 @media only screen and (max-width: 1024px) {
   .infoNavDisplay {
     border-bottom: 1.6px solid rgb(255,192,103);
-    padding-left: 3%;
-    padding-right: 2%;
+    padding-left: 4%;
+    padding-right: 3%;
   }
 }
 
