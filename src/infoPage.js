@@ -49,11 +49,11 @@ function InfoPage () {
       <div className="navDisplay" style={{ height: '6.1%', backgroundColor: 'rgb(104,19,0)', borderBottom: '1.6px solid rgb(255,192,103)'}}>
           <InfoNavBar/>
       </div> :
-      <div className="navDisplay" style={{ height: '6.1%', backgroundColor: 'rgb(104,19,0)', borderBottom: 'none'}}>
+      <div className="navDisplay" style={{ height: '6.4%', backgroundColor: 'rgb(104,19,0)', borderBottom: 'none'}}>
         <InfoNavBar/>
       </div>
       }
-      <div className='context' style={{height: '80.01%'}}>
+      <div className='context' style={{height: '88.01%'}}>
       <div className='contentDescriptionHeight'>
          <ul style={{ textAlign: 'left',paddingTop:'3%', width: '100%', whiteSpace: 'none'}}>
              <li id="infoContent">BBB is an interior design studio based in Kuala Lumpur. 
