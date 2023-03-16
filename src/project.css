@@ -133,7 +133,22 @@ div.projectDisplay1 {
   line-height: 30px;
   /* letter-spacing: 0.02em; */
   color: #000000;
-  width: 40%;
+  width: 80%;
+}
+
+.paddingLeft {
+  padding-left: 11%;
+}
+
+/* Small devices (500px and up) */
+@media only screen and (max-width: 640px) {
+  .mobileContentYear {
+    width: 40%;
+  }
+
+  .paddingLeft {
+    padding-left: 20%;
+  }
 }
 
 .row {

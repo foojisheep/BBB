@@ -227,7 +227,7 @@
 
 .projectDetailsImageDiv {
   display: flex;
-  height: 67%;
+  height: 70%;
   flex-direction: column;
   overflow: hidden;
 }

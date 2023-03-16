@@ -49,14 +49,14 @@ export default function ImageAndProjects() {
         <div id={`expanded-${projects.id}`} className="mobileExpandContent" key={`expand-${projects.id}`} {...getCollapseProps()} style={{ display: 'contents'}} onClick={()=> routeChange(projects.id)}>
           <div className='projectColumn' style={{ width: '20%', textAlign: 'start'}}>
           </div>
-          <div className='projectColumn' style={{ height: '9vh', alignItems:'center', textAlign: 'start', paddingLeft: '20%', paddingRight: '20%'}}>
+          <div className='projectColumn paddingLeft' style={{ height: '9vh', alignItems:'center', textAlign: 'start', paddingRight: '20%'}}>
             <p className='mobileExpandContentDescription' style={{ textAlign: 'start', paddingTop: '2%', paddingBottom: '2%' }}>{projects.details}</p>
           </div>
           <div className='projectColumn' style={{ textAlign: 'end'}}>
           </div>
           <div className='projectColumn' style={{ width: '20%', textAlign: 'start'}}>
           </div>
-          <div className='projectColumn' style={{ alignItems: 'flex-start', textAlign: 'start', paddingLeft: '20%', paddingRight: '20%'}}>
+          <div className='projectColumn paddingLeft' style={{ alignItems: 'flex-start', textAlign: 'start', paddingRight: '20%'}}>
             <p className='mobileExpandContentDescription' style={{ textAlign: 'start', paddingTop: '1%', paddingBottom: '2%', alignSelf: 'center'}} onClick={() => routeChange(projects.id)}>Read more</p>
           </div>
           <div className='projectColumn' style={{ textAlign: 'end'}}>
@@ -89,14 +89,14 @@ export default function ImageAndProjects() {
         <div id={`expanded-${projects.id}`} className="mobileExpandContent" key={`expand-${projects.id}`} {...getCollapseProps()} onClick={()=> routeChange(projects.id)}>
           <div className='projectColumn' style={{ width: '20%', textAlign: 'start'}}>
           </div>
-          <div className='projectColumn' style={{ height: '9vh',alignItems:'center', textAlign: 'start', paddingLeft: '20%', paddingRight: '20%'}}>
+          <div className='projectColumn paddingLeft' style={{ height: '9vh',alignItems:'center', textAlign: 'start', paddingRight: '20%'}}>
             <p className='mobileExpandContentDescription' style={{ textAlign: 'start', paddingTop: '2%', paddingBottom: '2%' }}>{projects.details}</p>
           </div>
           <div className='projectColumn' style={{ textAlign: 'end'}}>
           </div>
           <div className='projectColumn' style={{ width: '20%', textAlign: 'start'}}>
           </div>
-          <div className='projectColumn' style={{ alignItems: 'flex-start', textAlign: 'start', paddingLeft: '20%', paddingRight: '20%'}}>
+          <div className='projectColumn paddingLeft' style={{ alignItems: 'flex-start', textAlign: 'start', paddingRight: '20%'}}>
             <p className='mobileExpandContentDescription' style={{ textAlign: 'start', paddingTop: '1%', paddingBottom: '2%', alignSelf: 'center'}} onClick={() => routeChange(projects.id)}>Read more</p>
           </div>
           <div className='projectColumn' style={{ textAlign: 'end'}}>
