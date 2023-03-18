@@ -31,6 +31,7 @@ div.projectDisplay1 {
   /* height: 26%; */
   flex-direction: row;
   background: white;
+  cursor: pointer;
 }
 
 /* Small devices (mobile, 500px and down) */
