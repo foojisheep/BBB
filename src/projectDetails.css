@@ -270,6 +270,14 @@
     font-size: 12px; 
     line-height: 15px;
   }
+
+  .scroll {
+    overflow: scroll;
+  }
+  
+  #projectDetails th {
+    font-size: 12px;
+  }
 }
 
 .mobileProjectDescription {
@@ -283,11 +291,11 @@
   display: flex;
 }
 
-@media only screen and (max-width: 1024px) {
+/* @media only screen and (max-width: 1024px) {
   .scroll {
     overflow: scroll;
   }
   #projectDetails th {
     font-size: 12px;
   }
-}
+} */
