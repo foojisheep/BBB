@@ -81,7 +81,7 @@ function InfoPage () {
             </> :
             <>
             <tr>
-            <td style={{width: '20%', verticalAlign:'top'}}>
+            <td style={{width: '25%', verticalAlign:'top'}}>
               <ul className='textAlignLeft '>{ mobileView ?   <>Contact</> : <>CONTACT</> }
                 <li id="context">For all project enquires,</li>
                 <li id="context"><a href="mailto:hi@studiobbb.co">hi@studiobbb.co</a></li>
