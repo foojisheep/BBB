@@ -238,14 +238,21 @@
   padding-bottom: 1%;
 }
 
+@media only screen and (max-width: 600px) {
+  .projectDetailsTableTitle {
+    padding-top: 5% !important;
+    /* padding-bottom: 2%; */
+  }
+}
+
 @media only screen and (max-width: 1024px) {
   .projectDetailsImageDiv {
     height: 55%;
   }
 
   .projectDetailsTableTitle {
-    padding-top: 7%;
-    padding-bottom: 2%;
+    padding-top: 3% !important;
+    /* padding-bottom: 2%; */
   }
 
   #projectDetails .projectDescription {
@@ -281,6 +288,6 @@
     overflow: scroll;
   }
   #projectDetails th {
-    font-size: 16px;
+    font-size: 12px;
   }
 }
