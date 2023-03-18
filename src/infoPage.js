@@ -56,9 +56,11 @@ function InfoPage () {
       <div className='context' style={{height: '88.01%'}}>
       <div className='contentDescriptionHeight'>
          <ul style={{ textAlign: 'left',paddingTop:'3%', width: '100%', whiteSpace: 'none'}}>
-             <li id="infoContent">BBB is an interior design studio based in Kuala Lumpur. 
-             We create non-linear narratives associated with a sense of place - 
-             echoing emotions formed through a connection with the craft of building.</li>
+             <li id="infoContent">BBB is an interior design studio based in </li>
+             <li id="infoContent">Kuala Lumpur. We create non-linear</li>
+             <li id="infoContent">narratives associated with a sense of place -</li>
+             <li id="infoContent">echoing emotions formed through</li>
+             <li id="infoContent">a connection with the craft of building.</li>
          </ul>
        </div>
        <div className='infoContentDiv' >
