@@ -294,7 +294,7 @@ a:link {
 }
 
 .fixedTopPosition {
-  position: fixed;
+  position: sticky;
   top: 0;
   width: -webkit-fill-available;
 }
