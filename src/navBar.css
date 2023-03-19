@@ -50,8 +50,8 @@
   font-family: 'FoundersGroteskText';
   font-style: normal;
   font-weight: 400;
-  font-size: 20px;
-  line-height: 20px;
+  font-size: 18px;
+  line-height: 18px;
   letter-spacing: 0.02em;
   color: #000000;
   display: flex;
@@ -181,7 +181,7 @@ a:active {
   font-family: 'FoundersGroteskText';
   font-style: normal;
   font-weight: 400;
-  font-size: 28px;
+  font-size: 24px;
   line-height: 30px;
   /* letter-spacing: 0.02em; */
   color: #000000;

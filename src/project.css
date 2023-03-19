@@ -108,9 +108,9 @@ div.projectDisplay1 {
   font-family: 'FoundersGroteskText';
   font-style: normal;
   font-weight: 100;
-  font-size: 28px;
+  font-size: 24px;
   line-height: 30px;
-  /* letter-spacing: -0.02em; */
+  letter-spacing: 0.02em;
   color: #000000;
   text-align: left;
   padding-left: 2%;
@@ -144,7 +144,7 @@ div.projectDisplay1 {
 /* Small devices (500px and up) */
 @media only screen and (max-width: 640px) {
   .mobileContentYear {
-    width: 40%;
+    /* width: 40%; */
   }
 
   .paddingLeft {
@@ -194,7 +194,7 @@ div.projectDisplay1 {
 }
 
 .mobileExpandContentDescription {
-  width: 80%;
+  /* width: 80%; */
   font-size: 18px;
   margin-left: 0.5%;
   margin-right: 2%;
