@@ -67,10 +67,13 @@ function InfoPage () {
           <table id="contextAlign">
           { mobileView ? 
             <>
-            <ul className='textAlignLeft mobileFontSize'>{ mobileView ?   <><h1 classame='mobileFontSize' style={{ paddingTop: '3%', paddingBottom: '3%'}}>Contact</h1></> : <>CONTACT</> }
-                <li id="context mobileFontSize">For all project enquires,</li>
+            <ul className='textAlignLeft mobileFontSize'>For all project enquires,
                 <li id="context mobileFontSize"><a href="mailto:hi@studiobbb.co">hi@studiobbb.co</a></li>
               </ul>
+            {/* <ul className='textAlignLeft mobileFontSize'>{ mobileView ?   <><h1 classame='mobileFontSize' style={{ paddingTop: '3%', paddingBottom: '3%'}}>Contact</h1></> : <>CONTACT</> }
+                <li id="context mobileFontSize">For all project enquires,</li>
+                <li id="context mobileFontSize"><a href="mailto:hi@studiobbb.co">hi@studiobbb.co</a></li>
+              </ul> */}
               <ul className='textAlignLeft mobileFontSize'>{ mobileView ?  <>Office Hours</> : <>OFFICE HOURS</> }
                 <li id="context mobileFontSize">Monday to Friday</li>
                 <li id="context mobileFontSize">10:00 - 18:00</li>

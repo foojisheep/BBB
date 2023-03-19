@@ -4,6 +4,7 @@ import logoEnd from './resource/logo-end-new.svg';
 import logoBig from  './resource/logo.svg';
 import './landingPage.css';
 import './loadingPage.css';
+import './navBar.css';
 import './project.css';
 import ImageAndProjects from "./project";
 import Navbar from "./navBar";
@@ -35,7 +36,7 @@ export default function LandingPage() {
     <>
       {/* <div className='landingPageTransition' style={{display: 'flex', flexDirection: 'column', height: '100vh', width: "100vw", backgroundColor: '#FFB8F2'}}> */}
       <div style={{display: 'flex', flexDirection: 'column', height: '100vh', width: "100vw", backgroundColor: 'rgb(255, 184, 242'}}> 
-        <div className="navDisplay" style={{ height: '7%'}}>
+        <div className="navDisplay fixedTopPosition" style={{ height: '7%'}}>
           <Navbar/>
         </div>
         <ImageAndProjects style={{height: '93.25%'}}/>

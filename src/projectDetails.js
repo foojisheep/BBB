@@ -141,7 +141,7 @@ function Desc(object) {
     return (
       <>
         <td>
-          <table>
+          <table style={{ borderSpacing: '0' }}>
             {/* <tr>
           <th style={{ textAlign: 'left' ,paddingBottom: '5%', paddingTop: '5%'}}>{}</th>
           <th></th>

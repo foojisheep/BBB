@@ -34,88 +34,48 @@ function Projects() {
 
   const isMobileContent = projects.map((projects) =>
   <>
-    { projects.id == 1 ? 
-      <div className="projectListDisplay projectBackgroundColour" key={projects.id} style={{ backgroundColor: 'rgb(255,192,103)'}}>
-        <div id={`expand-${projects.id}`} className="projectColumn" {...getToggleProps()} onClick={()=> isMobileExpandDetails(projects, true)}>
-          <div className='mobileContentYear' style={{ width: '20%', textAlign: 'start'}}>
-            {projects.mobileYear}
+  { projects.id == 1 ? 
+        <div className="projectListDisplay projectBackgroundColour" key={projects.id} style={{ backgroundColor: 'rgb(255,192,103)'}}>
+          <div id={`expand-${projects.id}`} className="projectColumn" {...getToggleProps()} onClick={()=> isMobileExpandDetails(projects, true)}>
+            <div className='mobileContentYear' style={{ width: '20%', textAlign: 'start'}}>
+              {projects.mobileYear}
+            </div>
+            <div className='mobileContentYear' style={{ alignItems: 'flex-start', textAlign: 'start'}}>
+              {projects.name}
+            </div>
           </div>
-          <div className='mobileContentYear' style={{ alignItems: 'flex-start', textAlign: 'start'}}>
-            {projects.name}
-          </div>
-          <div className='mobileContentYear' style={{ textAlign: 'end'}}>
-            {projects.category}
-          </div>
-        </div>
-        <div id={`expanded-${projects.id}`} className="mobileExpandContent" key={`expand-${projects.id}`} {...getCollapseProps()} style={{ display: 'contents'}} onClick={()=> routeChange(projects.id)}>
-          <div className='projectColumn' style={{ width: '20%', textAlign: 'start'}}>
-          </div>
-          <div className='projectColumn paddingLeft' style={{ height: '9vh', alignItems:'center', textAlign: 'start', paddingRight: '20%'}}>
-            <p className='mobileExpandContentDescription' style={{ textAlign: 'start', paddingTop: '2%', paddingBottom: '2%' }}>{projects.details}</p>
-          </div>
-          <div className='projectColumn' style={{ textAlign: 'end'}}>
-          </div>
-          <div className='projectColumn' style={{ width: '20%', textAlign: 'start'}}>
-          </div>
-          <div className='projectColumn paddingLeft' style={{ alignItems: 'flex-start', textAlign: 'start', paddingRight: '20%'}}>
-            <p className='mobileExpandContentDescription' style={{ textAlign: 'start', paddingTop: '1%', paddingBottom: '2%', alignSelf: 'center'}} onClick={() => routeChange(projects.id)}>Read more</p>
-          </div>
-          <div className='projectColumn' style={{ textAlign: 'end'}}>
+          <div id={`expanded-${projects.id}`} className="mobileExpandContent" key={`expand-${projects.id}`} {...getCollapseProps()} style={{ display: 'contents'}} onClick={()=> routeChange(projects.id)}>
+            <div className='projectColumn' style={{ width: '20%', textAlign: 'start'}}>
+            </div>
+            <div className='projectColumn paddingLeft' style={{ height: '7vh', alignItems:'center', textAlign: 'start'}}>
+              <p className='mobileExpandContentDescription' style={{ textAlign: 'start', paddingTop: '2%', paddingBottom: '2%' }}>{projects.details}</p>
+            </div>
+            <div className='projectColumn' style={{ textAlign: 'end'}}>
+            </div>
           </div>
         </div>
-        {/* <div id={`expanded-${projects.id}`} className='mobileExpandContent'  key={`expand-${projects.id}`} {...getCollapseProps()} style={{ display: 'inline-table', width: '100%'}} onClick={() => routeChange(projects.id)}>
-          <div className="projectColumn" style={{ height: '6vh', alignItems:'center'}}>
-            <p style={{ float: 'left', width: '20%'}}></p>
-            <p className='mobileExpandContentDescription' style={{ textAlign: 'start', paddingTop: '2%', paddingBottom: '2%' }}>{projects.details}</p>
+      :
+        <div className="projectListDisplay projectBackgroundColour" key={projects.id}>
+          <div id={`expand-${projects.id}`} className="projectColumn" {...getToggleProps()} onClick={()=> isMobileExpandDetails(projects, true)}>
+            <div className='mobileContentYear' style={{ width: '20%', textAlign: 'start'}}>
+              {projects.mobileYear}
+            </div>
+            <div className='mobileContentYear' style={{ alignItems: 'flex-start', textAlign: 'start'}}>
+              {projects.name}
+            </div>
           </div>
-          <div className="projectColumn" style={{}}>
-            <p style={{ float: 'left', width: '20%'}}></p>
-            <p className='mobileExpandContentDescription' style={{ textAlign: 'start', alignSelf: 'center'}} onClick={() => routeChange(projects.id)}>Read more</p>
-          </div>
-        </div> */}
-      </div>
-    :
-      <div className="projectListDisplay projectBackgroundColour" key={projects.id}>
-        <div id={`expand-${projects.id}`} className="projectColumn" {...getToggleProps()} onClick={()=> isMobileExpandDetails(projects, true)}>
-          <div className='mobileContentYear' style={{ width: '20%', textAlign: 'start'}}>
-            {projects.mobileYear}
-          </div>
-          <div className='mobileContentYear' style={{ alignItems: 'flex-start', textAlign: 'start'}}>
-            {projects.name}
-          </div>
-          <div className='mobileContentYear' style={{ textAlign: 'end'}}>
-            {projects.category}
+          <div id={`expanded-${projects.id}`} className="mobileExpandContent" key={`expand-${projects.id}`} {...getCollapseProps()} onClick={()=> routeChange(projects.id)}>
+            <div className='projectColumn' style={{ width: '20%', textAlign: 'start'}}>
+            </div>
+            <div className='projectColumn paddingLeft' style={{ height: '7vh',alignItems:'center', textAlign: 'start'}}>
+              <p className='mobileExpandContentDescription' style={{ textAlign: 'start', paddingTop: '2%', paddingBottom: '2%' }}>{projects.details}</p>
+            </div>
+            <div className='projectColumn' style={{ textAlign: 'end'}}>
+            </div>
           </div>
         </div>
-        <div id={`expanded-${projects.id}`} className="mobileExpandContent" key={`expand-${projects.id}`} {...getCollapseProps()} onClick={()=> routeChange(projects.id)}>
-          <div className='projectColumn' style={{ width: '20%', textAlign: 'start'}}>
-          </div>
-          <div className='projectColumn paddingLeft' style={{ height: '9vh',alignItems:'center', textAlign: 'start', paddingRight: '20%'}}>
-            <p className='mobileExpandContentDescription' style={{ textAlign: 'start', paddingTop: '2%', paddingBottom: '2%' }}>{projects.details}</p>
-          </div>
-          <div className='projectColumn' style={{ textAlign: 'end'}}>
-          </div>
-          <div className='projectColumn' style={{ width: '20%', textAlign: 'start'}}>
-          </div>
-          <div className='projectColumn paddingLeft' style={{ alignItems: 'flex-start', textAlign: 'start', paddingRight: '20%'}}>
-            <p className='mobileExpandContentDescription' style={{ textAlign: 'start', paddingTop: '1%', paddingBottom: '2%', alignSelf: 'center'}} onClick={() => routeChange(projects.id)}>Read more</p>
-          </div>
-          <div className='projectColumn' style={{ textAlign: 'end'}}>
-          </div>
-        </div>
-        {/* <div id={`expanded-${projects.id}`} className='mobileExpandContent'  key={`expand-${projects.id}`} {...getCollapseProps()} onClick={() => routeChange(projects.id)}>
-          <div className="projectColumn" style={{ height: '6vh', alignItems:'center'}}>
-            <p style={{ float: 'left', width: '20%'}}></p>
-            <p className='mobileExpandContentDescription' style={{ textAlign: 'start', paddingTop: '2%', paddingBottom: '2%'}}>{projects.details}</p>
-          </div>
-          <div className="projectColumn" style={{ }}>
-            <p style={{ float: 'left', width: '20%'}}></p>
-            <p className='mobileExpandContentDescription' style={{ textAlign: 'start', alignSelf: 'center'}} onClick={() => routeChange(projects.id)}>Read more</p>
-          </div>
-        </div> */}
-      </div>
-    }
-  </>
+      }
+    </>
   );
 
   return (
@@ -192,7 +152,7 @@ export default function LoadingPage() {
       {showLanding && (
         <div className='landingPage-transition' style={{ display: 'flex', flexDirection: 'column', height: "100vh", width: "100vw" , backgroundColor: 'rgb(255, 184, 242)'}}>
           {/* <div className="navDisplay slideDown"> */}
-          <div className="navDisplay">
+          <div className="navDisplay fixedTopPosition">
             <Navbar style={{ display: 'flex', height: '5%'}}/>
            </div>
            {mobileView ?

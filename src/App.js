@@ -35,7 +35,7 @@ export default function App() {
 
   const onResize = () => { 
     console.log('enter resize');
-    if(screenWidth < 1024){
+    if(screenWidth < 1025){
       setMobileView(true);
       setLaptopView(false);
       console.log('mobile');
