@@ -47,7 +47,7 @@ function Projects() {
           <div id={`expanded-${projects.id}`} className="mobileExpandContent" key={`expand-${projects.id}`} {...getCollapseProps()} style={{ display: 'contents'}} onClick={()=> routeChange(projects.id)}>
             <div className='projectColumn' style={{ width: '20%', textAlign: 'start'}}>
             </div>
-            <div className='projectColumn paddingLeft' style={{ height: '7vh', alignItems:'center', textAlign: 'start'}}>
+            <div className='projectColumn paddingLeft projectListHeight' style={{ alignItems:'center', textAlign: 'start'}}>
               <p className='mobileExpandContentDescription' style={{ textAlign: 'start', paddingTop: '2%', paddingBottom: '2%' }}>{projects.details}</p>
             </div>
             <div className='projectColumn' style={{ textAlign: 'end'}}>
@@ -67,7 +67,7 @@ function Projects() {
           <div id={`expanded-${projects.id}`} className="mobileExpandContent" key={`expand-${projects.id}`} {...getCollapseProps()} onClick={()=> routeChange(projects.id)}>
             <div className='projectColumn' style={{ width: '20%', textAlign: 'start'}}>
             </div>
-            <div className='projectColumn paddingLeft' style={{ height: '7vh',alignItems:'center', textAlign: 'start'}}>
+            <div className='projectColumn paddingLeft projectListHeight' style={{ alignItems:'center', textAlign: 'start'}}>
               <p className='mobileExpandContentDescription' style={{ textAlign: 'start', paddingTop: '2%', paddingBottom: '2%' }}>{projects.details}</p>
             </div>
             <div className='projectColumn' style={{ textAlign: 'end'}}>

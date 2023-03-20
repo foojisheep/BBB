@@ -52,6 +52,10 @@ div.projectDisplay1 {
     padding-left: 4% !important;
     padding-right: 4% !important;
   }
+
+  .projectListHeight {
+    height: 5vh;
+  }
 }
 
 /* Large devices (laptops/desktops, 992px and up) */
@@ -149,6 +153,10 @@ div.projectDisplay1 {
 
   .paddingLeft {
     padding-left: 20%;
+  }
+
+  .projectListHeight {
+    height: 7vh;
   }
 }
 
