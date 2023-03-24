@@ -47,10 +47,10 @@ function InfoPage () {
     <div style={{display: 'flex', flexDirection: 'column', height: '100vh', width: "100vw", background: 'rgb(104,19,0)'}}> 
       { mobileView ?
       <div className="navDisplay" style={{ position: 'sticky', top: 0 ,height: '6.1%', backgroundColor: 'rgb(104,19,0)', borderBottom: '1.6px solid rgb(255,192,103)'}}>
-          <InfoNavBar/>
+          <Navbar style={{ backgroundColor: 'green'}}/>
       </div> :
       <div className="navDisplay" style={{ position: 'sticky', top: 0 ,height: '6.4%', backgroundColor: 'rgb(104,19,0)', borderBottom: 'none'}}>
-        <InfoNavBar/>
+        <Navbar style={{ backgroundColor: 'green'}}/>
       </div>
       }
       <div className='context' style={{height: '88.01%'}}>
