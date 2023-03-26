@@ -162,7 +162,7 @@ a:link {
 
 @media only screen and (max-width: 450px) {
   #infoContent {
-    font-size: 17px !important;
+    padding-right: 15% !important;
   }
 }
 

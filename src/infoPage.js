@@ -54,6 +54,13 @@ function InfoPage () {
       </div>
       }
       <div className='context' style={{height: '88%'}}>
+      { screenWidth < 744 ?
+      <div className='contentDescriptionHeight'>
+        <ul style={{ textAlign: 'left',paddingTop:'3%', width: '100%', whiteSpace: 'none'}}>
+        <li id="infoContent">BBB is an interior design studio based in Kuala Lumpur. We create non-linear narratives associated with a sense of place - echoing emotions formed through a connection with the craft of building.</li>
+        </ul>
+      </div>
+      :
       <div className='contentDescriptionHeight'>
          <ul style={{ textAlign: 'left',paddingTop:'3%', width: '100%', whiteSpace: 'none'}}>
              <li id="infoContent">BBB is an interior design studio based in </li>
@@ -63,6 +70,7 @@ function InfoPage () {
              <li id="infoContent">a connection with the craft of building.</li>
          </ul>
        </div>
+      }
        <div className='infoContentDiv' >
           <table id="contextAlign">
           { mobileView ? 
