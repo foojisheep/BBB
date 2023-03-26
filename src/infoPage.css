@@ -27,7 +27,8 @@
   .infoFooterDisplay {
     height: 5%;
     padding-top: 3%;
-    text-align: center;
+    text-align: left;
+    padding-left: 4% !important;
   }
 
   .infoContentDiv {
@@ -156,6 +157,12 @@ a:link {
     text-align: left;
     /* padding-left: 2%; */
     padding-right: 27%;
+  }
+}
+
+@media only screen and (max-width: 450px) {
+  #infoContent {
+    font-size: 17px !important;
   }
 }
 
