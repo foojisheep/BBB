@@ -122,7 +122,7 @@ a:active {
   .studioBBB {
     font-style: normal;
     font-weight: 400;
-    font-size: 16px;
+    font-size: 18px;
     line-height: 20px;
     display: flex;
     align-items: center;
@@ -141,6 +141,7 @@ a:active {
     border-bottom: 1.6px solid #000000;
     padding-left: 4% !important;
     padding-right: 4% !important;
+    align-items: center;
   }
 }
 
@@ -199,7 +200,7 @@ a:active {
     font-family: 'FoundersGroteskText';
     font-style: normal;
     font-weight: 400;
-    font-size: 16px;
+    font-size: 18px;
     line-height: 30px;
     /* letter-spacing: 0.02em; */
     color: #000000;

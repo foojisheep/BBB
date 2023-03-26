@@ -14,11 +14,11 @@ import { useContext } from 'react';
 const screenWidth = window.innerWidth;
 
 const images = [
-  { id: 1, file: 'Wangsa', name: ['01', '02', '03', '04', '05', '06', '07', '08', '09', '10', '11', '12', '13'] },
-  { id: 2, file: 'KLC', name: ['01', '02', '03', '04', '05', '06', '07', '08', '09', '10'] },
-  { id: 3, file: 'Hejau', name: ['01', '02', '03', '04', '05', '06', '07'] },
-  { id: 4, file: 'Melody', name: ['01', '02', '03', '04', '05', '06', '07', '08'] },
-  { id: 5, file: 'Poppy', name: ['01', '02', '03', '04', '05', '06', '07'] },
+  { id: 1, file: 'Wangsa', name: ['01', '02', '03', '04', '05', '06', '07', '08', '09', '10', '11', '12', '13'] , format: 'png'},
+  { id: 2, file: 'KLC', name: ['01', '02', '03', '04', '05', '06', '07', '08', '09', '10'] , format: 'png'},
+  { id: 3, file: 'Hejau', name: ['01', '02', '03', '04', '05', '06', '07'], format:'png' },
+  { id: 4, file: 'Melody', name: ['01', '02', '03', '04', '05', '06', '07', '08'], format: 'png'},
+  { id: 5, file: 'Poppy', name: ['01', '02', '04', '05', '06', '07', '08', '09', '10', '11'], format: 'jpg' },
 ];
 
 const projectsDetails = [
@@ -175,12 +175,13 @@ function ShowImage(props) {
   const id = parseInt(props.value) - 1;
   const photos = images[id].name;
   const file = images[id].file;
+  const format =images[id].format;
   const showImage = photos.map((index) => {
     //   const img = require(`./resource/Images/${file}/${photo}.png`);
-    //   console.log(`./Images/${file}/${photo}.png`);
+    //  console.log(`./resource/Images/${file}/${index}.${format}`);
     return (
       // <div className='list-group-item' style={{}}>
-      <LazyLoadImage style={{ height: '100%'}} key={`${file}-${index}`} className="project-image" src={require(`./resource/Images/${file}/${index}.png`)} alt={`${file}-${index}`} />
+      <LazyLoadImage style={{ height: '100%'}} key={`${file}-${index}`} className="project-image" src={require(`./resource/Images/${file}/${index}.${format}`)} alt={`${file}-${index}`} />
       // </div>
       // <img key={`${file}-${index}`} className="project-image" src={require(`./resource/Images/${file}/Hover.png`)} alt={`${file}-${index}`}/>
     );
