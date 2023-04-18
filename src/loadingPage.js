@@ -150,7 +150,7 @@ export default function LoadingPage() {
         </div>
       )}
       {showLanding && (
-        <div className='landingPage-transition' style={{ display: 'flex', flexDirection: 'column', height: "100vh", width: "100vw" , backgroundColor: 'rgb(255, 184, 242)'}}>
+        <div className='landingPage-transition' style={{ display: 'flex', flexDirection: 'column', height: "100svh", width: "100vw" , backgroundColor: 'rgb(255, 184, 242)'}}>
           {/* <div className="navDisplay slideDown"> */}
           <div className="navDisplay fixedTopPosition">
             <Navbar style={{ display: 'flex'}}/>
