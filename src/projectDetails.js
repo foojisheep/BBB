@@ -3,13 +3,15 @@ import './loadingPage.css';
 import './project.css';
 import './projectDetails.css';
 import Navbar from "./navBar";
-import { useParams } from 'react-router-dom';
+import { useParams, useNavigate } from 'react-router-dom';
 import { isMobile } from "react-device-detect";
 import HorizontalScroll from 'react-scroll-horizontal';
 import React, { useState, useEffect } from "react";
 import { LazyLoadImage } from "react-lazy-load-image-component";
 import { ViewContext } from './ViewContext';
 import { useContext } from 'react';
+import useCollapse from 'react-collapsed';
+import arrow from './resource/arrow.svg';
 
 const screenWidth = window.innerWidth;
 
@@ -29,14 +31,72 @@ const projectsDetails = [
   { id: 5, title: 'Poppykat', location: 'Cheras, Kuala Lumpur', category: 'Food & Beverage', years: 'On-going', surface: '480 sqft', collab: '', desc1: 'The design initiation began with an orange solid surface countertop. The orange hue recalls a certain aestaesthetic from Wes Anderson’s The Darjeeling Limited. A concept was crafted around this – an orange glaze complimented by a geometrical pattern. ', desc2: 'Here, associated zones unfold one after another, defined by architectural cues such as wall opening and wall treatment. The intent was to present a sense of fun and intrigue through a consistent aesthetic and spatial fluidity.' },
 ];
 
+const projects = [
+  { id: 1, year: '  2023', mobileYear: '  2023', name: 'Wangsa9 Penthouse', details: 'Emotional connection across 5,313km.', category: 'Residential', link: './Images/Wangsa/Hover.png' },
+  { id: 2, year: '      ', mobileYear: '  2023',name: 'KLC', details: 'Lunar Eclipse.', category: 'Commercial', link: './Images/KLC/Hover.png' },
+  { id: 3, year: '  2022', mobileYear: '  2022',name: 'Hejau', details: 'A foundation of environmental psychology.', category: 'Commercial', link: './Images/Hejau/Hover.png' },
+  { id: 4, year: '      ', mobileYear: '  2023',name: 'Melody Kindyland', details: 'A place just like a home and a communal place for children.', category: 'Commercial', link: './Images/Melody/Hover.png' },
+  { id: 5, year: '      ', mobileYear: '  2022',name: 'Poppykat', details: 'Recalled a certain aesthetic from Wes Anderson\'s Movie.', category: 'Commercial', link: './Images/Poppy/Hover.png' },
+];
+
+function ShowImage1(props) {
+  const {mobileView, laptopView, navView} = useContext(ViewContext);
+  const id = parseInt(props.value);
+  const photos = images[id].name;
+  const file = images[id].file;
+  const format =images[id].format;
+  console.log('show image here!');
+  const showImage = photos.map((index) => {
+    return (
+      <LazyLoadImage id={`${file}-${index}`} style={{ padding: 0 }} key={`${file}-${index}`} className="project-image" src={require(`./resource/Images/${file}/${index}.${format}`)} alt={`${file}-${index}`} />
+    );
+  });
+  const div = 'image';
+  console.log(showImage);
+  return (
+    <>    
+    <div className='projectDetailsImageDiv' style={{ maxHeight: '40%', borderBottom: '1.6px solid rgb(0, 0, 0)'}}>
+      <div id='projectImageDiv' className="project-Image-Div" onMouseEnter={() => scrollable(div, true)} style={{ overflow: "scroll" , height: '70vh'}}>
+        {/* <HorizontalScroll className='scroll' reverseScroll={true} style={{ overflow: 'auto' , position : 'inherit'}}> */}
+        {showImage}
+        {/* <LazyLoadImage src={arrow} /> */}
+        {/* </HorizontalScroll> */}
+      </div>
+      </div>
+    </>
+  );
+}
+
+
 function ShowProject(props) {
-  const {mobileView, laptopView} = useContext(ViewContext);
+  const {mobileView, laptopView, navView} = useContext(ViewContext);
+  const { getCollapseProps, getToggleProps, isExpanded } = useCollapse();
   const id = parseInt(props.value) - 1;
   const div = 'project';
+  let navigate = useNavigate();
+  const routeChange = (projectId) => {
+    let path = `/project/${projectId}`;
+    navigate(path);
+  }
 
-  const isMobileContent = (
-    <>
-    <div id='projectDetailDisplay' className="projectDetailDisplay" onMouseEnter={() => scrollable(div, true)} style={{overflow: 'scroll', paddingLeft: '1%', paddingRight:'1%'}}>
+  const isMobileProjectList = projects.map((project) =>
+  <>
+  { project.id != id + 1  ? 
+  <div id={`mobile-project-list-${project.id}`} className="projectListDisplay projectBackgroundColour" key={projects.id} style={{ 'paddingTop': '1%', 'paddingBottom': '1%', 'borderTop': project.id == 1 ? 'none': '1.6px solid #000000'}} onClick={()=> routeChange(project.id)}>
+    <div id={`expand-${project.id}`} className="projectColumn" {...getToggleProps()} onClick={()=> isMobileExpandDetails(projects, true)}>
+      <div className='mobileContentYear' style={{ width: '20%', textAlign: 'start'}}>
+        {project.mobileYear}
+      </div>
+      <div className='mobileContentYear' style={{ alignItems: 'flex-start', textAlign: 'start'}}>
+        {project.name}
+      </div>
+    </div>
+  </div> 
+  :
+  <div className="projectBackgroundColour" key={projects.id} style={{ 'borderTop': '1.6px solid #000000', height: 'inherit'}}>
+    {/* {showImageInList} */}
+    <ShowImage1 key={id.toString()} value={id} />
+    <div id={`projectDetailDisplay-${project.id}`} className="projectDetailDisplay" onMouseEnter={() => scrollable(div, true)} style={{overflow: 'scroll', paddingLeft: '1%', paddingRight:'1%'}}>
       <table id="projectDetails">
         <tr>
           <th className='projectDetailsTableTitle'>{projectsDetails[id].title}</th>
@@ -73,6 +133,51 @@ function ShowProject(props) {
       </table>
       <MobileDesc value={projectsDetails[id]} />
     </div>
+  </div> 
+  }
+  </>
+  );
+
+  const isMobileContent = (
+    <>
+    <div id={`projectDetailDisplay-${id}`} className="projectDetailDisplay" onMouseEnter={() => scrollable(div, true)} style={{overflow: 'scroll', paddingLeft: '1%', paddingRight:'1%'}}>
+      <table id="projectDetails">
+        <tr>
+          <th className='projectDetailsTableTitle'>{projectsDetails[id].title}</th>
+          { mobileView ? <></> : <th></th>}
+        </tr>
+        <tr>
+          <td style={{ width: '18%', verticalAlign: 'top' }}>
+            <table style={{ display: 'table-row-group'}}>
+              <tr>
+                <td style={{ verticalAlign:'top'}}>Location</td>
+                <td style={{ paddingLeft:'5%', whiteSpace:'nowrap'}}>{projectsDetails[id].location}</td>
+              </tr>
+              <tr>
+                <td style={{ verticalAlign:'top'}}>Category</td>
+                <td style={{ paddingLeft:'5%', whiteSpace:'nowrap'}}>{projectsDetails[id].category}</td>
+              </tr>
+              <tr>
+                <td style={{ verticalAlign:'top'}}>Years</td>
+                <td style={{ paddingLeft:'5%', whiteSpace:'nowrap'}}>{projectsDetails[id].years}</td>
+              </tr>
+              <tr>
+                <td style={{ verticalAlign:'top'}}>Surface</td>
+                <td style={{ paddingLeft:'5%', whiteSpace:'nowrap'}}>{projectsDetails[id].surface}</td>
+              </tr>
+              {projectsDetails[id].collab != '' &&
+                <tr>
+                  <td style={{ verticalAlign:'top'}}>Collab</td>
+                  <td style={{ paddingLeft:'5%', whiteSpace:'nowrap'}}>{projectsDetails[id].collab}</td>
+                </tr>
+              }
+            </table>
+          </td>
+        </tr>
+      </table>
+      <MobileDesc value={projectsDetails[id]} />
+    </div>
+    {isMobileProjectList}
     </>
   );
   
@@ -119,7 +224,7 @@ function ShowProject(props) {
   );
 
   if(mobileView ){
-    return(isMobileContent);
+    return(isMobileProjectList);
   } else {
     return (isLaptopContent)
   }
@@ -128,7 +233,7 @@ function ShowProject(props) {
 function MobileDesc(object) {
     return (
       <>
-        <div style={{ textAlign: 'left', paddingLeft:'3%', paddingRight: '3%', paddingBottom: '18%'}}>
+        <div style={{ textAlign: 'left', paddingLeft:'3%', paddingRight: '3%', paddingBottom: '2%'}}>
           <p className='mobileProjectDescription' style={{ textAlign: 'left'}}>{object.value.desc1}</p>
           <p className='mobileProjectDescription' style={{ textAlign: 'left', paddingTop: '1%' }}>&emsp;{object.value.desc2}</p>
         </div>
@@ -142,10 +247,6 @@ function Desc(object) {
       <>
         <td>
           <table style={{ borderSpacing: '0' }}>
-            {/* <tr>
-          <th style={{ textAlign: 'left' ,paddingBottom: '5%', paddingTop: '5%'}}>{}</th>
-          <th></th>
-          </tr> */}
             <tr>
               <th className='projectDescription' style={{ textAlign: 'left', display: 'table-cell', paddingLeft: '1%', verticalAlign: 'top', width: '50%', display:'table-row-group'}}>{object.value.desc1}</th>
               <th className='projectDescription' style={{ textAlign: 'left', display: 'table-cell', paddingLeft: '1%', verticalAlign: 'top', width: '50%', display:'table-row-group'}}>{object.value.desc2}</th>
@@ -177,13 +278,8 @@ function ShowImage(props) {
   const file = images[id].file;
   const format =images[id].format;
   const showImage = photos.map((index) => {
-    //   const img = require(`./resource/Images/${file}/${photo}.png`);
-    //  console.log(`./resource/Images/${file}/${index}.${format}`);
     return (
-      // <div className='list-group-item' style={{}}>
       <LazyLoadImage style={{ height: '100%'}} key={`${file}-${index}`} className="project-image" src={require(`./resource/Images/${file}/${index}.${format}`)} alt={`${file}-${index}`} />
-      // </div>
-      // <img key={`${file}-${index}`} className="project-image" src={require(`./resource/Images/${file}/Hover.png`)} alt={`${file}-${index}`}/>
     );
   });
   const div = 'image';
@@ -193,11 +289,8 @@ function ShowImage(props) {
       {/* <div style ={{display:'flex', height:'66.5%', flexDirection:'column', overflow:'hidden'}}> */}
     <div className='projectDetailsImageDiv'>
       <div id='projectImageDiv' className="project-Image-Div" onMouseEnter={() => scrollable(div, true)} style={{ overflow: "scroll" }}>
-        <HorizontalScroll className='scroll' reverseScroll={true} style={{ overflow: 'auto' }}>
-          {/* <div style={{width: '110vw'}}> */}
-        {/* <div className='list-group list-group-horizontal' style={{ display: 'flex', overflow: 'hidden', height: '80%' }}> */}
-        {showImage}
-        {/* </div> */}
+        <HorizontalScroll className='scroll' reverseScroll={true} style={{ overflow: 'auto'}}>
+         {showImage}
         </HorizontalScroll>
       </div>
       </div>
@@ -230,8 +323,8 @@ export default function ProjectDetailPage(object) {
         <Navbar />
       </div>
       {/* <div className='projectDetailsTransition' style={{ flexDirection: 'column', height: '95%'}}> */}
-      <div style={{ flexDirection: 'column', height: '95%'}}>
-        <ShowImage key={id.toString()} value={id} />
+      <div style={{ flexDirection: 'column', height: mobileView? 'auto': '95%'}}>
+        {mobileView ? <></> : <ShowImage key={id.toString()} value={id} /> }
         <ShowProject key={id.toString()} value={id} />
       </div>
     </div>
@@ -253,4 +346,23 @@ function scrollable(div, scroll) {
     document.getElementsByClassName('projectDetailDisplay')[0].style.overflow = 'scroll';
     document.getElementsByClassName('project-Image-Div')[0].style.overflow = 'scroll';
   }
+}
+
+function isMobileExpandDetails (projects, expand) {
+  console.log('isMobileExpandDetails');
+  console.log(projects);
+  const projectCount = 5;
+  const number = projects.id -1;
+  console.log(number);
+  // for(let i = 0; i < projectCount; i++){
+  //   if(number == i && expand) {
+  //     document.getElementById('changeImage').src = projects.link;
+  //     document.getElementsByClassName('mobileExpandContent')[number].style.display = 'contents';
+  //     document.getElementsByClassName('projectBackgroundColour')[number].style.backgroundColor = 'rgb(255,192,103)';
+  //     document.getElementsByClassName('mobileExpandContent')[number].style.width = '100%';
+  //   } else {
+  //     document.getElementsByClassName('mobileExpandContent')[i].style.display = 'none';
+  //     document.getElementsByClassName('projectBackgroundColour')[i].style.backgroundColor = '#FFFFFF';
+  //   }
+  // }
 }
