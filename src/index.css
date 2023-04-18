@@ -12,7 +12,7 @@ body {
   margin: 0;
   overflow: hidden;
   /* position: fixed; */
-  height: -webkit-fill-available;
+  height: 100svh;
   -webkit-overflow-scrolling: touch;
   -ms-overflow-style: hidden;  /* for Internet Explorer, Edge */
   scrollbar-width: hidden;  /* for Firefox
