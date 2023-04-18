@@ -301,7 +301,7 @@ a:link {
   letter-spacing: 0.02em;
 }
 
-.fixedTopPosition {
+.fixedTopPosition1 {
   position: sticky;
   top: 0;
   width: -webkit-fill-available;

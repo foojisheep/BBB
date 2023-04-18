@@ -86,7 +86,7 @@ export default function ImageAndProjects() {
           <LazyLoadImage id="changeImage" key='logo' className="landingPage-image1" src={projects[0].link} onMouseEnter={() => changeURL(logoBig, false)} />
         </div>
       </div>
-      <div className="projectDisplay1">
+      <div className="projectDisplay1" style={{ overflowY: 'scroll'}}>
         <table id="customers">
           {isMobileContent}
         </table>
