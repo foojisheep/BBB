@@ -247,7 +247,7 @@
 
 @media only screen and (max-width: 1024px) {
   .projectDetailsImageDiv {
-    height: 55%;
+    height: auto;
   }
 
   .projectDetailsTableTitle {
