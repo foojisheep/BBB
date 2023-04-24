@@ -93,7 +93,7 @@ function ShowProject(props) {
     </div>
   </div> 
   :
-  <div className="projectBackgroundColour" key={projects.id} style={{ 'borderTop': project.id == 1 ? 'none' : '1.6px solid #000000', height: 'inherit'}}>
+  <div className="projectBackgroundColour" key={projects.id} style={{ 'borderTop': project.id == 1 ? 'none' : '1.6px solid #000000', height: 'auto'}}>
     {/* {showImageInList} */}
     <ShowImage1 key={id.toString()} value={id} />
     <div id={`projectDetailDisplay-${project.id}`} className="projectDetailDisplay" onMouseEnter={() => scrollable(div, true)} style={{overflow: 'scroll', paddingLeft: '1%', paddingRight:'1%'}}>
