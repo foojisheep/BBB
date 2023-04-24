@@ -82,7 +82,7 @@ function ShowProject(props) {
   const isMobileProjectList = projects.map((project) =>
   <>
   { project.id != id + 1  ? 
-  <div id={`mobile-project-list-${project.id}`} className="projectListDisplay projectBackgroundColour" key={projects.id} style={{ 'paddingTop': '1%', 'paddingBottom': '1%', 'height': '4svh', 'borderTop': project.id == 1 ? 'none': '1.6px solid #000000'}} onClick={()=> routeChange(project.id)}>
+  <div id={`mobile-project-list-${project.id}`} className="projectListDisplay projectBackgroundColour" key={projects.id} style={{ 'paddingTop': '1%', 'paddingBottom': '1%', 'borderTop': project.id == 1 ? 'none': '1.6px solid #000000'}} onClick={()=> routeChange(project.id)}>
     <div id={`expand-${project.id}`} className="projectColumn" {...getToggleProps()} onClick={()=> isMobileExpandDetails(projects, true)}>
       <div className='mobileContentYear' style={{ width: '20%', textAlign: 'start'}}>
         {project.mobileYear}
@@ -323,7 +323,7 @@ export default function ProjectDetailPage(object) {
         <Navbar />
       </div>
       {/* <div className='projectDetailsTransition' style={{ flexDirection: 'column', height: '95%'}}> */}
-      <div style={{ flexDirection: 'column', height: mobileView? '96svh': '95%', overflowX: mobileView ? 'scroll':'hidden'}}>
+      <div style={{ flexDirection: 'column', height: mobileView? '97svh': '95%', overflowX: mobileView ? 'scroll':'hidden'}}>
         {mobileView ? <></> : <ShowImage key={id.toString()} value={id} /> }
         <ShowProject key={id.toString()} value={id} />
       </div>
