@@ -55,8 +55,8 @@ function ShowImage1(props) {
   console.log(showImage);
   return (
     <>    
-    <div className='projectDetailsImageDiv' style={{ maxHeight: '40%', borderBottom: '1.6px solid rgb(0, 0, 0)'}}>
-      <div id='projectImageDiv' className="project-Image-Div" onMouseEnter={() => scrollable(div, true)} style={{ overflow: "scroll" , height: '70vh'}}>
+    <div className='projectDetailsImageDiv' style={{ borderBottom: '1.6px solid rgb(0, 0, 0)'}}>
+      <div id='projectImageDiv' className="project-Image-Div" onMouseEnter={() => scrollable(div, true)} style={{ overflow: "scroll" , maxHeight: '51vh'}}>
         {/* <HorizontalScroll className='scroll' reverseScroll={true} style={{ overflow: 'auto' , position : 'inherit'}}> */}
         {showImage}
         {/* <LazyLoadImage src={arrow} /> */}
@@ -82,7 +82,7 @@ function ShowProject(props) {
   const isMobileProjectList = projects.map((project) =>
   <>
   { project.id != id + 1  ? 
-  <div id={`mobile-project-list-${project.id}`} className="projectListDisplay projectBackgroundColour" key={projects.id} style={{ 'paddingTop': '1%', 'paddingBottom': '1%', 'borderTop': project.id == 1 ? 'none': '1.6px solid #000000'}} onClick={()=> routeChange(project.id)}>
+  <div id={`mobile-project-list-${project.id}`} className="projectListDisplay projectBackgroundColour" key={projects.id} style={{ 'paddingTop': '1%', 'paddingBottom': '1%', 'height': '4%', 'borderTop': project.id == 1 ? 'none': '1.6px solid #000000'}} onClick={()=> routeChange(project.id)}>
     <div id={`expand-${project.id}`} className="projectColumn" {...getToggleProps()} onClick={()=> isMobileExpandDetails(projects, true)}>
       <div className='mobileContentYear' style={{ width: '20%', textAlign: 'start'}}>
         {project.mobileYear}
