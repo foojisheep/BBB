@@ -54,17 +54,17 @@ function ShowImage1(props) {
   const div = 'image';
   console.log(showImage);
   return (
-    <>    
+    <>
     <div className='projectDetailsImageDiv' style={{ borderBottom: '1.6px solid rgb(0, 0, 0)'}}>
-      <div id='projectImageDiv' className="project-Image-Div" onMouseEnter={() => scrollable(div, true)} style={{ overflow: "scroll" , maxHeight: '51vh'}}>
+      <div id='projectImageDiv' className="project-Image-Div" onMouseEnter={() => scrollable(div, true)} style={{ overflow: "scroll" , maxHeight: '51vh', position:'relative'}}>
         {/* <HorizontalScroll className='scroll' reverseScroll={true} style={{ overflow: 'auto' , position : 'inherit'}}> */}
         {/* <Button src={require('./resource/arrow.svg')}></Button> */}
         {showImage}
         {/* <LazyLoadImage src={arrow} /> */}
         {/* </HorizontalScroll> */}
-      </div>
-      <div className='iconArrow' style={{ position: 'absolute', right: '5%', top: '50%'}}>
-        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-arrow-right-circle"><circle cx="12" cy="12" r="10"></circle><polyline points="12 16 16 12 12 8"></polyline><line x1="8" x2="16" y1="12" y2="12"></line></svg>
+        <div className='iconArrow' style={{ position: 'absolute', right: '5%', bottom: '5%'}}>
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-arrow-right-circle"><circle cx="12" cy="12" r="10"></circle><polyline points="12 16 16 12 12 8"></polyline><line x1="8" x2="16" y1="12" y2="12"></line></svg>
+        </div>
       </div>
     </div>
     </>
@@ -292,10 +292,13 @@ function ShowImage(props) {
       {/* <HorizontalScroll>   */} 
       {/* <div style ={{display:'flex', height:'66.5%', flexDirection:'column', overflow:'hidden'}}> */}
     <div className='projectDetailsImageDiv'>
-      <div id='projectImageDiv' className="project-Image-Div" onMouseEnter={() => scrollable(div, true)} style={{ overflow: "scroll" }}>
+      <div id='projectImageDiv' className="project-Image-Div" onMouseEnter={() => scrollable(div, true)} style={{ overflow: "scroll" ,position:'relative'}}>
         <HorizontalScroll className='scroll' reverseScroll={true} style={{ overflow: 'auto'}}>
          {showImage}
         </HorizontalScroll>
+        <div className='iconArrow' style={{ position: 'absolute', right: '5%', bottom: '5%'}}>
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-arrow-right-circle"><circle cx="12" cy="12" r="10"></circle><polyline points="12 16 16 12 12 8"></polyline><line x1="8" x2="16" y1="12" y2="12"></line></svg>
+        </div>
       </div>
       </div>
       {/* </HorizontalScroll> */}
