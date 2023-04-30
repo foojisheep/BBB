@@ -34,7 +34,7 @@ export default function ImageAndProjects() {
   const isMobileContent = projects.map((projects) =>
   <>
 { projects.id == 1 ? 
-      <div className="projectListDisplay projectBackgroundColour" key={projects.id} style={{ backgroundColor: 'rgb(255,192,103)'}}>
+      <div className="projectListDisplay projectBackgroundColour" key={projects.id} style={{ backgroundColor: '#FFFFFF'}}>
         <div id={`expand-${projects.id}`} className="projectColumn" {...getToggleProps()} onClick={()=> isMobileExpandDetails(projects, true)}>
           <div className='mobileContentYear' style={{ width: '20%', textAlign: 'start'}}>
             {projects.mobileYear}
@@ -47,9 +47,10 @@ export default function ImageAndProjects() {
           <div className='projectColumn' style={{ width: '20%', textAlign: 'start'}}>
           </div>
           <div className='projectColumn paddingLeft projectListHeight' style={{ alignItems:'center', textAlign: 'start'}}>
-            <p className='mobileExpandContentDescription' style={{ textAlign: 'start', paddingTop: '2%', paddingBottom: '2%' }}>{projects.details}</p>
+            <p className='mobileExpandContentDescription' style={{ textAlign: 'start', paddingTop: '2%', paddingBottom: '2%', width: '100%'}}>{projects.details}</p>
+            <div className='projectColumn' style={{ textAlign: 'end', display: 'block'}}>
+            <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-plus"><line x1="12" x2="12" y1="5" y2="19"></line><line x1="5" x2="19" y1="12" y2="12"></line></svg>
           </div>
-          <div className='projectColumn' style={{ textAlign: 'end'}}>
           </div>
         </div>
       </div>
@@ -67,10 +68,15 @@ export default function ImageAndProjects() {
           <div className='projectColumn' style={{ width: '20%', textAlign: 'start'}}>
           </div>
           <div className='projectColumn paddingLeft projectListHeight' style={{alignItems:'center', textAlign: 'start'}}>
-            <p className='mobileExpandContentDescription' style={{ textAlign: 'start', paddingTop: '2%', paddingBottom: '2%' }}>{projects.details}</p>
+            <p className='mobileExpandContentDescription' style={{ textAlign: 'start', paddingTop: '2%', paddingBottom: '2%' , width: '100%'}}>{projects.details}</p>
+            {/* <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-plus"><line x1="12" x2="12" y1="5" y2="19"></line><line x1="5" x2="19" y1="12" y2="12"></line></svg> */}
+            <div className='projectColumn' style={{ textAlign: 'end', display: 'block'}}>
+            <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-plus"><line x1="12" x2="12" y1="5" y2="19"></line><line x1="5" x2="19" y1="12" y2="12"></line></svg>
           </div>
-          <div className='projectColumn' style={{ textAlign: 'end'}}>
           </div>
+          {/* <div className='projectColumn' style={{ textAlign: 'end', display: 'block'}}>
+            <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-plus"><line x1="12" x2="12" y1="5" y2="19"></line><line x1="5" x2="19" y1="12" y2="12"></line></svg>
+          </div> */}
         </div>
       </div>
     }
@@ -86,7 +92,7 @@ export default function ImageAndProjects() {
           <LazyLoadImage id="changeImage" key='logo' className="landingPage-image1" src={projects[0].link} onMouseEnter={() => changeURL(logoBig, false)} />
         </div>
       </div>
-      <div className="projectDisplay1" style={{ overflowY: 'scroll'}}>
+      <div className="projectDisplay1">
         <table id="customers">
           {isMobileContent}
         </table>
@@ -140,7 +146,7 @@ function isMobileExpandDetails (projects, expand) {
     if(number == i && expand) {
       document.getElementById('changeImage').src = projects.link;
       document.getElementsByClassName('mobileExpandContent')[number].style.display = 'contents';
-      document.getElementsByClassName('projectBackgroundColour')[number].style.backgroundColor = 'rgb(255,192,103)';
+      document.getElementsByClassName('projectBackgroundColour')[number].style.backgroundColor = '#FFFFFF';
       document.getElementsByClassName('mobileExpandContent')[number].style.width = '100%';
     } else {
       document.getElementsByClassName('mobileExpandContent')[i].style.display = 'none';
