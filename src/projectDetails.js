@@ -62,8 +62,9 @@ function ShowImage1(props) {
         {showImage}
         {/* <LazyLoadImage src={arrow} /> */}
         {/* </HorizontalScroll> */}
-        <div className='iconArrow' style={{ position: 'absolute', right: '5%', bottom: '5%'}}>
-          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-arrow-right-circle"><circle cx="12" cy="12" r="10" style={{ fill: 'white'}}></circle><polyline points="12 16 16 12 12 8"></polyline><line x1="8" x2="16" y1="12" y2="12"></line></svg>
+        <div className='iconArrow' style={{ position: 'absolute', right: '5%', bottom: '1%'}}>
+        <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="0.5" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-arrow-right-circle"><circle cx="12" cy="12" r="10" style={{ fill: 'white'}}></circle><polyline points="12 16 16 12 12 8"></polyline><line x1="8" x2="16" y1="12" y2="12"></line></svg>
+          {/* <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-arrow-right-circle"><circle cx="12" cy="12" r="10" style={{ fill: 'white'}}></circle><polyline points="12 16 16 12 12 8"></polyline><line x1="8" x2="16" y1="12" y2="12"></line></svg> */}
         </div>
       </div>
     </div>
@@ -86,7 +87,7 @@ function ShowProject(props) {
   const isMobileProjectList = projects.map((project) =>
   <>
   { project.id != id + 1  ? 
-  <div id={`mobile-project-list-${project.id}`} className="projectListDisplay projectBackgroundColour" key={projects.id} style={{ 'paddingTop': '1%', 'paddingBottom': '1%', borderTop: project.id == 1 ? 'none': '1.6px solid #000000'}} onClick={()=> routeChange(project.id)}>
+  <div id={`mobile-project-list-${project.id}`} className="projectListDisplay projectBackgroundColour" key={projects.id} style={{ 'paddingTop': '1%', 'paddingBottom': '1%', borderTop: project.id == 1 ? 'none': '1.6px solid #000000'}} onClick={()=> routeChange(project.id)} onScroll={() => hideArrow(projects)}>
     <div id={`expand-${project.id}`} className="projectColumn" {...getToggleProps()} onClick={()=> isMobileExpandDetails(projects, true)}>
       <div className='mobileContentYear' style={{ width: '20%', textAlign: 'start'}}>
         {project.mobileYear}
@@ -97,7 +98,7 @@ function ShowProject(props) {
     </div>
   </div> 
   :
-  <div className="projectBackgroundColour" key={projects.id} style={{ 'borderTop': project.id == 1 ? 'none' : '1.6px solid #000000', height: 'auto'}}>
+  <div className="projectBackgroundColour" key={projects.id} style={{ 'borderTop': project.id == 1 ? 'none' : '1.6px solid #000000', height: 'auto'}} onScroll={() => hideArrow(projects)}>
     {/* {showImageInList} */}
     <ShowImage1 key={id.toString()} value={id} />
     <div id={`projectDetailDisplay-${project.id}`} className="projectDetailDisplay" onMouseEnter={() => scrollable(div, true)} style={{overflow: 'scroll', paddingLeft: '1%', paddingRight:'1%'}}>
@@ -296,8 +297,9 @@ function ShowImage(props) {
         <HorizontalScroll className='scroll' reverseScroll={true} style={{ overflow: 'auto'}}>
          {showImage}
         </HorizontalScroll>
-        <div className='iconArrow' style={{ position: 'absolute', right: '5%', bottom: '5%'}}>
-          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-arrow-right-circle"><circle cx="12" cy="12" r="10" style={{ fill: 'white'}}></circle><polyline points="12 16 16 12 12 8"></polyline><line x1="8" x2="16" y1="12" y2="12"></line></svg>
+        <div className='iconArrow' style={{ position: 'absolute', right: '5%', bottom: '1%'}}>
+        <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="0.5" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-arrow-right-circle"><circle cx="12" cy="12" r="10" style={{ fill: 'white'}}></circle><polyline points="12 16 16 12 12 8"></polyline><line x1="8" x2="16" y1="12" y2="12"></line></svg>
+          {/* <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-arrow-right-circle"><circle cx="12" cy="12" r="10" style={{ fill: 'white'}}></circle><polyline points="12 16 16 12 12 8"></polyline><line x1="8" x2="16" y1="12" y2="12"></line></svg> */}
         </div>
       </div>
       </div>
@@ -337,6 +339,12 @@ export default function ProjectDetailPage(object) {
     </div>
   );
 }
+
+function hideArrow(projects){
+  const number = projects.id -1;
+  document.getElementsByClassName('iconArrow')[number].style.display = 'none';
+}
+
 
 function scrollable(div, scroll) {
   if(screenWidth < 1024 ||  isMobile){
