@@ -154,7 +154,7 @@ export default function LoadingPage() {
       {showLanding && (
         <div className='landingPage-transition' style={{ display: 'flex', flexDirection: 'column', height: "100svh", width: "100vw" , backgroundColor: 'rgb(255, 184, 242)'}}>
           {/* <div className="navDisplay slideDown"> */}
-          <div className="navDisplay fixedTopPosition">
+          <div className="navDisplay fixedTopPosition" style={{ height: '3.5%'}}>
             <Navbar style={{ display: 'flex'}}/>
            </div>
            {mobileView ?
@@ -164,7 +164,7 @@ export default function LoadingPage() {
             </div>
            </div>
            :
-           <div className='landingPage-full0'>
+           <div className='landingPage-full0' style={{ height: '70.5%'}}>
              <div key="landing" className="landingPage-full1">
                <LazyLoadImage id="hoverImage" key='logo' className="landingPage-image1" src={logoBig} alt={logoBig.toString()} onMouseEnter={() => changeURL(logoBig, false)} />
              </div>

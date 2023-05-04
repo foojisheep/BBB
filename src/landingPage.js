@@ -36,7 +36,7 @@ export default function LandingPage() {
     <>
       {/* <div className='landingPageTransition' style={{display: 'flex', flexDirection: 'column', height: '100vh', width: "100vw", backgroundColor: '#FFB8F2'}}> */}
       <div style={{display: 'flex', flexDirection: 'column', height: '100svh', width: "100vw", backgroundColor: 'rgb(255, 184, 242'}}> 
-        <div className="navDisplay fixedTopPosition">
+        <div className="navDisplay fixedTopPosition" style={{ height: '3.5%'}}>
           <Navbar/>
         </div>
         <ImageAndProjects/>

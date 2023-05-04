@@ -100,7 +100,7 @@ export default function ImageAndProjects() {
       </>
        :
        <>
-       <div className='landingPage-full0' >
+       <div className='landingPage-full0' style={{ height: '70.5%'}}>
         <div key="landing" className="landingPage-full1">
           <LazyLoadImage id="hoverImage" key='logo' className="landingPage-image1" src={logoBig} alt={logoBig.toString()} onMouseEnter={() => changeURL(logoBig, false)} />
         </div>
