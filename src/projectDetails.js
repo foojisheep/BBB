@@ -55,7 +55,7 @@ function ShowImage1(props) {
   console.log(showImage);
   return (
     <>
-    <div className='projectDetailsImageDiv' style={{ borderBottom: '1.6px solid rgb(0, 0, 0)'}}>
+    <div className='projectDetailsImageDiv' style={{ borderBottom: '1.6px solid rgb(0, 0, 0)'}} onScroll={() => hideArrow(projects)}>
       <div id='projectImageDiv' className="project-Image-Div" onMouseEnter={() => scrollable(div, true)} style={{ overflow: "scroll" , maxHeight: '51vh', position:'relative'}}>
         {/* <HorizontalScroll className='scroll' reverseScroll={true} style={{ overflow: 'auto' , position : 'inherit'}}> */}
         {/* <Button src={require('./resource/arrow.svg')}></Button> */}
@@ -87,7 +87,7 @@ function ShowProject(props) {
   const isMobileProjectList = projects.map((project) =>
   <>
   { project.id != id + 1  ? 
-  <div id={`mobile-project-list-${project.id}`} className="projectListDisplay projectBackgroundColour" key={projects.id} style={{ 'paddingTop': '1%', 'paddingBottom': '1%', borderTop: project.id == 1 ? 'none': '1.6px solid #000000'}} onClick={()=> routeChange(project.id)} onScroll={() => hideArrow(projects)}>
+  <div id={`mobile-project-list-${project.id}`} className="projectListDisplay projectBackgroundColour" key={projects.id} style={{ 'paddingTop': '1%', 'paddingBottom': '1%', borderTop: project.id == 1 ? 'none': '1.6px solid #000000'}} onClick={()=> routeChange(project.id)}>
     <div id={`expand-${project.id}`} className="projectColumn" {...getToggleProps()} onClick={()=> isMobileExpandDetails(projects, true)}>
       <div className='mobileContentYear' style={{ width: '20%', textAlign: 'start'}}>
         {project.mobileYear}
@@ -98,7 +98,7 @@ function ShowProject(props) {
     </div>
   </div> 
   :
-  <div className="projectBackgroundColour" key={projects.id} style={{ 'borderTop': project.id == 1 ? 'none' : '1.6px solid #000000', height: 'auto'}} onScroll={() => hideArrow(projects)}>
+  <div className="projectBackgroundColour" key={projects.id} style={{ 'borderTop': project.id == 1 ? 'none' : '1.6px solid #000000', height: 'auto'}}>
     {/* {showImageInList} */}
     <ShowImage1 key={id.toString()} value={id} />
     <div id={`projectDetailDisplay-${project.id}`} className="projectDetailDisplay" onMouseEnter={() => scrollable(div, true)} style={{overflow: 'scroll', paddingLeft: '1%', paddingRight:'1%'}}>
@@ -292,7 +292,7 @@ function ShowImage(props) {
     <>    
       {/* <HorizontalScroll>   */} 
       {/* <div style ={{display:'flex', height:'66.5%', flexDirection:'column', overflow:'hidden'}}> */}
-    <div className='projectDetailsImageDiv'>
+    <div className='projectDetailsImageDiv' onScroll={() => hideArrow(projects)}>
       <div id='projectImageDiv' className="project-Image-Div" onMouseEnter={() => scrollable(div, true)} style={{ overflow: "scroll" ,position:'relative'}}>
         <HorizontalScroll className='scroll' reverseScroll={true} style={{ overflow: 'auto'}}>
          {showImage}
@@ -342,6 +342,7 @@ export default function ProjectDetailPage(object) {
 
 function hideArrow(projects){
   const number = projects.id -1;
+  console.log('hide arrow', number);
   document.getElementsByClassName('iconArrow')[number].style.display = 'none';
 }
 
