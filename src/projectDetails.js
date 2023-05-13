@@ -55,15 +55,15 @@ function ShowImage1(props) {
   console.log(showImage);
   return (
     <>
-    <div className='projectDetailsImageDiv' style={{ borderBottom: '1.6px solid rgb(0, 0, 0)'}} onScroll={() => hideArrow(projects)}>
-      <div id='projectImageDiv' className="project-Image-Div" onMouseEnter={() => scrollable(div, true)} style={{ overflow: "scroll" , maxHeight: '51vh', position:'relative'}}>
+    <div id={`mobileContent-${id}`} key={id} className={`projectDetailsImageDiv mobileExpandContent`} style={{ borderBottom: '1.6px solid rgb(0, 0, 0)'}} onTouchMove={() => hideArrow(id)} onScroll={() => hideArrow(id)}>
+      <div id='projectImageDiv' className="project-Image-Div" onMouseEnter={() => scrollable(div, true)} onScroll={() => hideArrow(id)} style={{ overflow: "scroll" , maxHeight: '51vh', position:'relative'}}>
         {/* <HorizontalScroll className='scroll' reverseScroll={true} style={{ overflow: 'auto' , position : 'inherit'}}> */}
         {/* <Button src={require('./resource/arrow.svg')}></Button> */}
         {showImage}
         {/* <LazyLoadImage src={arrow} /> */}
         {/* </HorizontalScroll> */}
-        <div className='iconArrow' style={{ position: 'absolute', right: '5%', bottom: '1%'}}>
-        <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="0.5" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-arrow-right-circle"><circle cx="12" cy="12" r="10" style={{ fill: 'white'}}></circle><polyline points="12 16 16 12 12 8"></polyline><line x1="8" x2="16" y1="12" y2="12"></line></svg>
+        <div className='iconArrow' style={{ position: 'absolute', right: '2%', bottom: '1%', display: 'flex'}}>
+          <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="0.5" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-arrow-right-circle"><circle cx="12" cy="12" r="10" style={{ fill: 'white'}}></circle><polyline points="12 16 16 12 12 8"></polyline><line x1="8" x2="16" y1="12" y2="12"></line></svg>
           {/* <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-arrow-right-circle"><circle cx="12" cy="12" r="10" style={{ fill: 'white'}}></circle><polyline points="12 16 16 12 12 8"></polyline><line x1="8" x2="16" y1="12" y2="12"></line></svg> */}
         </div>
       </div>
@@ -88,7 +88,7 @@ function ShowProject(props) {
   <>
   { project.id != id + 1  ? 
   <div id={`mobile-project-list-${project.id}`} className="projectListDisplay projectBackgroundColour" key={projects.id} style={{ 'paddingTop': '1%', 'paddingBottom': '1%', borderTop: project.id == 1 ? 'none': '1.6px solid #000000'}} onClick={()=> routeChange(project.id)}>
-    <div id={`expand-${project.id}`} className="projectColumn" {...getToggleProps()} onClick={()=> isMobileExpandDetails(projects, true)}>
+    <div id={`expand-${project.id}`} className="projectColumn" {...getToggleProps()} onClick={()=> isMobileExpandDetails(project.id, true)}>
       <div className='mobileContentYear' style={{ width: '20%', textAlign: 'start'}}>
         {project.mobileYear}
       </div>
@@ -145,7 +145,7 @@ function ShowProject(props) {
 
   const isMobileContent = (
     <>
-    <div id={`projectDetailDisplay-${id}`} className="projectDetailDisplay" onMouseEnter={() => scrollable(div, true)} style={{overflow: 'scroll', paddingLeft: '1%', paddingRight:'1%'}}>
+    <div id={`projectDetailDisplay-${id}`} className="projectDetailDisplay" onMouseEnter={() => scrollable(div, true)} onScroll={() => hideArrow(id)} style={{overflow: 'scroll', paddingLeft: '1%', paddingRight:'1%'}}>
       <table id="projectDetails">
         <tr>
           <th className='projectDetailsTableTitle'>{projectsDetails[id].title}</th>
@@ -188,7 +188,7 @@ function ShowProject(props) {
   
   const isLaptopContent = (
     <>
-    <div id='projectDetailDisplay' className="projectDetailDisplay" onMouseEnter={() => scrollable(div, true)}>
+    <div id='projectDetailDisplay' className="projectDetailDisplay" onMouseEnter={() => scrollable(div, true)} onScroll={() => hideArrow(id)}>
       <table id="projectDetails">
         <tr>
           <th className='projectDetailsTableTitle'>{projectsDetails[id].title}</th>
@@ -292,13 +292,13 @@ function ShowImage(props) {
     <>    
       {/* <HorizontalScroll>   */} 
       {/* <div style ={{display:'flex', height:'66.5%', flexDirection:'column', overflow:'hidden'}}> */}
-    <div className='projectDetailsImageDiv' onScroll={() => hideArrow(projects)}>
-      <div id='projectImageDiv' className="project-Image-Div" onMouseEnter={() => scrollable(div, true)} style={{ overflow: "scroll" ,position:'relative'}}>
+    <div className='projectDetailsImageDiv' onScroll={() => hideArrow(id)}>
+      <div id='projectImageDiv' className="project-Image-Div" onMouseEnter={() => scrollable(div, true)} onScroll={() => hideArrow(id)} style={{ overflow: "scroll" ,position:'relative'}}>
         <HorizontalScroll className='scroll' reverseScroll={true} style={{ overflow: 'auto'}}>
          {showImage}
         </HorizontalScroll>
-        <div className='iconArrow' style={{ position: 'absolute', right: '5%', bottom: '1%'}}>
-        <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="0.5" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-arrow-right-circle"><circle cx="12" cy="12" r="10" style={{ fill: 'white'}}></circle><polyline points="12 16 16 12 12 8"></polyline><line x1="8" x2="16" y1="12" y2="12"></line></svg>
+        <div className='iconArrowDesktop' style={{ position: 'absolute', right: '5%', bottom: '1%'}}>
+          <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="0.5" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-arrow-right-circle"><circle cx="12" cy="12" r="10" style={{ fill: 'white'}}></circle><polyline points="12 16 16 12 12 8"></polyline><line x1="8" x2="16" y1="12" y2="12"></line></svg>
           {/* <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-arrow-right-circle"><circle cx="12" cy="12" r="10" style={{ fill: 'white'}}></circle><polyline points="12 16 16 12 12 8"></polyline><line x1="8" x2="16" y1="12" y2="12"></line></svg> */}
         </div>
       </div>
@@ -340,12 +340,13 @@ export default function ProjectDetailPage(object) {
   );
 }
 
-function hideArrow(projects){
-  const number = projects.id -1;
-  console.log('hide arrow', number);
-  document.getElementsByClassName('iconArrow')[number].style.display = 'none';
+function hideArrow(id){
+  const number = id;
+  console.log('iconArrow');
+  const icon = document.getElementsByClassName('iconArrow');
+  console.log('icon ', icon[0]);
+  document.getElementsByClassName('iconArrow')[0].style.display = 'none';
 }
-
 
 function scrollable(div, scroll) {
   if(screenWidth < 1024 ||  isMobile){
@@ -364,21 +365,15 @@ function scrollable(div, scroll) {
   }
 }
 
-function isMobileExpandDetails (projects, expand) {
+function isMobileExpandDetails (id, expand) {
   console.log('isMobileExpandDetails');
   console.log(projects);
   const projectCount = 5;
-  const number = projects.id -1;
+  const number = parseInt(id)-1;
   console.log(number);
-  // for(let i = 0; i < projectCount; i++){
-  //   if(number == i && expand) {
-  //     document.getElementById('changeImage').src = projects.link;
-  //     document.getElementsByClassName('mobileExpandContent')[number].style.display = 'contents';
-  //     document.getElementsByClassName('projectBackgroundColour')[number].style.backgroundColor = 'rgb(255,192,103)';
-  //     document.getElementsByClassName('mobileExpandContent')[number].style.width = '100%';
-  //   } else {
-  //     document.getElementsByClassName('mobileExpandContent')[i].style.display = 'none';
-  //     document.getElementsByClassName('projectBackgroundColour')[i].style.backgroundColor = '#FFFFFF';
-  //   }
-  // }
+  const element = document.getElementsByClassName(`mobileExpandContent`)[0];
+  console.log('element',element);
+
+  element.scrollIntoView({behavior:"smooth"});
+  console.log('scroll done')
 }
