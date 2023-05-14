@@ -92,11 +92,12 @@ function ShowProject(props) {
       //   top: 5,
       //   behavior: 'smooth'
       // });
-      // // divRef.current.scrollTop
-      // divRef.current.scrollTo({
-      //   top: ref.offsetTop,
-      //   behavior: "smooth",
-      // });
+      // divRef.current.scrollTop
+      divRef.current.scrollTo({
+        top: divRef.offsetTop,
+        behavior: "smooth",
+      });
+      // divRef.current.scrollIntoView({ behavior: 'smooth'});
       // divRef.current.scrollIntoView({ behavior: 'smooth', block: 'start', inline: 'nearest' });
       // divRef.current.style.top = 0;
       // const container = divRef.current.parentNode; // Get the container element
@@ -352,7 +353,7 @@ export default function ProjectDetailPage(object) {
         <Navbar />
       </div>
       {/* <div className='projectDetailsTransition' style={{ flexDirection: 'column', height: '95%'}}> */}
-      <div style={{ flexDirection: 'column', height: mobileView? '92svh': '95%', overflowX: mobileView ? 'scroll':'hidden'}}>
+      <div style={{ flexDirection: 'column', height: mobileView? '95svh': '95%', overflowX: mobileView ? 'scroll':'hidden'}}>
         {mobileView ? <></> : <ShowImage key={id.toString()} value={id} /> }
         <ShowProject key={id.toString()} value={id} />
       </div>
@@ -394,6 +395,9 @@ function isMobileExpandDetails (id, expand) {
   const projectCount = 5;
   const number = parseInt(id)-1;
   console.log(number);
+  // divRef.current.scrollIntoView({ behavior: 'smooth'});
+      // divRef.current.scrollIntoView({ behavior: 'smooth', block: 'start', inline: 'nearest' });
+
   // const element = document.getElementsByClassName(`mobileExpandContent`)[0];
   // console.log('element',element);
 
