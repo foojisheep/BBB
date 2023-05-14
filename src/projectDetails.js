@@ -307,15 +307,15 @@ function ShowImage(props) {
     <>    
       {/* <HorizontalScroll>   */} 
       {/* <div style ={{display:'flex', height:'66.5%', flexDirection:'column', overflow:'hidden'}}> */}
-    <div className='projectDetailsImageDiv' onScroll={() => hideArrow(id)} onTouchMove={() => hideArrow(id)}>
+    <div className='projectDetailsImageDiv' onScroll={() => hideArrow(id)}>
       <div id='projectImageDiv' className="project-Image-Div" onMouseEnter={() => scrollable(div, true)} onScroll={() => hideArrow(id)} style={{ overflow: "scroll" ,position:'relative'}}>
         <HorizontalScroll className='scroll' reverseScroll={true} style={{ overflow: 'auto'}}>
          {showImage}
         </HorizontalScroll>
-        <div className='iconArrowDesktop' style={{ position: 'absolute', right: '5%', bottom: '1%'}}>
-          <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="0.5" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-arrow-right-circle"><circle cx="12" cy="12" r="10" style={{ fill: 'white'}}></circle><polyline points="12 16 16 12 12 8"></polyline><line x1="8" x2="16" y1="12" y2="12"></line></svg>
+        {/* <div className='iconArrowDesktop' style={{ position: 'absolute', right: '5%', bottom: '3%'}}> */}
+          {/* <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="0.5" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-arrow-right-circle"><circle cx="12" cy="12" r="10" style={{ fill: 'white'}}></circle><polyline points="12 16 16 12 12 8"></polyline><line x1="8" x2="16" y1="12" y2="12"></line></svg> */}
           {/* <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-arrow-right-circle"><circle cx="12" cy="12" r="10" style={{ fill: 'white'}}></circle><polyline points="12 16 16 12 12 8"></polyline><line x1="8" x2="16" y1="12" y2="12"></line></svg> */}
-        </div>
+        {/* </div> */}
       </div>
       </div>
       {/* </HorizontalScroll> */}
