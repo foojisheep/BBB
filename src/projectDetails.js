@@ -88,6 +88,10 @@ function ShowProject(props) {
   useEffect(() => {
     console.log('ref', divRef.current);
     if (divRef.current) {
+      // divRef.current.scrollTo({
+      //   top: 5,
+      //   behavior: 'smooth'
+      // });
       // divRef.current.scrollIntoView({ behavior: 'smooth', block: 'center', inline: 'center' });
       // divRef.current.style.top = 0;
       // const container = divRef.current.parentNode; // Get the container element
@@ -109,7 +113,7 @@ function ShowProject(props) {
     </div>
   </div> 
   :
-  <div className="projectBackgroundColour" key={projects.id} ref={divRef} style={{ 'borderTop': project.id == 1 ? 'none' : '1.6px solid #000000', height: 'auto'}}>
+  <div className="projectBackgroundColour" id={projects.id} key={projects.id} ref={divRef} style={{ 'borderTop': project.id == 1 ? 'none' : '1.6px solid #000000', height: 'auto'}}>
     {/* {showImageInList} */}
     <ShowImage1 key={id.toString()} value={id} />
     <div id={`projectDetailDisplay-${project.id}`} className="projectDetailDisplay" onMouseEnter={() => scrollable(div, true)} style={{overflow: 'scroll', paddingLeft: '1%', paddingRight:'1%'}}>
@@ -343,7 +347,7 @@ export default function ProjectDetailPage(object) {
         <Navbar />
       </div>
       {/* <div className='projectDetailsTransition' style={{ flexDirection: 'column', height: '95%'}}> */}
-      <div style={{ flexDirection: 'column', maxHeight: mobileView? '95svh': '95%', overflowX: mobileView ? 'scroll':'hidden'}}>
+      <div style={{ flexDirection: 'column', height: mobileView? '95svh': '95%', overflowX: mobileView ? 'scroll':'hidden'}}>
         {mobileView ? <></> : <ShowImage key={id.toString()} value={id} /> }
         <ShowProject key={id.toString()} value={id} />
       </div>
