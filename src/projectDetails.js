@@ -6,7 +6,7 @@ import Navbar from "./navBar";
 import { useParams, useNavigate } from 'react-router-dom';
 import { isMobile } from "react-device-detect";
 import HorizontalScroll from 'react-scroll-horizontal';
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect,useRef } from "react";
 import { LazyLoadImage } from "react-lazy-load-image-component";
 import { ViewContext } from './ViewContext';
 import { useContext } from 'react';
@@ -55,8 +55,8 @@ function ShowImage1(props) {
   console.log(showImage);
   return (
     <>
-    <div id={`mobileContent-${id}`} key={id} className={`projectDetailsImageDiv mobileExpandContent`} style={{ borderBottom: '1.6px solid rgb(0, 0, 0)'}} onTouchMove={() => hideArrow(id)} onScroll={() => hideArrow(id)}>
-      <div id='projectImageDiv' className="project-Image-Div" onMouseEnter={() => scrollable(div, true)} onScroll={() => hideArrow(id)} style={{ overflow: "scroll" , maxHeight: '51vh', position:'relative'}}>
+    <div id={`mobileContent-${id}`} key={id} className={`projectDetailsImageDiv mobileExpandContent`} style={{ borderBottom: '1.6px solid rgb(0, 0, 0)'}} onScrollCapture={() => hideArrow(id)} onScroll={() => hideArrow(id)}>
+      <div id='projectImageDiv' className="project-Image-Div" onMouseEnter={() => scrollable(div, true)} onScrollCapture={() => hideArrow(id)} onScroll={() => hideArrow(id)} style={{ overflow: "scroll" , maxHeight: '51vh', position:'relative'}}>
         {/* <HorizontalScroll className='scroll' reverseScroll={true} style={{ overflow: 'auto' , position : 'inherit'}}> */}
         {/* <Button src={require('./resource/arrow.svg')}></Button> */}
         {showImage}
@@ -83,6 +83,15 @@ function ShowProject(props) {
     let path = `/project/${projectId}`;
     navigate(path);
   }
+  const divRef = useRef();
+
+  useEffect(() => {
+    console.log('ref', divRef.current);
+    if (divRef.current) {
+      divRef.current.scrollIntoView({ behavior: 'smooth', block: 'start', inline: 'nearest' });
+      // divRef.current.style.top = 0;
+    }
+  }, []);
 
   const isMobileProjectList = projects.map((project) =>
   <>
@@ -98,7 +107,7 @@ function ShowProject(props) {
     </div>
   </div> 
   :
-  <div className="projectBackgroundColour" key={projects.id} style={{ 'borderTop': project.id == 1 ? 'none' : '1.6px solid #000000', height: 'auto'}}>
+  <div className="projectBackgroundColour" key={projects.id} ref={divRef} style={{ 'borderTop': project.id == 1 ? 'none' : '1.6px solid #000000', height: 'auto'}}>
     {/* {showImageInList} */}
     <ShowImage1 key={id.toString()} value={id} />
     <div id={`projectDetailDisplay-${project.id}`} className="projectDetailDisplay" onMouseEnter={() => scrollable(div, true)} style={{overflow: 'scroll', paddingLeft: '1%', paddingRight:'1%'}}>
@@ -292,7 +301,7 @@ function ShowImage(props) {
     <>    
       {/* <HorizontalScroll>   */} 
       {/* <div style ={{display:'flex', height:'66.5%', flexDirection:'column', overflow:'hidden'}}> */}
-    <div className='projectDetailsImageDiv' onScroll={() => hideArrow(id)}>
+    <div className='projectDetailsImageDiv' onScroll={() => hideArrow(id)} onTouchMove={() => hideArrow(id)}>
       <div id='projectImageDiv' className="project-Image-Div" onMouseEnter={() => scrollable(div, true)} onScroll={() => hideArrow(id)} style={{ overflow: "scroll" ,position:'relative'}}>
         <HorizontalScroll className='scroll' reverseScroll={true} style={{ overflow: 'auto'}}>
          {showImage}
@@ -346,6 +355,9 @@ function hideArrow(id){
   const icon = document.getElementsByClassName('iconArrow');
   console.log('icon ', icon[0]);
   document.getElementsByClassName('iconArrow')[0].style.display = 'none';
+  const iconDesktop = document.getElementsByClassName('iconArrowDesktop');
+  console.log('icon desktop', iconDesktop[0]);
+  document.getElementsByClassName('iconArrowDesktop')[0].style.display = 'none';
 }
 
 function scrollable(div, scroll) {
