@@ -56,7 +56,7 @@ function ShowImage1(props) {
   return (
     <>
     <div id={`mobileContent-${id}`} key={id} className={`projectDetailsImageDiv mobileExpandContent`} style={{ borderBottom: '1.6px solid rgb(0, 0, 0)'}} onScrollCapture={() => hideArrow(id)} onScroll={() => hideArrow(id)}>
-      <div id='projectImageDiv' className="project-Image-Div" onMouseEnter={() => scrollable(div, true)} onScrollCapture={() => hideArrow(id)} onScroll={() => hideArrow(id)} style={{ overflow: "scroll" , maxHeight: '51vh', position:'fixed'}}>
+      <div id='projectImageDiv' className="project-Image-Div" onMouseEnter={() => scrollable(div, true)} onScrollCapture={() => hideArrow(id)} onScroll={() => hideArrow(id)} style={{ overflow: "scroll" , maxHeight: '51vh', position:'relative'}}>
         {/* <HorizontalScroll className='scroll' reverseScroll={true} style={{ overflow: 'auto' , position : 'inherit'}}> */}
         {/* <Button src={require('./resource/arrow.svg')}></Button> */}
         {showImage}
@@ -343,7 +343,7 @@ export default function ProjectDetailPage(object) {
         <Navbar />
       </div>
       {/* <div className='projectDetailsTransition' style={{ flexDirection: 'column', height: '95%'}}> */}
-      <div style={{ flexDirection: 'column', maxHeight: mobileView? '98svh': '95%', overflowX: mobileView ? 'scroll':'hidden'}}>
+      <div style={{ flexDirection: 'column', maxHeight: mobileView? '95svh': '95%', overflowX: mobileView ? 'scroll':'hidden'}}>
         {mobileView ? <></> : <ShowImage key={id.toString()} value={id} /> }
         <ShowProject key={id.toString()} value={id} />
       </div>
