@@ -83,7 +83,7 @@ function ShowProject(props) {
     let path = `/project/${projectId}`;
     navigate(path);
   }
-  const divRef = useRef();
+  const divRef = useRef(null);
 
   useEffect(() => {
     console.log('ref', divRef.current);
@@ -92,7 +92,12 @@ function ShowProject(props) {
       //   top: 5,
       //   behavior: 'smooth'
       // });
-      // divRef.current.scrollIntoView({ behavior: 'smooth', block: 'center', inline: 'center' });
+      // // divRef.current.scrollTop
+      // divRef.current.scrollTo({
+      //   top: ref.offsetTop,
+      //   behavior: "smooth",
+      // });
+      // divRef.current.scrollIntoView({ behavior: 'smooth', block: 'start', inline: 'nearest' });
       // divRef.current.style.top = 0;
       // const container = divRef.current.parentNode; // Get the container element
       // container.scrollTop = 0;
@@ -361,9 +366,9 @@ function hideArrow(id){
   const icon = document.getElementsByClassName('iconArrow');
   console.log('icon ', icon[0]);
   document.getElementsByClassName('iconArrow')[0].style.display = 'none';
-  const iconDesktop = document.getElementsByClassName('iconArrowDesktop');
-  console.log('icon desktop', iconDesktop[0]);
-  document.getElementsByClassName('iconArrowDesktop')[0].style.display = 'none';
+  // const iconDesktop = document.getElementsByClassName('iconArrowDesktop');
+  // console.log('icon desktop', iconDesktop[0]);
+  // document.getElementsByClassName('iconArrowDesktop')[0].style.display = 'none';
 }
 
 function scrollable(div, scroll) {
@@ -389,9 +394,9 @@ function isMobileExpandDetails (id, expand) {
   const projectCount = 5;
   const number = parseInt(id)-1;
   console.log(number);
-  const element = document.getElementsByClassName(`mobileExpandContent`)[0];
-  console.log('element',element);
+  // const element = document.getElementsByClassName(`mobileExpandContent`)[0];
+  // console.log('element',element);
 
-  element.scrollIntoView({behavior:"smooth"});
+  // element.scrollIntoView({behavior:"smooth"});
   console.log('scroll done')
 }
