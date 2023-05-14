@@ -93,12 +93,12 @@ function ShowProject(props) {
       //   behavior: 'smooth'
       // });
       // divRef.current.scrollTop
-      divRef.current.scrollTo({
-        top: divRef.offsetTop,
-        behavior: "smooth",
-      });
+      // divRef.current.scrollTo({
+      //   top: divRef.offsetTop,
+      //   behavior: "smooth",
+      // });
       // divRef.current.scrollIntoView({ behavior: 'smooth'});
-      // divRef.current.scrollIntoView({ behavior: 'smooth', block: 'start', inline: 'nearest' });
+      divRef.current.scrollIntoView({ behavior: 'smooth', block: 'start', inline: 'nearest' });
       // divRef.current.style.top = 0;
       // const container = divRef.current.parentNode; // Get the container element
       // container.scrollTop = 0;
@@ -353,7 +353,7 @@ export default function ProjectDetailPage(object) {
         <Navbar />
       </div>
       {/* <div className='projectDetailsTransition' style={{ flexDirection: 'column', height: '95%'}}> */}
-      <div style={{ flexDirection: 'column', height: mobileView? '96svh': '95%', overflowX: mobileView ? 'scroll':'hidden'}}>
+      <div style={{ flexDirection: 'column', height: mobileView? '94svh': '95%', overflowX: mobileView ? 'scroll':'hidden'}}>
         {mobileView ? <></> : <ShowImage key={id.toString()} value={id} /> }
         <ShowProject key={id.toString()} value={id} />
       </div>
