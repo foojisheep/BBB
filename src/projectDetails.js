@@ -88,10 +88,10 @@ function ShowProject(props) {
   useEffect(() => {
     console.log('ref', divRef.current);
     if (divRef.current) {
-      divRef.current.scrollIntoView({ behavior: 'smooth', block: 'center', inline: 'center' });
+      // divRef.current.scrollIntoView({ behavior: 'smooth', block: 'center', inline: 'center' });
       // divRef.current.style.top = 0;
-      const container = divRef.current.parentNode; // Get the container element
-      container.scrollTop = 0;
+      // const container = divRef.current.parentNode; // Get the container element
+      // container.scrollTop = 0;
     }
   }, []);
 

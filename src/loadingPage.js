@@ -154,7 +154,7 @@ export default function LoadingPage() {
       {showLanding && (
         <div className='landingPage-transition' style={{ display: 'flex', flexDirection: 'column', height: "100svh", width: "100vw" , backgroundColor: 'rgb(255, 184, 242)'}}>
           {/* <div className="navDisplay slideDown"> */}
-          <div className="navDisplay fixedTopPosition" style={{ height: '3.5%'}}>
+          <div className="navDisplay fixedTopPosition" style={{ height: '4%'}}>
             <Navbar style={{ display: 'flex'}}/>
            </div>
            {mobileView ?
