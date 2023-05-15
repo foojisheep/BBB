@@ -363,7 +363,7 @@ export default function ProjectDetailPage(object) {
         <Navbar />
       </div>
       {/* <div className='projectDetailsTransition' style={{ flexDirection: 'column', height: '95%'}}> */}
-      <div style={{ flexDirection: 'column', height: mobileView? '96svh': '95%', overflowX: mobileView ? 'scroll':'hidden'}}>
+      <div style={{ flexDirection: 'column', height: mobileView? '97svh': '95%', overflowX: mobileView ? 'scroll':'hidden'}}>
         {mobileView ? <></> : <ShowImage key={id.toString()} value={id} /> }
         <ShowProject key={id.toString()} value={id} />
       </div>
