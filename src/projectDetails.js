@@ -87,6 +87,7 @@ function ShowProject(props) {
 
   useEffect(() => {
     console.log('ref', divRef.current);
+    console.log('id name',id);
     if (divRef.current) {
       // divRef.current.scrollTo({
       //   top: 0,
@@ -98,14 +99,15 @@ function ShowProject(props) {
       //   behavior: "smooth",
       // });
       // divRef.current.scrollIntoView({ behavior: 'smooth'});
-      // var heightNavBar = '4vh';
-      // divRef.current.scrollIntoView(true);
-      // var scrolledY = window.scrollY;
-      // console.log('scrolled', window.scrollY);
-      // window.scroll(0, scrolledY - heightNavBar);
-      divRef.current.scrollIntoView({ behavior: 'smooth', block: 'start', inline: 'start' });
-      document.getElementsByClassName('navDisplay')[0].style.height = '4svh';
-      document.getElementsByClassName('navDisplay')[0].style.paddingTop = '2svh';
+      var heightNavBar = document.getElementsByClassName('navDisplay')[0].style.height;
+      divRef.current.scrollIntoView(true);
+      var scrolledY = window.scrollY;
+      console.log('scrolled', window.scrollY);
+      window.scroll(0, scrolledY - heightNavBar);
+      // divRef.current.scrollIntoView({ behavior: 'smooth', block: 'start', inline: 'nearest' });
+      // document.getElementsByClassName('navDisplay')[0].style.height = '4svh';
+      // document.getElementsByClassName('navDisplay')[0].style.position = 'inherit';
+      // document.getElementsByClassName('navDisplay')[0].style.paddingTop = '3svh';
       // divRef.current.scrollTo({0,5});
       // divRef.current.style.top = 0;
       // const container = divRef.current.parentNode; // Get the container element
@@ -127,7 +129,7 @@ function ShowProject(props) {
     </div>
   </div> 
   :
-  <div className="projectBackgroundColour" id={projects.id} key={projects.id} ref={divRef} style={{ 'borderTop': project.id == 1 ? 'none' : '1.6px solid #000000', height: 'auto'}}>
+  <div className="projectBackgroundColour" id={projects.id} key={projects.id} ref={divRef} data-target="refDiv" style={{ 'borderTop': project.id == 1 ? 'none' : '1.6px solid #000000', height: 'auto'}}>
     {/* {showImageInList} */}
     <ShowImage1 key={id.toString()} value={id} />
     <div id={`projectDetailDisplay-${project.id}`} className="projectDetailDisplay" onMouseEnter={() => scrollable(div, true)} style={{overflow: 'scroll', paddingLeft: '1%', paddingRight:'1%'}}>
