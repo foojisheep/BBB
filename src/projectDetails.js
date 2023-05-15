@@ -104,6 +104,8 @@ function ShowProject(props) {
       // console.log('scrolled', window.scrollY);
       // window.scroll(0, scrolledY - heightNavBar);
       divRef.current.scrollIntoView({ behavior: 'smooth', block: 'start', inline: 'start' });
+      document.getElementsByClassName('navDisplay')[0].style.height = '4svh';
+      document.getElementsByClassName('navDisplay')[0].style.paddingTop = '2svh';
       // divRef.current.scrollTo({0,5});
       // divRef.current.style.top = 0;
       // const container = divRef.current.parentNode; // Get the container element
@@ -355,7 +357,7 @@ export default function ProjectDetailPage(object) {
   const { id } = useParams();
   return (
     <div style={{ flexDirection: 'column', height: '100vh', width:"100vw" }}>        
-      <div className="navDisplay">
+      <div className="navDisplay" style={{ height: '4svh'}}>
         <Navbar />
       </div>
       {/* <div className='projectDetailsTransition' style={{ flexDirection: 'column', height: '95%'}}> */}
