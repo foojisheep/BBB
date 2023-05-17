@@ -49,7 +49,7 @@ export default function ImageAndProjects() {
           <div className='projectColumn paddingLeft projectListHeight' style={{ alignItems:'center', textAlign: 'start'}}>
             <p className='mobileExpandContentDescription' style={{ textAlign: 'start', paddingTop: '2%', paddingBottom: '2%', width: '100%'}}>{projects.details}</p>
             <div className='projectColumn' style={{ textAlign: 'end', display: 'block'}}>
-            <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-plus"><line x1="12" x2="12" y1="5" y2="19"></line><line x1="5" x2="19" y1="12" y2="12"></line></svg>
+            <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="butt" stroke-linejoin="round" class="lucide lucide-plus"><line x1="12" x2="12" y1="5" y2="19"></line><line x1="5" x2="19" y1="12" y2="12"></line></svg>
           </div>
           </div>
         </div>
@@ -69,14 +69,11 @@ export default function ImageAndProjects() {
           </div>
           <div className='projectColumn paddingLeft projectListHeight' style={{alignItems:'center', textAlign: 'start'}}>
             <p className='mobileExpandContentDescription' style={{ textAlign: 'start', paddingTop: '2%', paddingBottom: '2%' , width: '100%'}}>{projects.details}</p>
-            {/* <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-plus"><line x1="12" x2="12" y1="5" y2="19"></line><line x1="5" x2="19" y1="12" y2="12"></line></svg> */}
             <div className='projectColumn' style={{ textAlign: 'end', display: 'block'}}>
-            <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-plus"><line x1="12" x2="12" y1="5" y2="19"></line><line x1="5" x2="19" y1="12" y2="12"></line></svg>
+            {/* <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-plus"><line x1="12" x2="12" y1="5" y2="19"></line><line x1="5" x2="19" y1="12" y2="12"></line></svg> */}
+            <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="butt" stroke-linejoin="round" class="lucide lucide-plus"><line x1="12" x2="12" y1="5" y2="19"></line><line x1="5" x2="19" y1="12" y2="12"></line></svg>
           </div>
           </div>
-          {/* <div className='projectColumn' style={{ textAlign: 'end', display: 'block'}}>
-            <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-plus"><line x1="12" x2="12" y1="5" y2="19"></line><line x1="5" x2="19" y1="12" y2="12"></line></svg>
-          </div> */}
         </div>
       </div>
     }
@@ -88,9 +85,11 @@ export default function ImageAndProjects() {
       { mobileView ? 
       <>
       <div className='landingPage-full0'>
+      <a id='changeLink' href={`/project/${projects[0].id}`}>
         <div key="landing" className="landingPage-full1">
-          <LazyLoadImage id="changeImage" key='logo' className="landingPage-image1" src={projects[0].link} onMouseEnter={() => changeURL(logoBig, false)} />
+          <LazyLoadImage id="changeImage" key='logo' className="landingPage-image1" src={projects[0].link} onMouseEnter={() => changeURL(logoBig, false)}/>
         </div>
+        </a>
       </div>
       <div className="projectDisplay1">
         <table id="customers">
@@ -148,6 +147,7 @@ function isMobileExpandDetails (projects, expand) {
       document.getElementsByClassName('mobileExpandContent')[number].style.display = 'contents';
       document.getElementsByClassName('projectBackgroundColour')[number].style.backgroundColor = '#FFFFFF';
       document.getElementsByClassName('mobileExpandContent')[number].style.width = '100%';
+      document.getElementById('changeLink').href = `/project/${projects.id}`;
     } else {
       document.getElementsByClassName('mobileExpandContent')[i].style.display = 'none';
       document.getElementsByClassName('projectBackgroundColour')[i].style.backgroundColor = '#FFFFFF';

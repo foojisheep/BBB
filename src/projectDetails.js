@@ -405,9 +405,4 @@ function isMobileExpandDetails (id, expand) {
   const projectCount = 5;
   const number = parseInt(id)-1;
   console.log(number);
-  // const element = document.getElementsByClassName(`mobileExpandContent`)[0];
-  // console.log('element',element);
-
-  // element.scrollIntoView({behavior:"smooth"});
-  console.log('scroll done')
 }

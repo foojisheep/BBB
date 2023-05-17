@@ -159,9 +159,11 @@ export default function LoadingPage() {
            </div>
            {mobileView ?
            <div className='landingPage-full0'>
+            <a id='changeLink' href={`/project/${projects[0].id}`}>
             <div key="landing" className="landingPage-full1">
               <LazyLoadImage id="changeImage" key='logo' className="landingPage-image1" src={projects[0].link} alt={logoBig.toString()} onMouseEnter={() => changeURL(logoBig, false)} />
             </div>
+            </a>
            </div>
            :
            <div className='landingPage-full0' style={{ height: '70.5%'}}>
@@ -209,6 +211,7 @@ function isMobileExpandDetails (projects, expand) {
       document.getElementsByClassName('mobileExpandContent')[number].style.display = 'inline-table';
       document.getElementsByClassName('projectBackgroundColour')[number].style.backgroundColor = '#FFFFFF';
       document.getElementsByClassName('mobileExpandContent')[number].style.width = '96%';
+      document.getElementById('changeLink').href = `/project/${projects.id}`;
       console.log('isMobileExpandDetails');
     } else {
       document.getElementsByClassName('mobileExpandContent')[i].style.display = 'none';
