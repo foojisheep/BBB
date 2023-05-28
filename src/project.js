@@ -105,7 +105,7 @@ export default function ImageAndProjects() {
           <LazyLoadImage id="hoverImage" key='logo' className="landingPage-image1" src={logoBig} alt={logoBig.toString()} onMouseEnter={() => changeURL(logoBig, false)} />
         </div>
       </div>
-       <div className="projectDisplay1 collapsible" style={{ height: '26%',backgroundColor: '#FFFFFF'}}>
+       <div className="hideScrollBar projectDisplay1 collapsible" style={{ height: '26%',backgroundColor: '#FFFFFF', overflowY:'scroll'}}>
         <table id="customers">
           {content}
         </table>

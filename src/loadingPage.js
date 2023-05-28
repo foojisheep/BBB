@@ -93,7 +93,7 @@ function Projects() {
       </div>
       :
       // <div className='slideUp' style={{backgroundColor: '#FFFFFF', height:'26%'}}></div>
-      <div style={{backgroundColor: '#FFFFFF', height:'26%'}}>
+      <div className='hideScrollBar' style={{backgroundColor: '#FFFFFF', height:'26%', overflowY:'scroll'}}>
         <div className="projectDisplay1" style={{ height: '100%'}}>
           <table id="customers">
             {content}
