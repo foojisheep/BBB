@@ -185,6 +185,7 @@ const projects = [
   { id: 3, year: '  2022', mobileYear: '  2022',name: 'Hejau', details: 'A foundation of environmental psychology.', category: 'Commercial', link: './Images/Hejau/Hover.png' },
   { id: 4, year: '      ', mobileYear: '  2022',name: 'Melody Kindyland', details: 'A place just like a home and a communal place for children.', category: 'Commercial', link: './Images/Melody/Hover.png' },
   { id: 5, year: '      ', mobileYear: '  2022',name: 'Poppykat', details: 'Recalled a certain aesthetic from Wes Anderson\'s Movie.', category: 'Commercial', link: './Images/Poppy/Hover.png' },
+  { id: 6, year: '      ', mobileYear: '  2023',name: 'KLC 2', details: 'Lunar Eclipse.', category: 'Commercial', link: './Images/KLC/Hover.png' },
 ];
 
 function changeURL(projects, hover) {
