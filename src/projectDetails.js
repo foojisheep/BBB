@@ -398,7 +398,7 @@ function ShowImage(props) {
       {/* <div style ={{display:'flex', height:'66.5%', flexDirection:'column', overflow:'hidden'}}> */}
     <div className='projectDetailsImageDiv hideScrollBar' onScroll={() => hideArrow(id)}>
       <div id='projectImageDiv' className="project-Image-Div hideScrollBar" onMouseEnter={() => scrollable(div, true)} onScroll={() => hideArrow(id)} style={{ overflow: "scroll" ,position:'relative'}}>
-        <HorizontalScroll className='scroll hideScrollBar' reverseScroll={true} style={{ overflow: 'auto'}}>
+        <HorizontalScroll className='scroll hideScrollBar' reverseScroll={true} style={{ overflow: 'auto', cursor: 'pointer'}}>
          {showImage}
         </HorizontalScroll>
         {/* <div className='iconArrowDesktop' style={{ position: 'absolute', right: '5%', bottom: '3%'}}> */}
