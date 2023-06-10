@@ -203,7 +203,7 @@ function changeURL(projects, hover) {
 function isMobileExpandDetails (projects, expand) {
   console.log('isMobileExpandDetails');
   console.log(projects);
-  const projectCount = 5;
+  const projectCount = 6;
   const number = projects.id -1;
   console.log(number);
   for(let i = 0; i < projectCount; i++){

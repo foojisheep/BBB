@@ -58,7 +58,7 @@ function ShowImage1(props) {
   console.log(showImage);
   return (
     <>
-    <div id={`mobileContent-${id}`} key={id} className={`projectDetailsImageDiv mobileExpandContent`} style={{ borderBottom: '1.6px solid rgb(0, 0, 0)'}} onScrollCapture={() => hideArrow(id)} onScroll={() => hideArrow(id)}>
+    <div id={`mobileContent-${id}`} key={id} className={`projectDetailsImageDiv mobileExpandContent hideScrollBar`} style={{ borderBottom: '1.6px solid rgb(0, 0, 0)'}} onScrollCapture={() => hideArrow(id)} onScroll={() => hideArrow(id)}>
       <div id='projectImageDiv' className="project-Image-Div" onMouseEnter={() => scrollable(div, true)} onScrollCapture={() => hideArrow(id)} onScroll={() => hideArrow(id)} style={{ overflow: "scroll" , height: '51vh', position:'relative'}}>
         {/* <HorizontalScroll className='scroll' reverseScroll={true} style={{ overflow: 'auto' , position : 'inherit'}}> */}
         {/* <Button src={require('./resource/arrow.svg')}></Button> */}
@@ -220,9 +220,54 @@ function ShowProject(props) {
     </>
   );
   
-  const isLaptopContent = (
+  const isLaptopContent1 = (
     <>
     <div id='projectDetailDisplay' className="projectDetailDisplay" onMouseEnter={() => scrollable(div, true)} onScroll={() => hideArrow(id)}>
+      <table id="projectDetails" style={{width: '100%'}}>
+        <tr>
+          <th className='projectDetailsTableTitle'>{projectsDetails[id].title}</th>
+          <th></th>
+        </tr>
+      </table>
+      <div style={{ width: '100%', overflow: 'hidden'}}>
+        <div class="column" style={{paddingLeft: '3%', float: 'left', width: '22%'}}>
+          <table id="projectDetails" style={{ display: 'table-row-group'}}>
+            <tr>
+              <td style={{ verticalAlign:'top'}}>Location</td>
+              <td style={{ paddingLeft:'5%', whiteSpace:'nowrap'}}>{projectsDetails[id].location}</td>
+            </tr>
+            <tr>
+              <td style={{ verticalAlign:'top'}}>Category</td>
+              <td style={{ paddingLeft:'5%', whiteSpace:'nowrap'}}>{projectsDetails[id].category}</td>
+            </tr>
+            <tr>
+              <td style={{ verticalAlign:'top'}}>Years</td>
+              <td style={{ paddingLeft:'5%', whiteSpace:'nowrap'}}>{projectsDetails[id].years}</td>
+            </tr>
+            <tr>
+              <td style={{ verticalAlign:'top'}}>Surface</td>
+              <td style={{ paddingLeft:'5%', whiteSpace:'nowrap'}}>{projectsDetails[id].surface}</td>
+            </tr>
+            {projectsDetails[id].collab != '' &&
+              <tr>
+                <td style={{ verticalAlign:'top'}}>Collab</td>
+                <td style={{ paddingLeft:'5%', whiteSpace:'nowrap'}}>{projectsDetails[id].collab}</td>
+              </tr>
+            }
+          </table>
+          {/* <Desc1 value={projectsDetails[id]} /> */}
+        </div>
+        <div class="hideScrollBar column font-family" style={{ width: '72%', float: 'right', paddingRight: '3%', height: '16vh', overflowY:'scroll'}}>
+          <Desc1 value={projectsDetails[id]} />
+        </div>
+      </div>
+    </div>
+    </>
+  );
+
+  const isLaptopContent = (
+    <>
+    <div id='projectDetailDisplay' className="projectDetailDisplay" onMouseEnter={() => scrollable(div, true)} onScroll={() => hideArrow(id)} style={{ overflow: 'hidden'}}>
       <table id="projectDetails">
         <tr>
           <th className='projectDetailsTableTitle'>{projectsDetails[id].title}</th>
@@ -265,7 +310,7 @@ function ShowProject(props) {
   if(mobileView ){
     return(isMobileProjectList);
   } else {
-    return (isLaptopContent)
+    return (isLaptopContent1);
   }
 }
 
@@ -285,12 +330,12 @@ function Desc(object) {
     return (
       <>
         <td>
-          <table style={{ borderSpacing: '0' }}>
-            <tr>
+          {/* <table style={{ borderSpacing: '0' }}>
+            <tr> */}
               <th className='projectDescription' style={{ textAlign: 'left', display: 'table-cell', paddingLeft: '1%', verticalAlign: 'top', width: '50%', display:'table-row-group'}}>{object.value.desc1}</th>
               <th className='projectDescription' style={{ textAlign: 'left', display: 'table-cell', paddingLeft: '1%', verticalAlign: 'top', width: '50%', display:'table-row-group'}}>{object.value.desc2}</th>
-            </tr>
-          </table>
+            {/* </tr>
+          </table> */}
         </td>
       </>
     );
@@ -311,6 +356,34 @@ function Desc(object) {
   }
 }
 
+function Desc1(object) {
+  if (object.value.id == 1 || object.value.id == 5) {
+    return (
+      <>
+      <p style={{ padding: 0, margin: 0}}>{object.value.desc1}</p>
+      <p>{object.value.desc2}</p>
+      </>
+    );
+  // } else if (object.value.id == 2 || object.value.id == 4) {
+  }else{
+    return (
+      <>
+      {/* <div class="row"> */}
+        <td style={{ width: '50%', textAlign: 'left', padding: 0, margin: 0}}>{object.value.desc1}</td>
+        <td style={{ paddingLeft: '2%', width: '48%', textAlign: 'left'}}>{object.value.desc2}</td>
+      {/* </div> */}
+      </>
+    );
+  // } else {
+  //   return (
+  //     <>
+  //       <td className='projectDescription' style={{ textAlign: 'left', paddingLeft:'5%'}}>{object.value.desc1}</td>
+  //       <td className='projectDescription' style={{ textAlign: 'left', paddingLeft:'5%', paddingTop: '1%' }}>{object.value.desc2}</td>
+  //     </>
+  //   );
+  }
+}
+
 function ShowImage(props) {
   const id = parseInt(props.value) - 1;
   const photos = images[id].name;
@@ -326,9 +399,9 @@ function ShowImage(props) {
     <>    
       {/* <HorizontalScroll>   */} 
       {/* <div style ={{display:'flex', height:'66.5%', flexDirection:'column', overflow:'hidden'}}> */}
-    <div className='projectDetailsImageDiv' onScroll={() => hideArrow(id)}>
-      <div id='projectImageDiv' className="project-Image-Div" onMouseEnter={() => scrollable(div, true)} onScroll={() => hideArrow(id)} style={{ overflow: "scroll" ,position:'relative'}}>
-        <HorizontalScroll className='scroll' reverseScroll={true} style={{ overflow: 'auto'}}>
+    <div className='projectDetailsImageDiv hideScrollBar' onScroll={() => hideArrow(id)}>
+      <div id='projectImageDiv' className="project-Image-Div hideScrollBar" onMouseEnter={() => scrollable(div, true)} onScroll={() => hideArrow(id)} style={{ overflow: "scroll" ,position:'relative'}}>
+        <HorizontalScroll className='scroll hideScrollBar' reverseScroll={true} style={{ overflow: 'auto', cursor: 'pointer'}}>
          {showImage}
         </HorizontalScroll>
         {/* <div className='iconArrowDesktop' style={{ position: 'absolute', right: '5%', bottom: '3%'}}> */}
@@ -366,7 +439,7 @@ export default function ProjectDetailPage(object) {
         <Navbar />
       </div>
       {/* <div className='projectDetailsTransition' style={{ flexDirection: 'column', height: '95%'}}> */}
-      <div className='hideScrollBar' style={{ flexDirection: 'column', height: mobileView? '95svh': '95%', overflowX: mobileView ? 'scroll':'hidden'}}>
+      <div className='hideScrollBar' style={{ flexDirection: 'column', height: mobileView? '95svh': '95%', overflowX: mobileView ? 'scroll':'unset'}}>
         {mobileView ? <></> : <ShowImage key={id.toString()} value={id} /> }
         <ShowProject key={id.toString()} value={id} />
       </div>
@@ -389,16 +462,16 @@ function scrollable(div, scroll) {
   if(screenWidth < 1024 ||  isMobile){
     if (scroll) {
       if(div == 'image') {
-        document.getElementsByClassName('projectDetailDisplay')[0].style.overflow = 'hidden';
-        document.getElementsByClassName('project-Image-Div')[0].style.overflow = 'scroll';
+        // document.getElementsByClassName('projectDetailDisplay')[0].style.overflow = 'hidden';
+        // document.getElementsByClassName('project-Image-Div')[0].style.overflow = 'scroll';
       } else{
-        document.getElementsByClassName('projectDetailDisplay')[0].style.overflow = 'scroll';
-        document.getElementsByClassName('project-Image-Div')[0].style.overflow = 'hidden';
+        // document.getElementsByClassName('projectDetailDisplay')[0].style.overflow = 'scroll';
+        // document.getElementsByClassName('project-Image-Div')[0].style.overflow = 'hidden';
       }
     }
   } else {
-    document.getElementsByClassName('projectDetailDisplay')[0].style.overflow = 'scroll';
-    document.getElementsByClassName('project-Image-Div')[0].style.overflow = 'scroll';
+    // document.getElementsByClassName('projectDetailDisplay')[0].style.overflow = 'scroll';
+    // document.getElementsByClassName('project-Image-Div')[0].style.overflow = 'scroll';
   }
 }
 
