@@ -85,14 +85,14 @@ export default function ImageAndProjects() {
     <>
       { mobileView ? 
       <>
-      <div className='landingPage-full0'>
+      <div className='landingPage-full0' style={{ minHeight: '68%'}}>
       <a id='changeLink' href={`/project/${projects[0].id}`}>
         <div key="landing" className="landingPage-full1">
           <LazyLoadImage id="changeImage" key='logo' className="landingPage-image1" src={projects[0].link} onMouseEnter={() => changeURL(logoBig, false)}/>
         </div>
         </a>
       </div>
-      <div className="projectDisplay1">
+      <div className="projectDisplay1" style={{ overflowY: 'scroll'}}>
         <table id="customers">
           {isMobileContent}
         </table>

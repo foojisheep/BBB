@@ -84,8 +84,8 @@ function Projects() {
     <>
     {mobileView ? 
       // <div className='slideUp' style={{backgroundColor: '#FFFFFF', overflow: 'hidden', height: '35%'}}>
-      <div style={{backgroundColor: '#FFFFFF', width: '100%'}}>
-        <div className="projectDisplay1">
+      <div style={{backgroundColor: '#FFFFFF', width: '100%', overflowY: 'scroll'}}>
+        <div className="projectDisplay1" >
           <table id="customers">
             {isMobileContent}
           </table>
@@ -158,7 +158,7 @@ export default function LoadingPage() {
             <Navbar style={{ display: 'flex'}}/>
            </div>
            {mobileView ?
-           <div className='landingPage-full0'>
+           <div className='landingPage-full0' style={{ minHeight: '68%'}}>
             <a id='changeLink' href={`/project/${projects[0].id}`}>
             <div key="landing" className="landingPage-full1">
               <LazyLoadImage id="changeImage" key='logo' className="landingPage-image1" src={projects[0].link} alt={logoBig.toString()} onMouseEnter={() => changeURL(logoBig, false)} />
