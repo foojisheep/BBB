@@ -85,7 +85,7 @@ export default function ImageAndProjects() {
     <>
       { mobileView ? 
       <>
-      <div className='landingPage-full0' style={{ minHeight: '63%'}}>
+      <div className='landingPage-full0' style={{ minHeight: '63.5%'}}>
       <a id='changeLink' href={`/project/${projects[0].id}`}>
         <div key="landing" className="landingPage-full1">
           <LazyLoadImage id="changeImage" key='logo' className="landingPage-image1" src={projects[0].link} onMouseEnter={() => changeURL(logoBig, false)}/>
