@@ -158,7 +158,7 @@ export default function LoadingPage() {
             <Navbar style={{ display: 'flex'}}/>
            </div>
            {mobileView ?
-           <div className='landingPage-full0' style={{ minHeight: '68%'}}>
+           <div className='landingPage-full0' style={{ minHeight: '63.5%'}}>
             <a id='changeLink' href={`/project/${projects[0].id}`}>
             <div key="landing" className="landingPage-full1">
               <LazyLoadImage id="changeImage" key='logo' className="landingPage-image1" src={projects[0].link} alt={logoBig.toString()} onMouseEnter={() => changeURL(logoBig, false)} />
