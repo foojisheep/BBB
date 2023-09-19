@@ -6,7 +6,7 @@
   font-family: 'Founders Grotesk Text Test';
   font-style: normal;
   font-weight: 400;
-  font-size: 24px;
+  font-size: 28px;
   line-height: 30px;
   letter-spacing: -0.02em;
 
@@ -28,9 +28,34 @@ div.projectDisplay1 {
   /* overflow-x: hidden; */
   /* display: block; */
   display: flex;
-  height: 25%;
+  /* height: 26%; */
   flex-direction: row;
-  /* background: white; */
+  background: white;
+  cursor: pointer;
+}
+
+/* Small devices (mobile, 500px and down) */
+@media only screen and (max-width: 1024px) {
+  div.projectDisplay1 {
+    /* overflow-x: hidden; */
+    /* display: block; */
+    display: flex;
+    /* height: 70%; */
+    flex-direction: row;
+    background: white;
+  }
+
+  .projectListDisplay{
+    border-top: 1.6px solid #000000;
+    padding-top: 2%;
+    padding-bottom: 2%;
+    padding-left: 4% !important;
+    padding-right: 4% !important;
+  }
+
+  .projectListHeight {
+    height: 5vh;
+  }
 }
 
 /* Large devices (laptops/desktops, 992px and up) */
@@ -70,12 +95,17 @@ div.projectDisplay1 {
 }
 
 #customers tr:hover {
-  background-color: #FFC572
+  background-color: rgb(255,192,103);
 }
 
 #customers tr {
   border-bottom: 1.6px solid black;
   border-collapse: collapse;
+}
+
+#customers tr:last-child
+{
+  border-bottom: none;
 }
 
 #customers td {
@@ -84,11 +114,102 @@ div.projectDisplay1 {
   font-weight: 100;
   font-size: 24px;
   line-height: 30px;
-  /* letter-spacing: -0.02em; */
+  letter-spacing: 0.02em;
   color: #000000;
   text-align: left;
-  padding-left: 1%;
-  padding-right: 1%;
-  padding-top: 0.2%;
-  padding-bottom: 0.4%;
+  padding-left: 2%;
+  padding-right: 2%;
+  padding-top: 0.3%;
+  padding-bottom: 0.5%;
+}
+
+.mobileContentYear {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  height: 100%;
+  /* margin-left: 2%; */
+  margin-right: 1%;
+  margin: 0;
+  font-family: 'FoundersGroteskText';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 30px;
+  /* letter-spacing: 0.02em; */
+  color: #000000;
+  width: 80%;
+}
+
+.paddingLeft {
+  padding-left: 19.5%;
+}
+
+/* Small devices (500px and up) */
+@media only screen and (max-width: 640px) {
+  .mobileContentYear {
+    /* width: 40%; */
+  }
+
+  .paddingLeft {
+    padding-left: 20%;
+  }
+
+  .projectListHeight {
+    height: 7vh;
+  }
+}
+
+.row {
+  width: 100%;
+  height: 5%;
+}
+
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Create two equal columns that floats next to each other */
+.column {
+  float: left;
+  width: 33.3%;
+  padding: auto;
+  /* padding: 10px;
+  height: 300px; Should be removed. Only for demonstration */
+}
+
+.projectListDisplay{
+  border-top: 1.6px solid #000000;
+  padding-top: 2%;
+  padding-bottom: 2%;
+  padding-left: 2%;
+  padding-right: 2%;
+}
+
+.projectListDisplay:last-child {
+  border-bottom:none;
+}
+
+.projectColumn {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  text-align: center;
+  font-size: 18px;
+  line-height: 20px;
+}
+
+.mobileExpandContentDescription {
+  /* width: 80%; */
+  font-size: 18px;
+  margin-left: 0.8%;
+  margin-right: 1%;
+  margin-top: 0;
+  margin-bottom: 0;
+  align-items: flex-start;
+  font-family: 'FoundersGroteskText';
+  font-style: normal;
+  line-height: 20px;
 }

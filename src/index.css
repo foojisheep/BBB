@@ -8,16 +8,22 @@
 } */
 
 body {
+  padding-top: env(safe-area-inset-top);
   margin: 0;
   overflow: hidden;
   /* position: fixed; */
+  height: 100svh;
+  -webkit-overflow-scrolling: touch;
   -ms-overflow-style: hidden;  /* for Internet Explorer, Edge */
   scrollbar-width: hidden;  /* for Firefox
   /* overflow-y: scroll;  */
+  /* padding-bottom: env(safe-area-inset-bottom); */
+  /* padding-bottom: calc(100dvh - var(--webkit-footer-gap) + 5%); */
 }
 
 body::-webkit-scrollbar {
   display: none; /* for Chrome, Safari, and Opera */
+  padding-bottom: env(safe-area-inset-bottom);
 }
 
 code {
