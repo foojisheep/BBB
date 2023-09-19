@@ -9,6 +9,7 @@ import useCollapse from 'react-collapsed';
 import { LazyLoadImage } from "react-lazy-load-image-component";
 import { useContext } from 'react';
 import { ViewContext } from './ViewContext';
+import AnimationPlayer from './video'
 const screenWidth = window.innerWidth;
 
 function Projects() {
@@ -127,8 +128,8 @@ export default function LoadingPage() {
 
   useEffect(() => {
     const timer = setTimeout(() => {
-      setShowLoading(!showLoading);
-      setShowLanding(!showLanding);
+      // setShowLoading(!showLoading);
+      // setShowLanding(!showLanding);
     }, 3000)
   }, []);
 
@@ -144,8 +145,9 @@ export default function LoadingPage() {
           <div className='navDisplay' style={{ backgroundColor: 'rgb(255, 184, 242)', borderBottom: 'hidden'}}/>
           <div className="loadingPage-full">
             <div className='loadingPage-image'>
-              {logo}
-              {logo}
+              {/* {logo}
+              {logo} */}
+              <AnimationPlayer />
             </div>
           </div>
           <div className='projectDisplay1' />
