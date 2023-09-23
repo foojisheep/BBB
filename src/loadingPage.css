@@ -368,3 +368,9 @@
 .hideScrollBar::-webkit-scrollbar {
   display: none;
 }
+
+video {
+  background-image: url(resource/bbb_loading_gif.gif);
+  background-repeat: repeat;
+  background-position: center;
+}

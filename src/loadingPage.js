@@ -10,6 +10,8 @@ import { LazyLoadImage } from "react-lazy-load-image-component";
 import { useContext } from 'react';
 import { ViewContext } from './ViewContext';
 import AnimationPlayer from './video'
+import glassBBB from  './resource/bbb_loading2.mp4';
+
 const screenWidth = window.innerWidth;
 
 function Projects() {
@@ -128,8 +130,8 @@ export default function LoadingPage() {
 
   useEffect(() => {
     const timer = setTimeout(() => {
-      // setShowLoading(!showLoading);
-      // setShowLanding(!showLanding);
+      setShowLoading(!showLoading);
+      setShowLanding(!showLanding);
     }, 3000)
   }, []);
 
@@ -160,17 +162,22 @@ export default function LoadingPage() {
             <Navbar style={{ display: 'flex'}}/>
            </div>
            {mobileView ?
-           <div className='landingPage-full0' style={{ minHeight: '63.5%'}}>
+           <div className='landingPage-full0' style={{ maxHeight: '63.5%'}}>
             <a id='changeLink' href={`/project/${projects[0].id}`}>
             <div key="landing" className="landingPage-full1">
-              <LazyLoadImage id="changeImage" key='logo' className="landingPage-image1" src={projects[0].link} alt={logoBig.toString()} onMouseEnter={() => changeURL(logoBig, false)} />
+              {/* THIS PART DISPLAY IMAGE WHEN USER SELECT STORE FROM THE LIST */}
+              {/* <LazyLoadImage id="changeImage" key='logo' className="landingPage-image1" src={projects[0].link} alt={logoBig.toString()} onMouseEnter={() => changeURL(logoBig, false)} /> */}
             </div>
             </a>
            </div>
            :
-           <div className='landingPage-full0' style={{ height: '70.5%'}}>
+           <div className='landingPage-full0' style={{ maxheight: '70.5%'}}>
              <div key="landing" className="landingPage-full1">
-               <LazyLoadImage id="hoverImage" key='logo' className="landingPage-image1" src={logoBig} alt={logoBig.toString()} onMouseEnter={() => changeURL(logoBig, false)} />
+              <video id="video" controls autoPlay loop muted>
+                <source src={glassBBB} type="video/mp4"></source>
+              </video>
+              {/* THIS PART HOVER IMAGE WHEN USER SELECT STORE FROM THE LIST */}
+               {/* <LazyLoadImage id="hoverImage" key='logo' className="landingPage-image1" src={logoBig} alt={logoBig.toString()} onMouseEnter={() => changeURL(logoBig, false)} /> */}
              </div>
            </div>
            }
@@ -210,6 +217,7 @@ function isMobileExpandDetails (projects, expand) {
   for(let i = 0; i < projectCount; i++){
     if(number == i && expand) {
       document.getElementById('changeImage').src = projects.link;
+      // document.getElementById('video').style.display = 'none';
       document.getElementsByClassName('mobileExpandContent')[number].style.display = 'inline-table';
       document.getElementsByClassName('projectBackgroundColour')[number].style.backgroundColor = '#FFFFFF';
       document.getElementsByClassName('mobileExpandContent')[number].style.width = '96%';
