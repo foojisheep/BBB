@@ -179,7 +179,7 @@ export default function LoadingPage() {
            :
            <div className='landingPage-full0' style={{ height: '70.5%'}}>
              <div key="landing" className="landingPage-full1">
-              <video id="videoBBB" controls autoPlay loop muted>
+              <video id="videoBBB" autoPlay loop muted>
                 <source src={glassBBB} type="video/mp4"></source>
               </video>
               {/* THIS  PART HOVER IMAGE WHEN USER SELECT STORE FROM THE LIST */}

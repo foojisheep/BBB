@@ -102,7 +102,7 @@ export default function ImageAndProjects() {
        <>
        <div className='landingPage-full0' style={{ height: '70.5%'}}>
         <div key="landing" className="landingPage-full1">
-          <LazyLoadImage id="hoverImage" key='logo' className="landingPage-image1" src={logoBig} alt={logoBig.toString()} onMouseEnter={() => changeURL(logoBig, false)} />
+          <LazyLoadImage id="hoverImage1" key='logo' className="landingPage-image1" src={logoBig} alt={logoBig.toString()} onMouseEnter={() => changeURL(logoBig, false)} />
         </div>
       </div>
        <div className="hideScrollBar projectDisplay1 collapsible" style={{ height: '26%',backgroundColor: '#FFFFFF', overflowY:'scroll'}}>
@@ -127,12 +127,12 @@ const projects = [
 function changeURL(projects, hover) {
   if (!hover) {
     console.log('hover out');
-    document.getElementById('hoverImage').src = logoBig;
+    document.getElementById('hoverImage1').src = logoBig;
   }
 
   if (hover && projects.link.length !== 0) {
     console.log(projects.link);
-    document.getElementById('hoverImage').src = projects.link;
+    document.getElementById('hoverImage1').src = projects.link;
   }
 }
 

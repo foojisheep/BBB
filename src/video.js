@@ -5,7 +5,7 @@ import glassBBB from  './resource/bbb_loading2.mp4';
 const AnimationPlayer = () => {
   return (
     <div>
-      <video controls autoPlay loop muted>
+      <video autoPlay loop muted>
           <source src={glassBBB} type="video/mp4"></source>
         </video>
     </div>
