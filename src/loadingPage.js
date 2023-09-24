@@ -96,7 +96,7 @@ function Projects() {
       </div>
       :
       // <div className='slideUp' style={{backgroundColor: '#FFFFFF', height:'26%'}}></div>
-      <div className='hideScrollBar' style={{backgroundColor: '#FFFFFF', height:'26%', overflowY:'scroll'}}>
+      <div className='slideUp hideScrollBar' style={{backgroundColor: '#FFFFFF', height:'26%', overflowY:'scroll'}}>
         <div className="projectDisplay1" style={{ height: '100%'}}>
           <table id="customers">
             {content}
@@ -125,13 +125,13 @@ export default function LoadingPage() {
       window.removeEventListener("resize", onResize);
     };
   }, []);
-  const [showLoading, setShowLoading] = useState(true);
-  const [showLanding, setShowLanding] = useState(false);
+  const [showLoading, setShowLoading] = useState(false);
+  const [showLanding, setShowLanding] = useState(true);
 
   useEffect(() => {
     const timer = setTimeout(() => {
-      setShowLoading(!showLoading);
-      setShowLanding(!showLanding);
+      // setShowLoading(!showLoading);
+      // setShowLanding(!showLanding);
     }, 3000)
   }, []);
 
@@ -144,7 +144,7 @@ export default function LoadingPage() {
     <>
       {showLoading && (
         <div className='defaultLandingPage-full'>
-          <div className='navDisplay' style={{ backgroundColor: 'rgb(255, 184, 242)', borderBottom: 'hidden'}}/>
+          <div className='navDisplay' style={{ backgroundColor: '#FFFFFF', borderBottom: 'hidden'}}/>
           <div className="loadingPage-full">
             <div className='loadingPage-image'>
               {/* {logo}
@@ -156,28 +156,34 @@ export default function LoadingPage() {
         </div>
       )}
       {showLanding && (
-        <div className='landingPage-transition' style={{ display: 'flex', flexDirection: 'column', height: "100svh", width: "100vw" , backgroundColor: 'rgb(255, 184, 242)'}}>
+        <div className='landingPage-transition' style={{ display: 'flex', flexDirection: 'column', height: "100svh", width: "100vw" , backgroundColor: '#FFFFFF'}}>
           {/* <div className="navDisplay slideDown"> */}
-          <div className="navDisplay fixedTopPosition" style={{ height: '4%'}}>
-            <Navbar style={{ display: 'flex'}}/>
-           </div>
+          {mobileView ?
+            <div className="navDisplay fixedTopPosition" style={{ height: '4%'}}>
+              <Navbar style={{ display: 'flex'}}/>
+            </div>
+            :
+            <div className="navDisplay slideDown fixedTopPosition" style={{ height: '4%'}}>
+              <Navbar style={{ display: 'flex'}}/>
+            </div>
+            }
            {mobileView ?
-           <div className='landingPage-full0' style={{ maxHeight: '63.5%'}}>
+           <div className='landingPage-full0' style={{ minHeight: '63.5%'}}>
             <a id='changeLink' href={`/project/${projects[0].id}`}>
             <div key="landing" className="landingPage-full1">
               {/* THIS PART DISPLAY IMAGE WHEN USER SELECT STORE FROM THE LIST */}
-              {/* <LazyLoadImage id="changeImage" key='logo' className="landingPage-image1" src={projects[0].link} alt={logoBig.toString()} onMouseEnter={() => changeURL(logoBig, false)} /> */}
+              <LazyLoadImage id="changeImage" key='logo' className="landingPage-image1" src={projects[0].link} alt={logoBig.toString()} onMouseEnter={() => changeURL(logoBig, false)} />
             </div>
             </a>
            </div>
            :
-           <div className='landingPage-full0' style={{ maxheight: '70.5%'}}>
+           <div className='landingPage-full0' style={{ height: '70.5%'}}>
              <div key="landing" className="landingPage-full1">
-              <video id="video" controls autoPlay loop muted>
+              <video id="videoBBB" controls autoPlay loop muted>
                 <source src={glassBBB} type="video/mp4"></source>
               </video>
-              {/* THIS PART HOVER IMAGE WHEN USER SELECT STORE FROM THE LIST */}
-               {/* <LazyLoadImage id="hoverImage" key='logo' className="landingPage-image1" src={logoBig} alt={logoBig.toString()} onMouseEnter={() => changeURL(logoBig, false)} /> */}
+              {/* THIS  PART HOVER IMAGE WHEN USER SELECT STORE FROM THE LIST */}
+               <LazyLoadImage id="hoverImage" key='logo' className="landingPage-image1" src={logoBig} alt={logoBig.toString()} onMouseEnter={() => changeURL(logoBig, false)} />
              </div>
            </div>
            }
@@ -199,11 +205,15 @@ const projects = [
 function changeURL(projects, hover) {
   if (!hover) {
     console.log('hover out');
-    document.getElementById('hoverImage').src = logoBig;
+    // document.getElementById('hoverImage').src = logoBig;
+    document.getElementById('videoBBB').style.display = 'flex';
+    document.getElementById('hoverImage').style.display = 'none';
   }
 
   if (hover && projects.link.length !== 0) {
+    document.getElementById('videoBBB').style.display = 'none';
     console.log(projects.link);
+    document.getElementById('hoverImage').style.display = 'flex';
     document.getElementById('hoverImage').src = projects.link;
   }
 }

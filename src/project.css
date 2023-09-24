@@ -101,6 +101,7 @@ div.projectDisplay1 {
 #customers tr {
   border-bottom: 1.6px solid black;
   border-collapse: collapse;
+  border-top: 1.6px solid black;;
 }
 
 #customers tr:last-child
