@@ -8,6 +8,8 @@ import useCollapse from 'react-collapsed';
 import { LazyLoadImage } from "react-lazy-load-image-component";
 import { ViewContext } from './ViewContext';
 import { useContext } from 'react';
+import AnimationPlayer from './video'
+import glassBBB from  './resource/bbb_loading2.mp4';
 
 export default function ImageAndProjects() {
   const {mobileView, laptopView, navView} = useContext(ViewContext);
@@ -102,6 +104,11 @@ export default function ImageAndProjects() {
        <>
        <div className='landingPage-full0' style={{ height: '70.5%'}}>
         <div key="landing" className="landingPage-full1">
+          {/* <LazyLoadImage id="hoverImage1" key='logo' className="landingPage-image1" src={logoBig} alt={logoBig.toString()} onMouseEnter={() => changeURL(logoBig, false)} /> */}
+          <video id="videoBBB" autoPlay loop muted>
+            <source src={glassBBB} type="video/mp4"></source>
+          </video>
+        {/* THIS  PART HOVER IMAGE WHEN USER SELECT STORE FROM THE LIST */}
           <LazyLoadImage id="hoverImage1" key='logo' className="landingPage-image1" src={logoBig} alt={logoBig.toString()} onMouseEnter={() => changeURL(logoBig, false)} />
         </div>
       </div>
@@ -127,11 +134,15 @@ const projects = [
 function changeURL(projects, hover) {
   if (!hover) {
     console.log('hover out');
-    document.getElementById('hoverImage1').src = logoBig;
+    // document.getElementById('hoverImage').src = logoBig;
+    document.getElementById('videoBBB').style.display = 'flex';
+    document.getElementById('hoverImage1').style.display = 'none';
   }
 
   if (hover && projects.link.length !== 0) {
+    document.getElementById('videoBBB').style.display = 'none';
     console.log(projects.link);
+    document.getElementById('hoverImage1').style.display = 'flex';
     document.getElementById('hoverImage1').src = projects.link;
   }
 }
