@@ -11,6 +11,7 @@ import { useContext } from 'react';
 import { ViewContext } from './ViewContext';
 import AnimationPlayer from './video'
 import glassBBB from  './resource/bbb_loading2.mp4';
+import glassBBBMobile from  './resource/bbb_loading_mobile.mp4';
 
 const screenWidth = window.innerWidth;
 
@@ -158,7 +159,7 @@ export default function LoadingPage() {
             <a id='changeLink'>
             <div key="landing" className="landingPage-full1">
               <video id="mobileVideoBBB" autoPlay={true} loop={true} muted playsinline>
-                <source src={glassBBB} type="video/mp4"></source>
+                <source src={glassBBBMobile} type="video/mp4"></source>
               </video>
               {/* THIS PART DISPLAY IMAGE WHEN USER SELECT STORE FROM THE LIST */}
               <LazyLoadImage id="changeImage1" key='logo' className="landingPage-image1" alt={logoBig.toString()} onMouseEnter={() => changeURL(logoBig, false)} />

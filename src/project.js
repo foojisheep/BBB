@@ -10,6 +10,7 @@ import { ViewContext } from './ViewContext';
 import { useContext } from 'react';
 import AnimationPlayer from './video'
 import glassBBB from  './resource/bbb_loading2.mp4';
+import glassBBBMobile from  './resource/bbb_loading_mobile.mp4';
 
 export default function ImageAndProjects() {
   const {mobileView, laptopView, navView} = useContext(ViewContext);
@@ -91,7 +92,7 @@ export default function ImageAndProjects() {
       <a id='changeLink' href={`/project/${projects[0].id}`}>
         <div key="landing" className="landingPage-full1">
           <video id="mobileVideoBBB" autoPlay loop muted>
-            <source src={glassBBB} type="video/mp4"></source>
+            <source src={glassBBBMobile} type="video/mp4"></source>
           </video>
           <LazyLoadImage id="changeImage1" key='logo' className="landingPage-image1" src={projects[0].link} onMouseEnter={() => changeURL(logoBig, false)}/>
         </div>
