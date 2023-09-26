@@ -47,7 +47,7 @@ function Projects() {
               {projects.name}
             </div>
           </div>
-          <div id={`expanded-${projects.id}`} className="mobileExpandContent" key={`expand-${projects.id}`} {...getCollapseProps()} style={{ display: 'contents'}} onClick={()=> routeChange(projects.id)}>
+          <div id={`expanded-${projects.id}`} className="mobileExpandContent" key={`expand-${projects.id}`} {...getCollapseProps()} onClick={()=> routeChange(projects.id)}>
             <div className='projectColumn' style={{ width: '20%', textAlign: 'start'}}>
             </div>
             <div className='projectColumn paddingLeft projectListHeight' style={{ alignItems:'center', textAlign: 'start'}}>
@@ -171,11 +171,11 @@ export default function LoadingPage() {
            <div className='mobileLogoSlide landingPage-full0' style={{ minHeight: '63.5%'}}>
             <a id='changeLink' href={`/project/${projects[0].id}`}>
             <div key="landing" className="landingPage-full1">
-              <video id="videoBBB" autoPlay loop muted>
+              <video id="mobileVideoBBB" autoPlay loop muted>
                 <source src={glassBBB} type="video/mp4"></source>
               </video>
               {/* THIS PART DISPLAY IMAGE WHEN USER SELECT STORE FROM THE LIST */}
-              <LazyLoadImage id="changeImage" key='logo' className="landingPage-image1" src={projects[0].link} alt={logoBig.toString()} onMouseEnter={() => changeURL(logoBig, false)} />
+              <LazyLoadImage id="changeImage1" key='logo' className="landingPage-image1" src={projects[0].link} alt={logoBig.toString()} onMouseEnter={() => changeURL(logoBig, false)} />
             </div>
             </a>
            </div>
@@ -229,7 +229,7 @@ function isMobileExpandDetails (projects, expand) {
   console.log(number);
   for(let i = 0; i < projectCount; i++){
     if(number == i && expand) {
-      document.getElementById('changeImage').src = projects.link;
+      document.getElementById('changeImage1').src = projects.link;
       // document.getElementById('video').style.display = 'none';
       document.getElementsByClassName('mobileExpandContent')[number].style.display = 'inline-table';
       document.getElementsByClassName('projectBackgroundColour')[number].style.backgroundColor = '#FFFFFF';
@@ -237,6 +237,9 @@ function isMobileExpandDetails (projects, expand) {
       document.getElementById('changeLink').href = `/project/${projects.id}`;
       console.log('isMobileExpandDetails');
     } else {
+      console.log('expand');
+      document.getElementById('mobileVideoBBB').style.display = 'none';
+      document.getElementById('changeImage1').style.display = 'flex';
       document.getElementsByClassName('mobileExpandContent')[i].style.display = 'none';
       document.getElementsByClassName('projectBackgroundColour')[i].style.backgroundColor = '#FFFFFF';
     }

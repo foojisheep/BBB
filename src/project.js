@@ -45,7 +45,7 @@ export default function ImageAndProjects() {
             {projects.name}
           </div>
         </div>
-        <div id={`expanded-${projects.id}`} className="mobileExpandContent" key={`expand-${projects.id}`} {...getCollapseProps()} style={{ display: 'contents'}} onClick={()=> routeChange(projects.id)}>
+        <div id={`expanded-${projects.id}`} className="mobileExpandContent" key={`expand-${projects.id}`} {...getCollapseProps()} onClick={()=> routeChange(projects.id)}>
           <div className='projectColumn' style={{ width: '20%', textAlign: 'start'}}>
           </div>
           <div className='projectColumn paddingLeft projectListHeight' style={{ alignItems:'center', textAlign: 'start'}}>
@@ -90,7 +90,7 @@ export default function ImageAndProjects() {
       <div className='landingPage-full0' style={{ minHeight: '63.5%'}}>
       <a id='changeLink' href={`/project/${projects[0].id}`}>
         <div key="landing" className="landingPage-full1">
-          <video id="videoBBB" autoPlay loop muted>
+          <video id="mobileVideoBBB" autoPlay loop muted>
             <source src={glassBBB} type="video/mp4"></source>
           </video>
           <LazyLoadImage id="changeImage1" key='logo' className="landingPage-image1" src={projects[0].link} onMouseEnter={() => changeURL(logoBig, false)}/>
@@ -164,6 +164,9 @@ function isMobileExpandDetails (projects, expand) {
       document.getElementsByClassName('mobileExpandContent')[number].style.width = '100%';
       document.getElementById('changeLink').href = `/project/${projects.id}`;
     } else {
+      console.log('expand');
+      document.getElementById('mobileVideoBBB').style.display = 'none';
+      document.getElementById('changeImage1').style.display = 'flex';
       document.getElementsByClassName('mobileExpandContent')[i].style.display = 'none';
       document.getElementsByClassName('projectBackgroundColour')[i].style.backgroundColor = '#FFFFFF';
     }
