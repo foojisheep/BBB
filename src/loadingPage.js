@@ -125,37 +125,23 @@ export default function LoadingPage() {
       window.removeEventListener("resize", onResize);
     };
   }, []);
-  const [showLoading, setShowLoading] = useState(false);
-  const [showLanding, setShowLanding] = useState(true);
+  // const [showLoading, setShowLoading] = useState(false);
+  // const [showLanding, setShowLanding] = useState(true);
 
-  useEffect(() => {
-    const timer = setTimeout(() => {
-      // setShowLoading(!showLoading);
-      // setShowLanding(!showLanding);
-    }, 3000)
-  }, []);
+  // useEffect(() => {
+  //   const timer = setTimeout(() => {
+  //     // setShowLoading(!showLoading);
+  //     // setShowLanding(!showLanding);
+  //   }, 3000)
+  // }, []);
 
   const logos = [logoBig];
-  const logo = logos.map((logo, index) => (
-    <LazyLoadImage key={index} className='loadingImage' src={logo} alt={logo.toString()} />
-  ));
+  // const logo = logos.map((logo, index) => (
+  //   <LazyLoadImage key={index} className='loadingImage' src={logo} alt={logo.toString()} />
+  // ));
 
   return (
     <>
-      {showLoading && (
-        <div className='defaultLandingPage-full'>
-          <div className='navDisplay' style={{ backgroundColor: '#FFFFFF', borderBottom: 'hidden'}}/>
-          <div className="loadingPage-full">
-            <div className='loadingPage-image'>
-              {/* {logo}
-              {logo} */}
-              <AnimationPlayer />
-            </div>
-          </div>
-          <div className='projectDisplay1' />
-        </div>
-      )}
-      {showLanding && (
         <div className='landingPage-transition' style={{ display: 'flex', flexDirection: 'column', height: "100svh", width: "100vw" , backgroundColor: '#FFFFFF'}}>
           {/* <div className="navDisplay slideDown"> */}
           {/* {mobileView ?
@@ -192,7 +178,6 @@ export default function LoadingPage() {
            }
           <Projects />
         </div>
-      )}
     </>
   );
 }
