@@ -90,7 +90,10 @@ export default function ImageAndProjects() {
       <div className='landingPage-full0' style={{ minHeight: '63.5%'}}>
       <a id='changeLink' href={`/project/${projects[0].id}`}>
         <div key="landing" className="landingPage-full1">
-          <LazyLoadImage id="changeImage" key='logo' className="landingPage-image1" src={projects[0].link} onMouseEnter={() => changeURL(logoBig, false)}/>
+          <video id="videoBBB" autoPlay loop muted>
+            <source src={glassBBB} type="video/mp4"></source>
+          </video>
+          <LazyLoadImage id="changeImage1" key='logo' className="landingPage-image1" src={projects[0].link} onMouseEnter={() => changeURL(logoBig, false)}/>
         </div>
         </a>
       </div>
@@ -155,7 +158,7 @@ function isMobileExpandDetails (projects, expand) {
   console.log(number);
   for(let i = 0; i < projectCount; i++){
     if(number == i && expand) {
-      document.getElementById('changeImage').src = projects.link;
+      document.getElementById('changeImage1').src = projects.link;
       document.getElementsByClassName('mobileExpandContent')[number].style.display = 'contents';
       document.getElementsByClassName('projectBackgroundColour')[number].style.backgroundColor = '#FFFFFF';
       document.getElementsByClassName('mobileExpandContent')[number].style.width = '100%';

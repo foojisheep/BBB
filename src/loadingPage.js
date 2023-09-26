@@ -87,7 +87,7 @@ function Projects() {
     <>
     {mobileView ? 
       // <div className='slideUp' style={{backgroundColor: '#FFFFFF', overflow: 'hidden', height: '35%'}}>
-      <div style={{backgroundColor: '#FFFFFF', width: '100%', overflowY: 'scroll'}}>
+      <div className='slideUp' style={{backgroundColor: '#FFFFFF', width: '100%', overflowY: 'scroll'}}>
         <div className="projectDisplay1" >
           <table id="customers">
             {isMobileContent}
@@ -158,19 +158,22 @@ export default function LoadingPage() {
       {showLanding && (
         <div className='landingPage-transition' style={{ display: 'flex', flexDirection: 'column', height: "100svh", width: "100vw" , backgroundColor: '#FFFFFF'}}>
           {/* <div className="navDisplay slideDown"> */}
-          {mobileView ?
+          {/* {mobileView ?
             <div className="navDisplay fixedTopPosition" style={{ height: '4%'}}>
               <Navbar style={{ display: 'flex'}}/>
             </div>
-            :
+            : */}
             <div className="navDisplay slideDown fixedTopPosition" style={{ height: '4%'}}>
               <Navbar style={{ display: 'flex'}}/>
             </div>
-            }
+            {/* } */}
            {mobileView ?
-           <div className='landingPage-full0' style={{ minHeight: '63.5%'}}>
+           <div className='mobileLogoSlide landingPage-full0' style={{ minHeight: '63.5%'}}>
             <a id='changeLink' href={`/project/${projects[0].id}`}>
             <div key="landing" className="landingPage-full1">
+              <video id="videoBBB" autoPlay loop muted>
+                <source src={glassBBB} type="video/mp4"></source>
+              </video>
               {/* THIS PART DISPLAY IMAGE WHEN USER SELECT STORE FROM THE LIST */}
               <LazyLoadImage id="changeImage" key='logo' className="landingPage-image1" src={projects[0].link} alt={logoBig.toString()} onMouseEnter={() => changeURL(logoBig, false)} />
             </div>

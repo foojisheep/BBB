@@ -40,6 +40,7 @@
 
 .slideDown {
   animation: navBarSlide 2s ;
+  /* animation-fill-mode: linear forwards; */
   /* position: absolute; */
   /* left: 0; */
   /* top: 0; */
@@ -57,6 +58,7 @@
 
 .slideUp{
   animation: projectSlide 2s;
+  /* animation-fill-mode: linear forwards; */
 }
 
 .loadingPage-full {
@@ -379,4 +381,23 @@ video {
 
 #hoverImage {
   display: none;
+}
+
+#changeImage {
+  display: none;
+}
+
+@-webkit-keyframes logoSlide {
+  0% {transform: translateY(40%);}
+  100% {transform: translateY(0%);}
+}
+
+@keyframes logoSlide {
+  0% {transform: translateY(40%);}
+  100% {transform: translateY(0%);}
+}
+
+.mobileLogoSlide{
+  animation: logoSlide 2s;
+  /* animation-fill-mode: linear forwards; */
 }
