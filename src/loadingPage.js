@@ -136,9 +136,9 @@ export default function LoadingPage() {
   // }, []);
 
   const logos = [logoBig];
-  // const logo = logos.map((logo, index) => (
-  //   <LazyLoadImage key={index} className='loadingImage' src={logo} alt={logo.toString()} />
-  // ));
+  const logo = logos.map((logo, index) => (
+    <LazyLoadImage key={index} className='loadingImage' src={logo} alt={logo.toString()} />
+  ));
 
   return (
     <>
@@ -155,7 +155,7 @@ export default function LoadingPage() {
             {/* } */}
            {mobileView ?
            <div className='mobileLogoSlide landingPage-full0' style={{ minHeight: '63.5%'}}>
-            <a id='changeLink' href={`/project/${projects[0].id}`}>
+            <a id='changeLink'>
             <div key="landing" className="landingPage-full1">
               <video id="mobileVideoBBB" autoPlay={true} loop={true} muted playsinline>
                 <source src={glassBBB} type="video/mp4"></source>
