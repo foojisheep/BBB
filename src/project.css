@@ -231,7 +231,7 @@ video {
   display: none;
 }
 
-#mobileVideoBBB {
+/* #mobileVideoBBB {
   -o-object-fit: cover;
     object-fit: cover;
-}
+} */
