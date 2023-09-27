@@ -158,8 +158,8 @@ export default function LoadingPage() {
            <div className='mobileLogoSlide landingPage-full0' style={{ minHeight: '63.5%'}}>
             <a id='changeLink'>
             <div key="landing" className="landingPage-full1">
-              <video id="mobileVideoBBB" autoPlay muted loop playsInline src={glassBBBMobile}>
-                {/* <source src={glassBBBMobile} type="video/mp4"></source> */}
+              <video id="mobileVideoBBB" autoPlay muted loop playsInline>
+                <source src={glassBBBMobile} type="video/mp4"/>
               </video>
               {/* THIS PART DISPLAY IMAGE WHEN USER SELECT STORE FROM THE LIST */}
               <LazyLoadImage id="changeImage1" key='logo' className="landingPage-image1" alt={logoBig.toString()} onMouseEnter={() => changeURL(logoBig, false)} />
