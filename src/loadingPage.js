@@ -158,7 +158,7 @@ export default function LoadingPage() {
            <div className='mobileLogoSlide landingPage-full0' style={{ minHeight: '63.5%'}}>
             <a id='changeLink'>
             <div key="landing" className="landingPage-full1">
-              <video id="mobileVideoBBB" autoPlay muted loop playsInline src={glassBBBMobile}>
+              <video id="mobileVideoBBB" autoPlay muted loop playsInline preload='auto' src={glassBBBMobile}>
                 {/* <source src={glassBBBMobile} type="video/mp4"></source> */}
               </video>
               {/* THIS PART DISPLAY IMAGE WHEN USER SELECT STORE FROM THE LIST */}
