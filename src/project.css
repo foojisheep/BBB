@@ -230,3 +230,8 @@ video {
 #changeImage1 {
   display: none;
 }
+
+#mobileVideoBBB {
+  -o-object-fit: cover;
+    object-fit: cover;
+}

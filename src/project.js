@@ -91,7 +91,7 @@ export default function ImageAndProjects() {
       <div className='landingPage-full0' style={{ minHeight: '63.5%'}}>
       <a id='changeLink'>
         <div key="landing" className="landingPage-full1">
-          <video id="mobileVideoBBB" autoPlay muted loop playsinline src={glassBBBMobile}>
+        <video id="mobileVideoBBB" autoPlay={true} muted control={false} loop={true} playsinline src={glassBBBMobile}>
             {/* <source src={glassBBBMobile} type="video/mp4"></source> */}
           </video>
           <LazyLoadImage id="changeImage1" key='logo' className="landingPage-image1" src={projects[0].link} onMouseEnter={() => changeURL(logoBig, false)}/>

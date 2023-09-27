@@ -401,3 +401,8 @@ video {
   animation: logoSlide 2s;
   /* animation-fill-mode: linear forwards; */
 }
+
+#mobileVideoBBB {
+  -o-object-fit: cover;
+    object-fit: cover;
+}
