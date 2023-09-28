@@ -57,14 +57,13 @@ function ShowImage1(props) {
     <>
     <div id={`mobileContent-${id}`} key={id} className={`projectDetailsImageDiv mobileExpandContent hideScrollBar`} style={{ borderBottom: '1.6px solid rgb(0, 0, 0)'}} onScrollCapture={() => hideArrow(id)} onScroll={() => hideArrow(id)}>
       <div id='projectImageDiv' className="project-Image-Div" onMouseEnter={() => scrollable(div, true)} onScrollCapture={() => hideArrow(id)} onScroll={() => hideArrow(id)} style={{ overflow: "scroll" , height: '51vh', position:'relative'}}>
-        {/* <HorizontalScroll className='scroll' reverseScroll={true} style={{ overflow: 'auto' , position : 'inherit'}}> */}
-        {/* <Button src={require('./resource/arrow.svg')}></Button> */}
         {showImage}
-        {/* <LazyLoadImage src={arrow} /> */}
-        {/* </HorizontalScroll> */}
         <div className='iconArrow' style={{ position: 'absolute', right: '2%', bottom: '1%', display: 'flex'}}>
-          <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="0.5" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-arrow-right-circle"><circle cx="12" cy="12" r="10" style={{ fill: 'white'}}></circle><polyline points="12 16 16 12 12 8"></polyline><line x1="8" x2="16" y1="12" y2="12"></line></svg>
-          {/* <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-arrow-right-circle"><circle cx="12" cy="12" r="10" style={{ fill: 'white'}}></circle><polyline points="12 16 16 12 12 8"></polyline><line x1="8" x2="16" y1="12" y2="12"></line></svg> */}
+          <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="0.5" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-arrow-right-circle">
+            <circle cx="12" cy="12" r="10" style={{ fill: 'white'}}></circle>
+            <polyline points="12 16 16 12 12 8"></polyline>
+            <line x1="8" x2="16" y1="12" y2="12"></line>
+          </svg>
         </div>
       </div>
     </div>
@@ -89,29 +88,11 @@ function ShowProject(props) {
     console.log('ref', divRef.current);
     console.log('id name',id);
     if (divRef.current) {
-      // divRef.current.scrollTo({
-      //   top: 0,
-      //   behavior: 'smooth'
-      // });
-      // divRef.current.scrollTop
-      // divRef.current.scrollTo({
-      //   top: divRef.offsetTop,
-      //   behavior: "smooth",
-      // });
-      // divRef.current.scrollIntoView({ behavior: 'smooth'});
       var heightNavBar = document.getElementsByClassName('navDisplay')[0].style.height;
       divRef.current.scrollIntoView(true);
       var scrolledY = window.scrollY;
       console.log('scrolled', window.scrollY);
       window.scroll(0, scrolledY - heightNavBar);
-      // divRef.current.scrollIntoView({ behavior: 'smooth', block: 'start', inline: 'nearest' });
-      // document.getElementsByClassName('navDisplay')[0].style.height = '4svh';
-      // document.getElementsByClassName('navDisplay')[0].style.position = 'inherit';
-      // document.getElementsByClassName('navDisplay')[0].style.paddingTop = '3svh';
-      // divRef.current.scrollTo({0,5});
-      // divRef.current.style.top = 0;
-      // const container = divRef.current.parentNode; // Get the container element
-      // container.scrollTop = 0;
     }
   }, []);
 
@@ -173,49 +154,6 @@ function ShowProject(props) {
   }
   </>
   );
-
-  const isMobileContent = (
-    <>
-    <div id={`projectDetailDisplay-${id}`} className="projectDetailDisplay" onMouseEnter={() => scrollable(div, true)} onScroll={() => hideArrow(id)} style={{overflow: 'scroll', paddingLeft: '1%', paddingRight:'1%'}}>
-      <table id="projectDetails">
-        <tr>
-          <th className='projectDetailsTableTitle'>{projectsDetails[id].title}</th>
-          { mobileView ? <></> : <th></th>}
-        </tr>
-        <tr>
-          <td style={{ width: '18%', verticalAlign: 'top' }}>
-            <table style={{ display: 'table-row-group'}}>
-              <tr>
-                <td style={{ verticalAlign:'top'}}>Location</td>
-                <td style={{ paddingLeft:'5%', whiteSpace:'nowrap'}}>{projectsDetails[id].location}</td>
-              </tr>
-              <tr>
-                <td style={{ verticalAlign:'top'}}>Category</td>
-                <td style={{ paddingLeft:'5%', whiteSpace:'nowrap'}}>{projectsDetails[id].category}</td>
-              </tr>
-              <tr>
-                <td style={{ verticalAlign:'top'}}>Years</td>
-                <td style={{ paddingLeft:'5%', whiteSpace:'nowrap'}}>{projectsDetails[id].years}</td>
-              </tr>
-              <tr>
-                <td style={{ verticalAlign:'top'}}>Surface</td>
-                <td style={{ paddingLeft:'5%', whiteSpace:'nowrap'}}>{projectsDetails[id].surface}</td>
-              </tr>
-              {projectsDetails[id].collab != '' &&
-                <tr>
-                  <td style={{ verticalAlign:'top'}}>Collab</td>
-                  <td style={{ paddingLeft:'5%', whiteSpace:'nowrap'}}>{projectsDetails[id].collab}</td>
-                </tr>
-              }
-            </table>
-          </td>
-        </tr>
-      </table>
-      <MobileDesc value={projectsDetails[id]} />
-    </div>
-    {isMobileProjectList}
-    </>
-  );
   
   const isLaptopContent1 = (
     <>
@@ -262,48 +200,6 @@ function ShowProject(props) {
     </>
   );
 
-  const isLaptopContent = (
-    <>
-    <div id='projectDetailDisplay' className="projectDetailDisplay" onMouseEnter={() => scrollable(div, true)} onScroll={() => hideArrow(id)} style={{ overflow: 'hidden'}}>
-      <table id="projectDetails">
-        <tr>
-          <th className='projectDetailsTableTitle'>{projectsDetails[id].title}</th>
-          <th></th>
-        </tr>
-        <tr>
-          <td style={{ width: '20%', verticalAlign: 'top' }}>
-            <table style={{ display: 'table-row-group'}}>
-              <tr>
-                <td style={{ verticalAlign:'top'}}>Location</td>
-                <td style={{ paddingLeft:'5%', whiteSpace:'nowrap'}}>{projectsDetails[id].location}</td>
-              </tr>
-              <tr>
-                <td style={{ verticalAlign:'top'}}>Category</td>
-                <td style={{ paddingLeft:'5%', whiteSpace:'nowrap'}}>{projectsDetails[id].category}</td>
-              </tr>
-              <tr>
-                <td style={{ verticalAlign:'top'}}>Years</td>
-                <td style={{ paddingLeft:'5%', whiteSpace:'nowrap'}}>{projectsDetails[id].years}</td>
-              </tr>
-              <tr>
-                <td style={{ verticalAlign:'top'}}>Surface</td>
-                <td style={{ paddingLeft:'5%', whiteSpace:'nowrap'}}>{projectsDetails[id].surface}</td>
-              </tr>
-              {projectsDetails[id].collab != '' &&
-                <tr>
-                  <td style={{ verticalAlign:'top'}}>Collab</td>
-                  <td style={{ paddingLeft:'5%', whiteSpace:'nowrap'}}>{projectsDetails[id].collab}</td>
-                </tr>
-              }
-            </table>
-          </td>
-          <Desc value={projectsDetails[id]} />
-        </tr>
-      </table>
-    </div>
-    </>
-  );
-
   if(mobileView ){
     return(isMobileProjectList);
   } else {
@@ -327,12 +223,8 @@ function Desc(object) {
     return (
       <>
         <td>
-          {/* <table style={{ borderSpacing: '0' }}>
-            <tr> */}
-              <th className='projectDescription' style={{ textAlign: 'left', display: 'table-cell', paddingLeft: '1%', verticalAlign: 'top', width: '50%', display:'table-row-group'}}>{object.value.desc1}</th>
-              <th className='projectDescription' style={{ textAlign: 'left', display: 'table-cell', paddingLeft: '1%', verticalAlign: 'top', width: '50%', display:'table-row-group'}}>{object.value.desc2}</th>
-            {/* </tr>
-          </table> */}
+            <th className='projectDescription' style={{ textAlign: 'left', display: 'table-cell', paddingLeft: '1%', verticalAlign: 'top', width: '50%', display:'table-row-group'}}>{object.value.desc1}</th>
+            <th className='projectDescription' style={{ textAlign: 'left', display: 'table-cell', paddingLeft: '1%', verticalAlign: 'top', width: '50%', display:'table-row-group'}}>{object.value.desc2}</th>
         </td>
       </>
     );
@@ -361,23 +253,13 @@ function Desc1(object) {
       <p>{object.value.desc2}</p>
       </>
     );
-  // } else if (object.value.id == 2 || object.value.id == 4) {
   }else{
     return (
       <>
-      {/* <div class="row"> */}
         <td style={{ width: '50%', textAlign: 'left', padding: 0, margin: 0}}>{object.value.desc1}</td>
         <td style={{ paddingLeft: '2%', width: '48%', textAlign: 'left'}}>{object.value.desc2}</td>
-      {/* </div> */}
       </>
     );
-  // } else {
-  //   return (
-  //     <>
-  //       <td className='projectDescription' style={{ textAlign: 'left', paddingLeft:'5%'}}>{object.value.desc1}</td>
-  //       <td className='projectDescription' style={{ textAlign: 'left', paddingLeft:'5%', paddingTop: '1%' }}>{object.value.desc2}</td>
-  //     </>
-  //   );
   }
 }
 
@@ -394,20 +276,13 @@ function ShowImage(props) {
   const div = 'image';
   return (
     <>    
-      {/* <HorizontalScroll>   */} 
-      {/* <div style ={{display:'flex', height:'66.5%', flexDirection:'column', overflow:'hidden'}}> */}
-    <div className='projectDetailsImageDiv hideScrollBar' onScroll={() => hideArrow(id)}>
-      <div id='projectImageDiv' className="project-Image-Div hideScrollBar" onMouseEnter={() => scrollable(div, true)} onScroll={() => hideArrow(id)} style={{ overflow: "scroll" ,position:'relative'}}>
-        <HorizontalScroll className='scroll hideScrollBar' reverseScroll={true} style={{ overflow: 'auto', cursor: 'pointer'}}>
-         {showImage}
-        </HorizontalScroll>
-        {/* <div className='iconArrowDesktop' style={{ position: 'absolute', right: '5%', bottom: '3%'}}> */}
-          {/* <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="0.5" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-arrow-right-circle"><circle cx="12" cy="12" r="10" style={{ fill: 'white'}}></circle><polyline points="12 16 16 12 12 8"></polyline><line x1="8" x2="16" y1="12" y2="12"></line></svg> */}
-          {/* <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-arrow-right-circle"><circle cx="12" cy="12" r="10" style={{ fill: 'white'}}></circle><polyline points="12 16 16 12 12 8"></polyline><line x1="8" x2="16" y1="12" y2="12"></line></svg> */}
-        {/* </div> */}
+      <div className='projectDetailsImageDiv hideScrollBar' onScroll={() => hideArrow(id)}>
+        <div id='projectImageDiv' className="project-Image-Div hideScrollBar" onMouseEnter={() => scrollable(div, true)} onScroll={() => hideArrow(id)} style={{ overflow: "scroll" ,position:'relative'}}>
+          <HorizontalScroll className='scroll hideScrollBar' reverseScroll={true} style={{ overflow: 'auto', cursor: 'pointer'}}>
+          {showImage}
+          </HorizontalScroll>
+        </div>
       </div>
-      </div>
-      {/* </HorizontalScroll> */}
     </>
   );
 }
@@ -435,7 +310,6 @@ export default function ProjectDetailPage(object) {
       <div className="navDisplay" style={{ height: '4svh'}}>
         <Navbar />
       </div>
-      {/* <div className='projectDetailsTransition' style={{ flexDirection: 'column', height: '95%'}}> */}
       <div className='hideScrollBar' style={{ flexDirection: 'column', height: mobileView? '95svh': '95%', overflowX: mobileView ? 'scroll':'unset'}}>
         {mobileView ? <></> : <ShowImage key={id.toString()} value={id} /> }
         <ShowProject key={id.toString()} value={id} />
@@ -450,9 +324,6 @@ function hideArrow(id){
   const icon = document.getElementsByClassName('iconArrow');
   console.log('icon ', icon[0]);
   document.getElementsByClassName('iconArrow')[0].style.display = 'none';
-  // const iconDesktop = document.getElementsByClassName('iconArrowDesktop');
-  // console.log('icon desktop', iconDesktop[0]);
-  // document.getElementsByClassName('iconArrowDesktop')[0].style.display = 'none';
 }
 
 function scrollable(div, scroll) {
