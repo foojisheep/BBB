@@ -58,7 +58,7 @@ function ShowImage1(props) {
     <div id={`mobileContent-${id}`} key={id} className={`projectDetailsImageDiv mobileExpandContent hideScrollBar`} style={{ borderBottom: '1.6px solid rgb(0, 0, 0)'}} onScrollCapture={() => hideArrow(id)} onScroll={() => hideArrow(id)}>
       <div id='projectImageDiv' className="project-Image-Div" onMouseEnter={() => scrollable(div, true)} onScrollCapture={() => hideArrow(id)} onScroll={() => hideArrow(id)} style={{ overflow: "scroll" , height: '51vh', position:'relative'}}>
         {showImage}
-        <div className='iconArrow' style={{ position: 'absolute', right: '2%', bottom: '1%', display: 'flex'}}>
+        <div className='iconArrowMobile' style={{ position: 'absolute', right: '2%', bottom: '1%', display: 'flex'}}>
           <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="0.5" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-arrow-right-circle">
             <circle cx="12" cy="12" r="10" style={{ fill: 'white'}}></circle>
             <polyline points="12 16 16 12 12 8"></polyline>
@@ -157,7 +157,7 @@ function ShowProject(props) {
   
   const isLaptopContent1 = (
     <>
-    <div id='projectDetailDisplay' className="projectDetailDisplay" onMouseEnter={() => scrollable(div, true)} onScroll={() => hideArrow(id)}>
+    <div id='projectDetailDisplay' className="projectDetailDisplay" onMouseEnter={() => scrollable(div, true)} onScroll={() => hideArrowDesktop(id)}>
       <table id="projectDetails" style={{width: '100%'}}>
         <tr>
           <th className='projectDetailsTableTitle'>{projectsDetails[id].title}</th>
@@ -276,11 +276,18 @@ function ShowImage(props) {
   const div = 'image';
   return (
     <>    
-      <div className='projectDetailsImageDiv hideScrollBar' onScroll={() => hideArrow(id)}>
-        <div id='projectImageDiv' className="project-Image-Div hideScrollBar" onMouseEnter={() => scrollable(div, true)} onScroll={() => hideArrow(id)} style={{ overflow: "scroll" ,position:'relative'}}>
+      <div className='projectDetailsImageDiv hideScrollBar' onScrollCapture={() => hideArrowDesktop(id)} onScroll={() => hideArrowDesktop(id)}>
+        <div id='projectImageDiv' className="project-Image-Div hideScrollBar" onMouseEnter={() => scrollable(div, true)} onScrollCapture={() => hideArrowDesktop(id)} onScroll={() => hideArrowDesktop(id)} style={{ overflow: "scroll" ,position:'relative'}}>
           <HorizontalScroll className='scroll hideScrollBar' reverseScroll={true} style={{ overflow: 'auto', cursor: 'pointer'}}>
           {showImage}
           </HorizontalScroll>
+          <div className='iconArrow' style={{ position: 'absolute', right: '2%', bottom: '1%', display: 'flex'}}>
+            <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="0.5" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-arrow-right-circle">
+              <circle cx="12" cy="12" r="10" style={{ fill: 'white'}}></circle>
+              <polyline points="12 16 16 12 12 8"></polyline>
+              <line x1="8" x2="16" y1="12" y2="12"></line>
+            </svg>
+          </div>
         </div>
       </div>
     </>
@@ -320,9 +327,15 @@ export default function ProjectDetailPage(object) {
 
 function hideArrow(id){
   const number = id;
+  console.log('iconArrowMobile');
+  const icon = document.getElementsByClassName('iconArrowMobile');
+  document.getElementsByClassName('iconArrowMobile')[0].style.display = 'none';
+}
+
+function hideArrowDesktop(id){
+  const number = id;
   console.log('iconArrow');
-  const icon = document.getElementsByClassName('iconArrow');
-  console.log('icon ', icon[0]);
+  const iconDesktop = document.getElementsByClassName('iconArrow');
   document.getElementsByClassName('iconArrow')[0].style.display = 'none';
 }
 
