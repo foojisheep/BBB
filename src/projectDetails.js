@@ -48,14 +48,14 @@ function ShowImage1(props) {
   console.log('show image here!');
   const showImage = photos.map((index) => {
     return (
-      <LazyLoadImage id={`${file}-${index}`} style={{ padding: 0 }} key={`${file}-${index}`} className="project-image" src={require(`./resource/Images/${file}/${index}.${format}`)} alt={`${file}-${index}`} />
+      <LazyLoadImage id={`${file}-${index}`} style={{ padding: 0 }} key={`mobile-${file}-${index}`} className="project-image" src={require(`./resource/Images/${file}/${index}.${format}`)} alt={`${file}-${index}`} />
     );
   });
   const div = 'image';
   console.log(showImage);
   return (
     <>
-    <div id={`mobileContent-${id}`} key={id} className={`projectDetailsImageDiv mobileExpandContent hideScrollBar`} style={{ borderBottom: '1.6px solid rgb(0, 0, 0)'}} onScrollCapture={() => hideArrow(id)} onScroll={() => hideArrow(id)}>
+    <div id={`mobileContent-${id}`} key={id} className={`projectDetailsMobileImageDiv mobileExpandContent hideScrollBar`} style={{ borderBottom: '1.6px solid rgb(0, 0, 0)'}} onScrollCapture={() => hideArrow(id)} onScroll={() => hideArrow(id)}>
       <div id='projectImageDiv' className="project-Image-Div" onMouseEnter={() => scrollable(div, true)} onScrollCapture={() => hideArrow(id)} onScroll={() => hideArrow(id)} style={{ overflow: "scroll" , height: '51vh', position:'relative'}}>
         {showImage}
         <div className='iconArrowMobile' style={{ position: 'absolute', right: '2%', bottom: '1%', display: 'flex'}}>
@@ -157,6 +157,7 @@ function ShowProject(props) {
   
   const isLaptopContent1 = (
     <>
+    <ShowImage key={id.toString()} value={id} />
     <div id='projectDetailDisplay' className="projectDetailDisplay" onMouseEnter={() => scrollable(div, true)} onScroll={() => hideArrowDesktop(id)}>
       <table id="projectDetails" style={{width: '100%'}}>
         <tr>
@@ -200,11 +201,11 @@ function ShowProject(props) {
     </>
   );
 
-  if(mobileView ){
-    return(isMobileProjectList);
-  } else {
-    return (isLaptopContent1);
-  }
+  return(
+    <>
+    { mobileView ? isMobileProjectList : isLaptopContent1 }
+    </>
+  )
 }
 
 function MobileDesc(object) {
@@ -318,7 +319,6 @@ export default function ProjectDetailPage(object) {
         <Navbar />
       </div>
       <div className='hideScrollBar' style={{ flexDirection: 'column', height: mobileView? '95svh': '95%', overflowX: mobileView ? 'scroll':'unset'}}>
-        {mobileView ? <></> : <ShowImage key={id.toString()} value={id} /> }
         <ShowProject key={id.toString()} value={id} />
       </div>
     </div>
