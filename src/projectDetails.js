@@ -283,13 +283,13 @@ function ShowImage(props) {
           <HorizontalScroll className='scroll hideScrollBar' reverseScroll={true} style={{ overflow: 'auto', cursor: 'pointer'}}>
           {showImage}
           </HorizontalScroll>
-          <div className='iconArrow' style={{ position: 'absolute', right: '2%', bottom: '1%', display: 'flex'}}>
+          {/* <div className='iconArrow' style={{ position: 'absolute', right: '2%', bottom: '1%', display: 'flex'}}>
             <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="0.5" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-arrow-right-circle">
               <circle cx="12" cy="12" r="10" style={{ fill: 'white'}}></circle>
               <polyline points="12 16 16 12 12 8"></polyline>
               <line x1="8" x2="16" y1="12" y2="12"></line>
             </svg>
-          </div>
+          </div> */}
         </div>
       </div>
     </>
@@ -336,7 +336,7 @@ function hideArrow(id){
 function hideArrowDesktop(){
   // const divScrolled = document.getElementsByClassName('projectImageDiv');
   // console.log('123',divScrolled.scrollRight);
-  const iconDesktop = document.getElementsByClassName('iconArrow')[0];
+  // const iconDesktop = document.getElementsByClassName('iconArrow')[0];
   // if (iconDesktop) {
   //   document.getElementsByClassName('iconArrow')[0].style.display = 'flex';
   // }

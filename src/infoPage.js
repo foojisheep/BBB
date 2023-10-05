@@ -43,7 +43,7 @@ function InfoPage () {
       </div>
       :
       <div className='contentDescriptionHeight'>
-         <ul style={{ textAlign: 'left',paddingTop:'3%', width: '100%', whiteSpace: 'none'}}>
+         <ul style={{ textAlign: 'left',paddingTop:'3%', width: '105%', whiteSpace: 'none'}}>
              <li id="infoContent">BBB is an interior design studio based in </li>
              <li id="infoContent">Kuala Lumpur. We create non-linear</li>
              <li id="infoContent">narratives associated with a sense of place -</li>
