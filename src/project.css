@@ -142,9 +142,9 @@ div.projectDisplay1 {
   width: 80%;
 }
 
-.paddingLeft {
+/* .paddingLeft {
   padding-left: 19.5%;
-}
+} */
 
 /* Small devices (500px and up) */
 @media only screen and (max-width: 640px) {
