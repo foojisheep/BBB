@@ -11,6 +11,7 @@ import { LazyLoadImage } from "react-lazy-load-image-component";
 import { ViewContext } from './ViewContext';
 import { useContext } from 'react';
 import useCollapse from 'react-collapsed';
+import chucksHover from  './resource/Images/Chucks/Hover.jpg';
 
 const screenWidth = window.innerWidth;
 
@@ -33,7 +34,7 @@ const projectsDetails = [
 ];
 
 const projects = [
-  { id: 1, year: '  2023', mobileYear: '  2023', name: 'Chucks', details: 'Emotional connection across 5,313km.', category: 'Commercial', link: './Images/Chucks/Hover.jpg' },
+  { id: 1, year: '  2023', mobileYear: '  2023', name: 'Chucks', details: 'Emotional connection across 5,313km.', category: 'Commercial', link: chucksHover },
   { id: 2, year: '      ', mobileYear: '  2023', name: 'Wangsa9 Penthouse', details: 'Emotional connection across 5,313km.', category: 'Residential', link: './Images/Wangsa/Hover.png' },
   { id: 3, year: '      ', mobileYear: '  2023',name: 'KLC', details: 'Lunar Eclipse.', category: 'Commercial', link: './Images/KLC/Hover.png' },
   { id: 4, year: '  2022', mobileYear: '  2022',name: 'Hejau', details: 'A foundation of environmental psychology.', category: 'Commercial', link: './Images/Hejau/Hover.png' },
