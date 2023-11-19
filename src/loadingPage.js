@@ -162,7 +162,7 @@ export default function LoadingPage() {
                 <source src={glassBBBMobile} type="video/mp4"/>
               </video>
               {/* THIS PART DISPLAY IMAGE WHEN USER SELECT STORE FROM THE LIST */}
-              <LazyLoadImage id="changeImage1" key='logo' className="landingPage-image1" alt={logoBig.toString()} onMouseEnter={() => changeURL(logoBig, false)} />
+              <LazyLoadImage id="changeImage1" key='logo' className="landingPage-image1" onMouseEnter={() => changeURL(logoBig, false)} />
             </div>
             </a>
            </div>
@@ -184,7 +184,7 @@ export default function LoadingPage() {
 }
 
 const projects = [
-  { id: 1, year: '  2023', mobileYear: '  2023', name: 'Chucks', details: 'Unexpected, fun, curious.', category: 'Commercial', link: './Images/Chucks/Hover.png' },
+  { id: 1, year: '  2023', mobileYear: '  2023', name: 'Chucks', details: 'Unexpected, fun, curious.', category: 'Commercial', link: './Images/Chucks/Hover.jpg' },
   { id: 2, year: '      ', mobileYear: '  2023', name: 'Wangsa9 Penthouse', details: 'Emotional connection across 5,313km.', category: 'Residential', link: './Images/Wangsa/Hover.png' },
   { id: 3, year: '      ', mobileYear: '  2023', name: 'KLC', details: 'Lunar Eclipse.', category: 'Commercial', link: './Images/KLC/Hover.png' },
   { id: 4, year: '  2022', mobileYear: '  2022', name: 'Hejau', details: 'A foundation of environmental psychology.', category: 'Commercial', link: './Images/Hejau/Hover.png' },

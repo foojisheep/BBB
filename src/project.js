@@ -21,7 +21,7 @@ export default function ImageAndProjects() {
     let path = `/project/${projectId}`;
     navigate(path);
   }
-  // console.log(projects[1].category);
+
   const content = projects.map((projects) =>
     <tr key={projects.id} onMouseEnter={() => changeURL(projects, true)} onClick={() => routeChange(projects.id)}>
       <td>  </td>
@@ -113,7 +113,7 @@ export default function ImageAndProjects() {
             <source src={glassBBB} type="video/mp4"></source>
           </video>
         {/* THIS  PART HOVER IMAGE WHEN USER SELECT STORE FROM THE LIST */}
-          <LazyLoadImage id="hoverImage1" key='logo' className="landingPage-image1" src={logoBig} alt={logoBig.toString()} onMouseEnter={() => changeURL(logoBig, false)} />
+          <LazyLoadImage id="hoverImage1" key='logo' className="landingPage-image1" src={logoBig} onMouseEnter={() => changeURL(logoBig, false)} />
         </div>
       </div>
        <div className="hideScrollBar projectDisplay1 collapsible" style={{ height: '26%',backgroundColor: '#FFFFFF', overflowY:'scroll'}}>

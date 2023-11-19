@@ -11,7 +11,6 @@ import { LazyLoadImage } from "react-lazy-load-image-component";
 import { ViewContext } from './ViewContext';
 import { useContext } from 'react';
 import useCollapse from 'react-collapsed';
-import arrow from './resource/arrow.svg';
 
 const screenWidth = window.innerWidth;
 
@@ -25,7 +24,7 @@ const images = [
 ];
 
 const projectsDetails = [
-  { id: 1, title: 'Chuck’s Sstore', location: 'The Gardens', category: 'Commercial', years: 'On-going', surface: '700 sqft', collab: '', desc1: 'The new pop up store traces a sensory journey of unexpected visual interplay through materiality, shapes and form to reflect the multi faceted aspect of Chuck’s as a lifestyle brand.', desc2: 'The spatial layout of both options balances the need of functional visual merchandising with a sense of explorative spirit.' },
+  { id: 1, title: 'Chuck’s Store', location: 'The Gardens', category: 'Commercial', years: 'On-going', surface: '700 sqft', collab: '', desc1: 'The new pop up store traces a sensory journey of unexpected visual interplay through materiality, shapes and form to reflect the multi faceted aspect of Chuck’s as a lifestyle brand.', desc2: 'The spatial layout of both options balances the need of functional visual merchandising with a sense of explorative spirit.' },
   { id: 2, title: 'Wangsa9 Penthouse', location: 'Wangsa Maju', category: 'Residential', years: 'On-going', surface: '7,700 sqft', collab: '', desc1: 'The overall design direction is informed by the idea of injecting a sense of individuality and character to a contemporary holiday home. The vision was to create an experience that is inspired by interpretations of the landscape in the client’s home country.', desc2: 'Mountain striations, sensual desert curves and the rugged wadis are all strategically translated and expressed in architectural forms, materiality and color scheme as a celebration of the rich and diverse landscape Oman has to offer. The project is a commitment to craft a series of spaces that are personal, exciting and beautifully balanced.' },
   { id: 3, title: 'KLC Confinement Center', location: 'Dataran Prima', category: 'Commercial, Care Center', years: 'On-going', surface: '16,480 sqft', collab: '', desc1: 'The concept of lunar eclipse represents a balance, with the alignment of sun, moon and earth. A ray of light breaking from the shadow signifies the vibrancy of a new journey, similar to the vigour of a new birth.', desc2: 'The spatial concept is inspired by this natural sense of delicateness where the gesture of contact and peeling combine to mask the rigidity of the current office typology, all in the spirit of presenting a sensual, emotive and highly balanced environment for new mothers and their family.' },
   { id: 4, title: 'Hejau', location: 'Arcoris, Mont\'Kiara', category: 'Food & Beverage', years: '2021', surface: '220 sqft', collab: '', desc1: 'Hejau at Arcoris is infused with earthy tones, mineral surfaces and a sense of lightness. It is reflective of the spirit of reinterpreting the natural and organic. The interior appears as a singular carved volume. Visitors are greeted by flowing lines, earthy tones and textured surfaces - minerality, evocative of sunny Palm Springs and Arizona cliffs combined.', desc2: 'Pure material expressions are infused with Hejau’s interpretation to create a fun/engaging yet calming atmosphere.' },
@@ -34,7 +33,7 @@ const projectsDetails = [
 ];
 
 const projects = [
-  { id: 1, year: '  2023', mobileYear: '  2023', name: 'Chucks', details: 'Emotional connection across 5,313km.', category: 'Residential', link: './Images/Chucks/Hover.jpg' },
+  { id: 1, year: '  2023', mobileYear: '  2023', name: 'Chucks', details: 'Emotional connection across 5,313km.', category: 'Commercial', link: './Images/Chucks/Hover.jpg' },
   { id: 2, year: '      ', mobileYear: '  2023', name: 'Wangsa9 Penthouse', details: 'Emotional connection across 5,313km.', category: 'Residential', link: './Images/Wangsa/Hover.png' },
   { id: 3, year: '      ', mobileYear: '  2023',name: 'KLC', details: 'Lunar Eclipse.', category: 'Commercial', link: './Images/KLC/Hover.png' },
   { id: 4, year: '  2022', mobileYear: '  2022',name: 'Hejau', details: 'A foundation of environmental psychology.', category: 'Commercial', link: './Images/Hejau/Hover.png' },
