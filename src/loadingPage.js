@@ -144,35 +144,23 @@ export default function LoadingPage() {
 
   return (
     <>
-        <div className='landingPage-transition' style={{ display: 'flex', flexDirection: 'column', height: "100svh", width: "100vw" , backgroundColor: '#FFFFFF'}}>
-          {/* <div className="navDisplay slideDown"> */}
-          {/* {mobileView ?
-            <div className="navDisplay fixedTopPosition" style={{ height: '4%'}}>
-              <Navbar style={{ display: 'flex'}}/>
-            </div>
-            : */}
+        <div className='landingPage-transition' style={{ display: 'flex', flexDirection: 'column', height: "100svh", width: "100vw" , backgroundColor: '#FFB8F2'}}>
             <div className="navDisplay slideDown fixedTopPosition" style={{ height: '4%'}}>
               <Navbar style={{ display: 'flex'}}/>
             </div>
-            {/* } */}
            {mobileView ?
-           <div className='mobileLogoSlide landingPage-full0' style={{ minHeight: '63.5%'}}>
+          //  <div className='mobileLogoSlide landingPage-full0' style={{ minHeight: '63.5%'}}>
+          <div className='landingPage-full0'>
             <a id='changeLink'>
             <div key="landing" className="landingPage-full1">
-              <video id="mobileVideoBBB" autoPlay muted loop playsInline>
-                <source src={glassBBBMobile} type="video/mp4"/>
-              </video>
               {/* THIS PART DISPLAY IMAGE WHEN USER SELECT STORE FROM THE LIST */}
-              <LazyLoadImage id="changeImage1" key='logo' className="landingPage-image1" onMouseEnter={() => changeURL(logoBig, false)} />
+              <LazyLoadImage id="changeImage1" key='logo' className="landingPage-image1" src={logoBig} onMouseEnter={() => changeURL(logoBig, false)} />
             </div>
             </a>
            </div>
            :
            <div className='landingPage-full0' style={{ height: '70.5%'}}>
              <div key="landing" className="landingPage-full1">
-              <video id="videoBBB" autoPlay loop muted>
-                <source src={glassBBB} type="video/mp4"></source>
-              </video>
               {/* THIS  PART HOVER IMAGE WHEN USER SELECT STORE FROM THE LIST */}
                <LazyLoadImage id="hoverImage" key='logo' className="landingPage-image1" src={logoBig} onMouseEnter={() => changeURL(logoBig, false)} />
              </div>
@@ -196,13 +184,13 @@ const projects = [
 function changeURL(projects, hover) {
   if (!hover) {
     console.log('hover out');
-    // document.getElementById('hoverImage').src = logoBig;
-    document.getElementById('videoBBB').style.display = 'flex';
-    document.getElementById('hoverImage').style.display = 'none';
+    document.getElementById('hoverImage').src = logoBig;
+    // document.getElementById('videoBBB').style.display = 'flex';
+    // document.getElementById('hoverImage').style.display = 'none';
   }
 
   if (hover && projects.link.length !== 0) {
-    document.getElementById('videoBBB').style.display = 'none';
+    // document.getElementById('videoBBB').style.display = 'none';
     console.log(projects.link);
     document.getElementById('hoverImage').style.display = 'flex';
     document.getElementById('hoverImage').src = projects.link;
@@ -226,7 +214,7 @@ function isMobileExpandDetails (projects, expand) {
       console.log('isMobileExpandDetails');
     } else {
       console.log('expand');
-      document.getElementById('mobileVideoBBB').style.display = 'none';
+      // document.getElementById('mobileVideoBBB').style.display = 'none';
       document.getElementById('changeImage1').style.display = 'flex';
       document.getElementsByClassName('mobileExpandContent')[i].style.display = 'none';
       document.getElementsByClassName('projectBackgroundColour')[i].style.backgroundColor = '#FFFFFF';

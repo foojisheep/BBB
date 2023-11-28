@@ -102,7 +102,7 @@ ul {
 }
 
 .landingPage-full0 {
-  background-color: rgb(255, 255, 255);
+  /* background-color: rgb(255, 255, 255); */
   max-height: 67.5%;
   max-width: 100%;
   /* min-height: 67%;
@@ -116,7 +116,7 @@ ul {
 @media only screen and (max-width: 1024px) {
   .landingPage-full0 {
     min-height: 67%;
-    background-color: rgb(255, 255, 255);
+    /* background-color: rgb(255, 255, 255); */
     min-height: auto;
     width: auto;
     display: flex;

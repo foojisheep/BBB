@@ -380,11 +380,11 @@ video {
 }
 
 #hoverImage {
-  display: none;
+  /* display: none; */
 }
 
 #changeImage {
-  display: none;
+  /* display: none; */
 }
 
 @-webkit-keyframes logoSlide {
