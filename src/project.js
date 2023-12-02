@@ -12,6 +12,11 @@ import AnimationPlayer from './video'
 import glassBBB from  './resource/bbb_loading2.mp4';
 import glassBBBMobile from  './resource/bbb_loading_mobile.mp4';
 import chucksHover from  './resource/Images/Chucks/Hover.jpg';
+import penthouseHover from  './resource/Images/Wangsa/Hover.png';
+import KLCHover from  './resource/Images/KLC/Hover.png';
+import hijauHover from  './resource/Images/Hejau/Hover.png';
+import melodyHover from  './resource/Images/Melody/Hover.png';
+import poppyHover from  './resource/Images/Poppy/Hover.png';
 
 export default function ImageAndProjects() {
   const {mobileView, laptopView, navView} = useContext(ViewContext);
@@ -123,18 +128,18 @@ export default function ImageAndProjects() {
 
 const projects = [
   { id: 1, year: '  2023', mobileYear: '  2023', name: 'Chucks', details: 'Unexpected, fun, curious.', category: 'Commercial', link: chucksHover },
-  { id: 2, year: '      ', mobileYear: '  2023', name: 'Penthouse', details: 'Emotional connection across 5,313km.', category: 'Residential', link: './Images/Wangsa/Hover.png' },
-  { id: 3, year: '      ', mobileYear: '  2023', name: 'KLC', details: 'Lunar Eclipse.', category: 'Commercial', link: './Images/KLC/Hover.png' },
-  { id: 4, year: '  2022', mobileYear: '  2022', name: 'Hejau', details: 'A foundation of environmental psychology.', category: 'Commercial', link: './Images/Hejau/Hover.png' },
-  { id: 5, year: '      ', mobileYear: '  2022', name: 'Melody Kindyland', details: 'A place just like a home and a communal place for children.', category: 'Commercial', link: './Images/Melody/Hover.png' },
-  { id: 6, year: '      ', mobileYear: '  2022', name: 'Poppykat', details: 'Recalled a certain aesthetic from Wes Anderson\'s Movie.', category: 'Commercial', link: './Images/Poppy/Hover.png' },
+  { id: 2, year: '      ', mobileYear: '  2023', name: 'Penthouse', details: 'Ode to home.', category: 'Residential', link: penthouseHover },
+  { id: 3, year: '      ', mobileYear: '  2023', name: 'KLC', details: 'Lunar Eclipse.', category: 'Commercial', link: KLCHover },
+  { id: 4, year: '  2022', mobileYear: '  2022', name: 'Hejau', details: 'A foundation of environmental psychology.', category: 'Commercial', link: hijauHover },
+  { id: 5, year: '      ', mobileYear: '  2022', name: 'Melody Kindyland', details: 'A place just like a home and a communal place for children.', category: 'Commercial', link: melodyHover },
+  { id: 6, year: '      ', mobileYear: '  2022', name: 'Poppykat', details: 'Recalled a certain aesthetic from Wes Anderson\'s Movie.', category: 'Commercial', link: poppyHover },
 ];
 
 function changeURL(projects, hover) {
   if (!hover) {
     document.getElementById('hoverImage1').src = logoBig;
     // document.getElementById('videoBBB').style.display = 'flex';
-    document.getElementById('hoverImage1').style.display = 'none';
+    // document.getElementById('hoverImage1').style.display = 'none';
   }
 
   if (hover && projects.link.length !== 0) {
