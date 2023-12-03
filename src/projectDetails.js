@@ -30,12 +30,72 @@ const images = [
 ];
 
 const projectsDetails = [
-  { id: 1, title: 'Chuck’s Store', location: 'The Gardens', category: 'Commercial', years: 'May 2023', surface: '700 sqft', collab: '', desc1: 'The new pop up store traces a sensory journey of unexpected visual interplay through materiality, shapes and form to reflect the multi faceted aspect of Chuck’s as a lifestyle brand.', desc2: 'The spatial layout of both options balances the need of functional visual merchandising with a sense of explorative spirit.' },
-  { id: 2, title: 'Penthouse', location: 'Wangsa Maju', category: 'Residential', years: 'August 2023', surface: '7,700 sqft', collab: '', desc1: 'The overall design direction is informed by the idea of injecting a sense of individuality and character to a contemporary holiday home. The vision was to create an experience that is inspired by interpretations of the landscape in the client’s home country.', desc2: 'Mountain striations, sensual desert curves and the rugged wadis are all strategically translated and expressed in architectural forms, materiality and color scheme as a celebration of the rich and diverse landscape Oman of the client’s home country has to offer. The project is a commitment to craft a series of spaces that are personal, exciting and beautifully balanced' },
-  { id: 3, title: 'KLC Confinement Center', location: 'Dataran Prima', category: 'Commercial, Care Center', years: 'On-going', surface: '16,480 sqft', collab: '', desc1: 'The concept of lunar eclipse represents a balance, with the alignment of sun, moon and earth. A ray of light breaking from the shadow signifies the vibrancy of a new journey, similar to the vigour of a new birth.', desc2: 'The spatial concept is inspired by this natural sense of delicateness where the gesture of contact and peeling combine to mask the rigidity of the current office typology, all in the spirit of presenting a sensual, emotive and highly balanced environment for new mothers and their family.' },
-  { id: 4, title: 'Hejau', location: 'Arcoris, Mont\'Kiara', category: 'Food & Beverage', years: '2021', surface: '220 sqft', collab: '', desc1: 'Hejau at Arcoris is infused with earthy tones, mineral surfaces and a sense of lightness. It is reflective of the spirit of reinterpreting the natural and organic. The interior appears as a singular carved volume. Visitors are greeted by flowing lines, earthy tones and textured surfaces - minerality, evocative of sunny Palm Springs and Arizona cliffs combined.', desc2: 'Pure material expressions are infused with Hejau’s interpretation to create a fun/engaging yet calming atmosphere.' },
-  { id: 5, title: 'Melody Kindyland', location: 'SouthLink, Bangsar South', category: 'Commercial, Kindergarden', years: '2022', surface: '7,285 sqft', collab: 'Paper Plan Design Studio', desc1: 'The interior design concept is focused on promoting sustainability and versatility. It showcases various approaches to spatial planning, design elements, and creative solutions to create a space that is both functional and aesthetically pleasing.', desc2: 'The design is centered around children, aiming to create a sanctuary that provides a sense of security and warmth while also featuring unexpected design details to spark their curiosity.' },
-  { id: 6, title: 'Poppykat', location: 'Cheras, Kuala Lumpur', category: 'Food & Beverage', years: 'On-going', surface: '480 sqft', collab: '', desc1: 'The design initiation began with an orange solid surface countertop. The orange hue recalls a certain aestaesthetic from Wes Anderson’s The Darjeeling Limited. A concept was crafted around this – an orange glaze complimented by a geometrical pattern. ', desc2: 'Here, associated zones unfold one after another, defined by architectural cues such as wall opening and wall treatment. The intent was to present a sense of fun and intrigue through a consistent aesthetic and spatial fluidity.' },
+  { 
+    id: 1,
+    title: 'Chuck’s Store',
+    location: 'The Gardens',
+    category: 'Commercial',
+    years: 'May 2023',
+    surface: '700 sqft',
+    collab: '',
+    desc1: 'The new pop up store traces a sensory journey of unexpected visual interplay through materiality, shapes and form to reflect the multi faceted aspect of Chuck’s as a lifestyle brand.',
+    desc2: 'The spatial layout of both options balances the need of functional visual merchandising with a sense of explorative spirit.'
+  },
+  { 
+    id: 2,
+    title: 'Penthouse',
+    location: 'Wangsa Maju',
+    category: 'Residential',
+    years: 'August 2023',
+    surface: '7,700 sqft',
+    collab: '',
+    desc1: 'The overall design direction is informed by the idea of injecting a sense of individuality and character to a contemporary holiday home. The vision was to create an experience that is inspired by interpretations of the landscape in the client’s home country.',
+    desc2: 'Mountain striations, sensual desert curves and the rugged wadis are all strategically translated and expressed in architectural forms, materiality and color scheme as a celebration of the rich and diverse landscape Oman of the client’s home country has to offer. The project is a commitment to craft a series of spaces that are personal, exciting and beautifully balanced'
+  },
+  { 
+    id: 3,
+    title: 'KLC Confinement Center',
+    location: 'Dataran Prima',
+    category: 'Commercial, Care Center',
+    years: 'On-going',
+    surface: '16,480 sqft',
+    collab: '', 
+    desc1: 'The concept of lunar eclipse represents a balance, with the alignment of sun, moon and earth. A ray of light breaking from the shadow signifies the vibrancy of a new journey, similar to the vigour of a new birth.',
+    desc2: 'The spatial concept is inspired by this natural sense of delicateness where the gesture of contact and peeling combine to mask the rigidity of the current office typology, all in the spirit of presenting a sensual, emotive and highly balanced environment for new mothers and their family.'
+  },
+  { 
+    id: 4, 
+    title: 'Hejau', 
+    location: 'Arcoris, Mont\'Kiara',
+    category: 'Food & Beverage',
+    years: '2021',
+    surface: '220 sqft',
+    collab: '',
+    desc1: 'Hejau at Arcoris captivates with its earthy tones, mineral surfaces, and a lightness that reinterprets nature. The interior resembles a singular carved volume, welcoming visitors with flowing lines, earthy tones, and textured surfaces—a celebration of minerality reminiscent of sunny Palm Springs and Arizona cliffs.',
+    desc2: 'At Hejau, pure material expressions take on a playful interpretation, creating a visually delightful and inherently calming atmosphere. This synthesis of elements extends a warm invitation, urging visitors to partake in a unique and immersive journey through Hejau’s distinct embrace of nature-inspired design.',
+  },
+  { 
+    id: 5,
+    title: 'Melody Kindyland',
+    location: 'SouthLink, Bangsar South',
+    category: 'Commercial, Kindergarden',
+    years: '2022',
+    surface: '7,285 sqft',
+    collab: 'Paper Plan Design Studio',
+    desc1: 'The interior design concept is focused on promoting sustainability and versatility. It showcases various approaches to spatial planning, design elements, and creative solutions to create a space that is both functional and aesthetically pleasing.',
+    desc2: 'The design is centered around children, aiming to create a sanctuary that provides a sense of security and warmth while also featuring unexpected design details to spark their curiosity.'
+  },
+  { 
+    id: 6,
+    title: 'Poppykat',
+    location: 'Cheras, Kuala Lumpur',
+    category: 'Food & Beverage',
+    years: 'On-going',
+    surface: '480 sqft',
+    collab: '',
+    desc1: 'The design initiation began with an orange solid surface countertop. The orange hue recalls a certain aestaesthetic from Wes Anderson’s The Darjeeling Limited. A concept was crafted around this – an orange glaze complimented by a geometrical pattern. ',
+    desc2: 'Here, associated zones unfold one after another, defined by architectural cues such as wall opening and wall treatment. The intent was to present a sense of fun and intrigue through a consistent aesthetic and spatial fluidity.'
+  },
 ];
 
 const projects = [
@@ -169,7 +229,7 @@ function ShowProject(props) {
     <div id='projectDetailDisplay' className="projectDetailDisplay">
       <table id="projectDetails" style={{width: '100%'}}>
         <tr>
-          <th className='projectDetailsTableTitle'>{projectsDetails[id].title}</th>
+          <th className='projectDetailsFontSize projectDetailsTableTitle'>{projectsDetails[id].title}</th>
           <th></th>
         </tr>
       </table>
@@ -177,25 +237,25 @@ function ShowProject(props) {
         <div class="column" style={{paddingLeft: '3%', float: 'left', width: '22%'}}>
           <table id="projectDetails" style={{ display: 'table-row-group'}}>
             <tr>
-              <td style={{ verticalAlign:'top'}}>Location</td>
-              <td style={{ paddingLeft:'5%', whiteSpace:'nowrap'}}>{projectsDetails[id].location}</td>
+              <td class="projectDetailsFontSize" style={{ verticalAlign:'top'}}>Location</td>
+              <td class="projectDetailsFontSize" style={{ paddingLeft:'5%', whiteSpace:'nowrap'}}>{projectsDetails[id].location}</td>
             </tr>
             <tr>
-              <td style={{ verticalAlign:'top'}}>Category</td>
-              <td style={{ paddingLeft:'5%', whiteSpace:'nowrap'}}>{projectsDetails[id].category}</td>
+              <td class="projectDetailsFontSize" style={{ verticalAlign:'top'}}>Category</td>
+              <td class="projectDetailsFontSize" style={{ paddingLeft:'5%', whiteSpace:'nowrap'}}>{projectsDetails[id].category}</td>
             </tr>
             <tr>
-              <td style={{ verticalAlign:'top'}}>Years</td>
-              <td style={{ paddingLeft:'5%', whiteSpace:'nowrap'}}>{projectsDetails[id].years}</td>
+              <td class="projectDetailsFontSize" style={{ verticalAlign:'top'}}>Years</td>
+              <td class="projectDetailsFontSize" style={{ paddingLeft:'5%', whiteSpace:'nowrap'}}>{projectsDetails[id].years}</td>
             </tr>
             <tr>
-              <td style={{ verticalAlign:'top'}}>Surface</td>
-              <td style={{ paddingLeft:'5%', whiteSpace:'nowrap'}}>{projectsDetails[id].surface}</td>
+              <td class="projectDetailsFontSize" style={{ verticalAlign:'top'}}>Surface</td>
+              <td class="projectDetailsFontSize" style={{ paddingLeft:'5%', whiteSpace:'nowrap'}}>{projectsDetails[id].surface}</td>
             </tr>
             {projectsDetails[id].collab != '' &&
               <tr>
-                <td style={{ verticalAlign:'top'}}>Collab</td>
-                <td style={{ paddingLeft:'5%', whiteSpace:'nowrap'}}>{projectsDetails[id].collab}</td>
+                <td class="projectDetailsFontSize" style={{ verticalAlign:'top'}}>Collab</td>
+                <td class="projectDetailsFontSize" style={{ paddingLeft:'5%', whiteSpace:'nowrap'}}>{projectsDetails[id].collab}</td>
               </tr>
             }
           </table>

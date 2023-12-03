@@ -161,6 +161,10 @@
   border: none;
 }
 
+.projectDetailsFontSize {
+  font-size: 14px !important;
+}
+
 #projectDetails td {
   font-family: 'FoundersGroteskText';
   font-style: normal;
