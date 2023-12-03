@@ -115,9 +115,9 @@ function InfoPage () {
         </div>
       </div>
       { mobileView ?
-        <div id="bottomInfoNav"className="infoFooterDisplay mobileFontSize">Studio BBB &copy; 2023</div>
+        <div id="bottomInfoNav"className="infoFooterDisplay mobileFontSize">Copyrights &copy; 2023 BBB Design Studio Sdn. Bhd. 202201025118 (1470815-M). All Rights Reserved</div>
         :
-        <div id="bottomInfoNav"className="infoFooterDisplay laptopFontSize">Studio BBB &copy; 2023</div>
+        <div id="bottomInfoNav"className="infoFooterDisplay laptopFontSize">Copyrights &copy; 2023 BBB Design Studio Sdn. Bhd. 202201025118 (1470815-M). All Rights Reserved</div>
       }
     </div>
   );
