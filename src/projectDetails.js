@@ -22,8 +22,8 @@ const screenWidth = window.innerWidth;
 
 const images = [
   { id: 1, file: 'Chucks', name: ['01', '02', '03', '04', '05', '06', '07', '08'] , format: 'jpg'},
-  { id: 2, file: 'Wangsa', name: ['01', '02', '03', '04', '05', '06', '07', '08', '09', '10', '11', '12', '13', '14', '15', '16', '17', '18', '19', '20', '21', '22'] , format: 'png'},
-  { id: 3, file: 'KLC', name: ['01', '02', '03', '04', '05', '06', '07', '08', '09', '10', '11', '12', '13', '14', '15', '16', '17', '18', '19'] , format: 'png'},
+  { id: 2, file: 'Wangsa', name: ['02', '03', '04', '05', '06', '07', '08', '09', '10', '11', '12', '13', '14', '15', '16', '17', '18', '19', '20', '21', '22'] , format: 'png'},
+  { id: 3, file: 'KLC', name: ['02', '03', '04', '05', '06', '07', '08', '09', '10', '11', '12', '13', '14', '15', '16', '17', '18', '19'] , format: 'png'},
   { id: 4, file: 'Hejau', name: ['01', '02', '03', '04', '05', '06', '07'], format:'png' },
   { id: 5, file: 'Melody', name: ['01', '02', '03', '04', '05', '06', '07', '08'], format: 'png'},
   { id: 6, file: 'Poppy', name: ['01', '02', '04', '05', '06', '07', '08', '09', '10', '11'], format: 'jpg' },
@@ -340,7 +340,7 @@ function ShowImage(props) {
   const format =images[id].format;
   const showImage = photos.map((index) => {
     return (
-      <LazyLoadImage style={{ height: '100%'}} key={`${file}-${index}`} className="project-image" src={require(`./resource/Images/${file}/${index}.${format}`)} alt={`${file}-${index}`} />
+      <LazyLoadImage style={{ height: '100%', paddingRight: '2px'}} key={`${file}-${index}`} className="project-image" src={require(`./resource/Images/${file}/${index}.${format}`)} alt={`${file}-${index}`} />
     );
   });
   const div = 'image';
