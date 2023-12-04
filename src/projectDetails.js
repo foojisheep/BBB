@@ -17,21 +17,47 @@ import KLCHover from  './resource/Images/KLC/Hover.png';
 import hejauHover from  './resource/Images/Hejau/Hover.png';
 import melodyHover from  './resource/Images/Melody/Hover.png';
 import poppyHover from  './resource/Images/Poppy/Hover.png';
+import kiaraHover from './resource/Images/Kiara9/Hover.png';
+import wangsa9 from './resource/Images/Wangsa9/Hover.png';
 
 const screenWidth = window.innerWidth;
 
 const images = [
-  { id: 1, file: 'Chucks', name: ['01', '02', '03', '04', '05', '06', '07', '08'] , format: 'jpg'},
-  { id: 2, file: 'Wangsa', name: ['02', '03', '04', '05', '06', '07', '08', '09', '10', '11', '12', '13', '14', '15', '16', '17', '18', '19', '20', '21', '22'] , format: 'png'},
-  { id: 3, file: 'KLC', name: ['02', '03', '04', '05', '06', '07', '08', '09', '10', '11', '12', '13', '14', '15', '16', '17', '18', '19'] , format: 'png'},
-  { id: 4, file: 'Hejau', name: ['01', '02', '03', '04', '05', '06', '07'], format:'png' },
-  { id: 5, file: 'Melody', name: ['01', '02', '03', '04', '05', '06', '07', '08'], format: 'png'},
-  { id: 6, file: 'Poppy', name: ['01', '02', '04', '05', '06', '07', '08', '09', '10', '11'], format: 'jpg' },
+  { id: 1, file: 'Kiara9', name: ['01', '02', '03', '04', '05', '06', '07', '08', '09', '10'] , format: 'png'},
+  { id: 2, file: 'Wangsa9', name: ['02', '03', '04', '05', '06', '07', '08'] , format: 'png'},
+  { id: 3, file: 'Chucks', name: ['01', '02', '03', '04', '05', '06', '07', '08'] , format: 'jpg'},
+  { id: 4, file: 'Wangsa', name: ['02', '03', '04', '05', '06', '07', '08', '09', '10', '11', '12', '13', '14', '15', '16', '17', '18', '19', '20', '21', '22'] , format: 'png'},
+  { id: 5, file: 'KLC', name: ['02', '03', '04', '05', '06', '07', '08', '09', '10', '11', '12', '13', '14', '15', '16', '17', '18', '19'] , format: 'png'},
+  { id: 6, file: 'Hejau', name: ['01', '02', '03', '04', '05', '06', '07'], format:'png' },
+  { id: 7, file: 'Melody', name: ['01', '02', '03', '04', '05', '06', '07', '08'], format: 'png'},
+  { id: 8, file: 'Poppy', name: ['01', '02', '04', '05', '06', '07', '08', '09', '10', '11'], format: 'jpg' },
 ];
 
 const projectsDetails = [
   { 
     id: 1,
+    title: 'Kiara 9',
+    location: '',
+    category: 'Residential',
+    years: 'On-going',
+    surface: '6,000 sqft',
+    collab: '',
+    desc1: 'The white washed carcass of the penthouse evokes a feeling of silence and emptiness. This forms the central idea to the conception of a tranquil space with a deep restrain of color palette - where the gentleness of white is carefully layered and contrasted with darker materiality.',
+    desc2: 'This stylistic relationship is unchanging and it is omnipresent throughout, as it is a reminder of how the past can inform new possibilities for a new home'
+  },
+  { 
+    id: 2,
+    title: 'Wangsa 9',
+    location: '',
+    category: 'Residential',
+    years: 'On-going',
+    surface: '2,050 sqft',
+    collab: '',
+    desc1: 'The essence of our design concept for this residential space is to craft a serene and contemporary sanctuary that effortlessly integrates openness, sophistication, and a profound sense of calm. The primary focus is to create an open and airy atmosphere within the space, promoting a sense of fluidity and seamless flow between areas. To infuse an air of luxury and sophistication, we are committed to utilizing a carefully curated selection of high-quality, enduring materials. ',
+    desc2: 'This refined material palette will encompass a range of timeless elements that not only elevate the aesthetics but also enhance the overall sense of opulence within the space. Thoughtfully chosen furnishings, selected for their comfort and softness, will encourage an ambiance of profound stillness and calm.'
+  },
+  { 
+    id: 3,
     title: 'Chuck’s Store',
     location: 'The Gardens',
     category: 'Commercial',
@@ -42,7 +68,7 @@ const projectsDetails = [
     desc2: 'The spatial layout of both options balances the need of functional visual merchandising with a sense of explorative spirit.'
   },
   { 
-    id: 2,
+    id: 4,
     title: 'Penthouse',
     location: 'Wangsa Maju',
     category: 'Residential',
@@ -53,7 +79,7 @@ const projectsDetails = [
     desc2: 'Mountain striations, sensual desert curves and the rugged wadis are all strategically translated and expressed in architectural forms, materiality and color scheme as a celebration of the rich and diverse landscape Oman of the client’s home country has to offer. The project is a commitment to craft a series of spaces that are personal, exciting and beautifully balanced'
   },
   { 
-    id: 3,
+    id: 5,
     title: 'KLC Confinement Center',
     location: 'Dataran Prima',
     category: 'Commercial, Care Center',
@@ -64,7 +90,7 @@ const projectsDetails = [
     desc2: 'The spatial concept is inspired by this natural sense of delicateness where the gesture of contact and peeling combine to mask the rigidity of the current office typology, all in the spirit of presenting a sensual, emotive and highly balanced environment for new mothers and their family.'
   },
   { 
-    id: 4, 
+    id: 6, 
     title: 'Hejau', 
     location: 'Arcoris, Mont\'Kiara',
     category: 'Food & Beverage',
@@ -75,7 +101,7 @@ const projectsDetails = [
     desc2: 'At Hejau, pure material expressions take on a playful interpretation, creating a visually delightful and inherently calming atmosphere. This synthesis of elements extends a warm invitation, urging visitors to partake in a unique and immersive journey through Hejau’s distinct embrace of nature-inspired design.',
   },
   { 
-    id: 5,
+    id: 7,
     title: 'Melody Kindyland',
     location: 'SouthLink, Bangsar South',
     category: 'Commercial, Kindergarden',
@@ -86,7 +112,7 @@ const projectsDetails = [
     desc2: 'The design is centered around children, aiming to create a sanctuary that provides a sense of security and warmth while also featuring unexpected design details to spark their curiosity.'
   },
   { 
-    id: 6,
+    id: 8,
     title: 'Poppykat',
     location: 'Cheras, Kuala Lumpur',
     category: 'Food & Beverage',
@@ -99,12 +125,14 @@ const projectsDetails = [
 ];
 
 const projects = [
-  { id: 1, year: '  2023', mobileYear: '  2023', name: 'Chucks', details: 'Unexpected, fun, curious.', category: 'Commercial', link: chucksHover },
-  { id: 2, year: '      ', mobileYear: '  2023', name: 'Penthouse', details: 'Ode to home.', category: 'Residential', link: penthouseHover },
-  { id: 3, year: '      ', mobileYear: '  2023', name: 'KLC', details: 'Lunar Eclipse.', category: 'Commercial', link: KLCHover },
-  { id: 4, year: '  2022', mobileYear: '  2022', name: 'Hejau', details: 'A foundation of environmental psychology.', category: 'Commercial', link: hejauHover },
-  { id: 5, year: '      ', mobileYear: '  2022', name: 'Melody Kindyland', details: 'A place just like a home and a communal place for children.', category: 'Commercial', link: melodyHover },
-  { id: 6, year: '      ', mobileYear: '  2022', name: 'Poppykat', details: 'Recalled a certain aesthetic from Wes Anderson\'s Movie.', category: 'Commercial', link: poppyHover },
+  { id: 1, year: '  2023', mobileYear: '  2023', name: 'Kiara 9', details: 'Monochrome penthouse apartment.', category: 'Residential', link: kiaraHover },
+  { id: 2, year: '      ', mobileYear: '  2023', name: 'Wangsa 9', details: 'Serene Modern Sanctuary.', category: 'Residential', link: wangsa9 },
+  { id: 3, year: '      ', mobileYear: '  2023', name: 'Chucks', details: 'Unexpected, fun, curious.', category: 'Commercial', link: chucksHover },
+  { id: 4, year: '      ', mobileYear: '  2023', name: 'Penthouse', details: 'Ode to home.', category: 'Residential', link: penthouseHover },
+  { id: 5, year: '      ', mobileYear: '  2023', name: 'KLC', details: 'Lunar Eclipse.', category: 'Commercial', link: KLCHover },
+  { id: 6, year: '  2022', mobileYear: '  2022', name: 'Hejau', details: 'A foundation of environmental psychology.', category: 'Commercial', link: hejauHover },
+  { id: 7, year: '      ', mobileYear: '  2022', name: 'Melody Kindyland', details: 'A place just like a home and a communal place for children.', category: 'Commercial', link: melodyHover },
+  { id: 8, year: '      ', mobileYear: '  2022', name: 'Poppykat', details: 'Recalled a certain aesthetic from Wes Anderson\'s Movie.', category: 'Commercial', link: poppyHover },
 ];
 
 function ShowImage1(props) {

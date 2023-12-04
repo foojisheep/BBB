@@ -15,9 +15,11 @@ import glassBBBMobile from  './resource/bbb_loading_mobile.mp4';
 import chucksHover from  './resource/Images/Chucks/Hover.jpg';
 import penthouseHover from  './resource/Images/Wangsa/Hover.png';
 import KLCHover from  './resource/Images/KLC/Hover.png';
-import hijauHover from  './resource/Images/Hejau/Hover.png';
+import hejauHover from  './resource/Images/Hejau/Hover.png';
 import melodyHover from  './resource/Images/Melody/Hover.png';
 import poppyHover from  './resource/Images/Poppy/Hover.png';
+import kiaraHover from './resource/Images/Kiara9/Hover.png';
+import wangsa9 from './resource/Images/Wangsa9/Hover.png';
 
 const screenWidth = window.innerWidth;
 
@@ -178,12 +180,14 @@ export default function LoadingPage() {
 }
 
 const projects = [
-  { id: 1, year: '  2023', mobileYear: '  2023', name: 'Chucks', details: 'Unexpected, fun, curious.', category: 'Commercial', link: chucksHover },
-  { id: 2, year: '      ', mobileYear: '  2023', name: 'Penthouse', details: 'Ode to home.', category: 'Residential', link: penthouseHover },
-  { id: 3, year: '      ', mobileYear: '  2023', name: 'KLC', details: 'Lunar Eclipse.', category: 'Commercial', link: KLCHover },
-  { id: 4, year: '  2022', mobileYear: '  2022', name: 'Hejau', details: 'A foundation of environmental psychology.', category: 'Commercial', link: hijauHover },
-  { id: 5, year: '      ', mobileYear: '  2022', name: 'Melody Kindyland', details: 'A place just like a home and a communal place for children.', category: 'Commercial', link: melodyHover },
-  { id: 6, year: '      ', mobileYear: '  2022', name: 'Poppykat', details: 'Recalled a certain aesthetic from Wes Anderson\'s Movie.', category: 'Commercial', link: poppyHover },
+  { id: 1, year: '  2023', mobileYear: '  2023', name: 'Kiara 9', details: 'Monochrome penthouse apartment.', category: 'Residential', link: kiaraHover },
+  { id: 2, year: '      ', mobileYear: '  2023', name: 'Wangsa 9', details: 'Serene Modern Sanctuary.', category: 'Residential', link: wangsa9 },
+  { id: 3, year: '      ', mobileYear: '  2023', name: 'Chucks', details: 'Unexpected, fun, curious.', category: 'Commercial', link: chucksHover },
+  { id: 4, year: '      ', mobileYear: '  2023', name: 'Penthouse', details: 'Ode to home.', category: 'Residential', link: penthouseHover },
+  { id: 5, year: '      ', mobileYear: '  2023', name: 'KLC', details: 'Lunar Eclipse.', category: 'Commercial', link: KLCHover },
+  { id: 6, year: '  2022', mobileYear: '  2022', name: 'Hejau', details: 'A foundation of environmental psychology.', category: 'Commercial', link: hejauHover },
+  { id: 7, year: '      ', mobileYear: '  2022', name: 'Melody Kindyland', details: 'A place just like a home and a communal place for children.', category: 'Commercial', link: melodyHover },
+  { id: 8, year: '      ', mobileYear: '  2022', name: 'Poppykat', details: 'Recalled a certain aesthetic from Wes Anderson\'s Movie.', category: 'Commercial', link: poppyHover },
 ];
 
 function changeURL(projects, hover) {
