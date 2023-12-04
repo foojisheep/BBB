@@ -31,7 +31,7 @@ export default function NavBar() {
           :
           <div className='descriptionDiv'>
             { path != '/information' ? 
-              <h1 className='descriptionHeader'>
+              <h1 className='projectDetailsFontSize descriptionHeader'>
                 is an interior design studio believes every space
               </h1>
             :
@@ -40,7 +40,7 @@ export default function NavBar() {
               </h1>
             }
             { path != '/information' ?
-              <h1 className='descriptionHeader'>
+              <h1 className='projectDetailsFontSize descriptionHeader'>
                 created is an expression of oneself
               </h1>
             :

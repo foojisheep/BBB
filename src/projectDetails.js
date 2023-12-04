@@ -24,7 +24,7 @@ const screenWidth = window.innerWidth;
 
 const images = [
   { id: 1, file: 'Kiara9', name: ['01', '02', '03', '04', '05', '06', '07', '08', '09', '10'] , format: 'png'},
-  { id: 2, file: 'Wangsa9', name: ['02', '03', '04', '05', '06', '07', '08'] , format: 'png'},
+  { id: 2, file: 'Wangsa9', name: ['01', '02', '03', '04', '05', '06', '07', '08'] , format: 'png'},
   { id: 3, file: 'Chucks', name: ['01', '02', '03', '04', '05', '06', '07', '08'] , format: 'jpg'},
   { id: 4, file: 'Wangsa', name: ['02', '03', '04', '05', '06', '07', '08', '09', '10', '11', '12', '13', '14', '15', '16', '17', '18', '19', '20', '21', '22'] , format: 'png'},
   { id: 5, file: 'KLC', name: ['02', '03', '04', '05', '06', '07', '08', '09', '10', '11', '12', '13', '14', '15', '16', '17', '18', '19'] , format: 'png'},
@@ -42,8 +42,9 @@ const projectsDetails = [
     years: 'On-going',
     surface: '6,000 sqft',
     collab: '',
-    desc1: 'The white washed carcass of the penthouse evokes a feeling of silence and emptiness. This forms the central idea to the conception of a tranquil space with a deep restrain of color palette - where the gentleness of white is carefully layered and contrasted with darker materiality.',
-    desc2: 'This stylistic relationship is unchanging and it is omnipresent throughout, as it is a reminder of how the past can inform new possibilities for a new home'
+    desc1: 'The white washed carcass of the penthouse evokes a feeling of silence and emptiness. This forms the central idea to the conception of a tranquil space with a deep restrain of color palette - where the gentleness of white is carefully layered and contrasted with darker materiality.'
+    +'This stylistic relationship is unchanging and it is omnipresent throughout, as it is a reminder of how the past can inform new possibilities for a new home',
+    desc2: ''
   },
   { 
     id: 2,
@@ -53,8 +54,9 @@ const projectsDetails = [
     years: 'On-going',
     surface: '2,050 sqft',
     collab: '',
-    desc1: 'The essence of our design concept for this residential space is to craft a serene and contemporary sanctuary that effortlessly integrates openness, sophistication, and a profound sense of calm. The primary focus is to create an open and airy atmosphere within the space, promoting a sense of fluidity and seamless flow between areas. To infuse an air of luxury and sophistication, we are committed to utilizing a carefully curated selection of high-quality, enduring materials. ',
-    desc2: 'This refined material palette will encompass a range of timeless elements that not only elevate the aesthetics but also enhance the overall sense of opulence within the space. Thoughtfully chosen furnishings, selected for their comfort and softness, will encourage an ambiance of profound stillness and calm.'
+    desc1: 'The essence of our design concept for this residential space is to craft a serene and contemporary sanctuary that effortlessly integrates openness, sophistication, and a profound sense of calm. The primary focus is to create an open and airy atmosphere within the space, promoting a sense of fluidity and seamless flow between areas. To infuse an air of luxury and sophistication, we are committed to utilizing a carefully curated selection of high-quality, enduring materials. '
+    + 'This refined material palette will encompass a range of timeless elements that not only elevate the aesthetics but also enhance the overall sense of opulence within the space. Thoughtfully chosen furnishings, selected for their comfort and softness, will encourage an ambiance of profound stillness and calm.',
+    desc2: ''
   },
   { 
     id: 3,
@@ -64,8 +66,8 @@ const projectsDetails = [
     years: 'May 2023',
     surface: '700 sqft',
     collab: '',
-    desc1: 'The new pop up store traces a sensory journey of unexpected visual interplay through materiality, shapes and form to reflect the multi faceted aspect of Chuck’s as a lifestyle brand.',
-    desc2: 'The spatial layout of both options balances the need of functional visual merchandising with a sense of explorative spirit.'
+    desc1: 'The new pop-up store traces a sensory journey of unexpected visual interplay through materiality, shapes, and form, reflecting the multifaceted aspects of Chuck’s as a lifestyle brand.',
+    desc2: 'The spatial layout of the store balances the need for functionality and aesthetics. While addressing the pragmatic requirements of visual merchandising, the design also fosters an explorative spirit, inviting customers to engage with the products in a dynamic and experiential manner.'
   },
   { 
     id: 4,
@@ -80,10 +82,10 @@ const projectsDetails = [
   },
   { 
     id: 5,
-    title: 'KLC Confinement Center',
+    title: 'KLC Postnatal Center',
     location: 'Dataran Prima',
     category: 'Commercial, Care Center',
-    years: 'On-going',
+    years: 'June 2023',
     surface: '16,480 sqft',
     collab: '', 
     desc1: 'The concept of lunar eclipse represents a balance, with the alignment of sun, moon and earth. A ray of light breaking from the shadow signifies the vibrancy of a new journey, similar to the vigour of a new birth.',
@@ -343,18 +345,18 @@ function Desc(object) {
 }
 
 function Desc1(object) {
-  if (object.value.id == 1 || object.value.id == 5) {
+  if (object.value.id == 4 || object.value.id == 8) {
     return (
       <>
-      <p style={{ padding: 0, margin: 0}}>{object.value.desc1}</p>
-      <p>{object.value.desc2}</p>
+        <td class="projectDetailsDescriptionFontSize" style={{ width: '50%', textAlign: 'left', padding: 0, margin: 0}}>{object.value.desc1}</td>
+        <td class="projectDetailsDescriptionFontSize" style={{ paddingLeft: '2%', width: '48%', textAlign: 'left'}}>{object.value.desc2}</td>
       </>
     );
   }else{
     return (
       <>
-        <td style={{ width: '50%', textAlign: 'left', padding: 0, margin: 0}}>{object.value.desc1}</td>
-        <td style={{ paddingLeft: '2%', width: '48%', textAlign: 'left'}}>{object.value.desc2}</td>
+      <p class="projectDetailsDescriptionFontSize" style={{ padding: 0, margin: 0}}>{object.value.desc1}</p>
+      <p class="projectDetailsDescriptionFontSize">{object.value.desc2}</p>
       </>
     );
   }
@@ -458,7 +460,7 @@ function scrollable(div, scroll) {
 function isMobileExpandDetails (id, expand) {
   console.log('isMobileExpandDetails');
   console.log(projects);
-  const projectCount = 5;
+  const projectCount = 8;
   const number = parseInt(id)-1;
   console.log(number);
 }
