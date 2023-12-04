@@ -36,8 +36,8 @@ const images = [
 const projectsDetails = [
   { 
     id: 1,
-    title: 'Kiara 9',
-    location: '',
+    title: 'Penthouse',
+    location: 'Mont Kiara',
     category: 'Residential',
     years: 'On-going',
     surface: '6,000 sqft',
@@ -48,8 +48,8 @@ const projectsDetails = [
   },
   { 
     id: 2,
-    title: 'Wangsa 9',
-    location: '',
+    title: 'Penthouse',
+    location: 'Wangsa Maju',
     category: 'Residential',
     years: 'On-going',
     surface: '2,050 sqft',
@@ -345,7 +345,7 @@ function Desc(object) {
 }
 
 function Desc1(object) {
-  if (object.value.id == 4 || object.value.id == 8) {
+  if (object.value.id == 3 || object.value.id == 4 || object.value.id == 8) {
     return (
       <>
         <td class="projectDetailsDescriptionFontSize" style={{ width: '50%', textAlign: 'left', padding: 0, margin: 0}}>{object.value.desc1}</td>

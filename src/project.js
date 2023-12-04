@@ -130,8 +130,8 @@ export default function ImageAndProjects() {
 }
 
 const projects = [
-  { id: 1, year: '  2023', mobileYear: '  2023', name: 'Kiara 9', details: 'Monochrome penthouse apartment.', category: 'Residential', link: kiaraHover },
-  { id: 2, year: '      ', mobileYear: '  2023', name: 'Wangsa 9', details: 'Serene Modern Sanctuary.', category: 'Residential', link: wangsa9 },
+  { id: 1, year: '  2023', mobileYear: '  2023', name: 'Penthouse', details: 'Monochrome penthouse apartment.', category: 'Residential', link: kiaraHover },
+  { id: 2, year: '      ', mobileYear: '  2023', name: 'Penthouse', details: 'Serene Modern Sanctuary.', category: 'Residential', link: wangsa9 },
   { id: 3, year: '      ', mobileYear: '  2023', name: 'Chucks', details: 'Unexpected, fun, curious.', category: 'Commercial', link: chucksHover },
   { id: 4, year: '      ', mobileYear: '  2023', name: 'Penthouse', details: 'Ode to home.', category: 'Residential', link: penthouseHover },
   { id: 5, year: '      ', mobileYear: '  2023', name: 'KLC', details: 'Lunar Eclipse.', category: 'Commercial', link: KLCHover },
