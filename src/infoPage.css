@@ -23,6 +23,14 @@
 }
 
 /* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 1780px) {
+  .infoContentDiv {
+    /* padding-left: 4% !important; */
+    padding-top: 3% !important;
+  }
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
 @media only screen and (max-width: 1024px) {
   .infoFooterDisplay {
     height: 5%;
@@ -290,7 +298,7 @@ a:link {
 
 .infoContentDiv {
   padding-left: 2%; 
-  padding-top: 15%;
+  padding-top: 2% !important;
 }
 
 .mobileFontSize {
@@ -298,7 +306,7 @@ a:link {
 }
 
 .laptopFontSize {
-  font-size: 24px !important;
+  font-size: 16px !important;
   letter-spacing: 0.02em;
 }
 

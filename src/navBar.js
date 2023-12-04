@@ -35,7 +35,7 @@ export default function NavBar() {
                 is an interior design studio believes every space
               </h1>
             :
-              <h1 className='descriptionHeader' style={{ color: 'rgb(255, 192, 103)'}}>
+              <h1 className='projectDetailsFontSize descriptionHeader' style={{ color: 'rgb(255, 192, 103)'}}>
                 is an interior design studio believes every space
               </h1>
             }
@@ -44,7 +44,7 @@ export default function NavBar() {
                 created is an expression of oneself
               </h1>
             :
-              <h1 className='descriptionHeader' style={{ color: 'rgb(255, 192, 103)'}}>
+              <h1 className='projectDetailsFontSize descriptionHeader' style={{ color: 'rgb(255, 192, 103)'}}>
                 created is an expression of oneself
               </h1>
             }
