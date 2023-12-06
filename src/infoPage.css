@@ -20,6 +20,7 @@
   margin-bottom: 2%;
   color: rgb(255,192,103);
   /* margin-bottom: 0.2%; */
+  letter-spacing: 0.03em !important;
 }
 
 /* Small devices (portrait tablets and large phones, 600px and up) */
@@ -38,6 +39,7 @@
     text-align: left;
     padding-left: 4% !important;
     white-space: pre-wrap;
+    letter-spacing: 0.03em !important;
   }
 
   .infoContentDiv {

@@ -59,31 +59,31 @@ function InfoPage () {
             <ul className='textAlignLeft mobileFontSize'>For all project enquires,
                 <li id="context mobileFontSize"><a href="mailto:hi@studiobbb.co">hi@studiobbb.co</a></li>
               </ul>
-              <ul className='textAlignLeft mobileFontSize'>{ mobileView ?  <>Office Hours</> : <>OFFICE HOURS</> }
+              <ul className='textAlignLeft mobileFontSize' style={{ fontSize: '16px', letterSpacing: '0.03em'}}>{ mobileView ?  <>Office Hours</> : <>OFFICE HOURS</> }
                 <li id="context mobileFontSize">Monday to Friday</li>
-                <li id="context mobileFontSize">10:00 - 18:00</li>
+                <li id="context mobileFontSize" style={{ letterSpacing: '0.03em' }}>10:00 - 18:00</li>
               </ul>
-              <ul className='textAlignLeft mobileFontSize'>{ mobileView ?   <>Instagram</> : <>INSTAGRAM</> }
+              <ul className='textAlignLeft mobileFontSize' style={{ fontSize: '16px', letterSpacing: '0.03em' }}>{ mobileView ?   <>Instagram</> : <>INSTAGRAM</> }
                 <li id="context mobileFontSize"><a href="https://www.instagram.com/studiobbb.co">@studiobbb</a></li>
               </ul>
             </> :
             <>
             <tr>
             <td style={{width: '25%', verticalAlign:'top'}}>
-              <ul className='textAlignLeft '>{ mobileView ?   <>Contact</> : <>CONTACT</> }
+              <ul className='textAlignLeft' style={{ fontSize: '16px', letterSpacing: '0.03em'}}>{ mobileView ?   <>Contact</> : <>CONTACT</> }
                 <li id="context">For all project enquires,</li>
                 <li id="context"><a href="mailto:hi@studiobbb.co">hi@studiobbb.co</a></li>
               </ul>
             </td>
             <td>
-              <ul className='textAlignLeft'>{ mobileView ?  <>Office Hours</> : <>OFFICE HOURS</> }
+              <ul className='textAlignLeft' style={{ fontSize: '16px', letterSpacing: '0.03em'}}>{ mobileView ?  <>Office Hours</> : <>OFFICE HOURS</> }
                 <li id="context">Monday to Friday</li>
-                <li id="context">10:00 - 18:00</li>
+                <li id="context" style={{ letterSpacing: '0.03em' }}>10:00 - 18:00</li>
               </ul>
               <ul></ul>
             </td>
             </tr>
-            <ul className='textAlignLeft ' style={{ fontSize: '18px' }}>{ mobileView ?   <>Instagram</> : <>INSTAGRAM</> }
+            <ul className='textAlignLeft' style={{ fontSize: '16px', letterSpacing: '0.03em' }}>{ mobileView ?   <>Instagram</> : <>INSTAGRAM</> }
                 <li id="context"><a href="https://www.instagram.com/studiobbb.co">@studiobbb</a></li>
               </ul>
               </>
