@@ -50,12 +50,16 @@
   font-family: 'FoundersGroteskText';
   font-style: normal;
   font-weight: 400;
-  font-size: 18px;
-  line-height: 18px;
-  letter-spacing: 0.02em;
+  /* font-size: 18px; */
+  /* line-height: 18px !important; */
+  /* letter-spacing: 0.02em; */
   color: #000000;
   display: flex;
-  margin: 0
+  margin: 0;
+
+  font-size: 18px !important;
+  line-height: 18px !important;
+  letter-spacing: 0.03em;
 }
 
 .navDisplay {

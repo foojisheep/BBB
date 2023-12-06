@@ -43,7 +43,7 @@ const projectsDetails = [
     surface: '6,000 sqft',
     collab: '',
     desc1: 'The white washed carcass of the penthouse evokes a feeling of silence and emptiness. This forms the central idea to the conception of a tranquil space with a deep restrain of color palette - where the gentleness of white is carefully layered and contrasted with darker materiality.'
-    +'This stylistic relationship is unchanging and it is omnipresent throughout, as it is a reminder of how the past can inform new possibilities for a new home',
+    +' This stylistic relationship is unchanging and it is omnipresent throughout, as it is a reminder of how the past can inform new possibilities for a new home',
     desc2: ''
   },
   { 
@@ -78,7 +78,7 @@ const projectsDetails = [
     surface: '7,700 sqft',
     collab: '',
     desc1: 'The overall design direction is informed by the idea of injecting a sense of individuality and character to a contemporary holiday home. The vision was to create an experience that is inspired by interpretations of the landscape in the client’s home country.',
-    desc2: 'Mountain striations, sensual desert curves and the rugged wadis are all strategically translated and expressed in architectural forms, materiality and color scheme as a celebration of the rich and diverse landscape Oman of the client’s home country has to offer. The project is a commitment to craft a series of spaces that are personal, exciting and beautifully balanced'
+    desc2: 'Mountain striations, sensual desert curves and the rugged wadis are all strategically translated and expressed in architectural forms, materiality and color scheme as a celebration of the rich and diverse landscape Oman of the client’s home country has to offer. The project is a commitment to craft a series of spaces that are personal, exciting and beautifully balanced.'
   },
   { 
     id: 5,
@@ -356,7 +356,7 @@ function Desc1(object) {
     return (
       <>
       <p class="projectDetailsDescriptionFontSize" style={{ padding: 0, margin: 0}}>{object.value.desc1}</p>
-      <p class="projectDetailsDescriptionFontSize">{object.value.desc2}</p>
+      <p class="projectDetailsDescriptionFontSize" style={{ marginTop: '2%' }}>{object.value.desc2}</p>
       </>
     );
   }

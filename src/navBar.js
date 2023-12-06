@@ -31,20 +31,20 @@ export default function NavBar() {
           :
           <div className='descriptionDiv'>
             { path != '/information' ? 
-              <h1 className='projectDetailsFontSize descriptionHeader'>
+              <h1 className='descriptionHeader'>
                 is an interior design studio believes every space
               </h1>
             :
-              <h1 className='projectDetailsFontSize descriptionHeader' style={{ color: 'rgb(255, 192, 103)'}}>
+              <h1 className='descriptionHeader' style={{ color: 'rgb(255, 192, 103)'}}>
                 is an interior design studio believes every space
               </h1>
             }
             { path != '/information' ?
-              <h1 className='projectDetailsFontSize descriptionHeader'>
+              <h1 className='descriptionHeader'>
                 created is an expression of oneself
               </h1>
             :
-              <h1 className='projectDetailsFontSize descriptionHeader' style={{ color: 'rgb(255, 192, 103)'}}>
+              <h1 className='descriptionHeader' style={{ color: 'rgb(255, 192, 103)'}}>
                 created is an expression of oneself
               </h1>
             }
