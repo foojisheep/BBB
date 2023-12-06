@@ -161,6 +161,18 @@
   border: none;
 }
 
+.projectDetailsFontSize {
+  font-size: 18px !important;
+  line-height: 19px !important;
+  letter-spacing: 0.03em;
+}
+
+.projectDetailsDescriptionFontSize {
+  font-size: 19px !important;
+  line-height: 22px !important;
+  letter-spacing: 0.03em;
+}
+
 #projectDetails td {
   font-family: 'FoundersGroteskText';
   font-style: normal;

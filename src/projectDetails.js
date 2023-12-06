@@ -11,32 +11,130 @@ import { LazyLoadImage } from "react-lazy-load-image-component";
 import { ViewContext } from './ViewContext';
 import { useContext } from 'react';
 import useCollapse from 'react-collapsed';
-import arrow from './resource/arrow.svg';
+import chucksHover from  './resource/Images/Chucks/Hover.jpg';
+import penthouseHover from  './resource/Images/Wangsa/Hover.png';
+import KLCHover from  './resource/Images/KLC/Hover.png';
+import hejauHover from  './resource/Images/Hejau/Hover.png';
+import melodyHover from  './resource/Images/Melody/Hover.png';
+import poppyHover from  './resource/Images/Poppy/Hover.png';
+import kiaraHover from './resource/Images/Kiara9/Hover.png';
+import wangsa9 from './resource/Images/Wangsa9/Hover.png';
 
 const screenWidth = window.innerWidth;
 
 const images = [
-  { id: 1, file: 'Wangsa', name: ['01', '02', '03', '04', '05', '06', '07', '08', '09', '10', '11', '12', '13'] , format: 'png'},
-  { id: 2, file: 'KLC', name: ['01', '02', '03', '04', '05', '06', '07', '08', '09', '10'] , format: 'png'},
-  { id: 3, file: 'Hejau', name: ['01', '02', '03', '04', '05', '06', '07'], format:'png' },
-  { id: 4, file: 'Melody', name: ['01', '02', '03', '04', '05', '06', '07', '08'], format: 'png'},
-  { id: 5, file: 'Poppy', name: ['01', '02', '04', '05', '06', '07', '08', '09', '10', '11'], format: 'jpg' },
+  { id: 1, file: 'Kiara9', name: ['01', '02', '03', '04', '05', '06', '07', '08', '09', '10'] , format: 'png'},
+  { id: 2, file: 'Wangsa9', name: ['01', '02', '03', '04', '05', '06', '07', '08'] , format: 'png'},
+  { id: 3, file: 'Chucks', name: ['01', '02', '03', '04', '05', '06', '07', '08'] , format: 'jpg'},
+  { id: 4, file: 'Wangsa', name: ['02', '03', '04', '05', '06', '07', '08', '09', '10', '11', '12', '13', '14', '15', '16', '17', '18', '19', '20', '21', '22'] , format: 'png'},
+  { id: 5, file: 'KLC', name: ['02', '03', '04', '05', '06', '07', '08', '09', '10', '11', '12', '13', '14', '15', '16', '17', '18', '19'] , format: 'png'},
+  { id: 6, file: 'Hejau', name: ['01', '02', '03', '04', '05', '06', '07'], format:'png' },
+  { id: 7, file: 'Melody', name: ['01', '02', '03', '04', '05', '06', '07', '08'], format: 'png'},
+  { id: 8, file: 'Poppy', name: ['01', '02', '04', '05', '06', '07', '08', '09', '10', '11'], format: 'jpg' },
 ];
 
 const projectsDetails = [
-  { id: 1, title: 'Wangsa9 Penthouse', location: 'Wangsa Maju', category: 'Residential', years: 'On-going', surface: '7,700 sqft', collab: '', desc1: 'The overall design direction is informed by the idea of injecting a sense of individuality and character to a contemporary holiday home. The vision was to create an experience that is inspired by interpretations of the landscape in the client’s home country.', desc2: 'Mountain striations, sensual desert curves and the rugged wadis are all strategically translated and expressed in architectural forms, materiality and color scheme as a celebration of the rich and diverse landscape Oman has to offer. The project is a commitment to craft a series of spaces that are personal, exciting and beautifully balanced.' },
-  { id: 2, title: 'KLC Confinement Center', location: 'Dataran Prima', category: 'Commercial, Care Center', years: 'On-going', surface: '16,480 sqft', collab: '', desc1: 'The concept of lunar eclipse represents a balance, with the alignment of sun, moon and earth. A ray of light breaking from the shadow signifies the vibrancy of a new journey, similar to the vigour of a new birth.', desc2: 'The spatial concept is inspired by this natural sense of delicateness where the gesture of contact and peeling combine to mask the rigidity of the current office typology, all in the spirit of presenting a sensual, emotive and highly balanced environment for new mothers and their family.' },
-  { id: 3, title: 'Hejau', location: 'Arcoris, Mont\'Kiara', category: 'Food & Beverage', years: '2021', surface: '220 sqft', collab: '', desc1: 'Hejau at Arcoris is infused with earthy tones, mineral surfaces and a sense of lightness. It is reflective of the spirit of reinterpreting the natural and organic. The interior appears as a singular carved volume. Visitors are greeted by flowing lines, earthy tones and textured surfaces - minerality, evocative of sunny Palm Springs and Arizona cliffs combined.', desc2: 'Pure material expressions are infused with Hejau’s interpretation to create a fun/engaging yet calming atmosphere.' },
-  { id: 4, title: 'Melody Kindyland', location: 'SouthLink, Bangsar South', category: 'Commercial, Kindergarden', years: '2022', surface: '7,285 sqft', collab: 'Paper Plan Design Studio', desc1: 'The interior design concept is focused on promoting sustainability and versatility. It showcases various approaches to spatial planning, design elements, and creative solutions to create a space that is both functional and aesthetically pleasing.', desc2: 'The design is centered around children, aiming to create a sanctuary that provides a sense of security and warmth while also featuring unexpected design details to spark their curiosity.' },
-  { id: 5, title: 'Poppykat', location: 'Cheras, Kuala Lumpur', category: 'Food & Beverage', years: 'On-going', surface: '480 sqft', collab: '', desc1: 'The design initiation began with an orange solid surface countertop. The orange hue recalls a certain aestaesthetic from Wes Anderson’s The Darjeeling Limited. A concept was crafted around this – an orange glaze complimented by a geometrical pattern. ', desc2: 'Here, associated zones unfold one after another, defined by architectural cues such as wall opening and wall treatment. The intent was to present a sense of fun and intrigue through a consistent aesthetic and spatial fluidity.' },
+  { 
+    id: 1,
+    title: 'Penthouse',
+    location: 'Mont Kiara',
+    category: 'Residential',
+    years: 'On-going',
+    surface: '6,000 sqft',
+    collab: '',
+    desc1: 'The white washed carcass of the penthouse evokes a feeling of silence and emptiness. This forms the central idea to the conception of a tranquil space with a deep restrain of color palette - where the gentleness of white is carefully layered and contrasted with darker materiality.'
+    +' This stylistic relationship is unchanging and it is omnipresent throughout, as it is a reminder of how the past can inform new possibilities for a new home',
+    desc2: ''
+  },
+  { 
+    id: 2,
+    title: 'Penthouse',
+    location: 'Wangsa Maju',
+    category: 'Residential',
+    years: 'On-going',
+    surface: '2,050 sqft',
+    collab: '',
+    desc1: 'The essence of our design concept for this residential space is to craft a serene and contemporary sanctuary that effortlessly integrates openness, sophistication, and a profound sense of calm. The primary focus is to create an open and airy atmosphere within the space, promoting a sense of fluidity and seamless flow between areas. To infuse an air of luxury and sophistication, we are committed to utilizing a carefully curated selection of high-quality, enduring materials. '
+    + 'This refined material palette will encompass a range of timeless elements that not only elevate the aesthetics but also enhance the overall sense of opulence within the space. Thoughtfully chosen furnishings, selected for their comfort and softness, will encourage an ambiance of profound stillness and calm.',
+    desc2: ''
+  },
+  { 
+    id: 3,
+    title: 'Chuck’s Store',
+    location: 'The Gardens',
+    category: 'Commercial',
+    years: 'May 2023',
+    surface: '700 sqft',
+    collab: '',
+    desc1: 'The new pop-up store traces a sensory journey of unexpected visual interplay through materiality, shapes, and form, reflecting the multifaceted aspects of Chuck’s as a lifestyle brand.',
+    desc2: 'The spatial layout of the store balances the need for functionality and aesthetics. While addressing the pragmatic requirements of visual merchandising, the design also fosters an explorative spirit, inviting customers to engage with the products in a dynamic and experiential manner.'
+  },
+  { 
+    id: 4,
+    title: 'Penthouse',
+    location: 'Wangsa Maju',
+    category: 'Residential',
+    years: 'August 2023',
+    surface: '7,700 sqft',
+    collab: '',
+    desc1: 'The overall design direction is informed by the idea of injecting a sense of individuality and character to a contemporary holiday home. The vision was to create an experience that is inspired by interpretations of the landscape in the client’s home country.',
+    desc2: 'Mountain striations, sensual desert curves and the rugged wadis are all strategically translated and expressed in architectural forms, materiality and color scheme as a celebration of the rich and diverse landscape Oman of the client’s home country has to offer. The project is a commitment to craft a series of spaces that are personal, exciting and beautifully balanced.'
+  },
+  { 
+    id: 5,
+    title: 'KLC Postnatal Center',
+    location: 'Dataran Prima',
+    category: 'Commercial, Care Center',
+    years: 'June 2023',
+    surface: '16,480 sqft',
+    collab: '', 
+    desc1: 'The concept of lunar eclipse represents a balance, with the alignment of sun, moon and earth. A ray of light breaking from the shadow signifies the vibrancy of a new journey, similar to the vigour of a new birth.',
+    desc2: 'The spatial concept is inspired by this natural sense of delicateness where the gesture of contact and peeling combine to mask the rigidity of the current office typology, all in the spirit of presenting a sensual, emotive and highly balanced environment for new mothers and their family.'
+  },
+  { 
+    id: 6, 
+    title: 'Hejau', 
+    location: 'Arcoris, Mont\'Kiara',
+    category: 'Food & Beverage',
+    years: '2021',
+    surface: '220 sqft',
+    collab: '',
+    desc1: 'Hejau at Arcoris captivates with its earthy tones, mineral surfaces, and a lightness that reinterprets nature. The interior resembles a singular carved volume, welcoming visitors with flowing lines, earthy tones, and textured surfaces—a celebration of minerality reminiscent of sunny Palm Springs and Arizona cliffs.',
+    desc2: 'At Hejau, pure material expressions take on a playful interpretation, creating a visually delightful and inherently calming atmosphere. This synthesis of elements extends a warm invitation, urging visitors to partake in a unique and immersive journey through Hejau’s distinct embrace of nature-inspired design.',
+  },
+  { 
+    id: 7,
+    title: 'Melody Kindyland',
+    location: 'SouthLink, Bangsar South',
+    category: 'Commercial, Kindergarden',
+    years: '2022',
+    surface: '7,285 sqft',
+    collab: 'Paper Plan Design Studio',
+    desc1: 'The interior design concept is focused on promoting sustainability and versatility. It showcases various approaches to spatial planning, design elements, and creative solutions to create a space that is both functional and aesthetically pleasing.',
+    desc2: 'The design is centered around children, aiming to create a sanctuary that provides a sense of security and warmth while also featuring unexpected design details to spark their curiosity.'
+  },
+  { 
+    id: 8,
+    title: 'Poppykat',
+    location: 'Cheras, Kuala Lumpur',
+    category: 'Food & Beverage',
+    years: 'On-going',
+    surface: '480 sqft',
+    collab: '',
+    desc1: 'The design initiation began with an orange solid surface countertop. The orange hue recalls a certain aestaesthetic from Wes Anderson’s The Darjeeling Limited. A concept was crafted around this – an orange glaze complimented by a geometrical pattern. ',
+    desc2: 'Here, associated zones unfold one after another, defined by architectural cues such as wall opening and wall treatment. The intent was to present a sense of fun and intrigue through a consistent aesthetic and spatial fluidity.'
+  },
 ];
 
 const projects = [
-  { id: 1, year: '  2023', mobileYear: '  2023', name: 'Wangsa9 Penthouse', details: 'Emotional connection across 5,313km.', category: 'Residential', link: './Images/Wangsa/Hover.png' },
-  { id: 2, year: '      ', mobileYear: '  2023',name: 'KLC', details: 'Lunar Eclipse.', category: 'Commercial', link: './Images/KLC/Hover.png' },
-  { id: 3, year: '  2022', mobileYear: '  2022',name: 'Hejau', details: 'A foundation of environmental psychology.', category: 'Commercial', link: './Images/Hejau/Hover.png' },
-  { id: 4, year: '      ', mobileYear: '  2023',name: 'Melody Kindyland', details: 'A place just like a home and a communal place for children.', category: 'Commercial', link: './Images/Melody/Hover.png' },
-  { id: 5, year: '      ', mobileYear: '  2022',name: 'Poppykat', details: 'Recalled a certain aesthetic from Wes Anderson\'s Movie.', category: 'Commercial', link: './Images/Poppy/Hover.png' },
+  { id: 1, year: '  2023', mobileYear: '  2023', name: 'Kiara 9', details: 'Monochrome penthouse apartment.', category: 'Residential', link: kiaraHover },
+  { id: 2, year: '      ', mobileYear: '  2023', name: 'Wangsa 9', details: 'Serene Modern Sanctuary.', category: 'Residential', link: wangsa9 },
+  { id: 3, year: '      ', mobileYear: '  2023', name: 'Chucks', details: 'Unexpected, fun, curious.', category: 'Commercial', link: chucksHover },
+  { id: 4, year: '      ', mobileYear: '  2023', name: 'Penthouse', details: 'Ode to home.', category: 'Residential', link: penthouseHover },
+  { id: 5, year: '      ', mobileYear: '  2023', name: 'KLC', details: 'Lunar Eclipse.', category: 'Commercial', link: KLCHover },
+  { id: 6, year: '  2022', mobileYear: '  2022', name: 'Hejau', details: 'A foundation of environmental psychology.', category: 'Commercial', link: hejauHover },
+  { id: 7, year: '      ', mobileYear: '  2022', name: 'Melody Kindyland', details: 'A place just like a home and a communal place for children.', category: 'Commercial', link: melodyHover },
+  { id: 8, year: '      ', mobileYear: '  2022', name: 'Poppykat', details: 'Recalled a certain aesthetic from Wes Anderson\'s Movie.', category: 'Commercial', link: poppyHover },
 ];
 
 function ShowImage1(props) {
@@ -48,23 +146,22 @@ function ShowImage1(props) {
   console.log('show image here!');
   const showImage = photos.map((index) => {
     return (
-      <LazyLoadImage id={`${file}-${index}`} style={{ padding: 0 }} key={`${file}-${index}`} className="project-image" src={require(`./resource/Images/${file}/${index}.${format}`)} alt={`${file}-${index}`} />
+      <LazyLoadImage id={`${file}-${index}`} style={{ padding: 0 }} key={`mobile-${file}-${index}`} className="project-image" src={require(`./resource/Images/${file}/${index}.${format}`)} alt={`${file}-${index}`} />
     );
   });
   const div = 'image';
   console.log(showImage);
   return (
     <>
-    <div id={`mobileContent-${id}`} key={id} className={`projectDetailsImageDiv mobileExpandContent hideScrollBar`} style={{ borderBottom: '1.6px solid rgb(0, 0, 0)'}} onScrollCapture={() => hideArrow(id)} onScroll={() => hideArrow(id)}>
-      <div id='projectImageDiv' className="project-Image-Div" onMouseEnter={() => scrollable(div, true)} onScrollCapture={() => hideArrow(id)} onScroll={() => hideArrow(id)} style={{ overflow: "scroll" , height: '51vh', position:'relative'}}>
-        {/* <HorizontalScroll className='scroll' reverseScroll={true} style={{ overflow: 'auto' , position : 'inherit'}}> */}
-        {/* <Button src={require('./resource/arrow.svg')}></Button> */}
+    <div id={`mobileContent-${id}`} key={id} className={`projectDetailsMobileImageDiv mobileExpandContent hideScrollBar`} style={{ borderBottom: '1.6px solid rgb(0, 0, 0)'}} onScrollCapture={() => hideArrow(id)} onScroll={() => hideArrow(id)}>
+      <div id='mobileProjectImageDiv' className="project-Image-Div" onMouseEnter={() => scrollable(div, true)} onScrollCapture={() => hideArrow(id)} onScroll={() => hideArrow(id)} style={{ overflow: "scroll" , height: '51vh', position:'relative'}}>
         {showImage}
-        {/* <LazyLoadImage src={arrow} /> */}
-        {/* </HorizontalScroll> */}
-        <div className='iconArrow' style={{ position: 'absolute', right: '2%', bottom: '1%', display: 'flex'}}>
-          <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="0.5" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-arrow-right-circle"><circle cx="12" cy="12" r="10" style={{ fill: 'white'}}></circle><polyline points="12 16 16 12 12 8"></polyline><line x1="8" x2="16" y1="12" y2="12"></line></svg>
-          {/* <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-arrow-right-circle"><circle cx="12" cy="12" r="10" style={{ fill: 'white'}}></circle><polyline points="12 16 16 12 12 8"></polyline><line x1="8" x2="16" y1="12" y2="12"></line></svg> */}
+        <div className='iconArrowMobile' style={{ position: 'absolute', right: '2%', bottom: '1%', display: 'flex'}}>
+          <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="0.5" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-arrow-right-circle">
+            <circle cx="12" cy="12" r="10" style={{ fill: 'white'}}></circle>
+            <polyline points="12 16 16 12 12 8"></polyline>
+            <line x1="8" x2="16" y1="12" y2="12"></line>
+          </svg>
         </div>
       </div>
     </div>
@@ -89,29 +186,11 @@ function ShowProject(props) {
     console.log('ref', divRef.current);
     console.log('id name',id);
     if (divRef.current) {
-      // divRef.current.scrollTo({
-      //   top: 0,
-      //   behavior: 'smooth'
-      // });
-      // divRef.current.scrollTop
-      // divRef.current.scrollTo({
-      //   top: divRef.offsetTop,
-      //   behavior: "smooth",
-      // });
-      // divRef.current.scrollIntoView({ behavior: 'smooth'});
       var heightNavBar = document.getElementsByClassName('navDisplay')[0].style.height;
       divRef.current.scrollIntoView(true);
       var scrolledY = window.scrollY;
       console.log('scrolled', window.scrollY);
       window.scroll(0, scrolledY - heightNavBar);
-      // divRef.current.scrollIntoView({ behavior: 'smooth', block: 'start', inline: 'nearest' });
-      // document.getElementsByClassName('navDisplay')[0].style.height = '4svh';
-      // document.getElementsByClassName('navDisplay')[0].style.position = 'inherit';
-      // document.getElementsByClassName('navDisplay')[0].style.paddingTop = '3svh';
-      // divRef.current.scrollTo({0,5});
-      // divRef.current.style.top = 0;
-      // const container = divRef.current.parentNode; // Get the container element
-      // container.scrollTop = 0;
     }
   }, []);
 
@@ -173,56 +252,14 @@ function ShowProject(props) {
   }
   </>
   );
-
-  const isMobileContent = (
-    <>
-    <div id={`projectDetailDisplay-${id}`} className="projectDetailDisplay" onMouseEnter={() => scrollable(div, true)} onScroll={() => hideArrow(id)} style={{overflow: 'scroll', paddingLeft: '1%', paddingRight:'1%'}}>
-      <table id="projectDetails">
-        <tr>
-          <th className='projectDetailsTableTitle'>{projectsDetails[id].title}</th>
-          { mobileView ? <></> : <th></th>}
-        </tr>
-        <tr>
-          <td style={{ width: '18%', verticalAlign: 'top' }}>
-            <table style={{ display: 'table-row-group'}}>
-              <tr>
-                <td style={{ verticalAlign:'top'}}>Location</td>
-                <td style={{ paddingLeft:'5%', whiteSpace:'nowrap'}}>{projectsDetails[id].location}</td>
-              </tr>
-              <tr>
-                <td style={{ verticalAlign:'top'}}>Category</td>
-                <td style={{ paddingLeft:'5%', whiteSpace:'nowrap'}}>{projectsDetails[id].category}</td>
-              </tr>
-              <tr>
-                <td style={{ verticalAlign:'top'}}>Years</td>
-                <td style={{ paddingLeft:'5%', whiteSpace:'nowrap'}}>{projectsDetails[id].years}</td>
-              </tr>
-              <tr>
-                <td style={{ verticalAlign:'top'}}>Surface</td>
-                <td style={{ paddingLeft:'5%', whiteSpace:'nowrap'}}>{projectsDetails[id].surface}</td>
-              </tr>
-              {projectsDetails[id].collab != '' &&
-                <tr>
-                  <td style={{ verticalAlign:'top'}}>Collab</td>
-                  <td style={{ paddingLeft:'5%', whiteSpace:'nowrap'}}>{projectsDetails[id].collab}</td>
-                </tr>
-              }
-            </table>
-          </td>
-        </tr>
-      </table>
-      <MobileDesc value={projectsDetails[id]} />
-    </div>
-    {isMobileProjectList}
-    </>
-  );
   
   const isLaptopContent1 = (
     <>
-    <div id='projectDetailDisplay' className="projectDetailDisplay" onMouseEnter={() => scrollable(div, true)} onScroll={() => hideArrow(id)}>
+    <ShowImage key={id.toString()} value={id} />
+    <div id='projectDetailDisplay' className="projectDetailDisplay">
       <table id="projectDetails" style={{width: '100%'}}>
         <tr>
-          <th className='projectDetailsTableTitle'>{projectsDetails[id].title}</th>
+          <th className='projectDetailsFontSize projectDetailsTableTitle'>{projectsDetails[id].title}</th>
           <th></th>
         </tr>
       </table>
@@ -230,25 +267,25 @@ function ShowProject(props) {
         <div class="column" style={{paddingLeft: '3%', float: 'left', width: '22%'}}>
           <table id="projectDetails" style={{ display: 'table-row-group'}}>
             <tr>
-              <td style={{ verticalAlign:'top'}}>Location</td>
-              <td style={{ paddingLeft:'5%', whiteSpace:'nowrap'}}>{projectsDetails[id].location}</td>
+              <td class="projectDetailsFontSize" style={{ verticalAlign:'top'}}>Location</td>
+              <td class="projectDetailsFontSize" style={{ paddingLeft:'5%', whiteSpace:'nowrap'}}>{projectsDetails[id].location}</td>
             </tr>
             <tr>
-              <td style={{ verticalAlign:'top'}}>Category</td>
-              <td style={{ paddingLeft:'5%', whiteSpace:'nowrap'}}>{projectsDetails[id].category}</td>
+              <td class="projectDetailsFontSize" style={{ verticalAlign:'top'}}>Category</td>
+              <td class="projectDetailsFontSize" style={{ paddingLeft:'5%', whiteSpace:'nowrap'}}>{projectsDetails[id].category}</td>
             </tr>
             <tr>
-              <td style={{ verticalAlign:'top'}}>Years</td>
-              <td style={{ paddingLeft:'5%', whiteSpace:'nowrap'}}>{projectsDetails[id].years}</td>
+              <td class="projectDetailsFontSize" style={{ verticalAlign:'top'}}>Years</td>
+              <td class="projectDetailsFontSize" style={{ paddingLeft:'5%', whiteSpace:'nowrap'}}>{projectsDetails[id].years}</td>
             </tr>
             <tr>
-              <td style={{ verticalAlign:'top'}}>Surface</td>
-              <td style={{ paddingLeft:'5%', whiteSpace:'nowrap'}}>{projectsDetails[id].surface}</td>
+              <td class="projectDetailsFontSize" style={{ verticalAlign:'top'}}>Surface</td>
+              <td class="projectDetailsFontSize" style={{ paddingLeft:'5%', whiteSpace:'nowrap'}}>{projectsDetails[id].surface}</td>
             </tr>
             {projectsDetails[id].collab != '' &&
               <tr>
-                <td style={{ verticalAlign:'top'}}>Collab</td>
-                <td style={{ paddingLeft:'5%', whiteSpace:'nowrap'}}>{projectsDetails[id].collab}</td>
+                <td class="projectDetailsFontSize" style={{ verticalAlign:'top'}}>Collab</td>
+                <td class="projectDetailsFontSize" style={{ paddingLeft:'5%', whiteSpace:'nowrap'}}>{projectsDetails[id].collab}</td>
               </tr>
             }
           </table>
@@ -262,53 +299,11 @@ function ShowProject(props) {
     </>
   );
 
-  const isLaptopContent = (
+  return(
     <>
-    <div id='projectDetailDisplay' className="projectDetailDisplay" onMouseEnter={() => scrollable(div, true)} onScroll={() => hideArrow(id)} style={{ overflow: 'hidden'}}>
-      <table id="projectDetails">
-        <tr>
-          <th className='projectDetailsTableTitle'>{projectsDetails[id].title}</th>
-          <th></th>
-        </tr>
-        <tr>
-          <td style={{ width: '20%', verticalAlign: 'top' }}>
-            <table style={{ display: 'table-row-group'}}>
-              <tr>
-                <td style={{ verticalAlign:'top'}}>Location</td>
-                <td style={{ paddingLeft:'5%', whiteSpace:'nowrap'}}>{projectsDetails[id].location}</td>
-              </tr>
-              <tr>
-                <td style={{ verticalAlign:'top'}}>Category</td>
-                <td style={{ paddingLeft:'5%', whiteSpace:'nowrap'}}>{projectsDetails[id].category}</td>
-              </tr>
-              <tr>
-                <td style={{ verticalAlign:'top'}}>Years</td>
-                <td style={{ paddingLeft:'5%', whiteSpace:'nowrap'}}>{projectsDetails[id].years}</td>
-              </tr>
-              <tr>
-                <td style={{ verticalAlign:'top'}}>Surface</td>
-                <td style={{ paddingLeft:'5%', whiteSpace:'nowrap'}}>{projectsDetails[id].surface}</td>
-              </tr>
-              {projectsDetails[id].collab != '' &&
-                <tr>
-                  <td style={{ verticalAlign:'top'}}>Collab</td>
-                  <td style={{ paddingLeft:'5%', whiteSpace:'nowrap'}}>{projectsDetails[id].collab}</td>
-                </tr>
-              }
-            </table>
-          </td>
-          <Desc value={projectsDetails[id]} />
-        </tr>
-      </table>
-    </div>
+    { mobileView ? isMobileProjectList : isLaptopContent1 }
     </>
-  );
-
-  if(mobileView ){
-    return(isMobileProjectList);
-  } else {
-    return (isLaptopContent1);
-  }
+  )
 }
 
 function MobileDesc(object) {
@@ -327,12 +322,8 @@ function Desc(object) {
     return (
       <>
         <td>
-          {/* <table style={{ borderSpacing: '0' }}>
-            <tr> */}
-              <th className='projectDescription' style={{ textAlign: 'left', display: 'table-cell', paddingLeft: '1%', verticalAlign: 'top', width: '50%', display:'table-row-group'}}>{object.value.desc1}</th>
-              <th className='projectDescription' style={{ textAlign: 'left', display: 'table-cell', paddingLeft: '1%', verticalAlign: 'top', width: '50%', display:'table-row-group'}}>{object.value.desc2}</th>
-            {/* </tr>
-          </table> */}
+            <th className='projectDescription' style={{ textAlign: 'left', display: 'table-cell', paddingLeft: '1%', verticalAlign: 'top', width: '50%', display:'table-row-group'}}>{object.value.desc1}</th>
+            <th className='projectDescription' style={{ textAlign: 'left', display: 'table-cell', paddingLeft: '1%', verticalAlign: 'top', width: '50%', display:'table-row-group'}}>{object.value.desc2}</th>
         </td>
       </>
     );
@@ -354,60 +345,51 @@ function Desc(object) {
 }
 
 function Desc1(object) {
-  if (object.value.id == 1 || object.value.id == 5) {
+  if (object.value.id == 3 || object.value.id == 4 || object.value.id == 8) {
     return (
       <>
-      <p style={{ padding: 0, margin: 0}}>{object.value.desc1}</p>
-      <p>{object.value.desc2}</p>
+        <td class="projectDetailsDescriptionFontSize" style={{ width: '50%', textAlign: 'left', padding: 0, margin: 0}}>{object.value.desc1}</td>
+        <td class="projectDetailsDescriptionFontSize" style={{ paddingLeft: '2%', width: '48%', textAlign: 'left'}}>{object.value.desc2}</td>
       </>
     );
-  // } else if (object.value.id == 2 || object.value.id == 4) {
   }else{
     return (
       <>
-      {/* <div class="row"> */}
-        <td style={{ width: '50%', textAlign: 'left', padding: 0, margin: 0}}>{object.value.desc1}</td>
-        <td style={{ paddingLeft: '2%', width: '48%', textAlign: 'left'}}>{object.value.desc2}</td>
-      {/* </div> */}
+      <p class="projectDetailsDescriptionFontSize" style={{ padding: 0, margin: 0}}>{object.value.desc1}</p>
+      <p class="projectDetailsDescriptionFontSize" style={{ marginTop: '2%' }}>{object.value.desc2}</p>
       </>
     );
-  // } else {
-  //   return (
-  //     <>
-  //       <td className='projectDescription' style={{ textAlign: 'left', paddingLeft:'5%'}}>{object.value.desc1}</td>
-  //       <td className='projectDescription' style={{ textAlign: 'left', paddingLeft:'5%', paddingTop: '1%' }}>{object.value.desc2}</td>
-  //     </>
-  //   );
   }
 }
 
 function ShowImage(props) {
-  const id = parseInt(props.value) - 1;
+  const id = parseInt(props.value);
+  console.log('id heree', id);
   const photos = images[id].name;
   const file = images[id].file;
   const format =images[id].format;
   const showImage = photos.map((index) => {
     return (
-      <LazyLoadImage style={{ height: '100%'}} key={`${file}-${index}`} className="project-image" src={require(`./resource/Images/${file}/${index}.${format}`)} alt={`${file}-${index}`} />
+      <LazyLoadImage style={{ height: '100%', paddingRight: '2px'}} key={`${file}-${index}`} className="project-image" src={require(`./resource/Images/${file}/${index}.${format}`)} alt={`${file}-${index}`} />
     );
   });
   const div = 'image';
   return (
     <>    
-      {/* <HorizontalScroll>   */} 
-      {/* <div style ={{display:'flex', height:'66.5%', flexDirection:'column', overflow:'hidden'}}> */}
-    <div className='projectDetailsImageDiv hideScrollBar' onScroll={() => hideArrow(id)}>
-      <div id='projectImageDiv' className="project-Image-Div hideScrollBar" onMouseEnter={() => scrollable(div, true)} onScroll={() => hideArrow(id)} style={{ overflow: "scroll" ,position:'relative'}}>
-        <HorizontalScroll className='scroll hideScrollBar' reverseScroll={true} style={{ overflow: 'auto', cursor: 'pointer'}}>
-         {showImage}
-        </HorizontalScroll>
-        {/* <div className='iconArrowDesktop' style={{ position: 'absolute', right: '5%', bottom: '3%'}}> */}
-          {/* <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="0.5" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-arrow-right-circle"><circle cx="12" cy="12" r="10" style={{ fill: 'white'}}></circle><polyline points="12 16 16 12 12 8"></polyline><line x1="8" x2="16" y1="12" y2="12"></line></svg> */}
-          {/* <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-arrow-right-circle"><circle cx="12" cy="12" r="10" style={{ fill: 'white'}}></circle><polyline points="12 16 16 12 12 8"></polyline><line x1="8" x2="16" y1="12" y2="12"></line></svg> */}
-        {/* </div> */}
+      <div className='projectDetailsImageDiv hideScrollBar'>
+        <div id='projectImageDiv' className="projectImageDiv project-Image-Div hideScrollBar" onScroll={() => hideArrowDesktop()} style={{ overflow: "scroll" ,position:'relative'}}>
+          <HorizontalScroll className='scroll hideScrollBar' reverseScroll={true} style={{ overflow: 'auto', cursor: 'pointer'}}>
+          {showImage}
+          </HorizontalScroll>
+          {/* <div className='iconArrow' style={{ position: 'absolute', right: '2%', bottom: '1%', display: 'flex'}}>
+            <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="0.5" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-arrow-right-circle">
+              <circle cx="12" cy="12" r="10" style={{ fill: 'white'}}></circle>
+              <polyline points="12 16 16 12 12 8"></polyline>
+              <line x1="8" x2="16" y1="12" y2="12"></line>
+            </svg>
+          </div> */}
+        </div>
       </div>
-      </div>
-      {/* </HorizontalScroll> */}
     </>
   );
 }
@@ -435,9 +417,7 @@ export default function ProjectDetailPage(object) {
       <div className="navDisplay" style={{ height: '4svh'}}>
         <Navbar />
       </div>
-      {/* <div className='projectDetailsTransition' style={{ flexDirection: 'column', height: '95%'}}> */}
       <div className='hideScrollBar' style={{ flexDirection: 'column', height: mobileView? '95svh': '95%', overflowX: mobileView ? 'scroll':'unset'}}>
-        {mobileView ? <></> : <ShowImage key={id.toString()} value={id} /> }
         <ShowProject key={id.toString()} value={id} />
       </div>
     </div>
@@ -446,13 +426,18 @@ export default function ProjectDetailPage(object) {
 
 function hideArrow(id){
   const number = id;
-  console.log('iconArrow');
-  const icon = document.getElementsByClassName('iconArrow');
-  console.log('icon ', icon[0]);
-  document.getElementsByClassName('iconArrow')[0].style.display = 'none';
-  // const iconDesktop = document.getElementsByClassName('iconArrowDesktop');
-  // console.log('icon desktop', iconDesktop[0]);
-  // document.getElementsByClassName('iconArrowDesktop')[0].style.display = 'none';
+  console.log('iconArrowMobile');
+  const icon = document.getElementsByClassName('iconArrowMobile');
+  document.getElementsByClassName('iconArrowMobile')[0].style.display = 'none';
+}
+
+function hideArrowDesktop(){
+  // const divScrolled = document.getElementsByClassName('projectImageDiv');
+  // console.log('123',divScrolled.scrollRight);
+  // const iconDesktop = document.getElementsByClassName('iconArrow')[0];
+  // if (iconDesktop) {
+  //   document.getElementsByClassName('iconArrow')[0].style.display = 'flex';
+  // }
 }
 
 function scrollable(div, scroll) {
@@ -475,7 +460,7 @@ function scrollable(div, scroll) {
 function isMobileExpandDetails (id, expand) {
   console.log('isMobileExpandDetails');
   console.log(projects);
-  const projectCount = 5;
+  const projectCount = 8;
   const number = parseInt(id)-1;
   console.log(number);
 }

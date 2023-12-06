@@ -9,6 +9,18 @@ import useCollapse from 'react-collapsed';
 import { LazyLoadImage } from "react-lazy-load-image-component";
 import { useContext } from 'react';
 import { ViewContext } from './ViewContext';
+import AnimationPlayer from './video'
+import glassBBB from  './resource/bbb_loading2.mp4';
+import glassBBBMobile from  './resource/bbb_loading_mobile.mp4';
+import chucksHover from  './resource/Images/Chucks/Hover.jpg';
+import penthouseHover from  './resource/Images/Wangsa/Hover.png';
+import KLCHover from  './resource/Images/KLC/Hover.png';
+import hejauHover from  './resource/Images/Hejau/Hover.png';
+import melodyHover from  './resource/Images/Melody/Hover.png';
+import poppyHover from  './resource/Images/Poppy/Hover.png';
+import kiaraHover from './resource/Images/Kiara9/Hover.png';
+import wangsa9 from './resource/Images/Wangsa9/Hover.png';
+
 const screenWidth = window.innerWidth;
 
 function Projects() {
@@ -19,7 +31,7 @@ function Projects() {
     let path = `/project/${projectId}`;
     navigate(path);
   }
-  console.log(projects[1].category);
+
   const content = projects.map((projects) =>
     <tr key={projects.id} onMouseEnter={() => changeURL(projects, true)} onClick={() => routeChange(projects.id)}>
       <td>  </td>
@@ -44,7 +56,7 @@ function Projects() {
               {projects.name}
             </div>
           </div>
-          <div id={`expanded-${projects.id}`} className="mobileExpandContent" key={`expand-${projects.id}`} {...getCollapseProps()} style={{ display: 'contents'}} onClick={()=> routeChange(projects.id)}>
+          <div id={`expanded-${projects.id}`} className="mobileExpandContent" key={`expand-${projects.id}`} {...getCollapseProps()} onClick={()=> routeChange(projects.id)}>
             <div className='projectColumn' style={{ width: '20%', textAlign: 'start'}}>
             </div>
             <div className='projectColumn paddingLeft projectListHeight' style={{ alignItems:'center', textAlign: 'start'}}>
@@ -84,7 +96,7 @@ function Projects() {
     <>
     {mobileView ? 
       // <div className='slideUp' style={{backgroundColor: '#FFFFFF', overflow: 'hidden', height: '35%'}}>
-      <div style={{backgroundColor: '#FFFFFF', width: '100%', overflowY: 'scroll'}}>
+      <div className='slideUp' style={{backgroundColor: '#FFFFFF', width: '100%', overflowY: 'scroll'}}>
         <div className="projectDisplay1" >
           <table id="customers">
             {isMobileContent}
@@ -93,7 +105,7 @@ function Projects() {
       </div>
       :
       // <div className='slideUp' style={{backgroundColor: '#FFFFFF', height:'26%'}}></div>
-      <div className='hideScrollBar' style={{backgroundColor: '#FFFFFF', height:'26%', overflowY:'scroll'}}>
+      <div className='slideUp hideScrollBar' style={{backgroundColor: '#FFFFFF', height:'26%', overflowY:'scroll'}}>
         <div className="projectDisplay1" style={{ height: '100%'}}>
           <table id="customers">
             {content}
@@ -122,15 +134,15 @@ export default function LoadingPage() {
       window.removeEventListener("resize", onResize);
     };
   }, []);
-  const [showLoading, setShowLoading] = useState(true);
-  const [showLanding, setShowLanding] = useState(false);
+  // const [showLoading, setShowLoading] = useState(false);
+  // const [showLanding, setShowLanding] = useState(true);
 
-  useEffect(() => {
-    const timer = setTimeout(() => {
-      setShowLoading(!showLoading);
-      setShowLanding(!showLanding);
-    }, 3000)
-  }, []);
+  // useEffect(() => {
+  //   const timer = setTimeout(() => {
+  //     // setShowLoading(!showLoading);
+  //     // setShowLanding(!showLanding);
+  //   }, 3000)
+  // }, []);
 
   const logos = [logoBig];
   const logo = logos.map((logo, index) => (
@@ -139,62 +151,57 @@ export default function LoadingPage() {
 
   return (
     <>
-      {showLoading && (
-        <div className='defaultLandingPage-full'>
-          <div className='navDisplay' style={{ backgroundColor: 'rgb(255, 184, 242)', borderBottom: 'hidden'}}/>
-          <div className="loadingPage-full">
-            <div className='loadingPage-image'>
-              {logo}
-              {logo}
+        <div className='landingPage-transition' style={{ display: 'flex', flexDirection: 'column', height: "100svh", width: "100vw" , backgroundColor: '#FFB8F2'}}>
+            <div className="navDisplay slideDown fixedTopPosition" style={{ height: '4%'}}>
+              <Navbar style={{ display: 'flex'}}/>
             </div>
-          </div>
-          <div className='projectDisplay1' />
-        </div>
-      )}
-      {showLanding && (
-        <div className='landingPage-transition' style={{ display: 'flex', flexDirection: 'column', height: "100svh", width: "100vw" , backgroundColor: 'rgb(255, 184, 242)'}}>
-          {/* <div className="navDisplay slideDown"> */}
-          <div className="navDisplay fixedTopPosition" style={{ height: '4%'}}>
-            <Navbar style={{ display: 'flex'}}/>
-           </div>
            {mobileView ?
-           <div className='landingPage-full0' style={{ minHeight: '63.5%'}}>
-            <a id='changeLink' href={`/project/${projects[0].id}`}>
+          //  <div className='mobileLogoSlide landingPage-full0' style={{ minHeight: '63.5%'}}>
+          <div className='landingPage-full0'>
+            <a id='changeLink'>
             <div key="landing" className="landingPage-full1">
-              <LazyLoadImage id="changeImage" key='logo' className="landingPage-image1" src={projects[0].link} alt={logoBig.toString()} onMouseEnter={() => changeURL(logoBig, false)} />
+              {/* THIS PART DISPLAY IMAGE WHEN USER SELECT STORE FROM THE LIST */}
+              <LazyLoadImage id="changeImage1" key='logo' className="landingPage-image1" src={logoBig} onMouseEnter={() => changeURL(logoBig, false)} />
             </div>
             </a>
            </div>
            :
            <div className='landingPage-full0' style={{ height: '70.5%'}}>
              <div key="landing" className="landingPage-full1">
-               <LazyLoadImage id="hoverImage" key='logo' className="landingPage-image1" src={logoBig} alt={logoBig.toString()} onMouseEnter={() => changeURL(logoBig, false)} />
+              {/* THIS  PART HOVER IMAGE WHEN USER SELECT STORE FROM THE LIST */}
+               <LazyLoadImage id="hoverImage" key='logo' className="landingPage-image1" src={logoBig} onMouseEnter={() => changeURL(logoBig, false)} />
              </div>
            </div>
            }
           <Projects />
         </div>
-      )}
     </>
   );
 }
 
 const projects = [
-  { id: 1, year: '  2023', mobileYear: '  2023', name: 'Wangsa9 Penthouse', details: 'Emotional connection across 5,313km.', category: 'Residential', link: './Images/Wangsa/Hover.png' },
-  { id: 2, year: '      ', mobileYear: '  2023',name: 'KLC', details: 'Lunar Eclipse.', category: 'Commercial', link: './Images/KLC/Hover.png' },
-  { id: 3, year: '  2022', mobileYear: '  2022',name: 'Hejau', details: 'A foundation of environmental psychology.', category: 'Commercial', link: './Images/Hejau/Hover.png' },
-  { id: 4, year: '      ', mobileYear: '  2022',name: 'Melody Kindyland', details: 'A place just like a home and a communal place for children.', category: 'Commercial', link: './Images/Melody/Hover.png' },
-  { id: 5, year: '      ', mobileYear: '  2022',name: 'Poppykat', details: 'Recalled a certain aesthetic from Wes Anderson\'s Movie.', category: 'Commercial', link: './Images/Poppy/Hover.png' },
+  { id: 1, year: '  2023', mobileYear: '  2023', name: 'Penthouse', details: 'Monochrome penthouse apartment.', category: 'Residential', link: kiaraHover },
+  { id: 2, year: '      ', mobileYear: '  2023', name: 'Penthouse', details: 'Serene Modern Sanctuary.', category: 'Residential', link: wangsa9 },
+  { id: 3, year: '      ', mobileYear: '  2023', name: 'Chucks', details: 'Unexpected, fun, curious.', category: 'Commercial', link: chucksHover },
+  { id: 4, year: '      ', mobileYear: '  2023', name: 'Penthouse', details: 'Ode to home.', category: 'Residential', link: penthouseHover },
+  { id: 5, year: '      ', mobileYear: '  2023', name: 'KLC', details: 'Lunar Eclipse.', category: 'Commercial', link: KLCHover },
+  { id: 6, year: '  2022', mobileYear: '  2022', name: 'Hejau', details: 'A foundation of environmental psychology.', category: 'Commercial', link: hejauHover },
+  { id: 7, year: '      ', mobileYear: '  2022', name: 'Melody Kindyland', details: 'A place just like a home and a communal place for children.', category: 'Commercial', link: melodyHover },
+  { id: 8, year: '      ', mobileYear: '  2022', name: 'Poppykat', details: 'Recalled a certain aesthetic from Wes Anderson\'s Movie.', category: 'Commercial', link: poppyHover },
 ];
 
 function changeURL(projects, hover) {
   if (!hover) {
     console.log('hover out');
     document.getElementById('hoverImage').src = logoBig;
+    // document.getElementById('videoBBB').style.display = 'flex';
+    // document.getElementById('hoverImage').style.display = 'none';
   }
 
   if (hover && projects.link.length !== 0) {
+    // document.getElementById('videoBBB').style.display = 'none';
     console.log(projects.link);
+    document.getElementById('hoverImage').style.display = 'flex';
     document.getElementById('hoverImage').src = projects.link;
   }
 }
@@ -207,13 +214,17 @@ function isMobileExpandDetails (projects, expand) {
   console.log(number);
   for(let i = 0; i < projectCount; i++){
     if(number == i && expand) {
-      document.getElementById('changeImage').src = projects.link;
+      document.getElementById('changeImage1').src = projects.link;
+      // document.getElementById('video').style.display = 'none';
       document.getElementsByClassName('mobileExpandContent')[number].style.display = 'inline-table';
       document.getElementsByClassName('projectBackgroundColour')[number].style.backgroundColor = '#FFFFFF';
       document.getElementsByClassName('mobileExpandContent')[number].style.width = '96%';
       document.getElementById('changeLink').href = `/project/${projects.id}`;
       console.log('isMobileExpandDetails');
     } else {
+      console.log('expand');
+      // document.getElementById('mobileVideoBBB').style.display = 'none';
+      document.getElementById('changeImage1').style.display = 'flex';
       document.getElementsByClassName('mobileExpandContent')[i].style.display = 'none';
       document.getElementsByClassName('projectBackgroundColour')[i].style.backgroundColor = '#FFFFFF';
     }

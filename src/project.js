@@ -8,6 +8,18 @@ import useCollapse from 'react-collapsed';
 import { LazyLoadImage } from "react-lazy-load-image-component";
 import { ViewContext } from './ViewContext';
 import { useContext } from 'react';
+import AnimationPlayer from './video'
+import glassBBB from  './resource/bbb_loading2.mp4';
+import glassBBBMobile from  './resource/bbb_loading_mobile.mp4';
+import chucksHover from  './resource/Images/Chucks/Hover.jpg';
+import penthouseHover from  './resource/Images/Wangsa/Hover.png';
+import KLCHover from  './resource/Images/KLC/Hover.png';
+import hejauHover from  './resource/Images/Hejau/Hover.png';
+import melodyHover from  './resource/Images/Melody/Hover.png';
+import poppyHover from  './resource/Images/Poppy/Hover.png';
+import kiaraHover from './resource/Images/Kiara9/Hover.png';
+import wangsa9 from './resource/Images/Wangsa9/Hover.png';
+
 
 export default function ImageAndProjects() {
   const {mobileView, laptopView, navView} = useContext(ViewContext);
@@ -18,7 +30,7 @@ export default function ImageAndProjects() {
     let path = `/project/${projectId}`;
     navigate(path);
   }
-  // console.log(projects[1].category);
+
   const content = projects.map((projects) =>
     <tr key={projects.id} onMouseEnter={() => changeURL(projects, true)} onClick={() => routeChange(projects.id)}>
       <td>  </td>
@@ -43,7 +55,7 @@ export default function ImageAndProjects() {
             {projects.name}
           </div>
         </div>
-        <div id={`expanded-${projects.id}`} className="mobileExpandContent" key={`expand-${projects.id}`} {...getCollapseProps()} style={{ display: 'contents'}} onClick={()=> routeChange(projects.id)}>
+        <div id={`expanded-${projects.id}`} className="mobileExpandContent" key={`expand-${projects.id}`} {...getCollapseProps()} onClick={()=> routeChange(projects.id)}>
           <div className='projectColumn' style={{ width: '20%', textAlign: 'start'}}>
           </div>
           <div className='projectColumn paddingLeft projectListHeight' style={{ alignItems:'center', textAlign: 'start'}}>
@@ -86,9 +98,9 @@ export default function ImageAndProjects() {
       { mobileView ? 
       <>
       <div className='landingPage-full0' style={{ minHeight: '63.5%'}}>
-      <a id='changeLink' href={`/project/${projects[0].id}`}>
+      <a id='changeLink'>
         <div key="landing" className="landingPage-full1">
-          <LazyLoadImage id="changeImage" key='logo' className="landingPage-image1" src={projects[0].link} onMouseEnter={() => changeURL(logoBig, false)}/>
+          <LazyLoadImage id="changeImage1" key='logo' className="landingPage-image1" src={projects[0].link} onMouseEnter={() => changeURL(logoBig, false)}/>
         </div>
         </a>
       </div>
@@ -102,7 +114,8 @@ export default function ImageAndProjects() {
        <>
        <div className='landingPage-full0' style={{ height: '70.5%'}}>
         <div key="landing" className="landingPage-full1">
-          <LazyLoadImage id="hoverImage" key='logo' className="landingPage-image1" src={logoBig} alt={logoBig.toString()} onMouseEnter={() => changeURL(logoBig, false)} />
+        {/* THIS  PART HOVER IMAGE WHEN USER SELECT STORE FROM THE LIST */}
+          <LazyLoadImage id="hoverImage1" key='logo' className="landingPage-image1" src={logoBig} onMouseEnter={() => changeURL(logoBig, false)} />
         </div>
       </div>
        <div className="hideScrollBar projectDisplay1 collapsible" style={{ height: '26%',backgroundColor: '#FFFFFF', overflowY:'scroll'}}>
@@ -117,22 +130,27 @@ export default function ImageAndProjects() {
 }
 
 const projects = [
-  { id: 1, year: '  2023', mobileYear: '  2023', name: 'Wangsa9 Penthouse', details: 'Emotional connection across 5,313km.', category: 'Residential', link: './Images/Wangsa/Hover.png' },
-  { id: 2, year: '      ', mobileYear: '  2023',name: 'KLC', details: 'Lunar Eclipse.', category: 'Commercial', link: './Images/KLC/Hover.png' },
-  { id: 3, year: '  2022', mobileYear: '  2022',name: 'Hejau', details: 'A foundation of environmental psychology.', category: 'Commercial', link: './Images/Hejau/Hover.png' },
-  { id: 4, year: '      ', mobileYear: '  2022',name: 'Melody Kindyland', details: 'A place just like a home and a communal place for children.', category: 'Commercial', link: './Images/Melody/Hover.png' },
-  { id: 5, year: '      ', mobileYear: '  2022',name: 'Poppykat', details: 'Recalled a certain aesthetic from Wes Anderson\'s Movie.', category: 'Commercial', link: './Images/Poppy/Hover.png' },
+  { id: 1, year: '  2023', mobileYear: '  2023', name: 'Penthouse', details: 'Monochrome penthouse apartment.', category: 'Residential', link: kiaraHover },
+  { id: 2, year: '      ', mobileYear: '  2023', name: 'Penthouse', details: 'Serene Modern Sanctuary.', category: 'Residential', link: wangsa9 },
+  { id: 3, year: '      ', mobileYear: '  2023', name: 'Chucks', details: 'Unexpected, fun, curious.', category: 'Commercial', link: chucksHover },
+  { id: 4, year: '      ', mobileYear: '  2023', name: 'Penthouse', details: 'Ode to home.', category: 'Residential', link: penthouseHover },
+  { id: 5, year: '      ', mobileYear: '  2023', name: 'KLC', details: 'Lunar Eclipse.', category: 'Commercial', link: KLCHover },
+  { id: 6, year: '  2022', mobileYear: '  2022', name: 'Hejau', details: 'A foundation of environmental psychology.', category: 'Commercial', link: hejauHover },
+  { id: 7, year: '      ', mobileYear: '  2022', name: 'Melody Kindyland', details: 'A place just like a home and a communal place for children.', category: 'Commercial', link: melodyHover },
+  { id: 8, year: '      ', mobileYear: '  2022', name: 'Poppykat', details: 'Recalled a certain aesthetic from Wes Anderson\'s Movie.', category: 'Commercial', link: poppyHover },
 ];
 
 function changeURL(projects, hover) {
   if (!hover) {
-    console.log('hover out');
-    document.getElementById('hoverImage').src = logoBig;
+    document.getElementById('hoverImage1').src = logoBig;
+    // document.getElementById('videoBBB').style.display = 'flex';
+    // document.getElementById('hoverImage1').style.display = 'none';
   }
 
   if (hover && projects.link.length !== 0) {
-    console.log(projects.link);
-    document.getElementById('hoverImage').src = projects.link;
+    // document.getElementById('videoBBB').style.display = 'none';
+    document.getElementById('hoverImage1').style.display = 'flex';
+    document.getElementById('hoverImage1').src = projects.link;
   }
 }
 
@@ -144,12 +162,15 @@ function isMobileExpandDetails (projects, expand) {
   console.log(number);
   for(let i = 0; i < projectCount; i++){
     if(number == i && expand) {
-      document.getElementById('changeImage').src = projects.link;
+      document.getElementById('changeImage1').src = projects.link;
       document.getElementsByClassName('mobileExpandContent')[number].style.display = 'contents';
       document.getElementsByClassName('projectBackgroundColour')[number].style.backgroundColor = '#FFFFFF';
       document.getElementsByClassName('mobileExpandContent')[number].style.width = '100%';
       document.getElementById('changeLink').href = `/project/${projects.id}`;
     } else {
+      console.log('expand');
+      // document.getElementById('mobileVideoBBB').style.display = 'none';
+      document.getElementById('changeImage1').style.display = 'flex';
       document.getElementsByClassName('mobileExpandContent')[i].style.display = 'none';
       document.getElementsByClassName('projectBackgroundColour')[i].style.backgroundColor = '#FFFFFF';
     }

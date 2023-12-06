@@ -1,14 +1,8 @@
-import logoStart from './resource/logo-start.svg';
-import logoMiddle from './resource/logo-middle.svg';
-import logoEnd from './resource/logo-end.svg';
 import './landingPage.css';
 import './loadingPage.css';
 import './infoPage.css';
-import { isMobile } from "react-device-detect";
-import InfoNavBar from "./infoNavBar";
 import Navbar from "./navBar";
 import React, { useState, useContext } from "react";
-import { LazyLoadImage } from "react-lazy-load-image-component";
 import { ViewContext } from './ViewContext';
 
 function InfoPage () {
@@ -29,21 +23,8 @@ function InfoPage () {
     };
   }, []);
   const screenWidth = window.innerWidth;
-  const logos = [logoStart,logoMiddle,logoEnd];
-  const logo = logos.map((logo,index) => (
-    <LazyLoadImage key={index} className="landingPage-image" src={logo} alt={logo.toString()} />
-  ));
+
   return(
-    // <div id="infoDisplay" className="infoPageTransition">
-    // <div id="infoDisplay">
-    //   <InfoNavBar />
-    //   <div className='contentDescriptionHeight'>
-    //     <ul style={{ textAlign: 'left',paddingTop:'3%', width: '100%', whiteSpace: 'none', paddingLeft: '2%'}}>
-    //         <li id="infoContent">BBB is an interior design studio based in Kuala Lumpur. 
-    //         We create non-linear narratives associated with a sense of place - 
-    //         echoing emotions formed through a connection with the craft of building.</li>
-    //     </ul>
-    //   </div>
     <div style={{display: 'flex', flexDirection: 'column', height: '100svh', width: "100vw", background: 'rgb(104,19,0)'}}> 
       { mobileView ?
       <div className="navDisplay" style={{ position: 'sticky', top: 0 ,backgroundColor: 'rgb(104,19,0)', borderBottom: '1.6px solid rgb(255,192,103)'}}>
@@ -62,7 +43,7 @@ function InfoPage () {
       </div>
       :
       <div className='contentDescriptionHeight'>
-         <ul style={{ textAlign: 'left',paddingTop:'3%', width: '100%', whiteSpace: 'none'}}>
+         <ul style={{ textAlign: 'left',paddingTop:'3%', width: '105%', whiteSpace: 'none'}}>
              <li id="infoContent">BBB is an interior design studio based in </li>
              <li id="infoContent">Kuala Lumpur. We create non-linear</li>
              <li id="infoContent">narratives associated with a sense of place -</li>
@@ -78,35 +59,31 @@ function InfoPage () {
             <ul className='textAlignLeft mobileFontSize'>For all project enquires,
                 <li id="context mobileFontSize"><a href="mailto:hi@studiobbb.co">hi@studiobbb.co</a></li>
               </ul>
-            {/* <ul className='textAlignLeft mobileFontSize'>{ mobileView ?   <><h1 classame='mobileFontSize' style={{ paddingTop: '3%', paddingBottom: '3%'}}>Contact</h1></> : <>CONTACT</> }
-                <li id="context mobileFontSize">For all project enquires,</li>
-                <li id="context mobileFontSize"><a href="mailto:hi@studiobbb.co">hi@studiobbb.co</a></li>
-              </ul> */}
-              <ul className='textAlignLeft mobileFontSize'>{ mobileView ?  <>Office Hours</> : <>OFFICE HOURS</> }
+              <ul className='textAlignLeft mobileFontSize' style={{ fontSize: '16px', letterSpacing: '0.03em'}}>{ mobileView ?  <>Office Hours</> : <>OFFICE HOURS</> }
                 <li id="context mobileFontSize">Monday to Friday</li>
-                <li id="context mobileFontSize">10:00 - 18:00</li>
+                <li id="context mobileFontSize" style={{ letterSpacing: '0.03em' }}>10:00 - 18:00</li>
               </ul>
-              <ul className='textAlignLeft mobileFontSize'>{ mobileView ?   <>Instagram</> : <>INSTAGRAM</> }
+              <ul className='textAlignLeft mobileFontSize' style={{ fontSize: '16px', letterSpacing: '0.03em' }}>{ mobileView ?   <>Instagram</> : <>INSTAGRAM</> }
                 <li id="context mobileFontSize"><a href="https://www.instagram.com/studiobbb.co">@studiobbb</a></li>
               </ul>
             </> :
             <>
             <tr>
             <td style={{width: '25%', verticalAlign:'top'}}>
-              <ul className='textAlignLeft '>{ mobileView ?   <>Contact</> : <>CONTACT</> }
+              <ul className='textAlignLeft' style={{ fontSize: '16px', letterSpacing: '0.03em'}}>{ mobileView ?   <>Contact</> : <>CONTACT</> }
                 <li id="context">For all project enquires,</li>
                 <li id="context"><a href="mailto:hi@studiobbb.co">hi@studiobbb.co</a></li>
               </ul>
             </td>
             <td>
-              <ul className='textAlignLeft'>{ mobileView ?  <>Office Hours</> : <>OFFICE HOURS</> }
+              <ul className='textAlignLeft' style={{ fontSize: '16px', letterSpacing: '0.03em'}}>{ mobileView ?  <>Office Hours</> : <>OFFICE HOURS</> }
                 <li id="context">Monday to Friday</li>
-                <li id="context">10:00 - 18:00</li>
+                <li id="context" style={{ letterSpacing: '0.03em' }}>10:00 - 18:00</li>
               </ul>
               <ul></ul>
             </td>
             </tr>
-            <ul className='textAlignLeft ' style={{ fontSize: '18px' }}>{ mobileView ?   <>Instagram</> : <>INSTAGRAM</> }
+            <ul className='textAlignLeft' style={{ fontSize: '16px', letterSpacing: '0.03em' }}>{ mobileView ?   <>Instagram</> : <>INSTAGRAM</> }
                 <li id="context"><a href="https://www.instagram.com/studiobbb.co">@studiobbb</a></li>
               </ul>
               </>
@@ -115,9 +92,9 @@ function InfoPage () {
         </div>
       </div>
       { mobileView ?
-        <div id="bottomInfoNav"className="infoFooterDisplay mobileFontSize">Studio BBB &copy; 2023</div>
+        <div id="bottomInfoNav"className="infoFooterDisplay mobileFontSize">Copyrights &copy; 2023 BBB Design Studio Sdn. Bhd. 202201025118 (1470815-M). All Rights Reserved</div>
         :
-        <div id="bottomInfoNav"className="infoFooterDisplay laptopFontSize">Studio BBB &copy; 2023</div>
+        <div id="bottomInfoNav"className="infoFooterDisplay laptopFontSize">Copyrights &copy; 2023 BBB Design Studio Sdn. Bhd. 202201025118 (1470815-M). All Rights Reserved</div>
       }
     </div>
   );

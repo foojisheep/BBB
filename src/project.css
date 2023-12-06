@@ -101,6 +101,7 @@ div.projectDisplay1 {
 #customers tr {
   border-bottom: 1.6px solid black;
   border-collapse: collapse;
+  border-top: 1.6px solid black;;
 }
 
 #customers tr:last-child
@@ -141,9 +142,9 @@ div.projectDisplay1 {
   width: 80%;
 }
 
-.paddingLeft {
+/* .paddingLeft {
   padding-left: 19.5%;
-}
+} */
 
 /* Small devices (500px and up) */
 @media only screen and (max-width: 640px) {
@@ -212,4 +213,20 @@ div.projectDisplay1 {
   font-family: 'FoundersGroteskText';
   font-style: normal;
   line-height: 20px;
+}
+
+video {
+  /* background-image: url(resource/bbb_loading_gif.gif);
+  background-repeat: repeat;
+  background-position: center; */
+  /* width: 98%;
+  height: 60% */
+}
+
+#hoverImage1 {
+  /* display: none; */
+}
+
+#changeImage1 {
+  /* display: none;s */
 }
