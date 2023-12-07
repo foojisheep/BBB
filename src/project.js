@@ -31,15 +31,40 @@ export default function ImageAndProjects() {
     navigate(path);
   }
 
-  const content = projects.map((projects) =>
-    <tr key={projects.id} onMouseEnter={() => changeURL(projects, true)} onClick={() => routeChange(projects.id)}>
+  const content = projects.map((project) =>
+    <tr key={project.id} onMouseEnter={() => changeURL(project, true)} onClick={() => routeChange(project.id)}>
       <td>  </td>
-      <td>{projects.mobileYear}</td>
-      <td>{projects.name}</td>
+      <td>{project.mobileYear}</td>
+      <td>{project.name}</td>
       { navView ? null :
-        <td>{projects.details}</td>
-      }
-      <td style={{ textAlign: 'right' }}>{projects.category}</td>
+         <td>
+           {project.details + '  '}
+           { project.tag != null ?
+              <>
+              <span>
+                <button
+                  class="btn btn-success" 
+                  style={{
+                    borderRadius: '15px',
+                    backgroundColor: '#DEDEDE',
+                    innerWidth:'12px',
+                    height: '32px',
+                    borderStyle: 'none',
+                    fontSize: '20px',
+                    paddingLeft: '12px',
+                    paddingRight: '12px',
+                    fontFamily: 'FoundersGroteskText'
+                    }}
+                  >
+                  {project.tag}
+                </button>
+              </span>
+              </>
+              : <> </>
+            }
+         </td> 
+       }
+      <td style={{ textAlign: 'right' }}>{project.category}</td>
     </tr>
   );
 
@@ -130,14 +155,14 @@ export default function ImageAndProjects() {
 }
 
 const projects = [
-  { id: 1, year: '  2023', mobileYear: '  2023', name: 'Penthouse', details: 'Monochrome penthouse apartment.', category: 'Residential', link: kiaraHover },
-  { id: 2, year: '      ', mobileYear: '  2023', name: 'Penthouse', details: 'Serene Modern Sanctuary.', category: 'Residential', link: wangsa9 },
-  { id: 3, year: '      ', mobileYear: '  2023', name: 'Chucks', details: 'Unexpected, fun, curious.', category: 'Commercial', link: chucksHover },
-  { id: 4, year: '      ', mobileYear: '  2023', name: 'Penthouse', details: 'Ode to home.', category: 'Residential', link: penthouseHover },
-  { id: 5, year: '      ', mobileYear: '  2023', name: 'KLC', details: 'Lunar Eclipse.', category: 'Commercial', link: KLCHover },
-  { id: 6, year: '  2022', mobileYear: '  2022', name: 'Hejau', details: 'A foundation of environmental psychology.', category: 'Commercial', link: hejauHover },
-  { id: 7, year: '      ', mobileYear: '  2022', name: 'Melody Kindyland', details: 'A place just like a home and a communal place for children.', category: 'Commercial', link: melodyHover },
-  { id: 8, year: '      ', mobileYear: '  2022', name: 'Poppykat', details: 'Recalled a certain aesthetic from Wes Anderson\'s Movie.', category: 'Commercial', link: poppyHover },
+  { id: 1, year: '  2023', mobileYear: '  2023', name: 'Penthouse', details: 'Monochrome penthouse apartment.', category: 'Residential', link: kiaraHover , tag: 'on-going'},
+  { id: 2, year: '      ', mobileYear: '  2023', name: 'Penthouse', details: 'Serene Modern Sanctuary.', category: 'Residential', link: wangsa9 , tag: 'on-going'},
+  { id: 3, year: '      ', mobileYear: '  2023', name: 'Chucks', details: 'Unexpected, fun, curious.', category: 'Commercial', link: chucksHover , tag: null},
+  { id: 4, year: '      ', mobileYear: '  2023', name: 'Penthouse', details: 'Ode to home.', category: 'Residential', link: penthouseHover , tag: null},
+  { id: 5, year: '      ', mobileYear: '  2023', name: 'KLC', details: 'Lunar Eclipse.', category: 'Commercial', link: KLCHover , tag: null},
+  { id: 6, year: '  2022', mobileYear: '  2022', name: 'Hejau', details: 'A foundation of environmental psychology.', category: 'Commercial', link: hejauHover , tag: null},
+  { id: 7, year: '      ', mobileYear: '  2022', name: 'Melody Kindyland', details: 'A place just like a home and a communal place for children.', category: 'Commercial', link: melodyHover , tag: null },
+  { id: 8, year: '      ', mobileYear: '  2022', name: 'Poppykat', details: 'Recalled a certain aesthetic from Wes Anderson\'s Movie.', category: 'Commercial', link: poppyHover , tag: null},
 ];
 
 function changeURL(projects, hover) {
