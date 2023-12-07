@@ -164,13 +164,13 @@
 .projectDetailsFontSize {
   font-size: 18px !important;
   line-height: 19px !important;
-  letter-spacing: 0.03em;
+  letter-spacing: 0.03em !important;
 }
 
 .projectDetailsDescriptionFontSize {
   font-size: 19px !important;
   line-height: 22px !important;
-  letter-spacing: 0.03em;
+  letter-spacing: 0.03em !important;
 }
 
 #projectDetails td {

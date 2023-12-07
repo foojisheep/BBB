@@ -42,9 +42,8 @@ const projectsDetails = [
     years: 'On-going',
     surface: '6,000 sqft',
     collab: '',
-    desc1: 'The white washed carcass of the penthouse evokes a feeling of silence and emptiness. This forms the central idea to the conception of a tranquil space with a deep restrain of color palette - where the gentleness of white is carefully layered and contrasted with darker materiality.'
-    +' This stylistic relationship is unchanging and it is omnipresent throughout, as it is a reminder of how the past can inform new possibilities for a new home',
-    desc2: ''
+    desc1: 'The white washed carcass of the penthouse evokes a feeling of silence and emptiness. This forms the central idea to the conception of a tranquil space with a deep restrain of color palette - where the gentleness of white is carefully layered and contrasted with darker materiality. ',
+    desc2: 'The intentional, unchanging nature of this stylistic relationship serves as a visual reminder of how the past informs new possibilities in the creation of a home. It becomes a metaphorical bridge, connecting historical echoes within the space with the contemporary vision for a tranquil and timeless residence.'
   },
   { 
     id: 2,
@@ -54,9 +53,8 @@ const projectsDetails = [
     years: 'On-going',
     surface: '2,050 sqft',
     collab: '',
-    desc1: 'The essence of our design concept for this residential space is to craft a serene and contemporary sanctuary that effortlessly integrates openness, sophistication, and a profound sense of calm. The primary focus is to create an open and airy atmosphere within the space, promoting a sense of fluidity and seamless flow between areas. To infuse an air of luxury and sophistication, we are committed to utilizing a carefully curated selection of high-quality, enduring materials. '
-    + 'This refined material palette will encompass a range of timeless elements that not only elevate the aesthetics but also enhance the overall sense of opulence within the space. Thoughtfully chosen furnishings, selected for their comfort and softness, will encourage an ambiance of profound stillness and calm.',
-    desc2: ''
+    desc1: 'To infuse an air of luxury and sophistication, we are committed to utilizing a carefully curated selection of high-quality, enduring materials. This refined material palette will encompass a range of timeless elements that not only elevate the aesthetics but also enhance the overall sense of opulence within the space. ',
+    desc2: 'Thoughtfully chosen furnishings, selected for their comfort and softness, will encourage an ambiance of profound stillness and calm.'
   },
   { 
     id: 3,
@@ -345,21 +343,21 @@ function Desc(object) {
 }
 
 function Desc1(object) {
-  if (object.value.id == 3 || object.value.id == 4 || object.value.id == 8) {
+  // if (object.value.id == 1 || object.value.id == 2 || object.value.id == 3 || object.value.id == 4 || object.value.id == 8) {
     return (
       <>
         <td class="projectDetailsDescriptionFontSize" style={{ width: '50%', textAlign: 'left', padding: 0, margin: 0}}>{object.value.desc1}</td>
         <td class="projectDetailsDescriptionFontSize" style={{ paddingLeft: '2%', width: '48%', textAlign: 'left'}}>{object.value.desc2}</td>
       </>
     );
-  }else{
-    return (
-      <>
-      <p class="projectDetailsDescriptionFontSize" style={{ padding: 0, margin: 0}}>{object.value.desc1}</p>
-      <p class="projectDetailsDescriptionFontSize" style={{ marginTop: '2%' }}>{object.value.desc2}</p>
-      </>
-    );
-  }
+  // }else{
+  //   return (
+  //     <>
+  //     <p class="projectDetailsDescriptionFontSize" style={{ padding: 0, margin: 0}}>{object.value.desc1}</p>
+  //     <p class="projectDetailsDescriptionFontSize" style={{ marginTop: '1%' }}>{object.value.desc2}</p>
+  //     </>
+  //   );
+  // }
 }
 
 function ShowImage(props) {
