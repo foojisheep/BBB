@@ -52,7 +52,8 @@ export default function ImageAndProjects() {
                     fontSize: '18px',
                     paddingLeft: '12px',
                     paddingRight: '12px',
-                    fontFamily: 'FoundersGroteskText'
+                    fontFamily: 'FoundersGroteskText',
+                    color: '#000000'
                     }}
                   >
                   {project.tag}
@@ -81,7 +82,8 @@ export default function ImageAndProjects() {
                     fontSize: '20px',
                     paddingLeft: '12px',
                     paddingRight: '12px',
-                    fontFamily: 'FoundersGroteskText'
+                    fontFamily: 'FoundersGroteskText',
+                    color: '#000000'
                     }}
                   >
                   {project.tag}
@@ -121,7 +123,8 @@ export default function ImageAndProjects() {
                     fontSize: '18px',
                     paddingLeft: '12px',
                     paddingRight: '12px',
-                    fontFamily: 'FoundersGroteskText'
+                    fontFamily: 'FoundersGroteskText',
+                    color: '#000000'
                     }}
                   >
                   {projects.tag}
@@ -168,7 +171,8 @@ export default function ImageAndProjects() {
                     fontSize: '18px',
                     paddingLeft: '12px',
                     paddingRight: '12px',
-                    fontFamily: 'FoundersGroteskText'
+                    fontFamily: 'FoundersGroteskText',
+                    color: '#000000'
                     }}
                   >
                   {projects.tag}

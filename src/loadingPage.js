@@ -79,7 +79,8 @@ function Projects() {
                     fontSize: '18px',
                     paddingLeft: '12px',
                     paddingRight: '12px',
-                    fontFamily: 'FoundersGroteskText'
+                    fontFamily: 'FoundersGroteskText',
+                    color: '#000000'
                     }}
                   >
                   {projects.tag}
@@ -125,7 +126,8 @@ function Projects() {
                     fontSize: '18px',
                     paddingLeft: '12px',
                     paddingRight: '12px',
-                    fontFamily: 'FoundersGroteskText'
+                    fontFamily: 'FoundersGroteskText',
+                    color: '#000000'
                     }}
                   >
                   {projects.tag}
@@ -173,7 +175,8 @@ function Projects() {
                     fontSize: '18px',
                     paddingLeft: '12px',
                     paddingRight: '12px',
-                    fontFamily: 'FoundersGroteskText'
+                    fontFamily: 'FoundersGroteskText',
+                    color: '#000000'
                     }}
                   >
                   {project.tag}
@@ -202,7 +205,8 @@ function Projects() {
                     fontSize: '20px',
                     paddingLeft: '12px',
                     paddingRight: '12px',
-                    fontFamily: 'FoundersGroteskText'
+                    fontFamily: 'FoundersGroteskText',
+                    color: '#000000'
                     }}
                   >
                   {project.tag}
