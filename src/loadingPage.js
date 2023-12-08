@@ -172,7 +172,7 @@ function Projects() {
                     innerWidth:'12px',
                     height: '32px',
                     borderStyle: 'none',
-                    fontSize: '18px',
+                    fontSize: '20px',
                     paddingLeft: '12px',
                     paddingRight: '12px',
                     fontFamily: 'FoundersGroteskText',
