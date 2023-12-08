@@ -38,7 +38,17 @@ function Projects() {
       <td>{projects.mobileYear}</td>
       <td>{projects.name}</td>
       { navView ? null :
-        <td>{projects.details}</td>
+        <td>
+          {projects.details}
+          { projects.tag != null ?
+          <>
+          {/* <div style={{ paddingLeft: '1%' }}> */}
+          <button type="button" class="btn btn-primary">{projects.tag}</button>
+          {/* </div> */}
+          </>
+          : <> </>
+          }
+        </td> 
       }
       <td style={{ textAlign: 'right' }}>{projects.category}</td>
     </tr>
@@ -53,7 +63,33 @@ function Projects() {
               {projects.mobileYear}
             </div>
             <div className='mobileContentYear' style={{ alignItems: 'flex-start', textAlign: 'start'}}>
-              {projects.name}
+              <span>
+                {projects.name + ' '}
+                {projects.tag != null ?
+              <>
+              <span>
+                <button
+                  class="btn btn-success" 
+                  style={{
+                    borderRadius: '15px',
+                    backgroundColor: '#DEDEDE',
+                    innerWidth:'12px',
+                    height: '32px',
+                    borderStyle: 'none',
+                    fontSize: '18px',
+                    paddingLeft: '12px',
+                    paddingRight: '12px',
+                    fontFamily: 'FoundersGroteskText',
+                    color: '#000000'
+                    }}
+                  >
+                  {projects.tag}
+                </button>
+              </span>
+              </>
+              : <> </>
+              }
+              </span>
             </div>
           </div>
           <div id={`expanded-${projects.id}`} className="mobileExpandContent" key={`expand-${projects.id}`} {...getCollapseProps()} onClick={()=> routeChange(projects.id)}>
@@ -74,7 +110,33 @@ function Projects() {
               {projects.mobileYear}
             </div>
             <div className='mobileContentYear' style={{ alignItems: 'flex-start', textAlign: 'start'}}>
-              {projects.name}
+              <span>
+                {projects.name + ' '}
+                {projects.tag != null ?
+              <>
+              <span>
+                <button
+                  class="btn btn-success" 
+                  style={{
+                    borderRadius: '15px',
+                    backgroundColor: '#DEDEDE',
+                    innerWidth:'12px',
+                    height: '32px',
+                    borderStyle: 'none',
+                    fontSize: '18px',
+                    paddingLeft: '12px',
+                    paddingRight: '12px',
+                    fontFamily: 'FoundersGroteskText',
+                    color: '#000000'
+                    }}
+                  >
+                  {projects.tag}
+                </button>
+              </span>
+              </>
+              : <> </>
+              }
+              </span>
             </div>
           </div>
           <div id={`expanded-${projects.id}`} className="mobileExpandContent" key={`expand-${projects.id}`} {...getCollapseProps()} onClick={()=> routeChange(projects.id)}>
@@ -92,6 +154,73 @@ function Projects() {
     </>
   );
 
+  const content1 = projects.map((project) =>
+    <tr key={project.id} onMouseEnter={() => changeURL(project, true)} onClick={() => routeChange(project.id)}>
+       <td>  </td>
+       <td>{project.mobileYear}</td>
+       { navView 
+        ? <td>
+            {project.name + ' '}
+            {project.tag != null ?
+              <>
+              <span>
+                <button
+                  class="btn btn-success" 
+                  style={{
+                    borderRadius: '15px',
+                    backgroundColor: '#DEDEDE',
+                    innerWidth:'12px',
+                    height: '32px',
+                    borderStyle: 'none',
+                    fontSize: '20px',
+                    paddingLeft: '12px',
+                    paddingRight: '12px',
+                    fontFamily: 'FoundersGroteskText',
+                    color: '#000000'
+                    }}
+                  >
+                  {project.tag}
+                </button>
+              </span>
+              </>
+              : <> </>
+            }
+        </td> 
+        :<td>{project.name}</td> 
+      }
+       { navView ? null :
+         <td>
+           {project.details + '  '}
+           { project.tag != null ?
+              <>
+              <span>
+                <button
+                  class="btn btn-success" 
+                  style={{
+                    borderRadius: '15px',
+                    backgroundColor: '#DEDEDE',
+                    innerWidth:'12px',
+                    height: '32px',
+                    borderStyle: 'none',
+                    fontSize: '20px',
+                    paddingLeft: '12px',
+                    paddingRight: '12px',
+                    fontFamily: 'FoundersGroteskText',
+                    color: '#000000'
+                    }}
+                  >
+                  {project.tag}
+                </button>
+              </span>
+              </>
+              : <> </>
+            }
+         </td> 
+       }
+       <td style={{ textAlign: 'right' }}>{project.category}</td>
+    </tr>
+  );
+
   return (
     <>
     {mobileView ? 
@@ -106,11 +235,14 @@ function Projects() {
       :
       // <div className='slideUp' style={{backgroundColor: '#FFFFFF', height:'26%'}}></div>
       <div className='slideUp hideScrollBar' style={{backgroundColor: '#FFFFFF', height:'26%', overflowY:'scroll'}}>
-        <div className="projectDisplay1" style={{ height: '100%'}}>
-          <table id="customers">
-            {content}
-          </table>
-        </div>
+        {/* <div className="projectDisplay1" style={{ height: '100%'}}>
+          
+            {content1} */}
+          {/* </div> */}
+           <table id="customers">
+            {content1}
+          </table> 
+        {/* </div> */}
       </div>
     }
     </>
@@ -180,14 +312,14 @@ export default function LoadingPage() {
 }
 
 const projects = [
-  { id: 1, year: '  2023', mobileYear: '  2023', name: 'Penthouse', details: 'Monochrome penthouse apartment.', category: 'Residential', link: kiaraHover },
-  { id: 2, year: '      ', mobileYear: '  2023', name: 'Penthouse', details: 'Serene Modern Sanctuary.', category: 'Residential', link: wangsa9 },
-  { id: 3, year: '      ', mobileYear: '  2023', name: 'Chucks', details: 'Unexpected, fun, curious.', category: 'Commercial', link: chucksHover },
-  { id: 4, year: '      ', mobileYear: '  2023', name: 'Penthouse', details: 'Ode to home.', category: 'Residential', link: penthouseHover },
-  { id: 5, year: '      ', mobileYear: '  2023', name: 'KLC', details: 'Lunar Eclipse.', category: 'Commercial', link: KLCHover },
-  { id: 6, year: '  2022', mobileYear: '  2022', name: 'Hejau', details: 'A foundation of environmental psychology.', category: 'Commercial', link: hejauHover },
-  { id: 7, year: '      ', mobileYear: '  2022', name: 'Melody Kindyland', details: 'A place just like a home and a communal place for children.', category: 'Commercial', link: melodyHover },
-  { id: 8, year: '      ', mobileYear: '  2022', name: 'Poppykat', details: 'Recalled a certain aesthetic from Wes Anderson\'s Movie.', category: 'Commercial', link: poppyHover },
+  { id: 1, year: '  2023', mobileYear: '  2023', name: 'Penthouse', details: 'Monochrome penthouse apartment.', category: 'Residential', link: kiaraHover , tag: 'on-going'},
+  { id: 2, year: '      ', mobileYear: '  2023', name: 'Penthouse', details: 'Serene Modern Sanctuary.', category: 'Residential', link: wangsa9 , tag: 'on-going'},
+  { id: 3, year: '      ', mobileYear: '  2023', name: 'Chucks', details: 'Unexpected, fun, curious.', category: 'Commercial', link: chucksHover , tag: null},
+  { id: 4, year: '      ', mobileYear: '  2023', name: 'Penthouse', details: 'Ode to home.', category: 'Residential', link: penthouseHover , tag: null},
+  { id: 5, year: '      ', mobileYear: '  2023', name: 'KLC', details: 'Lunar Eclipse.', category: 'Commercial', link: KLCHover , tag: null},
+  { id: 6, year: '  2022', mobileYear: '  2022', name: 'Hejau', details: 'A foundation of environmental psychology.', category: 'Commercial', link: hejauHover , tag: null},
+  { id: 7, year: '      ', mobileYear: '  2022', name: 'Melody Kindyland', details: 'A place just like a home and a communal place for children.', category: 'Commercial', link: melodyHover , tag: null },
+  { id: 8, year: '      ', mobileYear: '  2022', name: 'Poppykat', details: 'Recalled a certain aesthetic from Wes Anderson\'s Movie.', category: 'Commercial', link: poppyHover , tag: null},
 ];
 
 function changeURL(projects, hover) {
