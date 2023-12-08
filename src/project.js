@@ -35,7 +35,35 @@ export default function ImageAndProjects() {
     <tr key={project.id} onMouseEnter={() => changeURL(project, true)} onClick={() => routeChange(project.id)}>
       <td>  </td>
       <td>{project.mobileYear}</td>
-      <td>{project.name}</td>
+      { navView 
+        ? <td>
+            {project.name + ' '}
+            {project.tag != null ?
+              <>
+              <span>
+                <button
+                  class="btn btn-success" 
+                  style={{
+                    borderRadius: '15px',
+                    backgroundColor: '#DEDEDE',
+                    innerWidth:'12px',
+                    height: '32px',
+                    borderStyle: 'none',
+                    fontSize: '18px',
+                    paddingLeft: '12px',
+                    paddingRight: '12px',
+                    fontFamily: 'FoundersGroteskText'
+                    }}
+                  >
+                  {project.tag}
+                </button>
+              </span>
+              </>
+              : <> </>
+            }
+        </td> 
+        :<td>{project.name}</td> 
+      }
       { navView ? null :
          <td>
            {project.details + '  '}
@@ -77,8 +105,33 @@ export default function ImageAndProjects() {
             {projects.mobileYear}
           </div>
           <div className='mobileContentYear' style={{ alignItems: 'flex-start', textAlign: 'start'}}>
-            {projects.name}
-          </div>
+              <span>
+                {projects.name + ' '}
+                {projects.tag != null ?
+              <>
+              <span>
+                <button
+                  class="btn btn-success" 
+                  style={{
+                    borderRadius: '15px',
+                    backgroundColor: '#DEDEDE',
+                    innerWidth:'12px',
+                    height: '32px',
+                    borderStyle: 'none',
+                    fontSize: '18px',
+                    paddingLeft: '12px',
+                    paddingRight: '12px',
+                    fontFamily: 'FoundersGroteskText'
+                    }}
+                  >
+                  {projects.tag}
+                </button>
+              </span>
+              </>
+              : <> </>
+              }
+              </span>
+            </div>
         </div>
         <div id={`expanded-${projects.id}`} className="mobileExpandContent" key={`expand-${projects.id}`} {...getCollapseProps()} onClick={()=> routeChange(projects.id)}>
           <div className='projectColumn' style={{ width: '20%', textAlign: 'start'}}>
@@ -99,8 +152,33 @@ export default function ImageAndProjects() {
             {projects.mobileYear}
           </div>
           <div className='mobileContentYear' style={{ alignItems: 'flex-start', textAlign: 'start'}}>
-            {projects.name}
-          </div>
+              <span>
+                {projects.name + ' '}
+                {projects.tag != null ?
+              <>
+              <span>
+                <button
+                  class="btn btn-success" 
+                  style={{
+                    borderRadius: '15px',
+                    backgroundColor: '#DEDEDE',
+                    innerWidth:'12px',
+                    height: '32px',
+                    borderStyle: 'none',
+                    fontSize: '18px',
+                    paddingLeft: '12px',
+                    paddingRight: '12px',
+                    fontFamily: 'FoundersGroteskText'
+                    }}
+                  >
+                  {projects.tag}
+                </button>
+              </span>
+              </>
+              : <> </>
+              }
+              </span>
+            </div>
         </div>
         <div id={`expanded-${projects.id}`} className="mobileExpandContent" key={`expand-${projects.id}`} {...getCollapseProps()} onClick={()=> routeChange(projects.id)}>
           <div className='projectColumn' style={{ width: '20%', textAlign: 'start'}}>
