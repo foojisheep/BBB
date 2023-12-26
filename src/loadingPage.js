@@ -65,7 +65,10 @@ function Projects() {
             <div className='mobileContentYear' style={{ alignItems: 'flex-start', textAlign: 'start'}}>
               <span>
                 {projects.name + ' '}
-                {projects.tag != null ?
+              </span>
+            </div>
+            <div className='mobileContentYear' style={{ textAlign: 'end'}}>
+            {projects.tag != null ?
               <>
               <span>
                 <button
@@ -89,7 +92,6 @@ function Projects() {
               </>
               : <> </>
               }
-              </span>
             </div>
           </div>
           <div id={`expanded-${projects.id}`} className="mobileExpandContent" key={`expand-${projects.id}`} {...getCollapseProps()} onClick={()=> routeChange(projects.id)}>
@@ -112,7 +114,10 @@ function Projects() {
             <div className='mobileContentYear' style={{ alignItems: 'flex-start', textAlign: 'start'}}>
               <span>
                 {projects.name + ' '}
-                {projects.tag != null ?
+              </span>
+            </div>
+            <div className='mobileContentYear' style={{ textAlign: 'end'}}>
+            {projects.tag != null ?
               <>
               <span>
                 <button
@@ -136,7 +141,6 @@ function Projects() {
               </>
               : <> </>
               }
-              </span>
             </div>
           </div>
           <div id={`expanded-${projects.id}`} className="mobileExpandContent" key={`expand-${projects.id}`} {...getCollapseProps()} onClick={()=> routeChange(projects.id)}>
@@ -341,7 +345,7 @@ function changeURL(projects, hover) {
 function isMobileExpandDetails (projects, expand) {
   console.log('isMobileExpandDetails');
   console.log(projects);
-  const projectCount = 5;
+  const projectCount = 8;
   const number = projects.id -1;
   console.log(number);
   for(let i = 0; i < projectCount; i++){
