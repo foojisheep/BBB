@@ -107,10 +107,13 @@ export default function ImageAndProjects() {
             {projects.mobileYear}
           </div>
           <div className='mobileContentYear' style={{ alignItems: 'flex-start', textAlign: 'start'}}>
-              <span>
-                {projects.name + ' '}
-                {projects.tag != null ?
-              <>
+            <span>
+              {projects.name + ' '}
+            </span>
+          </div>
+          <div className='mobileContentYear' style={{ textAlign: 'end'}}>
+            {projects.tag != null ?
+            <>
               <span>
                 <button
                   class="btn btn-success" 
@@ -130,15 +133,14 @@ export default function ImageAndProjects() {
                   {projects.tag}
                 </button>
               </span>
-              </>
-              : <> </>
-              }
-              </span>
-            </div>
+            </>
+            : <> </>
+            }
+          </div>
         </div>
         <div id={`expanded-${projects.id}`} className="mobileExpandContent" key={`expand-${projects.id}`} {...getCollapseProps()} onClick={()=> routeChange(projects.id)}>
-          <div className='projectColumn' style={{ width: '20%', textAlign: 'start'}}>
-          </div>
+          {/* <div className='projectColumn paddingLeft' style={{ width: '20%', textAlign: 'start'}}>
+          </div> */}
           <div className='projectColumn paddingLeft projectListHeight' style={{ alignItems:'center', textAlign: 'start'}}>
             <p className='mobileExpandContentDescription' style={{ textAlign: 'start', paddingTop: '2%', paddingBottom: '2%', width: '100%'}}>{projects.details}</p>
             <div className='projectColumn' style={{ textAlign: 'end', display: 'block'}}>
@@ -155,10 +157,13 @@ export default function ImageAndProjects() {
             {projects.mobileYear}
           </div>
           <div className='mobileContentYear' style={{ alignItems: 'flex-start', textAlign: 'start'}}>
-              <span>
-                {projects.name + ' '}
-                {projects.tag != null ?
-              <>
+            <span>
+              {projects.name + ' '}
+            </span>
+          </div>
+          <div className='mobileContentYear' style={{ textAlign: 'end'}}>
+            {projects.tag != null ?
+            <>
               <span>
                 <button
                   class="btn btn-success" 
@@ -178,15 +183,14 @@ export default function ImageAndProjects() {
                   {projects.tag}
                 </button>
               </span>
-              </>
-              : <> </>
-              }
-              </span>
-            </div>
+            </>
+            : <> </>
+            }
+          </div>
         </div>
         <div id={`expanded-${projects.id}`} className="mobileExpandContent" key={`expand-${projects.id}`} {...getCollapseProps()} onClick={()=> routeChange(projects.id)}>
-          <div className='projectColumn' style={{ width: '20%', textAlign: 'start'}}>
-          </div>
+          {/* <div className='projectColumn paddingLeft' style={{ width: '20%', textAlign: 'start'}}>
+          </div> */}
           <div className='projectColumn paddingLeft projectListHeight' style={{alignItems:'center', textAlign: 'start'}}>
             <p className='mobileExpandContentDescription' style={{ textAlign: 'start', paddingTop: '2%', paddingBottom: '2%' , width: '100%'}}>{projects.details}</p>
             <div className='projectColumn' style={{ textAlign: 'end', display: 'block'}}>
