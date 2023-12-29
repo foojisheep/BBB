@@ -288,7 +288,15 @@
   }
   
   #projectDetails th {
-    font-size: 12px;
+    font-size:  16px !important;
+    line-height: 18px !important;
+    letter-spacing: 0.02em !important;
+  }
+
+  #projectDetails td {
+    font-size:  16px !important;
+    line-height: 18px !important;
+    letter-spacing: 0.02em !important;
   }
 }
 
