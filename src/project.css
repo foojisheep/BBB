@@ -94,6 +94,12 @@ div.projectDisplay1 {
   }
 }
 
+@media only screen and (max-width: 1020px) {
+  .paddingLeft {
+    padding-left: 20% !important;
+  }
+}
+
 #customers tr:hover {
   background-color: rgb(255,192,103);
 }
