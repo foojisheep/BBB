@@ -62,34 +62,35 @@ function Projects() {
             <div className='mobileContentYear' style={{ width: '20%', textAlign: 'start'}}>
               {projects.mobileYear}
             </div>
-            <div className='mobileContentYear' style={{ alignItems: 'flex-start', textAlign: 'start'}}>
-              <span>
-                {projects.name + ' '}
-              </span>
+            <div className='mobileContentYear' style={{ alignItems: 'flex-start', textAlign: 'start', width: '50%'}}>
+            <span>
+              {projects.name + ' '}
+            </span>
             </div>
-            <div className='mobileContentYear' style={{ textAlign: 'end'}}>
-            {projects.tag != null ?
-              <>
-              <span>
-                <button
-                  class="btn btn-success" 
-                  style={{
-                    borderRadius: '15px',
-                    backgroundColor: '#DEDEDE',
-                    innerWidth:'12px',
-                    height: '32px',
-                    borderStyle: 'none',
-                    fontSize: '18px',
-                    paddingLeft: '12px',
-                    paddingRight: '12px',
-                    fontFamily: 'FoundersGroteskText',
-                    color: '#000000'
-                    }}
-                  >
-                  {projects.tag}
-                </button>
-              </span>
-              </>
+            <div className='mobileContentYear' style={{ textAlign: 'end', width: '30%'}}>
+              {
+                projects.tag != null ?
+                <>
+                <span>
+                  <button
+                    class="btn btn-success" 
+                    style={{
+                      borderRadius: '15px',
+                      backgroundColor: '#DEDEDE',
+                      innerWidth:'12px',
+                      height: '32px',
+                      borderStyle: 'none',
+                      fontSize: '18px',
+                      paddingLeft: '12px',
+                      paddingRight: '12px',
+                      fontFamily: 'FoundersGroteskText',
+                      color: '#000000'
+                      }}
+                    >
+                    {projects.tag}
+                  </button>
+                </span>
+                </>
               : <> </>
               }
             </div>
@@ -111,41 +112,42 @@ function Projects() {
             <div className='mobileContentYear' style={{ width: '20%', textAlign: 'start'}}>
               {projects.mobileYear}
             </div>
-            <div className='mobileContentYear' style={{ alignItems: 'flex-start', textAlign: 'start'}}>
-              <span>
-                {projects.name + ' '}
-              </span>
+            <div className='mobileContentYear' style={{ alignItems: 'flex-start', textAlign: 'start', width: '50%'}}>
+            <span>
+              {projects.name + ' '}
+            </span>
             </div>
-            <div className='mobileContentYear' style={{ textAlign: 'end'}}>
-            {projects.tag != null ?
-              <>
-              <span>
-                <button
-                  class="btn btn-success" 
-                  style={{
-                    borderRadius: '15px',
-                    backgroundColor: '#DEDEDE',
-                    innerWidth:'12px',
-                    height: '32px',
-                    borderStyle: 'none',
-                    fontSize: '18px',
-                    paddingLeft: '12px',
-                    paddingRight: '12px',
-                    fontFamily: 'FoundersGroteskText',
-                    color: '#000000'
-                    }}
-                  >
-                  {projects.tag}
-                </button>
-              </span>
-              </>
+            <div className='mobileContentYear' style={{ textAlign: 'end', width: '30%'}}>
+              {
+                projects.tag != null ?
+                <>
+                <span>
+                  <button
+                    class="btn btn-success" 
+                    style={{
+                      borderRadius: '15px',
+                      backgroundColor: '#DEDEDE',
+                      innerWidth:'12px',
+                      height: '32px',
+                      borderStyle: 'none',
+                      fontSize: '18px',
+                      paddingLeft: '12px',
+                      paddingRight: '12px',
+                      fontFamily: 'FoundersGroteskText',
+                      color: '#000000'
+                      }}
+                    >
+                    {projects.tag}
+                  </button>
+                </span>
+                </>
               : <> </>
               }
             </div>
           </div>
           <div id={`expanded-${projects.id}`} className="mobileExpandContent" key={`expand-${projects.id}`} {...getCollapseProps()} onClick={()=> routeChange(projects.id)}>
-            <div className='projectColumn' style={{ width: '20%', textAlign: 'start'}}>
-            </div>
+            {/* <div className='projectColumn' style={{ width: '20%', textAlign: 'start'}}>
+            </div> */}
             <div className='projectColumn paddingLeft projectListHeight' style={{ alignItems:'center', textAlign: 'start'}}>
               <p className='mobileExpandContentDescription' style={{ textAlign: 'start', paddingTop: '2%', paddingBottom: '2%' , width: '100%'}}>{projects.details}</p>
               <div className='projectColumn' style={{ textAlign: 'end', display: 'block'}}>

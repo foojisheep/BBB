@@ -3,14 +3,10 @@ import './loadingPage.css';
 import './project.css';
 import logoBig from './resource/logo.svg';
 import { useNavigate } from 'react-router-dom';
-import { isMobile } from "react-device-detect";
 import useCollapse from 'react-collapsed';
 import { LazyLoadImage } from "react-lazy-load-image-component";
 import { ViewContext } from './ViewContext';
 import { useContext } from 'react';
-import AnimationPlayer from './video'
-import glassBBB from  './resource/bbb_loading2.mp4';
-import glassBBBMobile from  './resource/bbb_loading_mobile.mp4';
 import chucksHover from  './resource/Images/Chucks/Hover.jpg';
 import penthouseHover from  './resource/Images/Wangsa/Hover.png';
 import KLCHover from  './resource/Images/KLC/Hover.png';
@@ -106,14 +102,15 @@ export default function ImageAndProjects() {
           <div className='mobileContentYear' style={{ width: '20%', textAlign: 'start'}}>
             {projects.mobileYear}
           </div>
-          <div className='mobileContentYear' style={{ alignItems: 'flex-start', textAlign: 'start'}}>
+          <div className='mobileContentYear' style={{ alignItems: 'flex-start', textAlign: 'start', width: '50%'}}>
             <span>
               {projects.name + ' '}
             </span>
           </div>
-          <div className='mobileContentYear' style={{ textAlign: 'end'}}>
-            {projects.tag != null ?
-            <>
+          <div className='mobileContentYear' style={{ textAlign: 'end', width: '30%'}}>
+            {
+              projects.tag != null ?
+              <>
               <span>
                 <button
                   class="btn btn-success" 
@@ -133,20 +130,19 @@ export default function ImageAndProjects() {
                   {projects.tag}
                 </button>
               </span>
-            </>
+              </>
             : <> </>
             }
           </div>
         </div>
         <div id={`expanded-${projects.id}`} className="mobileExpandContent" key={`expand-${projects.id}`} {...getCollapseProps()} onClick={()=> routeChange(projects.id)}>
-          {/* <div className='projectColumn paddingLeft' style={{ width: '20%', textAlign: 'start'}}>
-          </div> */}
-          <div className='projectColumn paddingLeft projectListHeight' style={{ alignItems:'center', textAlign: 'start'}}>
-            <p className='mobileExpandContentDescription' style={{ textAlign: 'start', paddingTop: '2%', paddingBottom: '2%', width: '100%'}}>{projects.details}</p>
-            <div className='projectColumn' style={{ textAlign: 'end', display: 'block'}}>
-            <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-plus"><line x1="12" x2="12" y1="5" y2="19"></line><line x1="5" x2="19" y1="12" y2="12"></line></svg>
-            {/* <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="butt" stroke-linejoin="round" class="lucide lucide-plus"><line x1="12" x2="12" y1="5" y2="19"></line><line x1="5" x2="19" y1="12" y2="12"></line></svg> */}
+          <div className='projectColumn' style={{ width: '20%', textAlign: 'start'}}>
           </div>
+          <div className='projectColumn paddingLeft projectListHeight' style={{ alignItems:'center', textAlign: 'start'}}>
+            <p className='mobileExpandContentDescription' style={{ textAlign: 'start', paddingTop: '2%', paddingBottom: '2%' , width: '100%'}}>{projects.details}</p>
+            <div className='projectColumn' style={{ textAlign: 'end', display: 'block'}}>
+              <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-plus"><line x1="12" x2="12" y1="5" y2="19"></line><line x1="5" x2="19" y1="12" y2="12"></line></svg>
+            </div>
           </div>
         </div>
       </div>
@@ -156,14 +152,15 @@ export default function ImageAndProjects() {
           <div className='mobileContentYear' style={{ width: '20%', textAlign: 'start'}}>
             {projects.mobileYear}
           </div>
-          <div className='mobileContentYear' style={{ alignItems: 'flex-start', textAlign: 'start'}}>
+          <div className='mobileContentYear' style={{ alignItems: 'flex-start', textAlign: 'start', width: '50%'}}>
             <span>
               {projects.name + ' '}
             </span>
           </div>
-          <div className='mobileContentYear' style={{ textAlign: 'end'}}>
-            {projects.tag != null ?
-            <>
+          <div className='mobileContentYear' style={{ textAlign: 'end', width: '30%'}}>
+            {
+              projects.tag != null ?
+              <>
               <span>
                 <button
                   class="btn btn-success" 
@@ -183,21 +180,29 @@ export default function ImageAndProjects() {
                   {projects.tag}
                 </button>
               </span>
-            </>
+              </>
             : <> </>
             }
           </div>
         </div>
         <div id={`expanded-${projects.id}`} className="mobileExpandContent" key={`expand-${projects.id}`} {...getCollapseProps()} onClick={()=> routeChange(projects.id)}>
+            <div className='projectColumn' style={{ width: '20%', textAlign: 'start'}}>
+            </div>
+            <div className='projectColumn paddingLeft projectListHeight' style={{ alignItems:'center', textAlign: 'start'}}>
+              <p className='mobileExpandContentDescription' style={{ textAlign: 'start', paddingTop: '2%', paddingBottom: '2%' , width: '100%'}}>{projects.details}</p>
+              <div className='projectColumn' style={{ textAlign: 'end', display: 'block'}}>
+                <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-plus"><line x1="12" x2="12" y1="5" y2="19"></line><line x1="5" x2="19" y1="12" y2="12"></line></svg>
+              </div>
+            </div>
           {/* <div className='projectColumn paddingLeft' style={{ width: '20%', textAlign: 'start'}}>
-          </div> */}
+          </div>
           <div className='projectColumn paddingLeft projectListHeight' style={{alignItems:'center', textAlign: 'start'}}>
             <p className='mobileExpandContentDescription' style={{ textAlign: 'start', paddingTop: '2%', paddingBottom: '2%' , width: '100%'}}>{projects.details}</p>
             <div className='projectColumn' style={{ textAlign: 'end', display: 'block'}}>
             <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-plus"><line x1="12" x2="12" y1="5" y2="19"></line><line x1="5" x2="19" y1="12" y2="12"></line></svg>
-            {/* <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="butt" stroke-linejoin="round" class="lucide lucide-plus"><line x1="12" x2="12" y1="5" y2="19"></line><line x1="5" x2="19" y1="12" y2="12"></line></svg> */}
+            <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="butt" stroke-linejoin="round" class="lucide lucide-plus"><line x1="12" x2="12" y1="5" y2="19"></line><line x1="5" x2="19" y1="12" y2="12"></line></svg>
           </div>
-          </div>
+          </div> */}
         </div>
       </div>
     }
