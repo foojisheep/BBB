@@ -139,7 +139,7 @@ export default function ImageAndProjects() {
           <div className='projectColumn' style={{ width: '20%', textAlign: 'start'}}>
           </div>
           <div className='projectColumn paddingLeft projectListHeight' style={{ alignItems:'center', textAlign: 'start'}}>
-            <p className='mobileExpandContentDescription' style={{ textAlign: 'start', paddingTop: '2%', paddingBottom: '2%' , width: '100%'}}>{projects.details}</p>
+            <p className='mobileExpandContentDescription' style={{ textAlign: 'start', width: '100%' }}>{projects.details}</p>
             <div className='projectColumn' style={{ textAlign: 'end', display: 'block'}}>
               <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-plus"><line x1="12" x2="12" y1="5" y2="19"></line><line x1="5" x2="19" y1="12" y2="12"></line></svg>
             </div>
@@ -189,7 +189,7 @@ export default function ImageAndProjects() {
             <div className='projectColumn' style={{ width: '20%', textAlign: 'start'}}>
             </div>
             <div className='projectColumn paddingLeft projectListHeight' style={{ alignItems:'center', textAlign: 'start'}}>
-              <p className='mobileExpandContentDescription' style={{ textAlign: 'start', paddingTop: '2%', paddingBottom: '2%' , width: '100%'}}>{projects.details}</p>
+              <p className='mobileExpandContentDescription' style={{ textAlign: 'start', width: '100%' }}>{projects.details}</p>
               <div className='projectColumn' style={{ textAlign: 'end', display: 'block'}}>
                 <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-plus"><line x1="12" x2="12" y1="5" y2="19"></line><line x1="5" x2="19" y1="12" y2="12"></line></svg>
               </div>

@@ -92,6 +92,9 @@ div.projectDisplay1 {
     /* width: inherit;
     height: 70vh; */
   }
+  .projectListHeight {
+    height: 4vh;
+  }
 }
 
 @media only screen and (max-width: 1020px) {
@@ -163,7 +166,7 @@ div.projectDisplay1 {
   }
 
   .projectListHeight {
-    height: 4vh;
+    height: 6vh;
   }
 }
 
