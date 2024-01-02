@@ -309,8 +309,8 @@ function MobileDesc(object) {
     return (
       <>
         <div style={{ textAlign: 'left', paddingLeft:'3%', paddingRight: '3%', paddingBottom: '2%' }}>
-          <p className='mobileProjectDescription' style={{ textAlign: 'justify', textJustify: 'inter-character'}}>{object.value.desc1}</p>
-          <p className='mobileProjectDescription' style={{ textAlign: 'justify', paddingTop: '1%', textJustify: 'inter-character'}}>&emsp;{object.value.desc2}</p>
+          <p className='mobileProjectDescription' style={{ textAlign: 'justify', hyphens: 'auto'}}>{object.value.desc1}</p>
+          <p className='mobileProjectDescription' style={{ textAlign: 'justify', paddingTop: '1%', hyphens: 'auto'}}>&emsp;{object.value.desc2}</p>
         </div>
       </>
     );

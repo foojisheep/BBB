@@ -56,7 +56,21 @@ function InfoPage () {
           <table id="contextAlign">
           { mobileView ? 
             <>
-            <ul className='textAlignLeft mobileFontSize'>For all project enquires,
+            <ul id="infoContent" className='textAlignLeft mobileFontSize' style={{ paddingLeft: 0, letterSpacing: '0.03em' }}>CONTACT
+              <li id="infoContent" style={{ paddingLeft: 0 }}>For all project enquires,
+                <a href="mailto:hi@studiobbb.co">hi@studiobbb.co</a></li>
+            </ul>
+            <ul id="infoContent" className='textAlignLeft mobileFontSize' style={{ paddingLeft: 0,  letterSpacing: '0.03em' }}>OFFICE HOURS
+              <li id="infoContent" style={{ paddingLeft: 0 }}>Monday to Friday</li>
+              <li id="infoContent" style={{ paddingLeft: 0 }}>10:00 - 18:00</li>
+            </ul>
+            <ul id="infoContent" className='textAlignLeft mobileFontSize' style={{ paddingLeft: 0,  letterSpacing: '0.03em' }}>INSTAGRAM
+              <li id="context mobileFontSize"><a href="https://www.instagram.com/studiobbb.co">@studiobbb</a></li>
+            </ul>
+
+
+
+            {/* <ul id="infoContent" className='textAlignLeft mobileFontSize'>For all project enquires,
                 <li id="context mobileFontSize"><a href="mailto:hi@studiobbb.co">hi@studiobbb.co</a></li>
               </ul>
               <ul className='textAlignLeft mobileFontSize' style={{ fontSize: '16px', letterSpacing: '0.03em'}}>{ mobileView ?  <>Office Hours</> : <>OFFICE HOURS</> }
@@ -65,7 +79,8 @@ function InfoPage () {
               </ul>
               <ul className='textAlignLeft mobileFontSize' style={{ fontSize: '16px', letterSpacing: '0.03em' }}>{ mobileView ?   <>Instagram</> : <>INSTAGRAM</> }
                 <li id="context mobileFontSize"><a href="https://www.instagram.com/studiobbb.co">@studiobbb</a></li>
-              </ul>
+              </ul> */}
+
             </> :
             <>
             <tr>
@@ -92,7 +107,10 @@ function InfoPage () {
         </div>
       </div>
       { mobileView ?
-        <div id="bottomInfoNav"className="infoFooterDisplay mobileFontSize">Copyrights &copy; 2023 BBB Design Studio Sdn. Bhd. 202201025118 (1470815-M). All Rights Reserved</div>
+        <ul id="bottomInfoNav" className="infoFooterDisplay mobileFontSize" style={{ fontWeight:'lighter', letterSpacing: '0.05em', paddingBottom: '2%'}}>
+          Copyrights &copy; 2023 
+          <li id="context" className='mobileFontSize' style={{ fontWeight:'lighter', paddingRight: '20%', letterSpacing: '0.05em'}}>BBB Design Studio Sdn. Bhd. 202201025118 (1470815-M). All Rights Reserved</li>
+        </ul>
         :
         <div id="bottomInfoNav"className="infoFooterDisplay laptopFontSize">Copyrights &copy; 2023 BBB Design Studio Sdn. Bhd. 202201025118 (1470815-M). All Rights Reserved</div>
       }
