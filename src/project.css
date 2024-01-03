@@ -166,6 +166,12 @@ div.projectDisplay1 {
   }
 
   .projectListHeight {
+    height: 5vh;
+  }
+}
+
+@media only screen and (max-width: 550px) {
+  .projectListHeight {
     height: 6vh;
   }
 }
