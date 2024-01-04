@@ -29,7 +29,7 @@ export default function ImageAndProjects() {
 
   const content = projects.map((project) =>
     <tr key={project.id} onMouseEnter={() => changeURL(project, true)} onClick={() => routeChange(project.id)}>
-      <td>  </td>
+      <td style={{ width: '2%' }}></td>
       <td>{project.mobileYear}</td>
       { navView 
         ? <td>
