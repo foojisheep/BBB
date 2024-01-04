@@ -103,16 +103,17 @@ function InfoPage () {
               </ul>
               </>
             }
+            { mobileView ?
+            <ul id="bottomInfoNav" className="infoFooterDisplay mobileFontSize" style={{ fontWeight:'lighter', letterSpacing: '0.04em !important', position: 'absolute'}}>
+              Copyrights &copy; 2023 
+              <li id="context" className='mobileFontSize' style={{ fontWeight:'lighter', paddingRight: '20%', letterSpacing: '0.04em', fontSize: '16px !important'}}>BBB Design Studio Sdn. Bhd. 202201025118 (1470815-M). All Rights Reserved</li>
+            </ul>
+            :
+            <div id="bottomInfoNav"className="infoFooterDisplay laptopFontSize" style={{ paddingBottom: '4%', letterSpacing: '0.04em !important', position: 'absolute'}}>Copyrights &copy; 2023 BBB Design Studio Sdn. Bhd. 202201025118 (1470815-M). All Rights Reserved</div>
+            }
           </table>
         </div>
-        { mobileView ?
-        <ul id="bottomInfoNav" className="infoFooterDisplay mobileFontSize" style={{ fontWeight:'lighter', letterSpacing: '0.04em !important', position: 'absolute'}}>
-          Copyrights &copy; 2023 
-          <li id="context" className='mobileFontSize' style={{ fontWeight:'lighter', paddingRight: '20%', letterSpacing: '0.04em'}}>BBB Design Studio Sdn. Bhd. 202201025118 (1470815-M). All Rights Reserved</li>
-        </ul>
-        :
-        <div id="bottomInfoNav"className="infoFooterDisplay laptopFontSize">Copyrights &copy; 2023 BBB Design Studio Sdn. Bhd. 202201025118 (1470815-M). All Rights Reserved</div>
-      }
+        
       </div>
     </div>
   );

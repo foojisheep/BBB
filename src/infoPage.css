@@ -38,6 +38,7 @@
     padding-left: 4% !important;
     white-space: pre-wrap;
     letter-spacing: 0.04em !important;
+    padding-bottom: 5% !important;
   }
 }
 
@@ -54,7 +55,7 @@
 
   .infoContentDiv {
     padding-left: 4% !important;
-    /* padding-top: 10% !important; */
+    padding-top: 4% !important;
   }
 }
 
@@ -63,7 +64,10 @@
 @media only screen and (max-width: 600px) {
   .infoContentDiv {
     padding-left: 4% !important;
-    padding-top: 20% !important;
+    padding-top: 15% !important;
+  }
+  .infoFooterDisplay {
+    padding-bottom: 4% !important;
   }
 }
 @media only screen and (max-width: 450px) {
@@ -268,7 +272,7 @@ a:link {
   font-family: 'FoundersGroteskText';
   font-style: normal;
   font-weight: 400;
-  font-size: 24px !important;
+  font-size: 24px;
   line-height: 110%;
   letter-spacing: 0.02em;
   color: rgb(255,192,103);
@@ -343,4 +347,10 @@ a:link {
   position: sticky;
   top: 0;
   width: -webkit-fill-available;
+}
+
+@media only screen and (max-width: 700px) {
+  .infoFooterDisplay {
+    padding-bottom: 4% !important;
+  }
 }
