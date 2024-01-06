@@ -154,12 +154,13 @@ function ShowImage1(props) {
     <div id={`mobileContent-${id}`} key={id} className={`projectDetailsMobileImageDiv mobileExpandContent hideScrollBar`} style={{ borderBottom: '1.6px solid rgb(0, 0, 0)'}} onScrollCapture={() => hideArrow(id)} onScroll={() => hideArrow(id)}>
       <div id='mobileProjectImageDiv' className="project-Image-Div" onMouseEnter={() => scrollable(div, true)} onScrollCapture={() => hideArrow(id)} onScroll={() => hideArrow(id)} style={{ overflow: "scroll" , height: '51vh', position:'relative'}}>
         {showImage}
-        <div className='iconArrowMobile' style={{ position: 'absolute', right: '2%', bottom: '1%', display: 'flex'}}>
-          <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="0.5" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-arrow-right-circle">
+        <div className='iconArrowMobile' style={{ position: 'absolute', right: '2%', bottom: '3%', display: 'flex'}}>
+          <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 22 22"><path fill="none" stroke="white" stroke-linecap="round" stroke-linejoin="round" stroke-width="1" d="M5 12h14m-7-7l7 7l-7 7"/></svg>
+          {/* <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="0.5" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-arrow-right-circle">
             <circle cx="12" cy="12" r="10" style={{ fill: 'white'}}></circle>
             <polyline points="12 16 16 12 12 8"></polyline>
             <line x1="8" x2="16" y1="12" y2="12"></line>
-          </svg>
+          </svg> */}
         </div>
       </div>
     </div>
@@ -307,9 +308,9 @@ function ShowProject(props) {
 function MobileDesc(object) {
     return (
       <>
-        <div style={{ textAlign: 'left', paddingLeft:'3%', paddingRight: '3%', paddingBottom: '2%'}}>
-          <p className='mobileProjectDescription' style={{ textAlign: 'left'}}>{object.value.desc1}</p>
-          <p className='mobileProjectDescription' style={{ textAlign: 'left', paddingTop: '1%' }}>&emsp;{object.value.desc2}</p>
+        <div style={{ textAlign: 'left', paddingLeft:'3%', paddingRight: '3%', paddingBottom: '2%' }}>
+          <p className='mobileProjectDescription' style={{ textAlign: 'justify', hyphens: 'auto'}}>{object.value.desc1}</p>
+          <p className='mobileProjectDescription' style={{ textAlign: 'justify', paddingTop: '1%', hyphens: 'auto'}}>&emsp;{object.value.desc2}</p>
         </div>
       </>
     );
