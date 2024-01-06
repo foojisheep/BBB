@@ -30,7 +30,7 @@ export default function ImageAndProjects() {
   const content = projects.map((project) =>
     <tr key={project.id} onMouseEnter={() => changeURL(project, true)} onClick={() => routeChange(project.id)}>
       <td style={{ width: '2%' }}></td>
-      <td>{project.mobileYear}</td>
+      <td style={{ padding: 0}}>{project.mobileYear}</td>
       { navView 
         ? <td>
             {project.name + ' '}
